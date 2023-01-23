@@ -468,6 +468,8 @@ body {
     width: 80%;
     text-align: left;
     border-collapse: collapse;
+    text-align: center;
+    /* justify-content: center; */
 }
 
 .table_title{
@@ -490,11 +492,14 @@ td{
     border-top: 2px solid transparent;
 }
 
-tr:hover td {
+tr:hover td{
     background: #FAAB01;
     color: #000;
 }
 
+tr td:first-child{
+    text-align: left;
+}
 
 
 
