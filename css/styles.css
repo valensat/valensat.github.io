@@ -479,7 +479,10 @@ td{
     border-top: 2px solid transparent;
 }
 
-tr:hover td { background: #FAAB01; color: #000; }
+tr:hover td {
+    background: #FAAB01;
+    color: #000;
+}
 
 
 
