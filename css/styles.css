@@ -448,6 +448,17 @@ body {
     height: 100%;
 }
 
+.table{
+    margin: auto;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.td{
+    text-align: center;
+}
+
+.tr:hover {background-color: #FAAB01;}
 
 
 
