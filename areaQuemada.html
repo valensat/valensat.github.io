@@ -132,7 +132,7 @@
                                 <a href="#" class="menu__link menu__link--inside">Humedad Relativa</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Precipitación</a>
+                                <a href="./precip.html" class="menu__link menu__link--inside">Precipitación</a>
                             </li>
                         </ul>
                     </li>
@@ -218,26 +218,12 @@
               </table>              
         </section>
 
-        <section class="container">
+        <div class="container">
             <div class="table_title">
-                <h2 class="subtitle">Histogram area quemada - km<sup>2</sup></h2>
+                <h2 class="subtitle">Histograma área quemada - km<sup>2</sup></h2>
             </div>
-            <ul class="histogram"> 
-                <li>15613.18:2010</li>
-                <li>2361.55:2011</li>
-                <li>130447.97:2012</li>
-                <li>1524.75:2013</li>
-                <li>1179.39:2014</li>
-                <li>3782.60:2015</li>
-                <li>13581.80:2016</li>
-                <li>20300.04:2017</li>
-                <li>7758.66:2018</li>
-                <li>2163.93:2019</li>
-                <li>8126.52:2020</li>
-                <li>1312.29:2021</li>
-                <li>80024.27:2022</li>
-            </ul>
-        </section>
+            <canvas id="barras_inc"></canvas>
+        </div>
 
 
 
@@ -255,6 +241,23 @@
 
 
     <script src="./js/app.js"></script>
+    <script src="./js/chart.js"></script>
+
+    <script>
+        var ctx = document.getElementById('barras_inc').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Área quemada (km^2)',
+                    backgroundColor: '#E34949',
+                    borderColor: 'gray',
+                    data: [15613.18, 2361.55, 130447.97, 1524.75, 1179.39, 3782.60, 13581.80, 20300.04, 7758.66, 2163.93, 8126.52, 1312.29, 80024.27]
+                }]},
+            options: {responsive: true}
+        });
+    </script>
 
 </body>
 </html>
