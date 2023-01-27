@@ -192,6 +192,7 @@
             </div>
             <table class="table">
                 <tr class="table_header">
+                 <th class="table_header--title">Source data</th>
                   <th class="table_header--title">2010</th>
                   <th class="table_header--title">2011</th>
                   <th class="table_header--title">2012</th>
@@ -207,19 +208,36 @@
                   <th class="table_header--title">2022</th>
                 </tr>
                 <tr>
-                    <td>15613.18 km<sup>2</sup></td>
-                    <td>2361.55 km<sup>2</sup></td>
-                    <td>130447.97 km<sup>2</sup></td>
-                    <td>1524.75 km<sup>2</sup></td>
-                    <td>1179.39 km<sup>2</sup></td>
-                    <td>3782.60 km<sup>2</sup></td>
-                    <td>13581.80 km<sup>2</sup></td>
-                    <td>20300.04 km<sup>2</sup></td>
-                    <td>7758.66 km<sup>2</sup></td>
-                    <td>2163.93 km<sup>2</sup></td>
-                    <td>8126.52 km<sup>2</sup></td>
-                    <td>1312.29 km<sup>2</sup></td>
-                    <td>80024.27 km<sup>2</sup></td>
+                    <td>MODIS</td>
+                    <td>80.50 km<sup>2</sup></td>
+                    <td>27.00 km<sup>2</sup></td>
+                    <td>877.25 km<sup>2</sup></td>
+                    <td>9.50 km<sup>2</sup></td>
+                    <td>6.00 km<sup>2</sup></td>
+                    <td>33.75 km<sup>2</sup></td>
+                    <td>88.75 km<sup>2</sup></td>
+                    <td>105.00 km<sup>2</sup></td>
+                    <td>45.50 km<sup>2</sup></td>
+                    <td>14.25 km<sup>2</sup></td>
+                    <td>39.00 km<sup>2</sup></td>
+                    <td>7.50 km<sup>2</sup></td>
+                    <td>461.25 km<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td>EFFIS</td>
+                    <td>54.95 km<sup>2</sup></td>
+                    <td>18.7 km<sup>2</sup></td>
+                    <td>549.72 km<sup>2</sup></td>
+                    <td>11.41 km<sup>2</sup></td>
+                    <td>10.13 km<sup>2</sup></td>
+                    <td>25.1 km<sup>2</sup></td>
+                    <td>62.77 km<sup>2</sup></td>
+                    <td>20.03 km<sup>2</sup></td>
+                    <td>35.32 km<sup>2</sup></td>
+                    <td>9.29 km<sup>2</sup></td>
+                    <td>5.63 km<sup>2</sup></td>
+                    <td>5.92 km<sup>2</sup></td>
+                    <td>342.73 km<sup>2</sup></td>
                 </tr>
               </table>              
         </section>
@@ -256,14 +274,30 @@
             data: {
                 labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
                 datasets: [{
-                    label: 'Área quemada (km^2)',
+                    label: 'Área quemada MODIS (km^2)',
                     backgroundColor: '#E34949',
                     borderColor: 'gray',
-                    data: [15613.18, 2361.55, 130447.97, 1524.75, 1179.39, 3782.60, 13581.80, 20300.04, 7758.66, 2163.93, 8126.52, 1312.29, 80024.27]
+                    data: [80.50, 27.00, 877.25, 9.50, 6.00, 33.75, 88.75, 105.00, 45.50, 14.25, 39.00, 7.50, 461.25]
                 }]},
             options: {responsive: true}
         });
     </script>
+
+<script>
+    var ctx = document.getElementById('barras_inc').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+            datasets: [{
+                label: 'Área quemada EFFIS (km^2)',
+                backgroundColor: '#E34949',
+                borderColor: 'gray',
+                data: [80.50, 27.00, 877.25, 9.50, 6.00, 33.75, 88.75, 105.00, 45.50, 14.25, 39.00, 7.50, 461.25]
+            }]},
+        options: {responsive: true}
+    });
+</script>
 
 </body>
 </html>
