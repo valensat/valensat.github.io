@@ -469,7 +469,6 @@ body {
     text-align: left;
     border-collapse: collapse;
     text-align: center;
-    /* justify-content: center; */
 }
 
 .table_title{
@@ -478,7 +477,6 @@ body {
 
 th{
     padding: 8px;
-    /* background-color: aqua; */
     border-top: 2px solid #001A49;
     border-bottom: 2px solid #001A49;
     color: #E48716;
@@ -486,9 +484,7 @@ th{
 
 td{
     padding: 8px;
-    /* background: rgba(250,250,250,0.4); */
     border-bottom: 2px solid #fff;
-    /* color: #669; */
     border-top: 2px solid transparent;
 }
 
@@ -501,11 +497,53 @@ tr td:first-child{
     text-align: left;
 }
 
+/* TABLAS AVAMET */
+
+.container_avamet{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.th_avamet{
+    padding: 8px;
+    background-color: #778D45;
+    border: 2px solid #1A2902;
+    color: aliceblue;
+    position: sticky;
+}
+
+.td_avamet{
+    padding: 8px;
+    border: 2px solid #1A2902;
+}
+
+.td_avamet:first-child{
+    background-color: #AEC670;
+}
+
+.tr_avamet{
+    background-color: aliceblue;
+}
+
+.tr_avamet:nth-child(37){
+    background-color: #AEC670;
+}
+
+.tr_avamet:nth-child(38), .tr_avamet:nth-child(49), .tr_avamet:nth-child(72), .tr_avamet:nth-child(94), .tr_avamet:nth-child(102), .tr_avamet:nth-child(134), .tr_avamet:nth-child(162), .tr_avamet:nth-child(174), .tr_avamet:nth-child(180), .tr_avamet:nth-child(183), .tr_avamet:nth-child(193), .tr_avamet:nth-child(214), .tr_avamet:nth-child(218), .tr_avamet:nth-child(227), .tr_avamet:nth-child(238), .tr_avamet:nth-child(247), .tr_avamet:nth-child(256), .tr_avamet:nth-child(263), .tr_avamet:nth-child(267), .tr_avamet:nth-child(295), .tr_avamet:nth-child(304), .tr_avamet:nth-child(315), .tr_avamet:nth-child(324), .tr_avamet:nth-child(359), .tr_avamet:nth-child(382), .tr_avamet:nth-child(404), .tr_avamet:nth-child(423), .tr_avamet:nth-child(444), .tr_avamet:nth-child(450), .tr_avamet:nth-child(506), .tr_avamet:nth-child(525), .tr_avamet:nth-child(543), .tr_avamet:nth-child(552){
+    background-color: #AEC09A;
+}
+
+.tr_avamet:hover .td_avamet{
+    background: #778D45;
+    color: aliceblue;
+}
 
 
-
-
-
+/* .mapa_container_marco{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 1px var(--color-title);
+} */
 
 
 
