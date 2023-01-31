@@ -188,9 +188,14 @@
                 <h2 class="subtitle">Datos AVAMET</h2>
                 <div id="table_avamet"></div>
             </div>
-            
         </div>
-
+       
+        <div class="container">
+            <div class="table_title">
+                <h2 class="subtitle">Temperatura de hoy</h2>
+            </div>
+            <canvas id="temp_graph"></canvas>
+        </div>
 
 
 
@@ -208,6 +213,7 @@
 
 
     <script src="./js/app.js"></script>
+    <script src="./js/chart.js"></script>
 
     <script>
         // Using XMLHttpRequest().
@@ -249,6 +255,22 @@
             table += '</table>';
             element_to_insert_table.innerHTML += table;
         }
+    </script>
+
+    <script>
+        var ctx = document.getElementById('temp_graph').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+                datasets: [{
+                    label: 'Temperatura media (ºC)',
+                    backgroundColor: '#fff',
+                    borderColor: '#E34949',
+                    data: [6.9, 6.1, 5.5, 4.8, 4.9, 4.7, 4.2, 4.1, 4.3, 6, 8.2, 10.6, 11.2, 11.7, 13.8, 13.2, 12.7, 12.2, 11.2, 9.2, 8.6, 7.9, 7.2, 6.7]
+                }]},
+            options: {responsive: true}
+        });
     </script>
 
 </body>

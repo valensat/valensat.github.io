@@ -502,6 +502,7 @@ tr td:first-child{
 .container_avamet{
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 100px;
 }
 
 .th_avamet{
