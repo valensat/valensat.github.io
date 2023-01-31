@@ -504,12 +504,28 @@ tr td:first-child{
     margin-right: auto;
 }
 
+.table_avamet{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0 -2px #1A2902;
+}
+
 .th_avamet{
     padding: 8px;
     background-color: #778D45;
     border: 2px solid #1A2902;
     color: aliceblue;
+    border-top: none;
+
+}
+
+.table_avamet--header{
     position: sticky;
+    top: 0;
 }
 
 .td_avamet{
@@ -537,14 +553,6 @@ tr td:first-child{
     background: #778D45;
     color: aliceblue;
 }
-
-
-/* .mapa_container_marco{
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 10px 1px var(--color-title);
-} */
-
 
 
 
