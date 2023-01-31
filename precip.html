@@ -192,7 +192,7 @@
        
         <div class="container">
             <div class="table_title">
-                <h2 class="subtitle">Temperatura de hoy</h2>
+                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET</h2>
             </div>
             <canvas id="temp_graph"></canvas>
         </div>
@@ -210,6 +210,8 @@
             </nav>
         </section>
     </footer>
+
+    
 
 
     <script src="./js/app.js"></script>
@@ -257,20 +259,70 @@
         }
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script>
-        var ctx = document.getElementById('temp_graph').getContext('2d');
-        var chart = new Chart(ctx, {
+        const chartData = './data/AVAMET/temp_aemet.csv'
+        // parse the file from CSV to JSON
+        d3.csv(chartData).then(function(datapoints) {
+            const HORA = [];
+            const TEMPERATURA = [];
+            const TEMPERATURA_MAXIMA = [];
+            const TEMPERATURA_MINIMA = [];
+
+            for (i = 0; i < datapoints.length; i++) {
+                HORA.push(datapoints[i].HORA)
+                TEMPERATURA.push(datapoints[i].TEMPERATURA)
+                TEMPERATURA_MAXIMA.push(datapoints[i].TEMPERATURA_MAXIMA)
+                TEMPERATURA_MINIMA.push(datapoints[i].TEMPERATURA_MINIMA)
+            }
+  
+        // setup 
+        const data = {
+            labels: HORA,
+            datasets: [{
+            label: 'Temperatura media (ºC)',
+            data: TEMPERATURA,
+            backgroundColor: '#fff',
+            borderColor: '#806491',
+            borderWidth: 2
+            },
+            {
+            label: 'Temperatura máxima (ºC)',
+            data: TEMPERATURA_MAXIMA,
+            backgroundColor: '#fff',
+            borderColor: ['rgba(227, 73, 73, 0.5)'],
+            borderWidth: 1
+            },
+            {
+            label: 'Temperatura mínima (ºC)',
+            data: TEMPERATURA_MINIMA,
+            backgroundColor: '#fff',
+            borderColor: ['rgba(47, 112, 175, 0.5)'],
+            borderWidth: 1
+            }
+        ]
+        };
+
+        // config 
+        const config = {
             type: 'line',
-            data: {
-                labels: ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
-                datasets: [{
-                    label: 'Temperatura media (ºC)',
-                    backgroundColor: '#fff',
-                    borderColor: '#E34949',
-                    data: [6.9, 6.1, 5.5, 4.8, 4.9, 4.7, 4.2, 4.1, 4.3, 6, 8.2, 10.6, 11.2, 11.7, 13.8, 13.2, 12.7, 12.2, 11.2, 9.2, 8.6, 7.9, 7.2, 6.7]
-                }]},
-            options: {responsive: true}
-        });
+            data,
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true,
+                }
+            }
+            }
+        };
+    
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('temp_graph'),
+            config
+        );
+        })
     </script>
 
 </body>
