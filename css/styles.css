@@ -504,23 +504,11 @@ tr td:first-child{
     margin-right: auto;
 }
 
-.table_avamet{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    text-align: center;
-    box-shadow: 0 -2px #1A2902;
-}
-
 .th_avamet{
     padding: 8px;
     background-color: #778D45;
     border: 2px solid #1A2902;
     color: aliceblue;
-    border-top: none;
-
 }
 
 .table_avamet--header{
