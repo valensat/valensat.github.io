@@ -192,9 +192,30 @@
        
         <div class="container">
             <div class="table_title">
-                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET</h2>
+                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Ejemplo)</h2>
             </div>
             <canvas id="temp_graph"></canvas>
+        </div>
+
+        <div class="container">
+            <div class="table_title">
+                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Valencia)</h2>
+            </div>
+            <canvas id="temp_val"></canvas>
+        </div>
+
+        <div class="container">
+            <div class="table_title">
+                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Alicante)</h2>
+            </div>
+            <canvas id="temp_alic"></canvas>
+        </div>
+
+        <div class="container">
+            <div class="table_title">
+                <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Castellón)</h2>
+            </div>
+            <canvas id="temp_cast"></canvas>
         </div>
 
         <div class="container">
@@ -326,16 +347,16 @@
             type: 'line',
             data,
             options: {
-            scales: {
-                y: {
-                beginAtZero: true,
-                ticks: {
-                    callback: function(value, index, values) {
-                        return `${value}.0 °C`
+                scales: {
+                    y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return `${value}.0 °C`
+                        }
+                    }
                     }
                 }
-                }
-            }
             }
         };
     
@@ -509,6 +530,78 @@
         config
         );
     })
+    </script>
+
+    <script>
+        const chartData4 = './data/AEMET_temp/valencia_2.csv'
+        // parse the file from CSV to JSON
+        d3.csv(chartData4).then(function(datapoints4) {
+            const dia_mes = [];
+            const hora = [];
+            const T = [];
+            const int = [];
+
+            for (i = 0; i < datapoints4.length; i++) {
+                dia_mes.push(datapoints4[i].dia_mes)
+                hora.push(datapoints4[i].hora)
+                T.push(datapoints4[i].T)
+                int.push(datapoints4[i].int)
+            }
+
+        // setup 
+        const data = {
+            labels: hora, dia_mes,
+            datasets: [{
+            label: 'Temperatura media (°C)',
+            data: T,
+            backgroundColor: '#fff',
+            borderColor: ['rgba(227, 73, 73, 1)'],
+            borderWidth: 2,
+            tension: 0.4
+            }
+        ]
+        };
+
+        // config 
+        const config = {
+            type: 'line',
+            data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return `${value}.0 °C`
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+                            callback: function(val, index) {
+                                // Hide every 2nd tick label
+                                return index % 2 === 0 ? this.getLabelForValue(val) : '';
+                            },
+                            // color: 'red',
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: int[1],
+                    }
+                }
+            }
+        };
+
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('temp_val'),
+            config
+        );
+        })
     </script>
 
 </body>
