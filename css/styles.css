@@ -534,11 +534,11 @@ tr td:first-child{
     background-color: aliceblue;
 }
 
-.tr_avamet:nth-child(37){
+.tr_avamet:first-child, .tr_avamet:nth-child(39){
     background-color: #AEC670;
 }
 
-.tr_avamet:nth-child(38), .tr_avamet:nth-child(49), .tr_avamet:nth-child(72), .tr_avamet:nth-child(94), .tr_avamet:nth-child(102), .tr_avamet:nth-child(134), .tr_avamet:nth-child(162), .tr_avamet:nth-child(174), .tr_avamet:nth-child(180), .tr_avamet:nth-child(183), .tr_avamet:nth-child(193), .tr_avamet:nth-child(214), .tr_avamet:nth-child(218), .tr_avamet:nth-child(227), .tr_avamet:nth-child(238), .tr_avamet:nth-child(247), .tr_avamet:nth-child(256), .tr_avamet:nth-child(263), .tr_avamet:nth-child(267), .tr_avamet:nth-child(295), .tr_avamet:nth-child(304), .tr_avamet:nth-child(315), .tr_avamet:nth-child(324), .tr_avamet:nth-child(359), .tr_avamet:nth-child(382), .tr_avamet:nth-child(404), .tr_avamet:nth-child(423), .tr_avamet:nth-child(444), .tr_avamet:nth-child(450), .tr_avamet:nth-child(506), .tr_avamet:nth-child(525), .tr_avamet:nth-child(543), .tr_avamet:nth-child(552){
+.tr_avamet:nth-child(40), .tr_avamet:nth-child(50), .tr_avamet:nth-child(74), .tr_avamet:nth-child(95), .tr_avamet:nth-child(104), .tr_avamet:nth-child(137), .tr_avamet:nth-child(167), .tr_avamet:nth-child(180), .tr_avamet:nth-child(187), .tr_avamet:nth-child(190), .tr_avamet:nth-child(200), .tr_avamet:nth-child(221), .tr_avamet:nth-child(225), .tr_avamet:nth-child(235), .tr_avamet:nth-child(244), .tr_avamet:nth-child(253), .tr_avamet:nth-child(264), .tr_avamet:nth-child(271), .tr_avamet:nth-child(275), .tr_avamet:nth-child(304), .tr_avamet:nth-child(314), .tr_avamet:nth-child(325), .tr_avamet:nth-child(334), .tr_avamet:nth-child(370), .tr_avamet:nth-child(393), .tr_avamet:nth-child(417), .tr_avamet:nth-child(435), .tr_avamet:nth-child(458), .tr_avamet:nth-child(464), .tr_avamet:nth-child(519), .tr_avamet:nth-child(539), .tr_avamet:nth-child(558), .tr_avamet:nth-child(567){
     background-color: #AEC09A;
 }
 

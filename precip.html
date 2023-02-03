@@ -183,10 +183,36 @@
             </div>
         </div>
 
-        <div class="container_avamet">
+        <!-- <div class="container_avamet">
             <div class="table">
                 <h2 class="subtitle">Datos AVAMET</h2>
                 <div id="table_avamet"></div>
+            </div>
+        </div> -->
+
+        <div class="container_avamet">
+            <div class="table">
+                <h2 class="subtitle">Datos AVAMET</h2>
+                <table class="table">
+                    <thead class="table_avamet--header">
+                        <tr class="tr_avamet">
+                            <th class="th_avamet">Estació</th>
+                            <th class="th_avamet">Altitud (m)</th>
+                            <th class="th_avamet">T (°C)</th>
+                            <th class="th_avamet">T mín (°C)</th>
+                            <th class="th_avamet">T máx (°C)</th>
+                            <th class="th_avamet">Punt rosada (°C)</th>
+                            <th class="th_avamet">Wind Chill (°C)</th>
+                            <th class="th_avamet">Humetat Relativa (%)</th>
+                            <th class="th_avamet">Precip Dia (mm)</th>
+                            <th class="th_avamet">Intensitat precip</th>
+                            <th class="th_avamet">Vent (km/h)</th>
+                            <th class="th_avamet">Direcció vent</th>
+                            <th class="th_avamet">Màxim vent (km/h)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_avamet"></tbody>
+                </table>
             </div>
         </div>
        
@@ -259,9 +285,10 @@
 
     <script src="./js/app.js"></script>
     <script src="./js/chart.js"></script>
+    <script src="./js/avamet_table.js"></script>
 
 
-    <script>
+    <!-- <script>
         // Using XMLHttpRequest().
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -301,7 +328,7 @@
             table += '</table>';
             element_to_insert_table.innerHTML += table;
         }
-    </script>
+    </script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
