@@ -183,13 +183,6 @@
             </div>
         </div>
 
-        <!-- <div class="container_avamet">
-            <div class="table">
-                <h2 class="subtitle">Datos AVAMET</h2>
-                <div id="table_avamet"></div>
-            </div>
-        </div> -->
-
         <div class="container_avamet">
             <div class="table">
                 <h2 class="subtitle">Datos AVAMET</h2>
@@ -244,13 +237,6 @@
             <input type="button" value="Reiniciar" onclick="recargar()" id="boton_reload">
         </div>
 
-         
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-        <script src="./js/desplegable.js"></script>
-        
-
         <div class="container">
             <div class="table_title">
                 <h2 class="subtitle">Diagrama ombrotérmico - 2021</h2>
@@ -264,7 +250,6 @@
             </div>
             <canvas id="clim_2022"></canvas>
         </div>
-
 
 
 
@@ -285,50 +270,13 @@
 
     <script src="./js/app.js"></script>
     <script src="./js/chart.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/avamet_table.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script src="./js/desplegable.js"></script>
+    <script src="./js/pruebajson.js"></script>
 
-
-    <!-- <script>
-        // Using XMLHttpRequest().
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-                if (xmlhttp.status == 200) {
-                    var table_container = document.getElementById('table_avamet');
-                    csv_string_to_table(xmlhttp.responseText, table_container);
-                }
-            }
-        };
-        xmlhttp.open("GET", "./data/AVAMET/13h_avamet.csv", true);
-        xmlhttp.send();
-        function csv_string_to_table(csv_string, element_to_insert_table) {
-            var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
-            var table = '';
-            var table_rows = '';
-            var table_header = '';
-            rows.forEach(function(row, row_index) {
-                var table_columns = '';
-                var columns = row.split(','); // split/separate the columns in a row
-                columns.forEach(function(column, column_index) {
-                    table_columns += row_index == 0 ? '<th class="th_avamet">' + column + '</th>' : '<td class="td_avamet">' + column + '</td>';
-                });
-                if (row_index == 0) {
-                    table_header += '<tr class="tr_avamet">' + table_columns + '</tr>';
-                } else {
-                    table_rows += '<tr class="tr_avamet">' + table_columns + '</tr>';
-                }
-            });
-            table += '<table class="table">';
-                table += '<thead class="table_avamet--header">';
-                    table += table_header;
-                table += '</thead>';
-                table += '<tbody>';
-                    table += table_rows;
-                table += '</tbody>';
-            table += '</table>';
-            element_to_insert_table.innerHTML += table;
-        }
-    </script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
@@ -570,7 +518,6 @@
 
       
 
-    <script src="./js/pruebajson.js"></script>
 
 </body>
 </html>
