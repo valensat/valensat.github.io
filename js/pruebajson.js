@@ -56,6 +56,18 @@ if(this.readyState == 4 && this.status == 200){
             title: {
                 display: true,
                 text: int[1],
+            },
+            tooltip: {
+                yAlign: 'bottom',
+                displayColors: false,
+                backgroundColor: 'rgba(250, 171, 1, 0.8)',
+                titleColor: 'rgb(28, 37, 44)',
+                titleFont: {weight: 'bold', family: 'Arial', size: 14},
+                titleAlign: 'center',
+                titleMarginBottom: 1,
+                bodyColor: 'rgb(28, 37, 44)',
+                bodyFont: {family: 'Arial', size: 14},
+                caretSize: 12
             }
         }
     }
