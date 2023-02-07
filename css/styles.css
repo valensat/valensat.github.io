@@ -548,6 +548,45 @@ tr td:first-child{
 }
 
 
+/* Imagenes */
+
+.img_graph{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+
+/* Other web */
+
+.container_otherweb{
+    padding: 0px 100px 100px 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow-y: scroll; */
+    height: 100vh;
+    width: 90%;
+}
+
+.otherweb{
+    width: 100%;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+
+
+.otherweb_container_marco{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 1px var(--color-title);
+    /* overflow-y: scroll; */
+
+}
+
+
+
+
+
 
 
 
@@ -624,3 +663,4 @@ tr td:first-child{
         font-size: 1.5em;
     }
 }
+
