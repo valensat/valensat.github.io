@@ -61,6 +61,18 @@ function changeFinancials(){
                     title: {
                         display: true,
                         text: int[1],
+                    },
+                    tooltip: {
+                        yAlign: 'bottom',
+                        displayColors: false,
+                        backgroundColor: 'rgba(240, 248, 255, 0.8)',
+                        titleColor: 'rgb(28, 37, 44)',
+                        titleFont: {weight: 'bold', family: 'Arial', size: 14},
+                        titleAlign: 'center',
+                        titleMarginBottom: 1,
+                        bodyColor: 'rgb(28, 37, 44)',
+                        bodyFont: {family: 'Arial', size: 14},
+                        caretSize: 12
                     }
                 }
             }
