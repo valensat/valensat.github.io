@@ -559,6 +559,15 @@ tr td:first-child{
 
 /* Other web */
 
+.container_web{
+    width: 90%;
+    /* max-width: 1200px; */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
 .container_otherweb{
     padding: 0px 100px 100px 100px;
     margin-left: auto;
