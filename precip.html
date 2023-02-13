@@ -177,14 +177,10 @@
                     <h2 class="subtitle">Histórico Valencia</h2>
                 </div>
                 <canvas id="temp_hist"></canvas>
+                <canvas id="prec_hist"></canvas>
                 <img src="./images/temperatura/temp.gif" alt="Histórico de temperatura en valencia">
             </div>
-            <!-- <div class="container">
-                <div class="table_title">
-                    <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Ejemplo)</h2>
-                </div>
-                <canvas id="temp_graph"></canvas>
-            </div> -->
+
 
             <div class="container">
                 <div class="table_title">
@@ -312,93 +308,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script src="./js/diagrama.js"></script>
-    <script>
-        const chartData = './data/AEMET/temp_aemet.csv'
-        // parse the file from CSV to JSON
-        d3.csv(chartData).then(function(datapoints) {
-            const HORA = [];
-            const TEMPERATURA = [];
-            const TEMPERATURA_MAXIMA = [];
-            const TEMPERATURA_MINIMA = [];
-
-            for (i = 0; i < datapoints.length; i++) {
-                HORA.push(datapoints[i].HORA)
-                TEMPERATURA.push(datapoints[i].TEMPERATURA)
-                TEMPERATURA_MAXIMA.push(datapoints[i].TEMPERATURA_MAXIMA)
-                TEMPERATURA_MINIMA.push(datapoints[i].TEMPERATURA_MINIMA)
-            }
-  
-        // setup 
-        const data = {
-            labels: HORA,
-            datasets: [{
-            label: 'Temperatura media (°C)',
-            data: TEMPERATURA,
-            backgroundColor: '#fff',
-            borderColor: '#806491',
-            borderWidth: 2,
-            tension: 0.4
-            },
-            {
-            label: 'Temperatura máxima (°C)',
-            data: TEMPERATURA_MAXIMA,
-            backgroundColor: '#fff',
-            borderColor: ['rgba(227, 73, 73, 0.5)'],
-            borderWidth: 1,
-            tension: 0.4
-            },
-            {
-            label: 'Temperatura mínima (°C)',
-            data: TEMPERATURA_MINIMA,
-            backgroundColor: '#fff',
-            borderColor: ['rgba(47, 112, 175, 0.5)'],
-            borderWidth: 1,
-            tension: 0.4
-            }
-        ]
-        };
-
-        // config 
-        const config = {
-            type: 'line',
-            data,
-            options: {
-                scales: {
-                    y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: function(value, index, values) {
-                            return `${value}.0 °C`
-                        }
-                    }
-                    }
-                },
-                plugins: {
-                tooltip: {
-                    yAlign: 'bottom',
-                    displayColors: false,
-                    backgroundColor: 'rgba(240, 248, 255, 0.8)',
-                    titleColor: 'rgb(28, 37, 44)',
-                    titleFont: {weight: 'bold', family: 'Arial', size: 14},
-                    titleAlign: 'center',
-                    titleMarginBottom: 1,
-                    bodyColor: 'rgb(28, 37, 44)',
-                    bodyFont: {family: 'Arial', size: 14},
-                    caretSize: 12
-                }
-            }
-            }
-        };
     
-        // render init block
-        const myChart = new Chart(
-            document.getElementById('temp_graph'),
-            config
-        );
-        })
-    </script>
-
     <script>
+    (function(){
         const chartData2 = './data/AEMET/climograma.csv'
         // parse the file from CSV to JSON
         d3.csv(chartData2).then(function(datapoints2) {
@@ -492,9 +404,11 @@
         config
         );
     })
+    })()
     </script>
 
     <script>
+    (function(){
         const chartData3 = './data/AEMET/climograma.csv'
         // parse the file from CSV to JSON
         d3.csv(chartData3).then(function(datapoints3) {
@@ -588,11 +502,13 @@
         config
         );
     })
+    })()
     </script>
 
 
 
     <script>
+    (function(){
         x = [1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
         y = [15.9,16.1,16.2,16.1,16.5,16.7,17,16.4,16.9,17.1,17.1,16.3,17,17,17.4,17.2,17.5,17.3,16.6,16.7,16.6,18,17.8,17.2,18,17.8,17.8,17.8,18.5,17.3,18,17.6,17.2,18.1,17.6,17.1,17.3,17.2,18.1,18,18.3,18.9,18.3,18.4,18.2,18.3,18.2,18.8,18,18.8]
         TM = [22,22.4,22,21.9,21.9,22.4,22.5,22.1,22.7,22.6,23.3,22,22.7,22.8,22.9,22.7,22.5,22.7,22,22.4,22.1,23.5,23.4,22.7,23.3,23.6,23.6,23.9,24,24.5,23.5,23,25.9,23.9,22.9,22.7,22.9,22,23,24.2,23.8,24.3,23.8,23.4,23.6,23.5,23.9,24.2,23.1,24.6]
@@ -626,16 +542,6 @@
                     min: 15,
                     max: 19
                     },
-                    x: {
-                        ticks: {
-                            // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-                            callback: function(val, index) {
-                                // Hide every 2nd tick label
-                                return index % 2 === 1 ? this.getLabelForValue(val) : '';
-                            },
-                            // color: 'red',
-                        }
-                    }
                 },
                 plugins: {
                 tooltip: {
@@ -659,6 +565,65 @@
             document.getElementById('temp_hist'),
             config
         );
+    })()
+    </script>
+
+    <script>
+    (function(){
+        xdata = [1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
+        ydata = [397.03,388.15,564.91,409.24,559.77,214.68,299.23,406.17,236.99,685.03,254.01,383.77,521.22,602.95,558.83,543.32,1047.25,569.44,634.49,410.7,345.2,268.51,346.24,494.03,282.51,428.48,305.26,477.98,513.8,609.31,400.52,572.78,253.19,368.05,654.83,515.86,396.21,369.84,354.86,244.31,257.04,373.89,520.4,515.66,324.85,449.77,382.99,560.53,450.34,728.47]
+        // setup 
+        const data = {
+            labels: xdata,
+            datasets: [{
+            label: 'Precipitación acumulada (mm)',
+            data: ydata,
+            backgroundColor: 'rgba(47, 112, 175, 1)',
+            borderColor: 'rgba(47, 112, 175, 1)',
+            borderWidth: 2,
+            tension: 0.4
+            }
+        ]
+        };
+
+        // config 
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                scales: {
+                    y: {
+                    beginAtZero: false,
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return `${value} mm`;
+                        },
+                    }
+                    },
+                },
+                plugins: {
+                tooltip: {
+                    yAlign: 'bottom',
+                    displayColors: false,
+                    backgroundColor: 'rgba(240, 248, 255, 0.8)',
+                    titleColor: 'rgb(28, 37, 44)',
+                    titleFont: {weight: 'bold', family: 'Arial', size: 14},
+                    titleAlign: 'center',
+                    titleMarginBottom: 1,
+                    bodyColor: 'rgb(28, 37, 44)',
+                    bodyFont: {family: 'Arial', size: 14},
+                    caretSize: 12
+                }
+            }
+            }
+        };
+
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('prec_hist'),
+            config
+        );
+    })()
     </script>
 
       

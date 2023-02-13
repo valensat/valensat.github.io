@@ -1,3 +1,4 @@
+(function(){
 var xmlhttp = new XMLHttpRequest();
 var url = '../data/AEMET_temp/valencia.json';
 xmlhttp.open('GET', url, true);
@@ -80,3 +81,4 @@ if(this.readyState == 4 && this.status == 200){
     );
 }
 }
+})()
