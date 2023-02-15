@@ -1,98 +1,110 @@
-function actualizarContenido(opcionSeleccionada) {
-fetch('./js/desplegable_graf.html')
-    .then(function(response) {
-    return response.text();
-    })
-    .then(function(data) {
-    document.getElementById('div_desplegable').innerHTML = data;
-    })
-    .catch(function(error) {
-    console.error('Error:', error);
-    });
+let selectedValueUrl = '';
 
-    const ciudad = document.getElementById('ciudad').value;
-
-    var xmlhttp = new XMLHttpRequest();
-    // var url = '../data/AEMET_temp/valenciajson.json';
-    const url = `../data/AEMET_temp/${ciudad}.json`
-    xmlhttp.open('GET', url, true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function a(){
-        if(this.readyState == 4 && this.status == 200){
-            var datapoints30 = JSON.parse(this.responseText);
-            fecha = datapoints30.map(function(elem){
-                return elem.Fecha;
-            })
-            T = datapoints30.map(function(elem){
-                return elem.T;
-            })
-            int = datapoints30.map(function(elem){
-                return elem.int;
-            })
-
-            const data = {
-                labels: fecha,
-                datasets: [{
-                    label: 'Temperatura media (°C)',
-                    data: T,
-                    backgroundColor: '#fff',
-                    borderColor: ['rgba(227, 73, 73, 1)'],
-                    borderWidth: 2,
-                    tension: 0.4
-                        }]
-                    };
-            
-            // config 
-            const config = {
-            type: 'line',
-            data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value, index, values) {
-                                return `${value}.0 °C`
-                            }
-                        }
-                    },
-                    x: {
-                        ticks: {
-                            // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-                            callback: function(val, index) {
-                                // Hide every 2nd tick label
-                                return index % 2 === 1 ? this.getLabelForValue(val) : '';
-                            },
-                            // color: 'red',
+function getChartData(jsonFile) {
+    fetch(jsonFile)
+      .then(response => response.json())
+      .then(data => {
+        const hora = data.map(obj => obj.Fecha);
+        const temp = data.map(obj => obj.T);
+        const fecha = data.map(obj => obj.int);
+        
+        // Usar los datos para crear el gráfico
+        const ctx = document.getElementById("graf_desplegable").getContext("2d");
+        myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: hora,
+            datasets: [
+              {
+                label: 'Temperatura media (°C)',
+                data: temp,
+                backgroundColor: '#fff',
+                borderColor: ['rgba(227, 73, 73, 1)'],
+                borderWidth: 2,
+                tension: 0.4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            // maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return `${value}.0 °C`
                         }
                     }
                 },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: int[1],
-                    },
-                    tooltip: {
-                        yAlign: 'bottom',
-                        displayColors: false,
-                        backgroundColor: 'rgba(240, 248, 255, 0.8)',
-                        titleColor: 'rgb(28, 37, 44)',
-                        titleFont: {weight: 'bold', family: 'Arial', size: 14},
-                        titleAlign: 'center',
-                        titleMarginBottom: 1,
-                        bodyColor: 'rgb(28, 37, 44)',
-                        bodyFont: {family: 'Arial', size: 14},
-                        caretSize: 12
+                x: {
+                    ticks: {
+                        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+                        callback: function(val, index) {
+                            // Hide every 2nd tick label
+                            return index % 2 === 1 ? this.getLabelForValue(val) : '';
+                        },
+                        // color: 'red',
                     }
                 }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: fecha[1],
+                },
+                tooltip: {
+                    yAlign: 'bottom',
+                    displayColors: false,
+                    backgroundColor: 'rgba(240, 248, 255, 0.8)',
+                    titleColor: 'rgb(28, 37, 44)',
+                    titleFont: {weight: 'bold', family: 'Arial', size: 14},
+                    titleAlign: 'center',
+                    titleMarginBottom: 1,
+                    bodyColor: 'rgb(28, 37, 44)',
+                    bodyFont: {family: 'Arial', size: 14},
+                    caretSize: 12
+                }
             }
-            };
-            
-            // render init block
-            const myChart = new Chart(
-            document.getElementById('graf_desplegable'),
-            config
-            );
-        }
-    }
-}
+          }
+        });
+      })
+      .catch(error => console.error(error));
+  }
+  
+// Seleccionar el desplegable
+const select = document.getElementById("ciudad");
+
+// Asignar evento "change" al desplegable
+select.addEventListener("change", event => {
+  // Obtener el valor seleccionado
+  const selectedValue = event.target.value;
+  selectedValueUrl = "../data/AEMET_temp/" + selectedValue + ".json"
+  
+  // Actualizar el gráfico con los datos del archivo JSON seleccionado
+  getChartData(selectedValueUrl);
+});
+
+function updateChart() {
+    // Obtener los nuevos datos del archivo JSON
+    fetch(selectedValueUrl)
+      .then(response => response.json())
+      .then(data => {
+        const hora = data.map(obj => obj.Fecha);
+        const temp = data.map(obj => obj.T);
+        const fecha = data.map(obj => obj.int);
+  
+        // Actualizar los datos del chart existente
+        myChart.data.labels = hora;
+        myChart.data.datasets[0].data = temp;
+        myChart.options.plugins.title.text = fecha[1]
+  
+        // Actualizar el chart
+        myChart.update();
+      })
+      .catch(error => console.error(error));
+  }
+
+select.addEventListener('change', function() {
+    updateChart();
+  });
