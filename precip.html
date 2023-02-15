@@ -201,8 +201,20 @@
                     <option value="castello">Castellón</option>
                     <option value="valencia">Valencia</option>
                 </select>
-                <input type="button" value="Reiniciar" onclick="recargar()" id="boton_reload">
+                <input type="button" value="Reiniciar" id="boton_reload">
             </div>
+
+            <script>
+                document.getElementById("boton_reload").addEventListener("click", function() {
+                fetch('precip.html')
+                    .then(function(response) {
+                    return response.text();
+                    })
+                    .then(function(data) {
+                    document.getElementById('myDiv').innerHTML = data;
+                    });
+                });
+            </script>
     
             <div class="container">
                 <div>
