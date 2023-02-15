@@ -1,10 +1,20 @@
-function changeFinancials(){
+function actualizarContenido(opcionSeleccionada) {
+fetch('./js/desplegable_graf.html')
+    .then(function(response) {
+    return response.text();
+    })
+    .then(function(data) {
+    document.getElementById('div_desplegable').innerHTML = data;
+    })
+    .catch(function(error) {
+    console.error('Error:', error);
+    });
 
-    const year = document.getElementById('year').value;
+    const ciudad = document.getElementById('ciudad').value;
 
     var xmlhttp = new XMLHttpRequest();
     // var url = '../data/AEMET_temp/valenciajson.json';
-    const url = `../data/AEMET_temp/${year}.json`
+    const url = `../data/AEMET_temp/${ciudad}.json`
     xmlhttp.open('GET', url, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function a(){
@@ -80,14 +90,9 @@ function changeFinancials(){
             
             // render init block
             const myChart = new Chart(
-            document.getElementById('prueba2'),
+            document.getElementById('graf_desplegable'),
             config
             );
         }
     }
-
-}
-
-function recargar(){
-    location.reload()
 }

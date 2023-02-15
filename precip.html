@@ -188,33 +188,24 @@
                     <h2 class="subtitle">Temperatura de las últimas 24h - AEMET (Valencia)</h2>
                 </div>
                 <canvas id="temp_val_json"></canvas>
-            </div>
-    
-            <div class="container" id="myDiv">
-                <div class="table_title">
-                    <h2 class="subtitle">Prueba desplegable</h2>
+            </div>   
+         
+            <div class=" container table_title">
+                <h2 class="subtitle">Temperatura de las últimas 24h - Desplegable</h2>
+                <div id="div_desplegable">
+                    <canvas id="graf_desplegable"></canvas>
                 </div>
-                <canvas id="prueba2"></canvas>
-                <select id="year" onchange="changeFinancials()">
+                <select id="ciudad">
                     <option>Elige ciudad</option>
                     <option value="alacant">Alicante</option>
                     <option value="castello">Castellón</option>
                     <option value="valencia">Valencia</option>
                 </select>
-                <input type="button" value="Reiniciar" id="boton_reload">
+                <input type="button" value="Buscar" onclick="actualizarContenido()">
             </div>
 
-            <script>
-                document.getElementById("boton_reload").addEventListener("click", function() {
-                fetch('precip.html')
-                    .then(function(response) {
-                    return response.text();
-                    })
-                    .then(function(data) {
-                    document.getElementById('myDiv').innerHTML = data;
-                    });
-                });
-            </script>
+            <script src="./js/desplegable_graf.js"></script>
+            
     
             <div class="container">
                 <div>
@@ -315,7 +306,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/avamet_table.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    <script src="./js/desplegable.js"></script>
     <script src="./js/pruebajson.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
