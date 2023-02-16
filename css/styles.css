@@ -595,6 +595,55 @@ tr td:first-child{
 }
 
 
+/* DESPLEGABLE */
+
+.desplegable{
+    text-align: center;
+}
+
+#avamet-widget-container {
+    border: none;
+    width: 100%;
+    height: max-content;
+    opacity: 1;
+    transition: opacity 1s;
+}
+#avamet-widget-container.fade-out {
+    opacity: 0;
+}
+
+.container_pastilla_avamet{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.avamet_widget_container{
+    width: 40%;
+    height: max-content;
+    min-height: 300px;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+#mapid {
+    height: 1000px;
+    width: 100%;
+  }
+
+#map {
+    height: 400px;
+    width: 100%;
+    }
+
 
 
 
