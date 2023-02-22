@@ -291,6 +291,28 @@
         </section>
 
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <section class="container">
+            <h2>Temperatura actual de Valencia</h2>
+            <p id="temperatura"></p>
+        </section>
+
+        <script>
+        $.ajax({
+        url: "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/8414/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWxlbnNhdHByb2plY3RAZ21haWwuY29tIiwianRpIjoiODA4MDAzMzctOWFjZC00ODU0LTgxM2ItNWYyZjc5ZTIyYzUyIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE2NzcwNjY3MjksInVzZXJJZCI6IjgwODAwMzM3LTlhY2QtNDg1NC04MTNiLTVmMmY3OWUyMmM1MiIsInJvbGUiOiIifQ.Ps7tu6zJexdHPBj36pLUwd9uLYE14lZLGxZi1lyQHqQ",
+        dataType: "json",
+        success: function(data) {
+            $.getJSON(data.datos, function(datos) {
+                var temperatura = datos[0].ta;
+                $("#temperatura").text(temperatura + " °C");
+            });
+        }
+    });
+
+        </script>
+  
+
+
         <!-- <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
         <section class="container">
             <div id="map"></div>
