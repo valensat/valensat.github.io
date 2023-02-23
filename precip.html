@@ -219,7 +219,7 @@
             <div class=" container table_title">
                 <h2 class="subtitle">Temperatura de las últimas 24h - Desplegable</h2>
                 <select id="ciudad" class="desplegable">
-                    <option>Elige ciudad</option>
+                    <option selected disabled>Elige ciudad</option>
                     <optgroup label="Alicante"></optgroup>
                     <option value="alacant" class="desplegable_options">Alicante</option>
                     <optgroup label="Catellón"></optgroup>
@@ -231,9 +231,9 @@
                     <canvas id="graf_desplegable"></canvas>
                 </div>
             </div>             
-
+            
             <script src="./js/desplegable_graf.js"></script>
-           
+            
             <div class="container">
                 <div>
                     <h2 class="subtitle">Diagrama ombrotérmico - 2021</h2>
@@ -285,7 +285,7 @@
             <h2 class="subtitle">Predicción AEMET</h2>
             <div class="container_otherweb">
                 <div class="otherweb_container_marco">
-                    <iframe src="https://www.aemet.es/es/eltiempo/prediccion/modelosnumericos/harmonie_arome#" name="targetframe2" allowTransparency="false" scrolling="yes" frameborder="0" class="otherweb"></iframe>
+                    <!-- <iframe src="https://www.aemet.es/es/eltiempo/prediccion/modelosnumericos/harmonie_arome#" name="targetframe2" allowTransparency="false" scrolling="yes" frameborder="0" class="otherweb"></iframe> -->
                 </div>
             </div>
         </section>
@@ -297,19 +297,135 @@
             <p id="temperatura"></p>
         </section>
 
-        <script>
-        $.ajax({
-        url: "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/8414/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWxlbnNhdHByb2plY3RAZ21haWwuY29tIiwianRpIjoiODA4MDAzMzctOWFjZC00ODU0LTgxM2ItNWYyZjc5ZTIyYzUyIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE2NzcwNjY3MjksInVzZXJJZCI6IjgwODAwMzM3LTlhY2QtNDg1NC04MTNiLTVmMmY3OWUyMmM1MiIsInJvbGUiOiIifQ.Ps7tu6zJexdHPBj36pLUwd9uLYE14lZLGxZi1lyQHqQ",
-        dataType: "json",
-        success: function(data) {
-            $.getJSON(data.datos, function(datos) {
-                var temperatura = datos[0].ta;
-                $("#temperatura").text(temperatura + " °C");
-            });
+        <!-- <script>
+        var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/8416Y/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWxlbnNhdHByb2plY3RAZ21haWwuY29tIiwianRpIjoiODA4MDAzMzctOWFjZC00ODU0LTgxM2ItNWYyZjc5ZTIyYzUyIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE2NzcwNjY3MjksInVzZXJJZCI6IjgwODAwMzM3LTlhY2QtNDg1NC04MTNiLTVmMmY3OWUyMmM1MiIsInJvbGUiOiIifQ.Ps7tu6zJexdHPBj36pLUwd9uLYE14lZLGxZi1lyQHqQ",
+        "method": "GET",
+        "headers": {
+            "cache-control": "no-cache"
         }
-    });
+        };
 
-        </script>
+        $.ajax(settings).done(function (response) {
+        console.log('Obtuvimos la URL: ', response);
+
+        // Después de obtener la URL con los datos, realizamos una nueva petición
+        $.ajax({
+            url: response,
+            method: 'GET',
+            headers: {
+            'cache-control': 'no-cache'
+            }
+        })
+        .done(function (response) {
+            console.log('Datos de la estación meteorológica: ', response);
+
+            // Procesamos la respuesta para obtener la temperatura actual
+            var temperatura = response[0].ta;
+
+            // Mostramos la temperatura en la página
+            $('#temperatura').text('Temperatura actual: ' + temperatura + '°C');
+        })
+        .fail(function (error) {
+            console.log('Error al obtener los datos de la estación meteorológica: ', error);
+        });
+        })
+        .fail(function (error) {
+        console.log('Error al obtener la URL: ', error);
+        });
+
+        </script> -->
+
+        <div class="container">
+            <div class="table_title">
+                <h2 class="subtitle">API AEMET PRUEBA</h2>
+            </div>
+            <canvas id="api_graph"></canvas>
+            <select id="estaciones" class="desplegable">
+                <option value="8416Y" selected disabled>Elige ciudad</option>
+                <optgroup label="Alicante"></optgroup>
+                <option value="8416Y" class="desplegable_options">Estacion1</option>
+                <optgroup label="Catellón"></optgroup>
+                <option value="8414A" class="desplegable_options">Estacion2</option>
+                <optgroup label="Valencia"></optgroup>
+                <option value="8309X" class="desplegable_options">Estacion3</option>
+            </select>
+            <canvas id="api_graph2"></canvas>
+        </div>   
+        <!-- <script src="./js/APIaemet.js"></script> -->
+        <script src="./js/APIaemet2.js"></script>
+
+
+        <!-- <script>
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://opendata.aemet.es/opendata/api/observacion/convencional/datos/estacion/8416Y/?api_key=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWxlbnNhdHByb2plY3RAZ21haWwuY29tIiwianRpIjoiODA4MDAzMzctOWFjZC00ODU0LTgxM2ItNWYyZjc5ZTIyYzUyIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE2NzcwNjY3MjksInVzZXJJZCI6IjgwODAwMzM3LTlhY2QtNDg1NC04MTNiLTVmMmY3OWUyMmM1MiIsInJvbGUiOiIifQ.Ps7tu6zJexdHPBj36pLUwd9uLYE14lZLGxZi1lyQHqQ",
+              "method": "GET",
+              "headers": {
+                "cache-control": "no-cache"
+              }
+            }
+          
+            $.ajax(settings)
+              .done(function(response) {
+                // Después de obtener la URL con los datos, realizamos una nueva petición
+                $.ajax({
+                    url: response.datos,
+                    method: 'GET',
+                    headers: {
+                        'cache-control': 'no-cache'
+                    }
+                    })
+                    .done(function (response) {
+                    console.log(response);  // Ver la respuesta en la consola
+                    var data = JSON.parse(response);
+                    console.log(data);  // Ver la respuesta parseada en la consola
+                    var temperatura = data[0].ta;
+                    console.log(temperatura);  // Ver la temperatura en la consola
+                    // $('#temperatura').text('Temperatura actual: ' + temperatura + '°C');
+                    // })
+                    // .fail(function (error) {
+                    // console.log(error);
+                    // });
+                    var temperaturas = [];
+                    var horas = [];
+                    for (var i = 0; i < data.length; i++) {
+                    temperaturas.push(data[i].ta);
+                    horas.push(data[i].fint);
+                    }
+                    console.log(temperaturas);  // Ver las temperaturas en la consola
+                    console.log(horas);  // Ver las horas en la consola
+                    
+                    var horasFormateadas = [];
+
+                    for (var i = 0; i < horas.length; i++) {
+                    var fecha = new Date(horas[i]);
+                    var dia = fecha.getDate();
+                    var mes = fecha.toLocaleString('default', { month: 'short' });
+                    var hora = fecha.getHours()+1;
+                    var horaFormateada = dia + ' ' + mes + '. ' + hora + 'h';
+                    horasFormateadas.push(horaFormateada);
+                    }
+
+                    console.log(horasFormateadas);
+
+                    
+
+                    // console.log(fechaFormateada);
+                    $('#temperatura').text('Temperatura actual: ' + temperaturas[temperaturas.length-1] + '°C');
+                    })
+                    .fail(function (error) {
+                    console.log(error);
+                    });
+              })
+              .fail(function(error) {
+                console.log(error);
+              });
+          </script> -->
+
   
 
 

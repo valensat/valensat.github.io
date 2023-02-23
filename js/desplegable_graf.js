@@ -1,3 +1,4 @@
+(function(){
 let selectedValueUrl = '';
 
 function getChartData(jsonFile) {
@@ -108,3 +109,4 @@ function updateChart() {
 select.addEventListener('change', function() {
     updateChart();
   });
+})()
