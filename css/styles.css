@@ -618,6 +618,7 @@ tr td:first-child{
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
 }
 
 .avamet_widget_container{
@@ -625,6 +626,15 @@ tr td:first-child{
     height: max-content;
     min-height: 300px;
     border: 0;
+}
+
+.iframe_estaciones{
+    width: 100%;
+    height: 600px;
+}
+
+.desplegable_height{
+    padding: 5px;
 }
 
 .center{
@@ -642,7 +652,22 @@ tr td:first-child{
     margin-left: auto;
 }
 
+.footer_ref{
+    text-align: right;
+    margin-right: 0;
+    padding-bottom: 5px;
+    font-size: 0.90em;
+    cursor: default;
+}
 
+.enlace_ref{
+    text-decoration: none;
+    color: #2F70AF;
+}
+
+.enlace_ref:hover{
+    text-decoration: underline;
+}
 
 
 #mapid {

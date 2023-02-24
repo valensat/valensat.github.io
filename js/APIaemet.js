@@ -110,7 +110,10 @@ $.ajax(settings)
                           bodyColor: 'rgb(28, 37, 44)',
                           bodyFont: {family: 'Arial', size: 14},
                           caretSize: 12
-                      }
+                      },
+                      legend: {
+                        onClick: null
+                      } 
                   }
                 }
           });
@@ -247,7 +250,10 @@ function getChartData(codigo) {
                             bodyColor: 'rgb(28, 37, 44)',
                             bodyFont: {family: 'Arial', size: 14},
                             caretSize: 12
-                        }
+                        },
+                        legend: {
+                            onClick: null
+                        } 
                     }
                   }
             });
