@@ -631,11 +631,15 @@ tr td:first-child{
     align-items: center;
     justify-content: center;
     text-align: center;
-    -webkit-text-size-adjust: none;
 }
 
 .registro_aemet{
     padding: 10px;
+}
+
+.registro_aemet_text{
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
