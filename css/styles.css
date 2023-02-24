@@ -631,6 +631,7 @@ tr td:first-child{
     align-items: center;
     justify-content: center;
     text-align: center;
+    -webkit-text-size-adjust: none;
 }
 
 .registro_aemet{
