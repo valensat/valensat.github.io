@@ -627,9 +627,15 @@ tr td:first-child{
     border: 0;
 }
 
+.center{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-
-
+.registro_aemet{
+    padding: 10px;
+}
 
 
 
