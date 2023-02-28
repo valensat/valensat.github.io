@@ -262,7 +262,7 @@ function getChartData(codigo) {
           
 
           // console.log(fechaFormateada);
-         $('#tit').text('Último registro: ' + horasFormateadas[temperaturas.length-2] + '-' + horasFormateadas[temperaturas.length-1]);
+         $('#tit').text('Último registro: ' + horasFormateadas[0] + '-' + horasFormateadas[temperaturas.length-1]);
           $('#temperatura').text('Temperatura: ' + data[temperaturas.length-1].ta + '°C');
           $('#temperatura_min').text('Temperatura mínima: ' + data[temperaturas.length-1].tamin + '°C');
           $('#temperatura_max').text('Temperatura máxima: ' + data[temperaturas.length-1].tamax + '°C');
