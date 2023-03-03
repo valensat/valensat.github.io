@@ -310,6 +310,12 @@
             </div>
         </section> -->
 
+        <!-- <div class="container">
+            <canvas id="prueba1"></canvas>
+        </div> -->
+
+        
+
 
         
  
@@ -668,6 +674,52 @@
         );
     })()
     </script>
+
+
+
+    <!-- <script>
+        (function(){
+            // Crear un nuevo objeto Chart y pasarle el canvas
+            x = [1, 5 , 6 ,7 ]
+            y = [4, 5, 8, 9]
+            y2 = [5, 9, 1, 13]
+            const ctx = document.getElementById('prueba1').getContext('2d');
+            myChart_new = new Chart(ctx, {
+                // Tipo de gráfico
+                type: 'bar',
+                // Datos que se van a mostrar
+                data: {
+                    labels: x,
+                    datasets: [{
+                        label: 'y',
+                        data: y,
+                        backgroundColor: '#fff', // Color de fondo
+                        borderColor: ['rgba(227, 73, 73, 1)'], // Color del borde
+                        borderWidth: 2, // Grosor del borde
+                        tension: 0.4
+                    },
+                    {
+                        label: 'y2',
+                        data: y2,
+                        backgroundColor: '#fff', // Color de fondo
+                        borderColor: ['rgba(123, 173, 56, 1)'], // Color del borde
+                        borderWidth: 2, // Grosor del borde
+                        tension: 0.4
+                    }
+                ]
+                },
+                // Opciones de configuración
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Titulo',
+                        } 
+                    }
+                }
+            });
+        })()
+    </script> -->
 
       
 
