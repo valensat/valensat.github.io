@@ -670,6 +670,14 @@ tr td:first-child{
 }
 
 
+/* MAPA AVAMET Y AEMET */
+
+.mapa_estaciones{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.8em;
+}
+
 #mapid {
     height: 1000px;
     width: 100%;
@@ -680,9 +688,66 @@ tr td:first-child{
     width: 600px;
     }
 
+.url_popup_map{
+    text-decoration: none;
+    color: #2F70AF;
+}
 
+.url_popup_map:hover{
+    text-decoration: underline;
+    color: #E48716;
+}
 
+.url_popup_map2{
+    text-decoration: none;
+    color: #2F70AF;
+}
 
+.url_popup_map2:hover{
+    text-decoration: underline;
+    color: #ED413E;
+}
+
+#map-legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+  }
+
+  .leyenda_mapa{
+    list-style-type: none;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 1em;
+    margin-left: 40px;
+    opacity: 0.9;
+  }
+
+  .leyenda_mapa:hover{
+    cursor: grab;
+  }
+
+  .leyenda_mapa--item{
+    display: flex;
+    align-items: center;
+  }
+
+  .leyenda_mapa--items{
+    padding-left: 5px;
+  }
+
+  .leyenda_mapa--items_item_1{
+    color: #E48716;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .leyenda_mapa--items_item_2{
+    color: #ED413E;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
 
 
 
