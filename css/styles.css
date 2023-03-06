@@ -750,6 +750,7 @@ tr td:first-child{
   }
 
   .footer_ref_mapa{
+    width: max-content;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
