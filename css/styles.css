@@ -18,6 +18,10 @@ body {
     padding: var(--padding-container);
 }
 
+.padding_bottom{
+    padding-bottom: 50px;
+}
+
 /* Header */
 .header{
     width: 100%;
@@ -195,6 +199,7 @@ body {
 
 .about_paragraph{
     line-height: 1.7;
+    padding-top: 15px;
 }
 
 .container_text{
