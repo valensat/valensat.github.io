@@ -76,13 +76,10 @@
     
                         <ul class="menu__nesting">
                             <li class="menu__inside">
-                                <a href="./areaQuemada.html" class="menu__link menu__link--inside">Áreas quemadas</a>
+                                <a href="./areaQuemada.html" class="menu__link menu__link--inside">Áreas quemadas y severidad</a>
                             </li>
                             <li class="menu__inside">
                                 <a href="./riesgo.html" class="menu__link menu__link--inside">Mapas de riesgo</a>
-                            </li>
-                            <li class="menu__inside">
-                                <a href="./severidad.html" class="menu__link menu__link--inside">Severidad de incendios</a>
                             </li>
                             <li class="menu__inside">
                                 <a href="./evolIncendios.html" class="menu__link menu__link--inside">Evolución en tiempo real</a>
@@ -165,17 +162,8 @@
 
         <section class="container about">
             <h2 class="subtitle">Area Quemada MODIS</h2>
-            <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptates exercitationem, voluptatem tempora consequatur in, accusantium assumenda doloribus necessitatibus, eum aperiam illum porro pariatur? Magnam facere possimus praesentium libero rerum.
-            Repellendus ipsum commodi totam. Ut a cumque, saepe deserunt, mollitia distinctio architecto omnis enim dolorum id, ex sed eaque numquam! Explicabo quae dolore nemo, porro esse illo sapiente quas soluta.
-            Ullam, reprehenderit. Ipsum, debitis blanditiis at et cum possimus molestiae. Atque, a! Iusto incidunt deserunt excepturi ab. Ducimus cum quisquam itaque quia provident ab! Quibusdam nemo fuga rerum doloribus itaque!
-            Velit officia delectus laborum asperiores quam pariatur eum rem optio consectetur natus facere ipsam eius, sunt voluptatibus tempora harum esse distinctio? Maiores iure explicabo beatae iusto dicta consequatur, modi earum.</p>
+            <p class="about_paragraph">Calculador del área quemada a través del uso del producto MODIS “Burned Area Monthly Global 500m” sobre toda la Comunidad Valenciana. El producto utilizado consta en una cuadrícula global mensual de 500 m que contiene información de calidad y área quemada por píxel, que se obtiene con el empleo de imágenes de reflectancia de superficie MODIS de 500 m junto con observaciones de incendios activos MODIS de 1 km.</p>
         </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src=" https://valensatproject.users.earthengine.app/view/firesarea" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
 
         <div class="container_appmap">
             <div class="mapa_container_marco">
@@ -246,9 +234,14 @@
             <canvas id="barras_inc"></canvas>
         </div>
 
+        <section class="container about">
+            <h2 class="subtitle">Area quemada y severidad - incendio de Luchente, 2018</h2>
+            <p class="about_paragraph">Mapa representante del área quemada y los grados de severidad del incendio de una zona cerca de Luchente, calculados según el método desarrollado por Llorens et al. Por el cálculo han sido utilizadas imágenes de 30.07.18 a 04.08.18 (pre-fire images) y de 24.08.18 a 30.08.18 (post-fire images). El layer 1 es lo hecho por Rafa.</p>
+        </section>
+
         <div class="container_appmap">
             <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/burnseverity" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                <iframe src="https://valensatproject.users.earthengine.app/view/fireluchenterafa" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
 
