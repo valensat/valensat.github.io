@@ -215,7 +215,7 @@ body {
 }
 
 .red_text{
-    color: #ED413E;
+    color: #ED413E !important;
 }
 
 /* Testimony */
