@@ -42,5 +42,27 @@
     }
 
     menu.addEventListener('click', ()=> list.classList.toggle('menu__links--show'));
+
+
+
+    // BOTÓN VOLVER ARRIBA
+
+    var backToTop = document.querySelector(".back-to-top");
+
+    window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 1000) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+    });
+
+    backToTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+    });
+
 })();
 
