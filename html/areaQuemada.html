@@ -235,10 +235,11 @@
         <section class="about">
             <h2 class="subtitle">Área quemada y severidad</h2>
             <div class="container_text about">
-                <p class="about_paragraph">Los incendios forestales se consideran una de las principales perturbaciones que provocan la destrucción de la vegetación en la Península Ibérica <sup><span class="valensat">[1]</span></sup> (Sousa, 1984). La cuantificación de los daños causados, mediante la estimación del área quemada y de la severidad del incendio (osea el grado en que un área ha sido alterada o interrumpida por el fuego), adquiere por tanto una importancia fundamental. En este proyecto se han evaluado diversas metodologías para la estimación de dichos parámetros.</p>
+                <p class="about_paragraph">Los incendios forestales se consideran una de las principales perturbaciones que provocan la destrucción de la vegetación en la Península Ibérica <sup><span class="valensat">[1]</span></sup>. La cuantificación de los daños causados, mediante la estimación del área quemada y de la severidad del incendio (osea el grado en que un área ha sido alterada o interrumpida por el fuego), adquiere por tanto una importancia fundamental. En este proyecto se han evaluado diversas metodologías para la estimación de dichos parámetros.</p>
                 <h2 class="subtitle">USGS method</h2>
-                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar el área quemada y la severidad de cualquier incendio ocurrido desde el 2017 hasta la actualidad, según el método oficial del Servicio Geológico de los Estados Unidos (USGS). Para resaltar las áreas quemadas y estimar la gravedad del incendio se utilizó el índice Normalized Burn Ratio (NBR) <sup><span class="valensat">[2]</span></sup> (Key y Benson, 2006), a partir de imágenes Sentinel 2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que tienen una resolución espacial de 20 m. El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><span class="valensat">[3] [4]</span></sup> (Teodoro y Amaral, 2019; Amos et al., 2019). </p>
-                <p class="about_paragraph">Antes de ser procesadas, las imágenes son corregidas atmosféricamente y las nubes vienen mascheradas, utilizando la banda de calidad de Sentinel-2 SR. </p>
+                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar el área quemada y la severidad de cualquier incendio ocurrido desde el 2017 hasta la actualidad, según el método oficial del Servicio Geológico de los Estados Unidos (USGS). Para resaltar las áreas quemadas y estimar la gravedad del incendio se utilizó el índice Normalized Burn Ratio (NBR) <sup><span class="valensat">[2]</span></sup>, a partir de imágenes Sentinel 2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que tienen una resolución espacial de 20 m. Antes de ser procesadas, las imágenes son corregidas atmosféricamente y las nubes vienen mascheradas, utilizando la banda de calidad de Sentinel-2 SR.</p>
+                <p class="about_paragraph">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><span class="valensat">[3] [4]</span></sup>.
+                </p>
                 <p><math display="block">
                     <mrow>
                       <mi>NBR</mi>
@@ -264,7 +265,7 @@
                         <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_heladas">
                     </div>
                 <p class="footer_map">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
-                <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad. Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
+                <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. El resultado obtenido se puede comparar con los datos oficiales publicados en la página del <a href="https://effis.jrc.ec.europa.eu/applications/data-and-services" target="_blank" class="footer_map--link">European Forest Fire Information System</a> (EFFIS). Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
             </div>
         </section>
 
@@ -278,8 +279,8 @@
 
         <section class="container_text about">
             <h2 class="subtitle">Llorens method</h2>
-            
-            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad. Puedes poner las fechas de antes o, si quieres, probar ponendo las fechas del 04.03.2023 (pre-fire images) y del 25.03.2023 (post-fire images), y seleccionar la zona cerca de Montanejos (Castellón), para visualizar el incendio que occurrió en el 2023.</p>
+
+            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. Puedes poner las fechas de antes o, si quieres, probar ponendo las fechas del 04.03.2023 (pre-fire images) y del 25.03.2023 (post-fire images), y seleccionar la zona cerca de Montanejos (Castellón), para visualizar el incendio que occurrió en el 2023.</p>
         </section>
 
         <div class="container_appmap">
@@ -288,16 +289,15 @@
             </div>
         </div>
 
-        
         <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresrafamethod" target="_blank" class="footer_map--link">aquí</a>.</p>
 
         <section class="about">
                 <div class="container_text about">
                         <h3 class="subtitle">Referencias</h3>
-                        <p class="about_paragraph"><span class="valensat">[1]</span> </p>
-                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
-                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
-                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
+                        <p class="about_paragraph"><a href="https://doi.org/10.1146/annurev.es.15.110184.002033" target="_blank" class="footer_map--link">[1]</a> Sousa, W. P. (1984). The Role of Disturbance in Natural Communities. Annual review of ecology and systematics, 15(1), 353-391.</p>
+                        <p class="about_paragraph"><span class="valensat">[2]</span> Key, C. H., & Benson, N. C. (2006). Landscape Assessment (LA). In: Lutes, Duncan C.; Keane, Robert E.; Caratti, John F.; Key, Carl H.; Benson, Nathan C.; Sutherland, Steve; Gangi, Larry J. 2006. FIREMON: Fire effects monitoring and inventory system. Gen. Tech. Rep. RMRS-GTR-164-CD. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. LA-1-55, 164.</p>
+                        <p class="about_paragraph"><a href="https://doi.org/10.3390/environments6030036" target="_blank" class="footer_map--link">[3]</a> Teodoro, A. C., & Amaral, A. C. F. (2019). A Statistical and Spatial Analysis of Portuguese Forest Fires in Summer 2016 Considering Landsat 8 and Sentinel 2A Data. Environments, 6(3), 36. </p>
+                        <p class="about_paragraph"><a href="https://doi.org/10.1080/01431161.2018.1519284" target="_blank" class="footer_map--link">[4]</a> Amos, C., Petropoulos, G. P., & Ferentinos, K. P. (2019). Determining the use of Sentinel-2A MSI for wildfire burning & severity detection. International Journal of Remote Sensing, 40(3), 905-930.</p>
                 </div>
         </section>
 
