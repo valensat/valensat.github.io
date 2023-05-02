@@ -392,6 +392,12 @@ body {
     color: #FAAB01;
 }
 
+.formulas{
+    padding: 25px 0 10px 0;
+    font-size: 20px;
+    color: #272525;
+}
+
 /* Testimony */
 
 .testimony_title{
@@ -655,7 +661,7 @@ ul{
 }
 
 .container_appmap{
-    padding: 10px 100px 100px 100px;
+    padding: 10px 50px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -755,6 +761,18 @@ tr td:first-child{
     text-align: left;
 }
 
+
+.title_table{
+    padding-top: 25px;
+    text-decoration: underline;
+    color: #244072;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+
+
+
 /* TABLAS AVAMET */
 
 .container_avamet{
@@ -818,6 +836,19 @@ tr td:first-child{
 .image_all{
     width: 100%;
 }
+
+.div_table{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image_table{
+    height: 25vh;
+}
+
+
+
 
 
 /* Other web */
