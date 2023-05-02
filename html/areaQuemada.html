@@ -158,7 +158,7 @@
     </header>
 
     <main>
-        <section class="container about">
+        <!-- <section class="container about">
             <h2 class="subtitle">Área Quemada MODIS</h2>
             <p class="about_paragraph">Calculador del área quemada a través del uso del producto MODIS “Burned Area Monthly Global 500m” sobre toda la Comunidad Valenciana. El producto utilizado consta en una cuadrícula global mensual de 500 m que contiene información de calidad y área quemada por píxel, que se obtiene con el empleo de imágenes de reflectancia de superficie MODIS de 500 m junto con observaciones de incendios activos MODIS de 1 km.</p>
         </section>
@@ -230,44 +230,42 @@
                 <h2 class="subtitle">Histograma área quemada - km<sup>2</sup></h2>
             </div>
             <canvas id="barras_inc"></canvas>
-        </div>
+        </div> -->
 
-        <section class="container about">
-            <h2 class="subtitle">Área quemada y severidad - incendio de Luchente, 2018</h2>
-            <p class="about_paragraph">Mapa representante del área quemada y los grados de severidad del incendio de una zona cerca de Luchente, calculados según el método desarrollado por Llorens et al. Por el cálculo han sido utilizadas imágenes de 30.07.18 a 04.08.18 (pre-fire images) y de 24.08.18 a 30.08.18 (post-fire images). El layer 1 es lo hecho por Rafa.</p>
-        </section>
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/fireluchenterafa" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+        <section class="about">
+            <h2 class="subtitle">Área quemada y severidad</h2>
+            <div class="container_text about">
+                <p class="about_paragraph">Los incendios forestales se consideran una de las principales perturbaciones que provocan la destrucción de la vegetación en la Península Ibérica <sup><span class="valensat">[1]</span></sup> (Sousa, 1984). La cuantificación de los daños causados, mediante la estimación del área quemada y de la severidad del incendio (osea el grado en que un área ha sido alterada o interrumpida por el fuego), adquiere por tanto una importancia fundamental. En este proyecto se han evaluado diversas metodologías para la estimación de dichos parámetros.</p>
+                <h2 class="subtitle">USGS method</h2>
+                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar el área quemada y la severidad de cualquier incendio ocurrido desde el 2017 hasta la actualidad, según el método oficial del Servicio Geológico de los Estados Unidos (USGS). Para resaltar las áreas quemadas y estimar la gravedad del incendio se utilizó el índice Normalized Burn Ratio (NBR) <sup><span class="valensat">[2]</span></sup> (Key y Benson, 2006), a partir de imágenes Sentinel 2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que tienen una resolución espacial de 20 m. El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><span class="valensat">[3] [4]</span></sup> (Teodoro y Amaral, 2019; Amos et al., 2019). </p>
+                <p class="about_paragraph">Antes de ser procesadas, las imágenes son corregidas atmosféricamente y las nubes vienen mascheradas, utilizando la banda de calidad de Sentinel-2 SR. </p>
+                <p><math display="block">
+                    <mrow>
+                      <mi>NBR</mi>
+                      <mo>=</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>NIR</mi>
+                          <mo>-</mo>
+                          <mi>SWIR</mi>
+                        </mrow>
+                        <mrow>
+                          <mi>NIR</mi>
+                          <mo>+</mo>
+                          <mi>SWIR</mi>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </math></p>
+                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
+                <p>dNBR = NBR<sub>pre</sub> - NBR<sub>post</sub></p>
+                <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
+                    <div class="padding_bottom">
+                        <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_heladas">
+                    </div>
+                <p class="footer_map">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
+                <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad. Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
             </div>
-        </div>
-
-        <section class="container about">
-            <h2 class="subtitle">Área quemada y severidad - incendio de Luchente, 2018</h2>
-            <p class="about_paragraph">Mapa representante del área quemada y los grados de severidad del incendio de una zona cerca de Luchente, calculados según el método de USGS. Por el cálculo han sido utilizadas imágenes de 30.07.18 a 04.08.18 (pre-fire images) y de 24.08.18 a 30.08.18 (post-fire images).</p>
-        </section>
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/firesusgs" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <section class="container about">
-            <h2 class="subtitle">Área quemada y severidad - Rafa method</h2>
-            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad.</p>
-        </section>
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/appfiresrafamethod" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <section class="container about">
-            <h2 class="subtitle">Área quemada y severidad - USGS method</h2>
-            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad.</p>
         </section>
 
         <div class="container_appmap">
@@ -276,6 +274,32 @@
             </div>
         </div>
 
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresusgs" target="_blank" class="footer_map--link">aquí</a>.</p>
+
+        <section class="container_text about">
+            <h2 class="subtitle">Llorens method</h2>
+            
+            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada, dividida por grados de severidad. Puedes poner las fechas de antes o, si quieres, probar ponendo las fechas del 04.03.2023 (pre-fire images) y del 25.03.2023 (post-fire images), y seleccionar la zona cerca de Montanejos (Castellón), para visualizar el incendio que occurrió en el 2023.</p>
+        </section>
+
+        <div class="container_appmap">
+            <div class="mapa_container_marco">
+                <iframe src="https://valensatproject.users.earthengine.app/view/appfiresrafamethod" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresrafamethod" target="_blank" class="footer_map--link">aquí</a>.</p>
+
+        <section class="about">
+                <div class="container_text about">
+                        <h3 class="subtitle">Referencias</h3>
+                        <p class="about_paragraph"><span class="valensat">[1]</span> </p>
+                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
+                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
+                        <p class="about_paragraph"><span class="valensat">[2]</span> </p>
+                </div>
+        </section>
 
     </main>
 
