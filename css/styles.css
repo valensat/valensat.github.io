@@ -408,6 +408,10 @@ body {
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 500px;
 }
 
 .testimony_body{
@@ -421,6 +425,7 @@ body {
     grid-row: 1/2;
     opacity: 0;
     pointer-events: none;
+    padding: 0 25px;
 }
 
 .testimony_body--show{
@@ -430,27 +435,46 @@ body {
 }
 
 .testimony_img{
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 350px;
     border-radius: 0%;
-    border: #FAAB01 solid;
+    box-shadow: 0 0 8px 1px #686461;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.testimony_img2{
+    width: 550px;
+    height: 350px;
+    border-radius: 0%;
+    box-shadow: 0 0 8px 1px #686461;
     object-fit: cover;
     object-position: 50% 30%;
 }
 
 .testimony_subtitle{
     color: #E48716;
-    font-size: 1.7em;
+    font-size: 2em;
     margin-bottom: 25px;
 }
 
 .testimony_texts{
-    max-width: 700px;
+    max-width: 90%;
+}
+
+.testimony_review{
+    line-height: 1.7;
+    text-align: justify;
 }
 
 .testimony_arrow{
-    width: 90%;
+    width: 100%;
     cursor: pointer;
+    background-color: #F2F2F0;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50px;
 }
 
 /* FOOTER */
@@ -622,13 +646,12 @@ ul{
 /* Mapa */
 
 .container_appmap_home{
-    padding: 100px;
+    padding: 10px 50px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     height: 100vh;
     width: 90%;
-    padding-bottom: 50px;
 }
 
 .container_appmap{
@@ -657,6 +680,25 @@ ul{
     box-shadow: 0 0 8px 1px #686461;
     border-radius: 10px;
 
+}
+
+.footer_map{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.footer_map--link{
+    text-decoration: none;
+    color: #E48716;
+    font-weight: 500;
+    /* font-size: 1.1em; */
+}
+
+.footer_map--link:hover{
+    text-decoration: underline;
+    color: #E48716;
+    /* font-weight: 500; */
+    /* font-size: 1.1em; */
 }
 
 .map{
