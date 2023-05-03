@@ -161,13 +161,15 @@
         <section class="about">
             <h1 class="title">EVOLUCIÓN URBANA</h1>
             <div class="container_text about">
-                <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reiciendis quisquam minima doloribus, odit, voluptate debitis odio esse qui minus alias iure ex explicabo ipsam eius ea? Porro, ipsa esse.
-                    Accusantium quidem quia eligendi architecto assumenda molestias? Amet harum officiis minima dicta placeat totam quis alias, architecto nemo unde doloremque fuga cumque possimus pariatur nostrum enim at culpa error ducimus?
-                    Delectus, doloribus. Consectetur, voluptate! Blanditiis dolorem, dolores modi dolore quaerat error accusamus autem, deserunt assumenda culpa nihil et earum atque tenetur! Unde omnis magni similique tempore temporibus nam est expedita.
-                    Distinctio ipsa eligendi repudiandae porro repellendus eveniet aperiam omnis dolorum tempore quos, repellat cumque, quibusdam odit asperiores ea fuga iusto aliquam nesciunt illum, animi molestias optio quas. Veritatis, soluta adipisci.
-                    Sit maiores mollitia architecto in quam molestias eius. Adipisci officiis dolore aliquid numquam! Quod fugit eum assumenda ipsa veritatis aliquam. Inventore, ducimus culpa voluptatum in repellendus qui numquam porro natus!
-                    Assumenda temporibus cum culpa distinctio illum labore, esse iusto architecto consequuntur, sequi optio accusamus saepe aperiam error ab reprehenderit veritatis. Hic nulla totam beatae eaque cumque nemo, inventore distinctio cum?
-                    Autem inventore labore nemo facere alias quasi modi voluptates, at, odio laboriosam asperiores quo in similique possimus, explicabo perspiciatis esse! Dolor repellendus cupiditate molestiae doloremque, qui perspiciatis voluptates animi praesentium?</p>
+                <p class="about_paragraph">Estudiar las series temporales de ciertas playas o líneas de costa puede resultar una tarea complicada 
+                    usando datos satelitales debido a la baja resolución espacial comentada anteriormente. Por suerte, el Instituto Cartográfico Valenciano (ICV) 
+                    contiene en su base de datos ortofotografías del Plan Nacional de Ortofotografía Aérea (PNOA), de la serie A, B y C de vuelos americanos que fotografiaron 
+                    la Comunitat Valenciana en la década de los 40, 50 y 60 y de vuelos menores.
+                    Estas ortofotografías tienen también la ventaja de ocupar un amplio abanico temporal, lo que nos permite evaluar mejor el cambio producido. 
+                    Pero, por otro lado, también estas imágenes tienen sus limitaciones. En primer lugar, no tenemos bandas espectrales, y eso prácticamente imposibilita realizar 
+                    un LandCover (al menos a gran escala) o hacer una segmentación óptima. En segundo lugar, podemos tener problemas a la hora de medir, 
+                    ya que estas ortofotografías deben estar ortoreferenciadas y ortorectificadas.
+                    </p>
             </div>
             <img src="../images/evolUrbana/intro.png" alt="" class="image_all">
         </section>
@@ -177,10 +179,13 @@
         <section class="about">
             <h2 class="subtitle">Time-Lapse Landsat</h2>
             <div class="container_text about">
-                <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptates exercitationem, voluptatem tempora consequatur in, accusantium assumenda doloribus necessitatibus, eum aperiam illum porro pariatur? Magnam facere possimus praesentium libero rerum.
-                    Repellendus ipsum commodi totam. Ut a cumque, saepe deserunt, mollitia distinctio architecto omnis enim dolorum id, ex sed eaque numquam! Explicabo quae dolore nemo, porro esse illo sapiente quas soluta.
-                    Ullam, reprehenderit. Ipsum, debitis blanditiis at et cum possimus molestiae. Atque, a! Iusto incidunt deserunt excepturi ab. Ducimus cum quisquam itaque quia provident ab! Quibusdam nemo fuga rerum doloribus itaque!
-                    Velit officia delectus laborum asperiores quam pariatur eum rem optio consectetur natus facere ipsam eius, sunt voluptatibus tempora harum esse distinctio? Maiores iure explicabo beatae iusto dicta consequatur, modi earum.</p>
+                <p class="about_paragraph">Las imágenes de satélite, pese a no tener tanta resolución espacial, sí tienen una resolución espectral y temporal mucho mayor, 
+                    y esto también tiene ventajas. Por ello, hemos creado una aplicación en Google Earth Engine con la intención de mostrar imágenes (en este caso de Landsat 
+                    por tener datos desde 1984) y observar la evolución de la urbanización a una escala perceptible por los satélites. Un claro ejemplo que se observa muy bien 
+                    es la expansión de los puertos de los grandes núcleos urbanos de la Comunitat Valenciana, con las consecuencias tanto económicas, sociales y políticas que conlleva.
+                    También el crecimiento de las grandes urbes en las últimas décadas es apreciable (nuevas urbanizaciones, carreteras, etc). 
+                    En esta aplicación solamente se debe dibujar la zona de interés, introducir el rango de años para la serie temporal y un rango de fechas para realizar un promedio de las imágenes. Esto último tiene la finalidad de conseguir una imagen clara y sin nubes, y el promediado se realiza con el algoritmo LandTrendr  (que estudia la evolución de cada píxel en la serie de imágenes). Establecemos como opción predeterminada el mes de agosto. 
+                    </p>
             </div>
         </section>
         
