@@ -158,18 +158,33 @@
     </header>
 
     <main>
-        <div>
-            <section class="about">
-                <h2 class="title">Calidad del agua</h2>
-                <p class="about_paragraph">El agua es un recurso fundamental y que en algunos lugares empieza a ser escaso. 
+        <section class="about">
+            <h2 class="title">Calidad del agua</h2>
+            <div class="container_text about">
+                <p class="about_paragraph">
+                    El agua es un recurso fundamental y que en algunos lugares empieza a ser escaso. 
                     Por otra parte, la presión demográfica provoca que produzcamos en muchas ocasiones un exceso de aguas de desecho, 
-                    y esto deteriora la calidad de las aguas (Doña et al., 2011). Una de las principales causas de la deficiente calidad del agua es debida al sector agrícola. 
-                    Éste provoca contaminación por nitratos (fertilizantes, plaguicidas…) cuando su uso es mayor del que pueden absorber los cultivos, 
-                    o cuando se eliminan por acción del agua o del viento de la superficie del suelo antes de que puedan ser absorbidos. 
-                    Este vertido de nitrógeno y fosfato extra en las aguas produce un exceso de nutrientes que da lugar a una aparición de algas o el afloramiento de cianobacterias tóxicas. 
-                    Esto es lo que llamamos proceso de eutrofizac.</p>
-            </section>
-        </div>
+                    y esto deteriora la calidad de las aguas (Doña et al., 2011). Una de las principales causas de la deficiente
+                    calidad del agua es debida al sector agrícola. Éste provoca contaminación por nitratos (fertilizantes, plaguicidas…) 
+                    cuando su uso es mayor del que pueden absorber los cultivos, o cuando se eliminan por acción del agua o del viento de
+                    la superficie del suelo antes de que puedan ser absorbidos. Este vertido de nitrógeno y fosfato extra en las aguas produce 
+                    un exceso de nutrientes que da lugar a una aparición de algas o el afloramiento de cianobacterias tóxicas. 
+                    Esto es lo que llamamos proceso de eutrofización.
+                </p>
+                <p class="about_paragraph">Para monitorear la calidad del agua de los embalses y lagos se creó, en el año 2000, la Directiva Marco del Agua 
+                    (WFD en sus siglas en inglés). Ésta obliga a todos los estados miembros a clasificar y estimar el estado ecológico de sus aguas para conseguir,
+                     al menos, un “buen estado” de todas las aguas continentales y costeras (Ansper & Alikas, 2018). La clasificación que marca la directiva va desde “muy malo” 
+                     a “muy bueno”, y se apoya en ciertos indicadores medioambientales en los que nosotros debemos apoyarnos.
+                </p>
+                <p class="about_paragraph">Y aquí la teledetección juega un papel fundamental, 
+                    pues estos obtener el valor de estos indicadores de forma “in situ” son muy costosos tanto en tiempo como económicamente.
+                     Sin embargo, con el procesamiento de imágenes de satélite podemos estimar estos indicadores con menor esfuerzo (sobre todo en grandes lagos como la Albufera) 
+                     y con una frecuencia temporal razonable. 
+                </p>
+                <h2 class="subtitle about">USGS method</h2>
+                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar</p>
+            </div>
+        </section>
         
         <div class="container_appmap">
             <div class="mapa_container_marco">
@@ -177,9 +192,135 @@
             </div>
         </div>
 
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/calidad-agua" target="_blank" class="footer_map--link">aquí</a>.</p>
 
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método USGS
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                                <p class="about_paragraph">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><a href="#ref" class="ref_text">3 4</a></sup>.
+                                </p>
+                                <p><math display="block" class="formulas">
+                                    <mrow>
+                                      <mi>NBR</mi>
+                                      <mo>=</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>-</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>+</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                  </math></p>
+                                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
+                                <p><math display="block" class="formulas">
+                                    <mi>dNBR</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>pre</mi>
+                                    </msub>
+                                    <mo>-</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>post</mi>
+                                    </msub>
+                                  </math></p>
+                                <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
+                                <div class="div_table">
+                                    <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
+                                    <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_table">
+                                </div>
+                                <p class="about_paragraph">En esta aplicación se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. El resultado obtenido se puede comparar con los datos oficiales publicados en la página del <a href="https://effis.jrc.ec.europa.eu/applications/data-and-services" target="_blank" class="footer_map--link">European Forest Fire Information System</a> (EFFIS). Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
+                            </div>
+                        </section>
+                </article>
+    
+                <!-- <article class="questions_padding">
+                    <div class="questions_answer">
+                        <h3 class="questions_title">¿Qué es CSS GRID?
+                            <span class="questions_arrow">
+                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
+                            </span>
+                        </h3>
+    
+                        
+                    </div>
+                </article>
+    
+                <article class="questions_padding">
+                    <div class="questions_answer">
+                        <h3 class="questions_title">¿Qué aprenderé en este curso?
+                            <span class="questions_arrow">
+                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
+                            </span>
+                        </h3>
+    
+                        <p class="questions_show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem necessitatibus laborum assumenda repellendus adipisci soluta, voluptatum quaerat? Ex earum atque rerum maiores ea. Eaque at dignissimos id tempore consequuntur! Expedita.
+                        Quae praesentium minima fugit. Similique exercitationem molestias excepturi illo inventore ducimus animi sapiente necessitatibus corporis, dignissimos recusandae repudiandae nemo reprehenderit quia magnam. Nesciunt, incidunt nemo! Excepturi iure sed cumque laudantium!</p>
+                    </div>
+                </article> -->
+            </section>
+        </section>
 
+        <section class="container_text about">
+            <h2 class="subtitle about">Llorens method</h2>
 
+            <p class="about_paragraph">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por Llorens et al. <sup><a href="#ref" class="ref_text">5</a></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
+
+            <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. Puedes poner las fechas de antes o, si quieres, probar ponendo las fechas del 04.03.2023 (pre-fire images) y del 25.03.2023 (post-fire images), y seleccionar la zona cerca de Montanejos (Castellón), para visualizar el incendio que occurrió en el 2023.</p>
+        </section>
+
+        <div class="container_appmap">
+            <div class="mapa_container_marco">
+                <iframe src="https://valensatproject.users.earthengine.app/view/appfiresrafamethod" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresrafamethod" target="_blank" class="footer_map--link">aquí</a>.</p>
+
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método Llorens
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                            </div>
+                        </section>
+                </article>
+            </section>
+        </section>
+
+        <section class="about">
+                <div class="container_text about">
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. Sousa, W. P. (1984). The Role of Disturbance in Natural Communities. Annual review of ecology and systematics, 15(1), 353-391. <a href="https://doi.org/10.1146/annurev.es.15.110184.002033" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Key, C. H., & Benson, N. C. (2006). Landscape Assessment (LA). In: Lutes, Duncan C.; Keane, Robert E.; Caratti, John F.; Key, Carl H.; Benson, Nathan C.; Sutherland, Steve; Gangi, Larry J. 2006. FIREMON: Fire effects monitoring and inventory system. Gen. Tech. Rep. RMRS-GTR-164-CD. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. LA-1-55, 164. <a href="https://doi.org/10.2737/RMRS-GTR-164" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Teodoro, A. C., & Amaral, A. C. F. (2019). A Statistical and Spatial Analysis of Portuguese Forest Fires in Summer 2016 Considering Landsat 8 and Sentinel 2A Data. Environments, 6(3), 36. <a href="https://doi.org/10.3390/environments6030036" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. Amos, C., Petropoulos, G. P., & Ferentinos, K. P. (2019). Determining the use of Sentinel-2A MSI for wildfire burning & severity detection. International Journal of Remote Sensing, 40(3), 905-930. <a href="https://doi.org/10.1080/01431161.2018.1519284" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. Rafa articol</p>
+                </div>
+        </section>
 
     </main>
 
@@ -269,6 +410,7 @@
 
 
     <script src="../js/app.js"></script>
+    <script src="../js/desplegable_info.js"></script>
 
 </body>
 </html>
