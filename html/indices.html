@@ -158,19 +158,6 @@
     </header>
 
     <main>
-        <!-- <section class="container about">
-            <h2 class="subtitle">NDVI garantizado (Agroseguros)</h2>
-            <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptates exercitationem, voluptatem tempora consequatur in, accusantium assumenda doloribus necessitatibus, eum aperiam illum porro pariatur? Magnam facere possimus praesentium libero rerum.
-            Repellendus ipsum commodi totam. Ut a cumque, saepe deserunt, mollitia distinctio architecto omnis enim dolorum id, ex sed eaque numquam! Explicabo quae dolore nemo, porro esse illo sapiente quas soluta.
-            Ullam, reprehenderit. Ipsum, debitis blanditiis at et cum possimus molestiae. Atque, a! Iusto incidunt deserunt excepturi ab. Ducimus cum quisquam itaque quia provident ab! Quibusdam nemo fuga rerum doloribus itaque!
-            Velit officia delectus laborum asperiores quam pariatur eum rem optio consectetur natus facere ipsam eius, sunt voluptatibus tempora harum esse distinctio? Maiores iure explicabo beatae iusto dicta consequatur, modi earum.</p>
-        </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/ndvi-g" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div> -->
 
         <section class="about">
             <h2 class="title">Índices de vegetación</h2>
@@ -189,10 +176,198 @@
         <section class="about">
             <div class="container_text about">
                     <h3 class="subtitle">¿Cómo se calculan y qué representan estos índices?</h3>
-                    <p class="about_paragraph">blabla</p>
-                    <p class="about_paragraph">blabla</p>
-                    <p class="about_paragraph">blabla</p>
-                    <p class="about_paragraph">blabla</p>
+                    <p class="about_paragraph">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> (Rouse et al. , 1974) es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:
+                        </p>
+
+                        <p>
+                            <math display="block" class="formulas">
+                              <mi>NDVI</mi>
+                              <mo>=</mo>
+                              <mfrac>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>RED</mi>
+                                </mrow>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>+</mo>
+                                  <mi>RED</mi>
+                                </mrow>
+                              </mfrac>
+                            </math>
+                          </p>
+                    
+                          
+                    <p class="about_paragraph"> El <strong>Enhanced vegetación index (EVI)</strong></p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>EVI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>2.5</mi>
+                              <mo>×</mo>
+                              <mfrac>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>RED</mi>
+                                </mrow>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>6</mi>
+                                    <mo>×</mo>
+                                    <mi>RED</mi>
+                                  </mrow>
+                                  <mo>&#x2212;</mo>
+                                  <mrow>
+                                    <mi>7.5</mi>
+                                    <mo>×</mo>
+                                    <mi>BLUE</mi>
+                                  </mrow>
+                                  <mo>+</mo>
+                                  <mrow>
+                                    <mi>1</mi>
+                                  </mrow>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>2.4</mi>
+                                <mo>×</mo>
+                                <mi>RED</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow>
+                                <mi>1</mi>
+                              </mrow>
+                            </mrow>
+                          </mfrac>
+                        </math>
+                      </p>
+                      
+
+                    <p class="about_paragraph">El <strong>Soil adjusted vegetation index (SAVI)</strong></p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>SAVI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>RED</mi>
+                              <mo>+</mo>
+                              <mi>L</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo>×</mo>
+                          <mrow>
+                            <mi>1</mi>
+                            <mo>+</mo>
+                            <mi>L</mi>
+                          </mrow>
+                        </math>
+                      </p>
+                      
+                    <p class="about_paragraph">El <strong>Normalized difference water index (NDWI)</strong></p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>NDWI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                          </mfrac>
+                        </math>
+                      </p>
+                      
+                    <p class="about_paragraph">El <strong>Normalized multiband drought index (NMDI)</strong></p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>NMDI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                            <mo>+</mo>
+                            <mi>BLUE</mi>
+                           </mfrac>
+                        </math>
+                    </p>
+                  
+
+                    <p class="about_paragraph">El <strong>Visible and shortwave drought index (VSDI)</strong></p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>VSDI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>-</mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>RED</mi>
+                              <mo>-</mo>
+                              <mi>BLUE</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo>×</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>SWIR1</mi>
+                              <mo>-</mo>
+                              <mi>SWIR2</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>SWIR1</mi>
+                              <mo>+</mo>
+                              <mi>SWIR2</mi>
+                            </mrow>
+                          </mfrac>
+                        </math>
+                      </p>
+                      
+
+
+
+
             </div>
          </section>
 
