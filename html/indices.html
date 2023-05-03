@@ -172,90 +172,48 @@
                 <iframe src="https://valensatproject.users.earthengine.app/view/sequa" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="" target="_blank" class="footer_map--link">aquí</a>.</p>
+
+        <section class="container about">
+            <h2 class="subtitle">Índices por comarca</h2>
+            <p class="about_paragraph">Con la siguiente app es posible calcular los mismos índices para las distintas comarcas de la Comunidad Valenciana.</p>
+        </section>
+        
+        <div class="container_appmap">
+            <div class="mapa_container_marco">
+                <iframe src="https://valensatproject.users.earthengine.app/view/porzonamodis" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="" target="_blank" class="footer_map--link">aquí</a>.</p>
         
 
         <section class="about">
             <div class="container_text about">
                     <h3 class="subtitle">¿Cómo se calculan y qué representan estos índices?</h3>
-                    <p class="about_paragraph">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> (Rouse et al. , 1974) es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:
-                        </p>
-
-                        <p>
-                            <math display="block" class="formulas">
-                              <mi>NDVI</mi>
-                              <mo>=</mo>
-                              <mfrac>
-                                <mrow>
-                                  <mi>NIR</mi>
-                                  <mo>&#x2212;</mo>
-                                  <mi>RED</mi>
-                                </mrow>
-                                <mrow>
-                                  <mi>NIR</mi>
-                                  <mo>+</mo>
-                                  <mi>RED</mi>
-                                </mrow>
-                              </mfrac>
-                            </math>
-                          </p>
-                    
-                          
-                    <p class="about_paragraph"> El <strong>Enhanced vegetación index (EVI)</strong></p>
+                    <p class="about_paragraph">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> <sup><a href="#ref" class="ref_text">1</a></sup>  es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:</p>
 
                     <p>
                         <math display="block" class="formulas">
-                          <mi>EVI</mi>
-                          <mo>=</mo>
-                          <mfrac>
+                            <mi>NDVI</mi>
+                            <mo>=</mo>
+                            <mfrac>
                             <mrow>
-                              <mi>2.5</mi>
-                              <mo>×</mo>
-                              <mfrac>
-                                <mrow>
-                                  <mi>NIR</mi>
-                                  <mo>&#x2212;</mo>
-                                  <mi>RED</mi>
-                                </mrow>
-                                <mrow>
-                                  <mi>NIR</mi>
-                                  <mo>+</mo>
-                                  <mrow>
-                                    <mi>6</mi>
-                                    <mo>×</mo>
-                                    <mi>RED</mi>
-                                  </mrow>
-                                  <mo>&#x2212;</mo>
-                                  <mrow>
-                                    <mi>7.5</mi>
-                                    <mo>×</mo>
-                                    <mi>BLUE</mi>
-                                  </mrow>
-                                  <mo>+</mo>
-                                  <mrow>
-                                    <mi>1</mi>
-                                  </mrow>
-                                </mrow>
-                              </mfrac>
-                            </mrow>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>+</mo>
-                              <mrow>
-                                <mi>2.4</mi>
-                                <mo>×</mo>
+                                <mi>NIR</mi>
+                                <mo>&#x2212;</mo>
                                 <mi>RED</mi>
-                              </mrow>
-                              <mo>+</mo>
-                              <mrow>
-                                <mi>1</mi>
-                              </mrow>
                             </mrow>
-                          </mfrac>
+                            <mrow>
+                                <mi>NIR</mi>
+                                <mo>+</mo>
+                                <mi>RED</mi>
+                            </mrow>
+                            </mfrac>
                         </math>
-                      </p>
-                      
+                    </p>
+                    
+                    <p class="about_paragraph"> Los valores del NDVI varían de -1 a +1, donde los valores más altos indican una mayor densidad y salud de la vegetación. Un NDVI de 0 indica una superficie sin vegetación, mientras que los valores negativos indican la presencia de agua o nieve. El NDVI se utiliza ampliamente en estudios de cambio climático, monitoreo de la vegetación y evaluación de la producción agrícola.</p>
 
-                    <p class="about_paragraph">El <strong>Soil adjusted vegetation index (SAVI)</strong></p>
+                    <p class="about_paragraph">El <strong>Soil adjusted vegetation index (SAVI)</strong> <sup><a href="#ref" class="ref_text">2</a></sup> se introdujo para mitigar el impacto del brillo del suelo. Su creador, Huete, añadió un factor de ajuste del suelo L a la ecuación del NDVI para corregir los efectos de ruido del suelo (color, humedad, variabilidad del suelo entre regiones, etc.), que suelen afectar a los resultados. Por cierto, este índice está más adaptado a estudios de análisis de vegetación en etapas de crecimiento inicial o vegetación dispersa. En general, el SAVI puede ser una buena alternativa en cualquier suelo donde exista una baja densidad vegetal y la exposición de la superficie del suelo sea relevante. Su ecuación es:</p>
 
                     <p>
                         <math display="block" class="formulas">
@@ -277,14 +235,57 @@
                           </mfrac>
                           <mo>×</mo>
                           <mrow>
-                            <mi>1</mi>
+                            <mi>(1</mi>
                             <mo>+</mo>
-                            <mi>L</mi>
+                            <mi>L)</mi>
                           </mrow>
                         </math>
-                      </p>
+                    </p>
+
+                      <p class="about_paragraph">El SAVI varía entre -1 y +1, dependiendo de la densidad de vegetación verde de la zona en cuestión. En las zonas con mucha vegetación verde, se usa L= 0 y, en este caso, SAVI es igual que el NDVI. Por el contrario, se usa L = 1 para las zonas de vegetación verde baja. Lo habitual es L = 0,5 para ajustarse a la mayoría de suelos.</p>
+
+                      <p class="about_paragraph"> El <strong>Enhanced vegetación index (EVI)</strong> es una alternativa más sólida a los índices tradicionales, por ser más robusto frente a la aportación del suelo y de las influencias atmosféricas. Liu y Huete <sup><a href="#ref" class="ref_text">3</a></sup> introdujeron este índice para ajustar los resultados del NDVI a los ruidos atmosféricos y del suelo, especialmente en las zonas de vegetación densa, así como para mitigar la saturación en la mayoría de los casos. Su ecuación es: </p>
                       
-                    <p class="about_paragraph">El <strong>Normalized difference water index (NDWI)</strong></p>
+                      <p>
+                          <math display="block" class="formulas">
+                            <mi>EVI</mi>
+                            <mo>=</mo>
+                              <mrow>
+                                <mi>G</mi>
+                                <mo>×</mo>
+                                <mfrac>
+                                  <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>&#x2212;</mo>
+                                    <mi>RED</mi>
+                                  </mrow>
+                                  <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>+</mo>
+                                    <mrow>
+                                      <mi>C1</mi>
+                                      <mo>×</mo>
+                                      <mi>RED</mi>
+                                    </mrow>
+                                    <mo>&#x2212;</mo>
+                                    <mrow>
+                                      <mi>C2</mi>
+                                      <mo>×</mo>
+                                      <mi>BLUE</mi>
+                                    </mrow>
+                                    <mo>+</mo>
+                                    <mrow>
+                                      <mi>L</mi>
+                                    </mrow>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                          </math>
+                        </p>
+
+                    <p class="about_paragraph"> El rango de valores del EVI es de -1 a +1, y para la vegetación sana varía entre 0,2 y 0,8. Los coeficientes C1 y C2 sirven para corregir la dispersión de los aerosoles presentes en la atmósfera y L para ajustar el fondo del suelo y del dosel de la vegetación.</p>
+                      
+                    <p class="about_paragraph">El <strong>Normalized difference water index (NDWI)</strong> <sup><a href="#ref" class="ref_text">4</a></sup> se elaboró inicialmente para delinear masas de agua al aire libre y evaluar su turbidez, mitigando la reflectancia del suelo y la vegetación terrestre. Su ecuación es:</p> 
 
                     <p>
                         <math display="block" class="formulas">
@@ -303,9 +304,11 @@
                             </mrow>
                           </mfrac>
                         </math>
-                      </p>
+                    </p>
+
+                    <p class="about_paragraph">El NDWI mide el cambio en el contenido de agua de las hojas, por eso se utiliza para monitorear sequías, registrar reducciones de rendimiento, aparte de descarga de embalses, descenso de los niveles de agua subterránea, etc. El rango común para la vegetación verde es de -0,1 a 0,4.</p>
                       
-                    <p class="about_paragraph">El <strong>Normalized multiband drought index (NMDI)</strong></p>
+                    <p class="about_paragraph">El <strong>Normalized multiband drought index (NMDI)</strong> <sup><a href="#ref" class="ref_text">5</a></sup>monitorea las posibles condiciones de sequía utilizando la diferencia entre dos bandas SWIR como medida de la sensibilidad al agua en la vegetación y el suelo. También se utiliza comúnmente en la detección de incendios forestales. Su ecuación es:</p>
 
                     <p>
                         <math display="block" class="formulas">
@@ -315,85 +318,57 @@
                             <mrow>
                               <mi>NIR</mi>
                               <mo>&#x2212;</mo>
-                              <mi>SWIR1</mi>
+                              <mi>(SWIR1</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>SWIR2)</mi>
                             </mrow>
                             <mrow>
                               <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>(SWIR1</mi>
                               <mo>+</mo>
-                              <mi>SWIR1</mi>
+                              <mi>SWIR2)</mi>
                             </mrow>
-                            <mo>+</mo>
-                            <mi>BLUE</mi>
-                           </mfrac>
+                          </mfrac>
                         </math>
                     </p>
                   
+                    <p class="about_paragraph">A medida que aumenta la humedad del suelo, los valores del índice disminuyen. Valores de 0,7 - 1 indican suelo seco, de 0,6 - 0,7 suelo con humedad intermedia y menores de 0,6 suelo húmedo.</p>
 
-                    <p class="about_paragraph">El <strong>Visible and shortwave drought index (VSDI)</strong></p>
+                    <p class="about_paragraph">El <strong>Visible and shortwave drought index (VSDI)</strong> <sup><a href="#ref" class="ref_text">6</a></sup> se basa en la diferencia entre las bandas sensibles a la humedad (SWIR y RED) y la banda de referencia de humedad (BLUE) y se usa para monitorear la sequía en diferentes tipos de cobertura de suelo agrícola, especialmente durante la temporada de crecimiento de las plantas. Su ecuación es:</p>
 
                     <p>
                         <math display="block" class="formulas">
                           <mi>VSDI</mi>
                           <mo>=</mo>
-                          <mfrac>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>-</mo>
-                              <mi>RED</mi>
-                            </mrow>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>+</mo>
-                              <mi>RED</mi>
-                              <mo>-</mo>
-                              <mi>BLUE</mi>
-                            </mrow>
-                          </mfrac>
-                          <mo>×</mo>
-                          <mfrac>
-                            <mrow>
-                              <mi>SWIR1</mi>
-                              <mo>-</mo>
-                              <mi>SWIR2</mi>
-                            </mrow>
-                            <mrow>
-                              <mi>SWIR1</mi>
-                              <mo>+</mo>
-                              <mi>SWIR2</mi>
-                            </mrow>
-                          </mfrac>
+                          <mi>1</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>[(SWIR</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>BLUE)+(RED</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>BLUE)]</mi>
                         </math>
                       </p>
-                      
-
-
-
 
             </div>
          </section>
 
-        <section class="container about">
-            <h2 class="subtitle">Índices por comarca</h2>
-            <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptates exercitationem, voluptatem tempora consequatur in, accusantium assumenda doloribus necessitatibus, eum aperiam il</p>
-        </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/porzonamodis" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
 
 
-        <section class="about">
+
+         <section class="about">
             <div class="container_text about">
-                    <h3 class="subtitle">Referencias</h3>
-                    <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[1]</a> </p>
-                    <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[2]</a> </p>
-                    <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[3]</a> </p>
-                    <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[4]</a> </p>
-                    <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[5]</a> </p>
+                    <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                    <p class="about_paragraph--ref">1. Rouse, J. W., Haas, R., Schell, J. A., & Deering, D. W. (1974). Monitoring Vegetation Systems in the Great Plains with Erts. NASA Special Publication, 351, 309.<a href="http://ui.adsabs.harvard.edu/abs/1974NASSP.351..309R/abstract" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    <p class="about_paragraph--ref">2. Huete, A. (1988). A soil-adjusted vegetation index (SAVI). Remote Sensing of Environment.<a href="https://doi.org/10.1016/0034-4257(88)90106-x" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    <p class="about_paragraph--ref">3. Liu, H., & Huete, A. (1995). A feedback based modification of the NDVI to minimize canopy background and atmospheric noise. IEEE Transactions on Geoscience and Remote Sensing, 33(2), 457-465.<a href="https://doi.org/10.1109/tgrs.1995.8746027" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    <p class="about_paragraph--ref">4. Gao, B. (1996). NDWI—A normalized difference water index for remote sensing of vegetation liquid water from space. Remote Sensing of Environment, 58(3), 257-266.<a href="https://doi.org/10.1016/s0034-4257(96)00067-3" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    <p class="about_paragraph--ref">5. Wang, L., & Qu, J. J. (2007). NMDI: A normalized multi-band drought index for monitoring soil and vegetation moisture with satellite remote sensing. Geophysical Research Letters, 34(20).<a href="https://doi.org/10.1029/2007gl031021" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    <p class="about_paragraph--ref">6. Zhang, N., Hong, Y., Qin, Q., & Liu, L. (2013). VSDI: a visible and shortwave infrared drought index for monitoring soil and vegetation moisture based on optical remote sensing. International Journal of Remote Sensing, 34(13), 4585-4609.<a href="https://doi.org/10.1080/01431161.2013.779046" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+
             </div>
-         </section>
+    </section>
 
 
     </main>
