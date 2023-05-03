@@ -770,6 +770,16 @@ tr td:first-child{
     font-size: 1.2em;
 }
 
+.title_img{
+    padding-bottom: 25px;
+    color: #244072;
+    font-size: 1em;
+}
+
+.image_fig{
+    padding: 25px 10px 5px;
+    height: 25vh;
+}
 
 
 

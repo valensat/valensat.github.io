@@ -269,9 +269,9 @@
                     <p class="about_paragraph">donde A es el área de la aglomeración urbana y A<sub>wu</sub> es la suma de las áreas A y S<sub>u</sub>.</p>
 
                     <div class="div_table">
-                        <img src="../images/isla_calor/def_limits.JPG" alt="" class="image_table">
-                        <img src="../images/isla_calor/suhi_valencia.JPG" alt="" class="image_table">
-                        <p class="title_table">Representación del concepto de definición de límites (izquierda) y ejemplo en el caso de Valencia (derecha)</p>
+                        <img src="../images/isla_calor/def_limits.JPG" alt="" class="image_fig">
+                        <img src="../images/isla_calor/suhi_valencia.JPG" alt="" class="image_fig">
+                        <p class="title_img">Representación del concepto de definición de límites (izquierda) y ejemplo en el caso de Valencia (derecha)</p>
                     </div>
 
 
@@ -304,16 +304,56 @@
                     </div>
 
                     <div class="div_table">
-                        <img src="../images/isla_calor/UFTVI_val.jpg" alt="" class="image_table">
-                        <img src="../images/isla_calor/UFTVI_legend.jpg" alt="" class="image_table">
-                        <p class="title_table">Ejemplo del índice UFTVI en el caso de Valencia</p>
+                        <img src="../images/isla_calor/UFTVI_val.jpg" alt="" class="image_fig">
+                        <img src="../images/isla_calor/UFTVI_legend.jpg" alt="" class="image_fig">
+                        <p class="title_img">Ejemplo del índice UFTVI en el caso de Valencia</p>
                     </div>
 
 
                     <h3 class="subtitle about">Discomfort Index (DI)</h3>
-                    <p class="about_paragraph">El índice de malestar (DI) es una medida de la sensación de calor humano para diferentes condiciones climáticas. Permite analizar el impacto bioclimático a partir de una relación entre la humedad relativa (RH) en percentaje y la temperatura de superficie terrestre<sup><span class="valensat">[1]</span></sup>, en ˚C.</p>
+                    <p class="about_paragraph">El índice de malestar (DI) es una medida de la sensación de calor humano para diferentes condiciones climáticas. Permite analizar el impacto bioclimático a partir de una relación entre la humedad relativa (RH) en percentaje y la temperatura de superficie terrestre<sup><span class="valensat">[1]</span></sup>, en ˚C. La humedad relativa se ha obtenido con el producto de ERA5.</p>
+
+                    <p><math display="block" class="formulas">
+                        <mi>LST</mi>
+                        <mo>=</mo>
+                        <mi>LST</mi>
+                        <mo>-</mo>
+                        <mi>(0.55</mi>
+                        <mo>-</mo>
+                        <mi>0.055 RH)</mi>
+                        <mi>(LST</mi>
+                        <mo>-</mo>
+                        <mi>14.5)</mi>
+                      </math>
+                    </p>
+
+                    <p class="about_paragraph">Este índice se divide en diez categorías, que van desde hiperglacial hasta tórrido. En el caso de Valencia, toda la comarca urbana tiene un índice de malestar correspondiente a la clase "very hot".</p>
+
+                    <div class="div_table">
+                        <p class="title_table">Categorización del índice de malestar</p>
+                        <img src="../images/isla_calor/DI_limits.jpg" alt="" class="image_table">
+                    </div>
+
                     <h3 class="subtitle about">Urban Hot Spots (UHS)</h3>
-                    <p class="about_paragraph">Los Urban Hot Spots (UHS) son las regiones más calientes de un área urbana<sup><span class="valensat">[3]</span></sup>. Un píxel se considera un punto caliente urbano si su temperatura está por encima de dos desviaciones estándar del valor medio de la escena.</p>  
+                    <p class="about_paragraph">Los Urban Hot Spots (UHS) son las regiones más calientes de un área urbana<sup><span class="valensat">[3]</span></sup>. Un píxel se considera un punto caliente urbano si su temperatura está por encima de dos desviaciones estándar (σ) del valor medio de la escena.</p>
+
+                    <p><math display="block" class="formulas">
+                        <mi>LST</mi>
+                        <mo>></mo>
+                        <msub>
+                            <mi>LST</mi>
+                            <mi>URB - MEAN</mi>
+                          </msub>
+                        <mo>+</mo>
+                        <mi>2σ</mi>
+                      </math>
+                    </p>
+
+                    <div class="div_table">
+                        <img src="../images/isla_calor/hot_spots.jpg" alt="" class="image_fig">
+                        <p class="title_img">Ejemplo de Urban Hot Spots en el caso de Valencia</p>
+                    </div>
+
                 </div>
         </section>
 
@@ -322,7 +362,7 @@
                 <div class="container_text about">
                         <h3 class="subtitle">Referencias</h3>
                         <p class="about_paragraph"><a href="https://doi.org/10.3390/rs12122052" target="_blank" class="footer_map--link">[1]</a> Sobrino, J. A., & Irakulis, I. (2020). A Methodology for Comparing the Surface Urban Heat Island in Selected Urban Agglomerations Around the World from Sentinel-3 SLSTR Data. Remote Sensing, 12(12), 2052.</p>
-                        <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[2]</a>(Liu & Zhang, 2011)</p>
+                        <p class="about_paragraph"><a href="https://doi.org/10.3390/rs3071535" target="_blank" class="footer_map--link">[2]</a>Liu, L., & Zhang, Y. (2011). Urban Heat Island Analysis Using the Landsat TM Data and ASTER Data: A Case Study in Hong Kong. Remote Sensing, 3(7), 1535-1552.</p>
                         <p class="about_paragraph"><a href="https://doi.org/10.1016/j.scs.2020.102100" target="_blank" class="footer_map--link">[3]</a> Portela, C. I., Massi, K. G., Rodrigues, T., & Alcântara, E. (2020). Impact of urban and industrial features on land surface temperature: Evidences from satellite thermal indices. Sustainable Cities and Society, 56, 102100.</p>
 
                 </div>
