@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>Áreas quemadas</title>
+    <title>Áreas quemadas y severidad</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
@@ -158,128 +158,15 @@
     </header>
 
     <main>
-        <!-- <section class="container about">
-            <h2 class="subtitle">Área Quemada MODIS</h2>
-            <p class="about_paragraph">Calculador del área quemada a través del uso del producto MODIS “Burned Area Monthly Global 500m” sobre toda la Comunidad Valenciana. El producto utilizado consta en una cuadrícula global mensual de 500 m que contiene información de calidad y área quemada por píxel, que se obtiene con el empleo de imágenes de reflectancia de superficie MODIS de 500 m junto con observaciones de incendios activos MODIS de 1 km.</p>
-        </section>
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/fireareaprovincias" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <section class="container">
-            <div class="table_title">
-                <h2 class="subtitle">Tabla área quemada - Modis</h2>
-            </div>
-            <table class="table">
-                <tr class="table_header">
-                 <th class="table_header--title">Source data</th>
-                  <th class="table_header--title">2010</th>
-                  <th class="table_header--title">2011</th>
-                  <th class="table_header--title">2012</th>
-                  <th class="table_header--title">2013</th>
-                  <th class="table_header--title">2014</th>
-                  <th class="table_header--title">2015</th>
-                  <th class="table_header--title">2016</th>
-                  <th class="table_header--title">2017</th>
-                  <th class="table_header--title">2018</th>
-                  <th class="table_header--title">2019</th>
-                  <th class="table_header--title">2020</th>
-                  <th class="table_header--title">2021</th>
-                  <th class="table_header--title">2022</th>
-                </tr>
-                <tr>
-                    <td>MODIS</td>
-                    <td>80.50 km<sup>2</sup></td>
-                    <td>27.00 km<sup>2</sup></td>
-                    <td>877.25 km<sup>2</sup></td>
-                    <td>9.50 km<sup>2</sup></td>
-                    <td>6.00 km<sup>2</sup></td>
-                    <td>33.75 km<sup>2</sup></td>
-                    <td>88.75 km<sup>2</sup></td>
-                    <td>105.00 km<sup>2</sup></td>
-                    <td>45.50 km<sup>2</sup></td>
-                    <td>14.25 km<sup>2</sup></td>
-                    <td>39.00 km<sup>2</sup></td>
-                    <td>7.50 km<sup>2</sup></td>
-                    <td>461.25 km<sup>2</sup></td>
-                </tr>
-                <tr>
-                    <td>EFFIS</td>
-                    <td>54.95 km<sup>2</sup></td>
-                    <td>18.7 km<sup>2</sup></td>
-                    <td>549.72 km<sup>2</sup></td>
-                    <td>11.41 km<sup>2</sup></td>
-                    <td>10.13 km<sup>2</sup></td>
-                    <td>25.1 km<sup>2</sup></td>
-                    <td>62.77 km<sup>2</sup></td>
-                    <td>20.03 km<sup>2</sup></td>
-                    <td>35.32 km<sup>2</sup></td>
-                    <td>9.29 km<sup>2</sup></td>
-                    <td>5.63 km<sup>2</sup></td>
-                    <td>5.92 km<sup>2</sup></td>
-                    <td>342.73 km<sup>2</sup></td>
-                </tr>
-              </table>              
-        </section>
-
-        <div class="container">
-            <div class="table_title">
-                <h2 class="subtitle">Histograma área quemada - km<sup>2</sup></h2>
-            </div>
-            <canvas id="barras_inc"></canvas>
-        </div> -->
-
+        
         <section class="about">
-            <h2 class="title">Área quemada y severidad</h2>
+            <h2 class="title">Áreas quemadas y severidad</h2>
             <div class="container_text about">
-                <p class="about_paragraph">Los incendios forestales se consideran una de las principales perturbaciones que provocan la destrucción de la vegetación en la Península Ibérica <sup><span class="valensat">[1]</span></sup>. La cuantificación de los daños causados, mediante la estimación del área quemada y de la severidad del incendio (osea el grado en que un área ha sido alterada o interrumpida por el fuego), adquiere por tanto una importancia fundamental. En este proyecto se han evaluado diversas metodologías para la estimación de dichos parámetros, ilustradas a continuación.</p>
+                <p class="about_paragraph">Los incendios forestales se consideran una de las principales perturbaciones que provocan la destrucción de la vegetación en la Península Ibérica <sup><a href="#ref" class="ref_text">1</a></sup>. La cuantificación de los daños causados, mediante la estimación del área quemada y de la severidad del incendio (osea el grado en que un área ha sido alterada o interrumpida por el fuego), adquiere por tanto una importancia fundamental. En este proyecto se han evaluado diversas metodologías para la estimación de dichos parámetros, ilustradas a continuación.</p>
                 <p class="about_paragraph">Debido a que este es un proceso de detección de cambios, puede pasar que los cambios en el medio ambiente no relacionados con incendios (cambios en la vegetación natural, deforestación, cambios en la cobertura del suelo...) puedan detectarse como daños por incendios forestales. En particular, ligeros cambios en la vegetación pueden ser incorrectamente interpretados como quemaduras de baja gravedad, por lo que esta clase debe tratarse con especial cuidado.</p>
                 <p class="about_paragraph">Las posibilidades de errores de clasificación aumentan cuando las imágenes se componen durante largos períodos o cuando las distancias entre estos períodos son demasiado largas. Por lo tanto, conocer el período de tiempo exacto del incendio y especificar una ventana de tiempo adecuada es crucial para minimizar los errores. </p>
                 <h2 class="subtitle about">USGS method</h2>
-                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar el área quemada y la severidad de cualquier incendio ocurrido desde el 2017 hasta la actualidad, según el método oficial del Servicio Geológico de los Estados Unidos (USGS). Para resaltar las áreas quemadas y estimar la gravedad del incendio se utilizó el índice Normalized Burn Ratio (NBR) <sup><span class="valensat">[2]</span></sup>, a partir de imágenes Sentinel 2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que tienen una resolución espacial de 20 m. Antes de ser procesadas, las imágenes son corregidas atmosféricamente y las nubes vienen mascheradas, utilizando la banda de calidad de Sentinel-2 SR.</p>
-                <p class="about_paragraph">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><span class="valensat">[3] [4]</span></sup>.
-                </p>
-                <p><math display="block" class="formulas">
-                    <mrow>
-                      <mi>NBR</mi>
-                      <mo>=</mo>
-                      <mfrac>
-                        <mrow>
-                          <mi>NIR</mi>
-                          <mo>-</mo>
-                          <mi>SWIR</mi>
-                        </mrow>
-                        <mrow>
-                          <mi>NIR</mi>
-                          <mo>+</mo>
-                          <mi>SWIR</mi>
-                        </mrow>
-                      </mfrac>
-                    </mrow>
-                  </math></p>
-                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
-                <p><math display="block" class="formulas">
-                    <mi>dNBR</mi>
-                    <mo>=</mo>
-                    <msub>
-                      <mi>NBR</mi>
-                      <mi>pre</mi>
-                    </msub>
-                    <mo>-</mo>
-                    <msub>
-                      <mi>NBR</mi>
-                      <mi>post</mi>
-                    </msub>
-                  </math></p>
-                <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
-                <div class="div_table">
-                    <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
-                    <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_table">
-                </div>
-                <p class="about_paragraph">En esta aplicación se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. El resultado obtenido se puede comparar con los datos oficiales publicados en la página del <a href="https://effis.jrc.ec.europa.eu/applications/data-and-services" target="_blank" class="footer_map--link">European Forest Fire Information System</a> (EFFIS). Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
+                <p class="about_paragraph">A través de la siguiente aplicación es posible estimar el área quemada y la severidad de cualquier incendio ocurrido desde el 2017 hasta la actualidad, según el método oficial del Servicio Geológico de los Estados Unidos (USGS). Para resaltar las áreas quemadas y estimar la gravedad del incendio se utilizó el índice Normalized Burn Ratio (NBR) <sup><a href="#ref" class="ref_text">2</a></sup>, a partir de imágenes Sentinel 2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que tienen una resolución espacial de 20 m. Antes de ser procesadas, las imágenes son corregidas atmosféricamente y las nubes vienen mascheradas, utilizando la banda de calidad de Sentinel-2 SR.</p>
             </div>
         </section>
 
@@ -292,10 +179,94 @@
 
         <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresusgs" target="_blank" class="footer_map--link">aquí</a>.</p>
 
+
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método USGS
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                                <p class="about_paragraph">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><a href="#ref" class="ref_text">3 4</a></sup>.
+                                </p>
+                                <p><math display="block" class="formulas">
+                                    <mrow>
+                                      <mi>NBR</mi>
+                                      <mo>=</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>-</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>+</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                  </math></p>
+                                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
+                                <p><math display="block" class="formulas">
+                                    <mi>dNBR</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>pre</mi>
+                                    </msub>
+                                    <mo>-</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>post</mi>
+                                    </msub>
+                                  </math></p>
+                                <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
+                                <div class="div_table">
+                                    <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
+                                    <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_table">
+                                </div>
+                                <p class="about_paragraph">En esta aplicación se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. El resultado obtenido se puede comparar con los datos oficiales publicados en la página del <a href="https://effis.jrc.ec.europa.eu/applications/data-and-services" target="_blank" class="footer_map--link">European Forest Fire Information System</a> (EFFIS). Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
+                            </div>
+                        </section>
+                </article>
+    
+                <!-- <article class="questions_padding">
+                    <div class="questions_answer">
+                        <h3 class="questions_title">¿Qué es CSS GRID?
+                            <span class="questions_arrow">
+                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
+                            </span>
+                        </h3>
+    
+                        
+                    </div>
+                </article>
+    
+                <article class="questions_padding">
+                    <div class="questions_answer">
+                        <h3 class="questions_title">¿Qué aprenderé en este curso?
+                            <span class="questions_arrow">
+                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
+                            </span>
+                        </h3>
+    
+                        <p class="questions_show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem necessitatibus laborum assumenda repellendus adipisci soluta, voluptatum quaerat? Ex earum atque rerum maiores ea. Eaque at dignissimos id tempore consequuntur! Expedita.
+                        Quae praesentium minima fugit. Similique exercitationem molestias excepturi illo inventore ducimus animi sapiente necessitatibus corporis, dignissimos recusandae repudiandae nemo reprehenderit quia magnam. Nesciunt, incidunt nemo! Excepturi iure sed cumque laudantium!</p>
+                    </div>
+                </article> -->
+            </section>
+        </section>
+
         <section class="container_text about">
             <h2 class="subtitle about">Llorens method</h2>
 
-            <p class="about_paragraph">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por Llorens et al.<sup><span class="valensat">[5]</span></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
+            <p class="about_paragraph">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por Llorens et al. <sup><a href="#ref" class="ref_text">5</a></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
 
             <p class="about_paragraph">En este apartado se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. Puedes poner las fechas de antes o, si quieres, probar ponendo las fechas del 04.03.2023 (pre-fire images) y del 25.03.2023 (post-fire images), y seleccionar la zona cerca de Montanejos (Castellón), para visualizar el incendio que occurrió en el 2023.</p>
         </section>
@@ -309,18 +280,37 @@
         <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://https://valensatproject.users.earthengine.app/view/appfiresrafamethod" target="_blank" class="footer_map--link">aquí</a>.</p>
 
         <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método Llorens
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                            </div>
+                        </section>
+                </article>
+            </section>
+        </section>
+
+        <section class="about">
                 <div class="container_text about">
-                        <h3 class="subtitle">Referencias</h3>
-                        <p class="about_paragraph"><a href="https://doi.org/10.1146/annurev.es.15.110184.002033" target="_blank" class="footer_map--link">[1]</a> Sousa, W. P. (1984). The Role of Disturbance in Natural Communities. Annual review of ecology and systematics, 15(1), 353-391.</p>
-                        <p class="about_paragraph"><a href="https://doi.org/10.2737/RMRS-GTR-164" target="_blank" class="footer_map--link">[2]</a> Key, C. H., & Benson, N. C. (2006). Landscape Assessment (LA). In: Lutes, Duncan C.; Keane, Robert E.; Caratti, John F.; Key, Carl H.; Benson, Nathan C.; Sutherland, Steve; Gangi, Larry J. 2006. FIREMON: Fire effects monitoring and inventory system. Gen. Tech. Rep. RMRS-GTR-164-CD. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. LA-1-55, 164.</p>
-                        <p class="about_paragraph"><a href="https://doi.org/10.3390/environments6030036" target="_blank" class="footer_map--link">[3]</a> Teodoro, A. C., & Amaral, A. C. F. (2019). A Statistical and Spatial Analysis of Portuguese Forest Fires in Summer 2016 Considering Landsat 8 and Sentinel 2A Data. Environments, 6(3), 36. </p>
-                        <p class="about_paragraph"><a href="https://doi.org/10.1080/01431161.2018.1519284" target="_blank" class="footer_map--link">[4]</a> Amos, C., Petropoulos, G. P., & Ferentinos, K. P. (2019). Determining the use of Sentinel-2A MSI for wildfire burning & severity detection. International Journal of Remote Sensing, 40(3), 905-930.</p>
-                        <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[5]</a> Rafa articol</p>
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. Sousa, W. P. (1984). The Role of Disturbance in Natural Communities. Annual review of ecology and systematics, 15(1), 353-391. <a href="https://doi.org/10.1146/annurev.es.15.110184.002033" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Key, C. H., & Benson, N. C. (2006). Landscape Assessment (LA). In: Lutes, Duncan C.; Keane, Robert E.; Caratti, John F.; Key, Carl H.; Benson, Nathan C.; Sutherland, Steve; Gangi, Larry J. 2006. FIREMON: Fire effects monitoring and inventory system. Gen. Tech. Rep. RMRS-GTR-164-CD. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. LA-1-55, 164. <a href="https://doi.org/10.2737/RMRS-GTR-164" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Teodoro, A. C., & Amaral, A. C. F. (2019). A Statistical and Spatial Analysis of Portuguese Forest Fires in Summer 2016 Considering Landsat 8 and Sentinel 2A Data. Environments, 6(3), 36. <a href="https://doi.org/10.3390/environments6030036" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. Amos, C., Petropoulos, G. P., & Ferentinos, K. P. (2019). Determining the use of Sentinel-2A MSI for wildfire burning & severity detection. International Journal of Remote Sensing, 40(3), 905-930. <a href="https://doi.org/10.1080/01431161.2018.1519284" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. Rafa articol</p>
                 </div>
         </section>
 
     </main>
 
+    <img src="../images/arrow_up.svg" alt="Volver arriba" class="back-to-top">
 
     <footer class="footer">
         <nav class="nav--footer footer_container container_text">
@@ -408,6 +398,7 @@
 
     <script src="../js/app.js"></script>
     <script src="../js/chart.js"></script>
+    <script src="../js/desplegable_info.js"></script>
 
     <script>
         var ctx = document.getElementById('barras_inc').getContext('2d');
@@ -424,6 +415,7 @@
             options: {responsive: true}
         });
     </script>
+    
 
 </body>
 </html>
