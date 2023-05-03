@@ -43,7 +43,7 @@ $.ajax(settings)
         const fecha = new Date(horas[i]);
         const dia = fecha.getDate();
         const mes = fecha.toLocaleString('default', { month: 'short' });
-        const hora = fecha.getHours()+1;
+        const hora = fecha.getHours()+2;
         const horaFormateada = dia + ' ' + mes + '. ' + hora + 'h';
         horasFormateadas.push(horaFormateada);
         }
@@ -183,7 +183,7 @@ function getChartData(codigo) {
           const fecha = new Date(horas[i]);
           const dia = fecha.getDate();
           const mes = fecha.toLocaleString('default', { month: 'short' });
-          const hora = fecha.getHours()+1;
+          const hora = fecha.getHours()+2;
           const horaFormateada = dia + ' ' + mes + '. ' + hora + 'h';
           horasFormateadas.push(horaFormateada);
           }
