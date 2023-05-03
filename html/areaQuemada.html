@@ -184,7 +184,7 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Más información sobre el método USGS
+                        <h3 class="desp_title">Más información sobre el método desarrollado por USGS
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
@@ -211,34 +211,32 @@
                                       </mfrac>
                                     </mrow>
                                   </math></p>
+
+                                  <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
+
+                                  <p><math display="block" class="formulas">
+                                    <mi>dNBR</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>pre</mi>
+                                    </msub>
+                                    <mo>-</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>post</mi>
+                                    </msub>
+                                  </math></p>
+
+                                  <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
+                                <div class="div_table">
+                                    <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
+                                    <img src="../images/Incendios/burn_sev_lev.png" alt="" class="image_table">
+                                </div>
                             </div>
                         </section>
                 </article>
     
-                <!-- <article class="questions_padding">
-                    <div class="questions_answer">
-                        <h3 class="questions_title">¿Qué es CSS GRID?
-                            <span class="questions_arrow">
-                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
-                            </span>
-                        </h3>
-    
-                        
-                    </div>
-                </article>
-    
-                <article class="questions_padding">
-                    <div class="questions_answer">
-                        <h3 class="questions_title">¿Qué aprenderé en este curso?
-                            <span class="questions_arrow">
-                                <img src="../images/arrow_up.svg" alt="arrow" class="questions_img">
-                            </span>
-                        </h3>
-    
-                        <p class="questions_show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem necessitatibus laborum assumenda repellendus adipisci soluta, voluptatum quaerat? Ex earum atque rerum maiores ea. Eaque at dignissimos id tempore consequuntur! Expedita.
-                        Quae praesentium minima fugit. Similique exercitationem molestias excepturi illo inventore ducimus animi sapiente necessitatibus corporis, dignissimos recusandae repudiandae nemo reprehenderit quia magnam. Nesciunt, incidunt nemo! Excepturi iure sed cumque laudantium!</p>
-                    </div>
-                </article> -->
             </section>
         </section>
 
@@ -263,7 +261,7 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Más información sobre el método Llorens
+                        <h3 class="desp_title">Más información sobre el método desarrollado por Llorens et al. (2023?)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
