@@ -167,7 +167,7 @@
                         Este fenómeno puede tener consecuencias negativas en la salud de las personas, la calidad del aire y la eficiencia energética en las ciudades. Por lo tanto, es importante que las ciudades implementen estrategias para reducir la formación de islas de calor urbano, como la creación y la ampliación de espacios verdes, la utilización de materiales de construcción más reflectantes y la promoción del transporte sostenible en lugar del automóvil.</p>
                         <h3 class="subtitle about">Surface Urban Heat Island (SUHI)</h3>
                     <p class="about_paragraph">Cuando se monitoriza la isla de calor urbana a partir de datos de teledetección, se habla de Isla de Calor Urbana Superficial (Surface Urban Heat Island, SUHI), debido a que el parámetro utilizado es la temperatura de superficie terrestre (Land Surface Temperature, LST). La metodología seguida para obtener los valores de SUHI aqui reportados ha sido la propuesta por Sobrino & Irakulis (2020) <sup><span class="valensat">[1]</span></sup>. De esta forma, se ha estimado SUHI<sub>MAX</sub> y SUHI<sub>MEAN</sub>, que se definen como las diferencias térmicas entre el LST máximo y medio de la zona urbana y el LST de su entorno.</p>
-                    <p><math display="inline" class="formulas">
+                    <p><math display="block" class="formulas">
                         <msub>
                             <mi>SUHI</mi>
                             <mi>MAX</mi>
@@ -183,7 +183,7 @@
                           <mi>SUR</mi>
                         </msub>
                       </math></p>
-                      <p><math display="inline" class="formulas">
+                      <p><math display="block" class="formulas">
                         <msub>
                             <mi>SUHI</mi>
                             <mi>MEAN</mi>
@@ -202,7 +202,7 @@
 
                     <p class="about_paragraph">Para definir el área urbana se ha utilizado los límites territoriales proporcionados por el Instituto Geográfico Nacional (IGN), mentras en el caso de las zonas circundantes se han definido tres áreas diferentes, la adyacente urbana (S<sub>u</sub>), la futura adyacente (S<sub>f</sub>) y la periurbana (S<sub>p</sub>). El ancho (W<sub>U</sub>, W<sub>f</sub> y W<sub>P</sub>) de la zona de influencia para cada entorno se calcula de la siguiente manera:</p>
 
-                    <p><math display="inline" class="formulas">
+                    <p><math display="block" class="formulas">
                         <msub>
                             <mi>W</mi>
                             <mi>u</mi>
@@ -219,7 +219,7 @@
                         </msup>
                       </math></p>
                       
-                      <p><math display="inline" class="formulas">
+                      <p><math display="block" class="formulas">
                         <msub>
                             <mi>W</mi>
                             <mi>f</mi>
@@ -239,7 +239,7 @@
                         </msup>
                       </math></p>
                       
-                      <p><math display="inline" class="formulas">
+                      <p><math display="block" class="formulas">
                         <msub>
                             <mi>W</mi>
                             <mi>p</mi>
@@ -269,16 +269,16 @@
                     <p class="about_paragraph">donde A es el área de la aglomeración urbana y A<sub>wu</sub> es la suma de las áreas A y S<sub>u</sub>.</p>
 
                     <div class="div_table">
-                        <img src="../images/isla_calor/def_limits.JPG" alt="" class="image_table">
-                        <img src="../images/isla_calor/suhi_valencia.JPG" alt="" class="image_table">
-                        <p class="title_table">Representación del concepto de definición de límites (izquierda) y ejemplo en el caso de Valencia (derecha)</p>
+                        <img src="../images/isla_calor/def_limits.JPG" alt="" class="image_fig">
+                        <img src="../images/isla_calor/suhi_valencia.JPG" alt="" class="image_fig">
+                        <p class="title_img">Representación del concepto de definición de límites (izquierda) y ejemplo en el caso de Valencia (derecha)</p>
                     </div>
 
 
                         <h3 class="subtitle about">Urban Thermal Field Variance Index (UFTVI)</h3>
                     <p class="about_paragraph">El Urban Thermal Field Variance Index, o UFTVI, es el índice más utilizado para la evaluación ecológica de ambientes urbanos, por su relación directa con el LST. Este index considera el impacto térmico de las diferentes subáreas (nivel de distrito) en el área de aglomeración urbana<sup><span class="valensat">[1]</span></sup> y permite un análisis cuantitativo del efecto Isla de Calor Urbano, a través de la relación:</p>
 
-                    <p><math display="inline" class="formulas">
+                    <p><math display="block" class="formulas">
                         <mi>UFTVI</mi>
                         <mo>=</mo>
                         <mi>1</mi>
@@ -298,11 +298,62 @@
 
                     <p class="about_paragraph">De esta forma, el índice UFTVI nos permite analizar el impacto térmico en cada zona del casco urbano. El índice se divide en seis niveles con seis índices de evaluación ecológica específicos <sup><span class="valensat">[2]</span></sup>, que van desde excelente (cuando el efecto SUHI es menospreciable) hasta peor (cuando el efecto SUHI es más fuerte). </p>
 
+                    <div class="div_table">
+                        <p class="title_table">Categorización del índice de evaluación ecológica</p>
+                        <img src="../images/isla_calor/cat_ind_ev.jpg" alt="" class="image_table">
+                    </div>
+
+                    <div class="div_table">
+                        <img src="../images/isla_calor/UFTVI_val.jpg" alt="" class="image_fig">
+                        <img src="../images/isla_calor/UFTVI_legend.jpg" alt="" class="image_fig">
+                        <p class="title_img">Ejemplo del índice UFTVI en el caso de Valencia</p>
+                    </div>
+
 
                     <h3 class="subtitle about">Discomfort Index (DI)</h3>
-                    <p class="about_paragraph">El índice de malestar (DI) es una medida de la sensación de calor humano para diferentes condiciones climáticas. Permite analizar el impacto bioclimático a partir de una relación entre la humedad relativa (RH) en percentaje y la temperatura de superficie terrestre<sup><span class="valensat">[1]</span></sup>, en ˚C.</p>
+                    <p class="about_paragraph">El índice de malestar (DI) es una medida de la sensación de calor humano para diferentes condiciones climáticas. Permite analizar el impacto bioclimático a partir de una relación entre la humedad relativa (RH) en percentaje y la temperatura de superficie terrestre<sup><span class="valensat">[1]</span></sup>, en ˚C. La humedad relativa se ha obtenido con el producto de ERA5.</p>
+
+                    <p><math display="block" class="formulas">
+                        <mi>LST</mi>
+                        <mo>=</mo>
+                        <mi>LST</mi>
+                        <mo>-</mo>
+                        <mi>(0.55</mi>
+                        <mo>-</mo>
+                        <mi>0.055 RH)</mi>
+                        <mi>(LST</mi>
+                        <mo>-</mo>
+                        <mi>14.5)</mi>
+                      </math>
+                    </p>
+
+                    <p class="about_paragraph">Este índice se divide en diez categorías, que van desde hiperglacial hasta tórrido. En el caso de Valencia, toda la comarca urbana tiene un índice de malestar correspondiente a la clase "very hot".</p>
+
+                    <div class="div_table">
+                        <p class="title_table">Categorización del índice de malestar</p>
+                        <img src="../images/isla_calor/DI_limits.jpg" alt="" class="image_table">
+                    </div>
+
                     <h3 class="subtitle about">Urban Hot Spots (UHS)</h3>
-                    <p class="about_paragraph">Los Urban Hot Spots (UHS) son las regiones más calientes de un área urbana<sup><span class="valensat">[3]</span></sup>. Un píxel se considera un punto caliente urbano si su temperatura está por encima de dos desviaciones estándar del valor medio de la escena.</p>  
+                    <p class="about_paragraph">Los Urban Hot Spots (UHS) son las regiones más calientes de un área urbana<sup><span class="valensat">[3]</span></sup>. Un píxel se considera un punto caliente urbano si su temperatura está por encima de dos desviaciones estándar (σ) del valor medio de la escena.</p>
+
+                    <p><math display="block" class="formulas">
+                        <mi>LST</mi>
+                        <mo>></mo>
+                        <msub>
+                            <mi>LST</mi>
+                            <mi>URB - MEAN</mi>
+                          </msub>
+                        <mo>+</mo>
+                        <mi>2σ</mi>
+                      </math>
+                    </p>
+
+                    <div class="div_table">
+                        <img src="../images/isla_calor/hot_spots.jpg" alt="" class="image_fig">
+                        <p class="title_img">Ejemplo de Urban Hot Spots en el caso de Valencia</p>
+                    </div>
+
                 </div>
         </section>
 
@@ -311,7 +362,7 @@
                 <div class="container_text about">
                         <h3 class="subtitle">Referencias</h3>
                         <p class="about_paragraph"><a href="https://doi.org/10.3390/rs12122052" target="_blank" class="footer_map--link">[1]</a> Sobrino, J. A., & Irakulis, I. (2020). A Methodology for Comparing the Surface Urban Heat Island in Selected Urban Agglomerations Around the World from Sentinel-3 SLSTR Data. Remote Sensing, 12(12), 2052.</p>
-                        <p class="about_paragraph"><a href="" target="_blank" class="footer_map--link">[2]</a>(Liu & Zhang, 2011)</p>
+                        <p class="about_paragraph"><a href="https://doi.org/10.3390/rs3071535" target="_blank" class="footer_map--link">[2]</a>Liu, L., & Zhang, Y. (2011). Urban Heat Island Analysis Using the Landsat TM Data and ASTER Data: A Case Study in Hong Kong. Remote Sensing, 3(7), 1535-1552.</p>
                         <p class="about_paragraph"><a href="https://doi.org/10.1016/j.scs.2020.102100" target="_blank" class="footer_map--link">[3]</a> Portela, C. I., Massi, K. G., Rodrigues, T., & Alcântara, E. (2020). Impact of urban and industrial features on land surface temperature: Evidences from satellite thermal indices. Sustainable Cities and Society, 56, 102100.</p>
 
                 </div>
