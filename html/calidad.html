@@ -242,80 +242,34 @@
                                 </div>
                                 
                                 <p class="about_paragraph">
-                                    Al ver este espectro, Mishra y Mishra (2012)<sup><a href="#ref" class="ref_text">2</a></sup> propusieron un índic
+                                    Al ver este espectro, Mishra y Mishra (2012)<sup><a href="#ref" class="ref_text">2</a></sup> propusieron un índice que relacionara dos bandas que permitiera
+                                    detectar uno de los picos de absorción. Así, al igual que el NDVI o el NDWI, aparece el Normalized Difference Clorophyll Index o NDCI, un indicador normalizado
+                                    con rango de -1 a 1. En el caso de estudiar el índice en <strong>Sentinel-2</strong>, elegimos las bandas 4 y 5 (en λ = 665nm y λ =705nm respectivamente) para estudiar la diferencia
+                                    del segundo pico.
                                 <p><math display="block" class="formulas">
                                     <mrow>
-                                      <mi>NBR</mi>  
+                                      <mi>NDCR</mi>  
                                       <mo>=</mo>
                                       <mfrac>
                                         <mrow>
-                                          <mi>NIR</mi>
+                                          <mi>B5</mi>
                                           <mo>-</mo>
-                                          <mi>SWIR</mi>
+                                          <mi>B4</mi>
                                         </mrow>
                                         <mrow>
-                                          <mi>NIR</mi>
+                                          <mi>B5</mi>
                                           <mo>+</mo>
-                                          <mi>SWIR</mi>
+                                          <mi>B4</mi>
                                         </mrow>
                                       </mfrac>
                                     </mrow>
                                   </math></p>
-                                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
-                                <p><math display="block" class="formulas">
-                                    <mi>dNBR</mi>
-                                    <mo>=</mo>
-                                    <msub>
-                                      <mi>NBR</mi>
-                                      <mi>pre</mi>
-                                    </msub>
-                                    <mo>-</mo>
-                                    <msub>
-                                      <mi>NBR</mi>
-                                      <mi>post</mi>
-                                    </msub>
-                                  </math></p>
-                                <p class="about_paragraph">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
-                                <div class="div_table">
-                                    <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
-                                    <img src="../images/calidad/calidad_agua.png" alt="" class="image_table">
-                                </div>
-                                <h3 class="subsubtitle"> <br> Normalized Difference Chlorophyll Index (NDCI)
+                                
+                                <h3 class="subsubtitle"> <br> Normalized Difference Turbidity Index (NDTI)
                                 </h3>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
-                                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
-                                <p><math display="block" class="formulas">
-                                    <mi>dNBR</mi>
-                                    <mo>=</mo>
-                                    <msub>
-                                      <mi>NBR</mi>
-                                      <mi>pre</mi>
-                                    </msub>
-                                    <mo>-</mo>
-                                    <msub>
-                                      <mi>NBR</mi>
-                                      <mi>post</mi>
-                                    </msub>
-                                  </math></p>
-                                <p class="about_paragraph">El</p>
-                                <p class="about_paragraph">En</p>
+                                <h3 class="subsubtitle"> <br> Total Suspended Solids (TSS)
+                                </h3>
+                             
                             </div>
                         </section>
                 </article>
