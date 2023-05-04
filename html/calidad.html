@@ -215,8 +215,32 @@
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><a href="#ref" class="ref_text">3 4</a></sup>.
+                                <p class="about_paragraph">
+                                    Antes de hablar de qué índices nos sirven para estudiar, la bibliografía nos dice que existe una bipartición en la clasificación de tipos de aguas: las aguas tipo 1 y tipo 2 (Mishra & Mishra, 2012).
                                 </p>
+                                <p class="about_paragraph">
+                                <strong>Aguas tipo 1:</strong> Son aquellas aguas en las que el fitoplancton (que convierte CO2 y H2O en O2) es el responsable de la producción primaria.
+                                </p>
+                                <p class="about_paragraph">
+                                <strong>Aguas tipo 2:</strong> Corresponden a las aguas turbias, donde no solo el fitoplancton es un factor fundamental. Aquí, constituyentes como materia totalmente suspendida (TSM), materia orgánica disuelta (CDOM), o la transparencia (SD) son igual de importantes y sus efectos no pueden ser negligibles.
+                                </p>
+                                <p class="about_paragraph">
+                                    En la Comunitat Valenciana (CV) tenemos diversos embalses, ríos y zonas de costa que podemos clasificar en estos dos tipos de agua. En el caso particular de la Albufera, 
+                                    que ha sido extensamente estudiada y existe un gran número de referencias sobre ella, sabemos que se trata de un agua tipo 2. Esto implica que para estimar de forma adecuada 
+                                    la calidad del agua debemos incorporar diferentes indicadores que tengan en cuenta todos los factores que afecten en mayor medida en la Albufera, y 
+                                    no solo aquellos que se relacionen con la biomasa del fitoplancton. 
+                                </p>
+                                <h3 class="subsubtitle"> <br> Normalized Difference Chlorophyll Index (NDCI)
+                                </h3>
+                                <p class="about_paragraph">
+                                    La clorofila a (chl-a) es el principal pigmento del fitoplancton, por lo que es un gran indicador para determinar la claridad del agua. 
+                                    Su reflectividad en el espectro es el siguiente: 
+                                </p>
+                                <div class="div_table">
+                                    <img src="../images/calidad/clorofila_espectrum.png" alt="Curvas espectrales de absorción de la clorofila-a y la clorofila-b" class="image_table_calidad">
+                                    <p class="image_title_calidad">Curvas espectrales de absorción de la clorofila-a y la clorofila-b</p>
+                                </div>
+                                
                                 <p><math display="block" class="formulas">
                                     <mrow>
                                       <mi>NBR</mi>
@@ -254,7 +278,42 @@
                                     <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
                                     <img src="../images/calidad/calidad_agua.png" alt="" class="image_table">
                                 </div>
-                                <p class="about_paragraph">En esta aplicación se pueden seleccionar las fechas de inicio y fin del incendio y la zona donde se produjo para obtener una estimación de la superficie quemada en hectarias, dividida por grados de severidad. El resultado obtenido se puede comparar con los datos oficiales publicados en la página del <a href="https://effis.jrc.ec.europa.eu/applications/data-and-services" target="_blank" class="footer_map--link">European Forest Fire Information System</a> (EFFIS). Puedes poner por ejemplo las fechas del 04.08.18 (pre-fire images) y del 24.08.18 (post-fire images) y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018.</p>
+                                <h3 class="subsubtitle"> <br> Normalized Difference Chlorophyll Index (NDCI)
+                                </h3>
+                                <p><math display="block" class="formulas">
+                                    <mrow>
+                                      <mi>NBR</mi>
+                                      <mo>=</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>-</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi>NIR</mi>
+                                          <mo>+</mo>
+                                          <mi>SWIR</mi>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                  </math></p>
+                                <p class="about_paragraph">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras. </p>
+                                <p><math display="block" class="formulas">
+                                    <mi>dNBR</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>pre</mi>
+                                    </msub>
+                                    <mo>-</mo>
+                                    <msub>
+                                      <mi>NBR</mi>
+                                      <mi>post</mi>
+                                    </msub>
+                                  </math></p>
+                                <p class="about_paragraph">El</p>
+                                <p class="about_paragraph">En</p>
                             </div>
                         </section>
                 </article>
