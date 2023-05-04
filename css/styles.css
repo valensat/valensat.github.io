@@ -484,26 +484,55 @@ body {
 /* FOOTER */
 
 .footer{
-    background-color: rgba(250, 171, 1, 0.9);
+    /* background-color: rgba(250, 171, 1, 0.9); */
+    /* background-color: rgba(250, 171, 1, 0.1); */
+    /* background-color: #272525e5; */
+    /* background-color: #3b383d; */
+    background-color: #2c303f;
     display: grid;
 }
 
-.footer_title{
+
+.footer_title {
+    padding: 0 10px;
+    font-size: 24px;
     font-size: 2rem;
-    color: #3b383d;
+    color: #F2F2F0;
+    position: relative;
+    text-align: center;
+    line-height: 1.5;
 }
+
+
+.footer_container--bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+  
+.border {
+    flex: 1;
+    height: 1px;
+    background-color: #F2F2F0;
+}
+
+
+  
 
 .footer_container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 .nav--footer{
     padding-bottom: 20px;
     display: grid;
-    /* grid-template-rows: 110px 1fr; */
     gap: 1em;
     grid-auto-flow: row;
     height: 100%;
@@ -513,13 +542,14 @@ body {
     /* display: grid; */
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 4.5em;
 }
 
 .link_footer{
     text-decoration: none;
     font-size: 0.9em;
-    color: #3b383d;
+    color: #F2F2F0;
+    font-weight: 300;
 }
 
 .link_footer:hover{
@@ -531,10 +561,46 @@ body {
     margin: 15px 0 15px 0;
 }
 
-.footer_container--bottom{
-    width: 80%;
+.logo_footer{
+    width: 175px;
+    padding-left: 15px;
+}
+
+.logo_footer2{
+    width: 110px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.border-top::after {
+    content: "Derechos reservados ©VALENSAT";
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #F2F2F0;
+    font-weight: 100;
+    font-size: 0.9em;
+}
+  
+.footer_container--bottom2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
+    gap: 3em;
+}
+
+.footer_priv{
+    color: #F2F2F0;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.footer_priv:hover{
+    text-decoration: underline;
 }
 
 ul{
@@ -543,7 +609,7 @@ ul{
 
 .links_footer--header{
     font-size: 1.2rem;
-    color: #3b383d;
+    color: #F2F2F0;
     font-weight: 600;
     text-decoration: none;
 }
@@ -556,7 +622,7 @@ ul{
     pointer-events: none;
     font-size: 1.2rem;
     text-decoration: none;
-    color: #3b383d;
+    color: #F2F2F0;
     font-weight: 600;
 }
 
@@ -572,7 +638,6 @@ ul{
     border: none;
     outline: none;
     background-color: #272525;
-    /* color: #ffffff; */
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
