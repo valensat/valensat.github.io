@@ -157,7 +157,7 @@ body {
     transition: transform 0.5s;
     display: flex;
     flex-wrap: wrap;
-    gap: 3em;
+    gap: 6em;
 }
 
 .menu__item--index{
