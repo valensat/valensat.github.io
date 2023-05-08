@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>Evolución urbana</title>
+    <title>Contaminación</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
@@ -33,7 +33,7 @@
 <body>
 
     <header class="header_product">
-        <nav class="nav container_nav_product">
+        <nav class="nav container">
             <div class="nav_logo">
                 <img src="../images/logo_ucg.png" alt="logo_UCG" class="nav_logo_img_product1">
             </div>
@@ -56,6 +56,10 @@
                 <img src="../images/logo_uv.jpg" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
+    </header>
+
+    <main>
+
         <section class="menu">
             <section class="menu__container">
                 <ul class="menu__links">
@@ -148,60 +152,16 @@
                 </div>
             </section>
         </section>
-    </header>
 
-    <main>       
-        <section class="about">
-            <h1 class="title">EVOLUCIÓN URBANA</h1>
-            <div class="container_text about">
-                <p class="about_paragraph">Estudiar las series temporales de ciertas playas o líneas de costa puede resultar una tarea complicada 
-                    usando datos satelitales debido a la baja resolución espacial comentada anteriormente. Por suerte, el Instituto Cartográfico Valenciano (ICV) 
-                    contiene en su base de datos ortofotografías del Plan Nacional de Ortofotografía Aérea (PNOA), de la serie A, B y C de vuelos americanos que fotografiaron 
-                    la Comunitat Valenciana en la década de los 40, 50 y 60 y de vuelos menores.
-                    Estas ortofotografías tienen también la ventaja de ocupar un amplio abanico temporal, lo que nos permite evaluar mejor el cambio producido. 
-                    Pero, por otro lado, también estas imágenes tienen sus limitaciones. En primer lugar, no tenemos bandas espectrales, y eso prácticamente imposibilita realizar 
-                    un LandCover (al menos a gran escala) o hacer una segmentación óptima. En segundo lugar, podemos tener problemas a la hora de medir, 
-                    ya que estas ortofotografías deben estar ortoreferenciadas y ortorectificadas.
-                    </p>
-            </div>
-            <img src="../images/evolUrbana/intro.png" alt="" class="image_all">
-        </section>
-        
-            
-
-        <section class="about">
-            <h2 class="subtitle">Time-Lapse Landsat</h2>
-            <div class="container_text about">
-                <p class="about_paragraph">Las imágenes de satélite, pese a no tener tanta resolución espacial, sí tienen una resolución espectral y temporal mucho mayor, 
-                    y esto también tiene ventajas. Por ello, hemos creado una aplicación en Google Earth Engine con la intención de mostrar imágenes (en este caso de Landsat 
-                    por tener datos desde 1984) y observar la evolución de la urbanización a una escala perceptible por los satélites. Un claro ejemplo que se observa muy bien 
-                    es la expansión de los puertos de los grandes núcleos urbanos de la Comunitat Valenciana, con las consecuencias tanto económicas, sociales y políticas que conlleva.
-                    También el crecimiento de las grandes urbes en las últimas décadas es apreciable (nuevas urbanizaciones, carreteras, etc). 
-                    En esta aplicación solamente se debe dibujar la zona de interés, introducir el rango de años para la serie temporal y un rango de fechas para realizar un promedio de las imágenes. Esto último tiene la finalidad de conseguir una imagen clara y sin nubes, y el promediado se realiza con el algoritmo LandTrendr  (que estudia la evolución de cada píxel en la serie de imágenes). Establecemos como opción predeterminada el mes de agosto. 
-                    </p>
-            </div>
-        </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/timelapsepv" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
+        <div class="container about">
+            <h1>En proceso...</h1>
+            <img src="../images/proceso.webp" alt="">
         </div>
-        
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            </div>
-        </section>
+
+
 
 
     </main>
-        
-    <img src="../images/arrow_up.svg" alt="Volver arriba" class="back-to-top">
 
     <footer class="footer">
         <nav class="nav--footer footer_container">
