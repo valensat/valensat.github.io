@@ -185,39 +185,41 @@
                     <h3 class="subtitle">¿Cómo se calculan y qué representan estos índices?</h3>
             </div>
         </section>
-        
+                
          <section class="about">
             <section class="desp_container">
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">SPI
+                        <h3 class="desp_title">Normalized Difference Vegetation Index (NDVI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
+                                <p class="about_paragraph">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> <sup><a href="#ref" class="ref_text">1</a></sup>  es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:</p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                            <mi>NDVI</mi>
+                            <mo>=</mo>
+                            <mfrac>
+                            <mrow>
+                                <mi>NIR</mi>
+                                <mo>&#x2212;</mo>
+                                <mi>RED</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>NIR</mi>
+                                <mo>+</mo>
+                                <mi>RED</mi>
+                            </mrow>
+                            </mfrac>
+                        </math>
+                    </p>
+                    
+                    <p class="about_paragraph"> Los valores del NDVI varían de -1 a +1, donde los valores más altos indican una mayor densidad y salud de la vegetación. Un NDVI de 0 indica una superficie sin vegetación, mientras que los valores negativos indican la presencia de agua o nieve. El NDVI se utiliza ampliamente en estudios de cambio climático, monitoreo de la vegetación y evaluación de la producción agrícola.</p>
                             </div>
                         </section>
                 </article>
@@ -229,33 +231,43 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">SPEI
+                        <h3 class="desp_title">Soil Adjusted Vegetation Index (SAVI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
+                                <p class="about_paragraph">El <strong>Soil Adjusted Vegetation Index (SAVI)</strong> <sup><a href="#ref" class="ref_text">2</a></sup> se introdujo para mitigar el impacto del brillo del suelo. Su creador, Huete, añadió un factor de ajuste del suelo L a la ecuación del NDVI para corregir los efectos de ruido del suelo (color, humedad, variabilidad del suelo entre regiones, etc.), que suelen afectar a los resultados. Por cierto, este índice está más adaptado a estudios de análisis de vegetación en etapas de crecimiento inicial o vegetación dispersa. En general, el SAVI puede ser una buena alternativa en cualquier suelo donde exista una baja densidad vegetal y la exposición de la superficie del suelo sea relevante. Su ecuación es:</p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>SAVI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>RED</mi>
+                              <mo>+</mo>
+                              <mi>L</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo>×</mo>
+                          <mrow>
+                            <mi>(1</mi>
+                            <mo>+</mo>
+                            <mi>L)</mi>
+                          </mrow>
+                        </math>
+                    </p>
+
+                      <p class="about_paragraph">El SAVI varía entre -1 y +1, dependiendo de la densidad de vegetación verde de la zona en cuestión. En las zonas con mucha vegetación verde, se usa L= 0 y, en este caso, SAVI es igual que el NDVI. Por el contrario, se usa L = 1 para las zonas de vegetación verde baja. Lo habitual es L = 0,5 para ajustarse a la mayoría de suelos.</p>
                             </div>
                         </section>
                 </article>
@@ -267,33 +279,53 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">VCI
+                        <h3 class="desp_title">Enhanced Vegetación Index (EVI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
+                                <p class="about_paragraph"> El <strong>Enhanced Vegetación Index (EVI)</strong> es una alternativa más sólida a los índices tradicionales, por ser más robusto frente a la aportación del suelo y de las influencias atmosféricas. Liu y Huete <sup><a href="#ref" class="ref_text">3</a></sup> introdujeron este índice para ajustar los resultados del NDVI a los ruidos atmosféricos y del suelo, especialmente en las zonas de vegetación densa, así como para mitigar la saturación en la mayoría de los casos. Su ecuación es: </p>
+                      
+                      <p>
+                          <math display="block" class="formulas">
+                            <mi>EVI</mi>
+                            <mo>=</mo>
+                              <mrow>
+                                <mi>G</mi>
+                                <mo>×</mo>
+                                <mfrac>
+                                  <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>&#x2212;</mo>
+                                    <mi>RED</mi>
+                                  </mrow>
+                                  <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>+</mo>
                                     <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
+                                      <mi>C1</mi>
+                                      <mo>×</mo>
+                                      <mi>RED</mi>
                                     </mrow>
-                                  </math></p>
+                                    <mo>&#x2212;</mo>
+                                    <mrow>
+                                      <mi>C2</mi>
+                                      <mo>×</mo>
+                                      <mi>BLUE</mi>
+                                    </mrow>
+                                    <mo>+</mo>
+                                    <mrow>
+                                      <mi>L</mi>
+                                    </mrow>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                          </math>
+                        </p>
+
+                    <p class="about_paragraph"> El rango de valores del EVI es de -1 a +1, y para la vegetación sana varía entre 0,2 y 0,8. Los coeficientes C1 y C2 sirven para corregir la dispersión de los aerosoles presentes en la atmósfera y L para ajustar el fondo del suelo y del dosel de la vegetación.</p>
                             </div>
                         </section>
                 </article>
@@ -305,33 +337,35 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">TCI
+                        <h3 class="desp_title">Normalized Difference Water Index (NDWI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
+                                <p class="about_paragraph">El <strong>Normalized Difference Water Index (NDWI)</strong> <sup><a href="#ref" class="ref_text">4</a></sup> se elaboró inicialmente para delinear masas de agua al aire libre y evaluar su turbidez, mitigando la reflectancia del suelo y la vegetación terrestre. Su ecuación es:</p> 
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>NDWI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>+</mo>
+                              <mi>SWIR1</mi>
+                            </mrow>
+                          </mfrac>
+                        </math>
+                    </p>
+
+                    <p class="about_paragraph">El NDWI mide el cambio en el contenido de agua de las hojas, por eso se utiliza para monitorear sequías, registrar reducciones de rendimiento, aparte de descarga de embalses, descenso de los niveles de agua subterránea, etc. El rango común para la vegetación verde es de -0,1 a 0,4.</p>
                             </div>
                         </section>
                 </article>
@@ -343,85 +377,78 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">SVI
+                        <h3 class="desp_title">Normalized Multiband Drought Index (NMDI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
+                                <p class="about_paragraph">El <strong>Normalized Multiband Drought Index (NMDI)</strong> <sup><a href="#ref" class="ref_text">5</a></sup>monitorea las posibles condiciones de sequía utilizando la diferencia entre dos bandas SWIR como medida de la sensibilidad al agua en la vegetación y el suelo. También se utiliza comúnmente en la detección de incendios forestales. Su ecuación es:</p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>NMDI</mi>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>(SWIR1</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>SWIR2)</mi>
+                            </mrow>
+                            <mrow>
+                              <mi>NIR</mi>
+                              <mo>&#x2212;</mo>
+                              <mi>(SWIR1</mi>
+                              <mo>+</mo>
+                              <mi>SWIR2)</mi>
+                            </mrow>
+                          </mfrac>
+                        </math>
+                    </p>
+                  
+                    <p class="about_paragraph">A medida que aumenta la humedad del suelo, los valores del índice disminuyen. Valores de 0,7 - 1 indican suelo seco, de 0,6 - 0,7 suelo con humedad intermedia y menores de 0,6 suelo húmedo.</p>
                             </div>
                         </section>
                 </article>
             </section>
-        </section>
-
+        </section>           
+                
         <section class="about">
             <section class="desp_container">
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">VHI
+                        <h3 class="desp_title">Visible and Shortwave Drought Index (VSDI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El SPI es un índice es diseñado <sup><a href="#ref" class="ref_text">3 4</a></sup>.
-                                </p>
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NBR</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>-</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>NIR</mi>
-                                          <mo>+</mo>
-                                          <mi>SWIR</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
+                                <p class="about_paragraph">El <strong>Visible and Shortwave Drought Index (VSDI)</strong> <sup><a href="#ref" class="ref_text">6</a></sup> se basa en la diferencia entre las bandas sensibles a la humedad (SWIR y RED) y la banda de referencia de humedad (BLUE) y se usa para monitorear la sequía en diferentes tipos de cobertura de suelo agrícola, especialmente durante la temporada de crecimiento de las plantas. Su ecuación es:</p>
+
+                    <p>
+                        <math display="block" class="formulas">
+                          <mi>VSDI</mi>
+                          <mo>=</mo>
+                          <mi>1</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>[(SWIR</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>BLUE)+(RED</mi>
+                          <mo>&#x2212;</mo>
+                          <mi>BLUE)]</mi>
+                        </math>
+                      </p>
                             </div>
                         </section>
                 </article>
             </section>
-        </section>
+        </section>           
 
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. IPCC, 2022: Climate Change 2022: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the  Intergovernmental Panel on Climate Change [H.-O. Pörtner, D.C. Roberts, M. Tignor, E.S. Poloczanska, K. Mintenbeck, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem, B. Rama (eds.)]. Cambridge University Press. Cambridge University Press, Cambridge, UK and New York, NY, USA, 3056 pp.<a href="https://www.researchgate.net/profile/Sina-Ayanlade/publication/362431678_Climate_Change_2022_Impacts_Adaptation_and_Vulnerability_Working_Group_II_Contribution_to_the_Sixth_Assessment_Report_of_the_Intergovernmental_Panel_on_Climate_Change/links/62ea52343c0ea87887793180/Climate-Change-2022-Impacts-Adaptation-and-Vulnerability-Working-Group-II-Contribution-to-the-Sixth-Assessment-Report-of-the-Intergovernmental-Panel-on-Climate-Change.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2. Vicente-Serrano, S. M., López-Moreno, J. I., Beguería, S., Lorenzo-Lacruz, J., Sanchez-Lorenzo, A., Beguería, S., Azorin-Molina, C., Morán-Tejeda, E., Revuelto, J., Trigo, R. M., Coelho, F., & Espejo, F. J. J. (2014). Evidence of increasing drought severity caused by temperature rise in southern Europe. Environmental Research Letters, 9(4), 044001.<a href="https://doi.org/10.1088/1748-9326/9/4/044001" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. Bates, B. C., Kundzewicz, Z. W., & Wu, S. (2008). Climate change and water.<a href="https://www.sswm.info/sites/default/files/reference_attachments/BATES%20et%20al%202008%20Climate%20Change%20and%20Water.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            </div>
-        </section>
 
     </main>
 
