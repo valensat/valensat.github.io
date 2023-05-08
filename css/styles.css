@@ -157,7 +157,7 @@ body {
     transition: transform 0.5s;
     display: flex;
     flex-wrap: wrap;
-    gap: 3em;
+    gap: 6em;
 }
 
 .menu__item--index{
@@ -938,10 +938,9 @@ tr td:first-child{
 
 .title_table{
     padding-top: 25px;
-    text-decoration: underline;
     color: #244072;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .title_img{
@@ -1028,7 +1027,7 @@ tr td:first-child{
 }
 
 .image_table{
-    height: 25vh;
+    height: 20vh;
 }
 
 
