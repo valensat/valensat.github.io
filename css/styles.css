@@ -399,10 +399,10 @@ body {
 .highlight-box {
     display: block;
     line-height: 1.7;
-    background-color: #f1f1f1;
-    border: 1px solid #001A49;
-    padding: 15px;
-    border-radius: 6px;
+    padding: 15px 0 0;
+    color: #001A49;
+    font-style: italic;
+    font-weight: 600;
 }
 
 /* Testimony */
