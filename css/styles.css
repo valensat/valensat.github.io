@@ -396,6 +396,15 @@ body {
     color: #272525;
 }
 
+.highlight-box {
+    display: block;
+    line-height: 1.7;
+    background-color: #f1f1f1;
+    border: 1px solid #001A49;
+    padding: 15px;
+    border-radius: 6px;
+}
+
 /* Testimony */
 
 .testimony_title{
