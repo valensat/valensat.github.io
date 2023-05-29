@@ -151,19 +151,20 @@
     </header>
 
     <main>
-        <section class="container about">
-            <h2 class="subtitle">Land Cover</h2>
-            <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perferendis maiores quam sit ratione voluptatem inventore quasi iusto adipisci, laudantium sequi. Corporis iure magni provident dolorem cum facilis nesciunt placeat.
-            Enim, deleniti! Totam, dignissimos similique, ipsa deserunt dolor quisquam culpa maxime, tenetur neque atque pariatur enim et iure vel tempora saepe ipsum voluptate! Magnam ad officiis sequi perferendis facilis cumque?
-            Voluptate dolore fugiat molestias corporis qui quo vitae dignissimos excepturi, aliquam repellat provident libero. Enim corrupti, nemo excepturi labore voluptatum iusto praesentium eveniet quos, odit officia recusandae, architecto repudiandae quaerat.</p>
-
+        <section class="about">
+            <h2 class="title">Land Cover</h2>
+            <div class="container_text about">
+                <p class="about_paragraph">Con el fin de obtener un mapa de clasificación de toda la comunidad se han realizado clasificaciones supervisadas con diferentes productos de satélite. El proceso se ha realizado tanto con imágenes de Landsat 5-9, para un análisis temporal, como con Sentinel 2, para un análisis a mejor resolución espacial.</p>
+                <h2 class="subtitle about">Clasificacion Landsat 1984-2022</h2>
+                <p class="highlight-box">En este apartado se puede visualizar la cobertura del suelo producida con imágenes Landsat 5 para el año 1984 y Landsat 9 para el año 2022. Para obtener la clasificación solo se tomaron en consideración las imágenes del periodo estival (principios de junio - finales de septiembre).</p>
+            </div>
         </section>
 
-        <div class="container_appmap">
+        <!-- <div class="container_appmap">
             <div class="mapa_container_marco">
                 <iframe src="https://valensatproject.users.earthengine.app/view/clasificacionsentinel20152022" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
-        </div>
+        </div> -->
 
         <div class="container_appmap">
             <div class="mapa_container_marco">
@@ -171,7 +172,9 @@
             </div>
         </div>
 
-        <section class="container">
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/clasificacionlandsat" target="_blank" class="footer_map--link">aquí</a>.</p>
+
+        <!-- <section class="container">
             <div class="table_title">
                 <h2 class="subtitle">Tabla de clasificación - Sentinel</h2>
             </div>
@@ -240,7 +243,7 @@
                   <td>1.65 %</td>
                 </tr>
               </table>              
-        </section>
+        </section> -->
 
         <section class="container">
             <div class="table_title">
@@ -313,12 +316,43 @@
               </table>              
         </section>
 
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método empleado
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                                <p class="about_paragraph">El métodos utilizado para realizar estas mapas de clasificación es el Clasificador Random Forest (Phan et al., 2020; Teluguntla et al., 2018; Kelley et al., 2018; Maxwell et al., 2019; Millard & Richardson, 2015; Li et al., 2016)<sup><a href="#ref" class="ref_text">1, 2 ...</a></sup>, que mediante árboles de decisión categoriza los inputs de entrada. Se han seleccionado más de 1000 puntos por toda la comunidad, introduciendo la clase a la que pertenecen (agua, urbano, suelo desnudo, vegetación y vegetación seca), y se han establecido 150 árboles decicionales.
+                                </p>
+
+                            </div>
+                        </section>
+                </article>
+    
+            </section>
+        </section>
+
+        <section class="about">
+            <div class="container_text about">
+                <h2 class="subtitle about">Clasificacion Sentinel 2022</h2>
+                <p class="highlight-box">En este apartado se puede visualizar la cobertura del suelo producida con imágenes Sentinel 2 para el año 2022. Para obtener la clasificación solo se tomaron en consideración las imágenes del periodo estival (principios de junio - finales de septiembre).</p>
+            </div>
+        </section>
+
 
         <div class="container_appmap">
             <div class="mapa_container_marco">
                 <iframe src="https://valensatproject.users.earthengine.app/view/clasificacionvalencia" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
+
+        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/clasificacionvalencia" target="_blank" class="footer_map--link">aquí</a>.</p>
 
 
         <section class="about">
@@ -427,6 +461,7 @@
 
 
     <script src="../js/app.js"></script>
+    <script src="../js/desplegable_info.js"></script>
 
 </body>
 </html>
