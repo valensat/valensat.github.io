@@ -963,6 +963,13 @@ tr td:first-child{
     height: 25vh;
 }
 
+.green-cell {
+    color: green;
+}
+
+.red-cell {
+    color: red;
+}
 
 
 /* TABLAS AVAMET */

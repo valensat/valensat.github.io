@@ -161,7 +161,7 @@
                     
                     <p class="about_paragraph">El uso de agua de riego representa alrededor del 70% de las extracciones de agua en todo el mundo y se cree que será una de las causas más importantes del aumento del uso del agua en los próximos años <sup><a href="#ref" class="ref_text">1,</a></sup> <sup><a href="#ref" class="ref_text">3</a></sup>. Por lo tanto, gestión integrada de recursos hídricos y la mejora de la eficiencia del uso del agua a traves de la teledeteccion resulta crucial para minimizar los efectos adversos de la sequía y asegurar un suministro adecuado de agua para la población y los ecosistemas.</p>
 
-                <p class="highlight-box">A través de la siguiente aplicación es posible calcular el SPI, el SPEI, el VCI, el TCI, el SVI y el VHI, seleccionando las fechas de referencia y la zona de interés.</p>
+                <p class="highlight-box">A través de la siguiente aplicación es posible calcular el Standardized Precipitation Index (SPI), el Standardized Precipitation Evapotranspiration Index (SPEI), el Vegetation Condition Index (VCI), el Temperature Condition Index (TCI), el Soil Vegetation Index (SVI) y el Vegetation Health Index (VHI), seleccionando las fechas de referencia y la zona de interés.</p>
             </div>
         </section>
 
@@ -182,35 +182,38 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Normalized Difference Vegetation Index (NDVI)
+                        <h3 class="desp_title">Standardized Precipitation Index (SPI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> <sup><a href="#ref" class="ref_text">1</a></sup>  es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:</p>
+                                <p class="about_paragraph">El <strong>Standardized Precipitation Index (SPI)</strong> <sup><a href="#ref" class="ref_text">1</a></sup> es un índice de aridez basado en la precipitación. Mide la anomalía de la precipitación en relación con una distribución de referencia, calculando la desviación estándar de las precipitaciones en un período de tiempo determinado. Se utiliza sobretodo para evaluar las condiciones de sequía o exceso de precipitación. Su ecuación es:</p>
 
-                    <p>
-                        <math display="block" class="formulas">
-                            <mi>NDVI</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                            <mrow>
-                                <mi>NIR</mi>
-                                <mo>&#x2212;</mo>
-                                <mi>RED</mi>
-                            </mrow>
-                            <mrow>
-                                <mi>NIR</mi>
-                                <mo>+</mo>
-                                <mi>RED</mi>
-                            </mrow>
-                            </mfrac>
-                        </math>
-                    </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>SPI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>P</mi>
+                                             <mo>-</mo>
+                                             <mi>P</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>σ</mi>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
                     
-                    <p class="about_paragraph"> Los valores del NDVI varían de -1 a +1, donde los valores más altos indican una mayor densidad y salud de la vegetación. Un NDVI de 0 indica una superficie sin vegetación, mientras que los valores negativos indican la presencia de agua o nieve. El NDVI se utiliza ampliamente en estudios de cambio climático, monitoreo de la vegetación y evaluación de la producción agrícola.</p>
+                    <p class="about_paragraph"> Los valores del SPI oscilan entre -3 y +3, donde los valores más altos indican condiciones de exceso de precipitación o mayor humedad. Un SPI cerca de 0 indica condiciones climáticas cercanas a la media histórica de precipitación, mientras valores negativos indican condiciones de sequía. Cuanto más negativo sea el valor, más severa será la sequía.</p>
                             </div>
                         </section>
                 </article>
@@ -222,43 +225,47 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Soil Adjusted Vegetation Index (SAVI)
+                        <h3 class="desp_title">Standardized Precipitation Evapotranspiration Index (SPEI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El <strong>Soil Adjusted Vegetation Index (SAVI)</strong> <sup><a href="#ref" class="ref_text">2</a></sup> se introdujo para mitigar el impacto del brillo del suelo. Su creador, Huete, añadió un factor de ajuste del suelo L a la ecuación del NDVI para corregir los efectos de ruido del suelo (color, humedad, variabilidad del suelo entre regiones, etc.), que suelen afectar a los resultados. Por cierto, este índice está más adaptado a estudios de análisis de vegetación en etapas de crecimiento inicial o vegetación dispersa. En general, el SAVI puede ser una buena alternativa en cualquier suelo donde exista una baja densidad vegetal y la exposición de la superficie del suelo sea relevante. Su ecuación es:</p>
+                                <p class="about_paragraph">El <strong>Standardized Precipitation Evapotranspiration Index (SPEI)</strong> es un índice de aridez que tiene en cuenta tanto la precipitación como la evapotranspiración. Al igual que el SPI, el SPEI mide las anomalías en relación con una distribución de referencia, pero también considera las necesidades de agua de las plantas, a través de la evapotranspiración. Su ecuación es:</p>
 
-                    <p>
-                        <math display="block" class="formulas">
-                          <mi>SAVI</mi>
-                          <mo>=</mo>
-                          <mfrac>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>&#x2212;</mo>
-                              <mi>RED</mi>
-                            </mrow>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>+</mo>
-                              <mi>RED</mi>
-                              <mo>+</mo>
-                              <mi>L</mi>
-                            </mrow>
-                          </mfrac>
-                          <mo>×</mo>
-                          <mrow>
-                            <mi>(1</mi>
-                            <mo>+</mo>
-                            <mi>L)</mi>
-                          </mrow>
-                        </math>
-                    </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>SPEI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>P</mi>
+                                             <mo>-</mo>
+                                             <mi>P</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                             <mo>-</mo>
+                                             <mi>E</mi>
+                                             <mo>-</mo>
+                                             <mi>E</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>σ</mi>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
 
-                      <p class="about_paragraph">El SAVI varía entre -1 y +1, dependiendo de la densidad de vegetación verde de la zona en cuestión. En las zonas con mucha vegetación verde, se usa L= 0 y, en este caso, SAVI es igual que el NDVI. Por el contrario, se usa L = 1 para las zonas de vegetación verde baja. Lo habitual es L = 0,5 para ajustarse a la mayoría de suelos.</p>
+                      <p class="about_paragraph">El SPEI tiene un comportamiento muy similar al SPI. Sus valores varían entre -3 y +3, con valores negativos que indican condiciones secas y valores positivos que indican una mayor presencia de agua.</p>
                             </div>
                         </section>
                 </article>
@@ -270,53 +277,45 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Enhanced Vegetación Index (EVI)
+                        <h3 class="desp_title">Vegetation Condition Index (VCI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph"> El <strong>Enhanced Vegetación Index (EVI)</strong> es una alternativa más sólida a los índices tradicionales, por ser más robusto frente a la aportación del suelo y de las influencias atmosféricas. Liu y Huete <sup><a href="#ref" class="ref_text">3</a></sup> introdujeron este índice para ajustar los resultados del NDVI a los ruidos atmosféricos y del suelo, especialmente en las zonas de vegetación densa, así como para mitigar la saturación en la mayoría de los casos. Su ecuación es: </p>
+                                <p class="about_paragraph"> El <strong>Vegetation Condition Index (VCI)</strong> se basa en la diferencia entre el índice de vegetación observado (por ejemplo, NDVI o EVI) y la media histórica, normalizando el resultado dentro de un rango predefinido. El VCI se utiliza con frecuencia para monitorear el estrés de las plantas y la disponibilidad de agua en el suelo. Su ecuación es: </p>
                       
-                      <p>
-                          <math display="block" class="formulas">
-                            <mi>EVI</mi>
-                            <mo>=</mo>
-                              <mrow>
-                                <mi>G</mi>
-                                <mo>×</mo>
-                                <mfrac>
-                                  <mrow>
-                                    <mi>NIR</mi>
-                                    <mo>&#x2212;</mo>
-                                    <mi>RED</mi>
-                                  </mrow>
-                                  <mrow>
-                                    <mi>NIR</mi>
-                                    <mo>+</mo>
-                                    <mrow>
-                                      <mi>C1</mi>
-                                      <mo>×</mo>
-                                      <mi>RED</mi>
-                                    </mrow>
-                                    <mo>&#x2212;</mo>
-                                    <mrow>
-                                      <mi>C2</mi>
-                                      <mo>×</mo>
-                                      <mi>BLUE</mi>
-                                    </mrow>
-                                    <mo>+</mo>
-                                    <mrow>
-                                      <mi>L</mi>
-                                    </mrow>
-                                  </mrow>
-                                </mfrac>
-                              </mrow>
-                          </math>
-                        </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>VCI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>min</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
 
-                    <p class="about_paragraph"> El rango de valores del EVI es de -1 a +1, y para la vegetación sana varía entre 0,2 y 0,8. Los coeficientes C1 y C2 sirven para corregir la dispersión de los aerosoles presentes en la atmósfera y L para ajustar el fondo del suelo y del dosel de la vegetación.</p>
+                    <p class="about_paragraph"> El VCI se normaliza generalmente en un rango de 0 a 100, con valores bajos que indican estrés hídrico y valores altos que indican una condición saludable de la vegetación o en general buenas condiciones de humedad en el suelo.</p>
                             </div>
                         </section>
                 </article>
@@ -328,35 +327,45 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Normalized Difference Water Index (NDWI)
+                        <h3 class="desp_title">Temperature Condition Index (TCI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El <strong>Normalized Difference Water Index (NDWI)</strong> <sup><a href="#ref" class="ref_text">4</a></sup> se elaboró inicialmente para delinear masas de agua al aire libre y evaluar su turbidez, mitigando la reflectancia del suelo y la vegetación terrestre. Su ecuación es:</p> 
+                                <p class="about_paragraph">El <strong>Temperature Condition Index (TCI)</strong> es un índice que mide las condiciones térmicas. Puede basarse en la temperatura media, máxima o mínima, y evalúa las anomalías en relación con la media histórica. Se puede utilizar para monitorear los efectos de las temperaturas extremas o el estrés térmico en los cultivos. Su ecuación es:</p> 
 
-                    <p>
-                        <math display="block" class="formulas">
-                          <mi>NDWI</mi>
-                          <mo>=</mo>
-                          <mfrac>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>&#x2212;</mo>
-                              <mi>SWIR1</mi>
-                            </mrow>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>+</mo>
-                              <mi>SWIR1</mi>
-                            </mrow>
-                          </mfrac>
-                        </math>
-                    </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>TCI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>T</mi>
+                                             <mo>-</mo>
+                                             <mi>T</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>T</mi>
+                                             <mo>-</mo>
+                                             <mi>T</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>min</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
 
-                    <p class="about_paragraph">El NDWI mide el cambio en el contenido de agua de las hojas, por eso se utiliza para monitorear sequías, registrar reducciones de rendimiento, aparte de descarga de embalses, descenso de los niveles de agua subterránea, etc. El rango común para la vegetación verde es de -0,1 a 0,4.</p>
+                    <p class="about_paragraph">El TCI no tiene valores límites específicos, ya que depende de la referencia y de el cálculo utilizado. Generalmente, valores  altos indican condiciones de calor extremo o estrés térmico para las plantas, minetras valores bajos indican condiciones de temperatura moderada y favorables para el crecimiento de las plantas.</p>
                             </div>
                         </section>
                 </article>
@@ -368,39 +377,45 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Normalized Multiband Drought Index (NMDI)
+                        <h3 class="desp_title">Soil Vegetation Index (SVI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El <strong>Normalized Multiband Drought Index (NMDI)</strong> <sup><a href="#ref" class="ref_text">5</a></sup>monitorea las posibles condiciones de sequía utilizando la diferencia entre dos bandas SWIR como medida de la sensibilidad al agua en la vegetación y el suelo. También se utiliza comúnmente en la detección de incendios forestales. Su ecuación es:</p>
+                                <p class="about_paragraph">El <strong>Soil Vegetation Index (SVI)</strong>es un índice que proporciona información sobre la salud y las condiciones de la vegetación, en relación con la disponibilidad de agua en el suelo. Se calcula utilizando índices de vegetación y datos de humedad del suelo, sigun la sigiente ecuación:</p>
 
-                    <p>
-                        <math display="block" class="formulas">
-                          <mi>NMDI</mi>
-                          <mo>=</mo>
-                          <mfrac>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>&#x2212;</mo>
-                              <mi>(SWIR1</mi>
-                              <mo>&#x2212;</mo>
-                              <mi>SWIR2)</mi>
-                            </mrow>
-                            <mrow>
-                              <mi>NIR</mi>
-                              <mo>&#x2212;</mo>
-                              <mi>(SWIR1</mi>
-                              <mo>+</mo>
-                              <mi>SWIR2)</mi>
-                            </mrow>
-                          </mfrac>
-                        </math>
-                    </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>SVI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>min</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
                   
-                    <p class="about_paragraph">A medida que aumenta la humedad del suelo, los valores del índice disminuyen. Valores de 0,7 - 1 indican suelo seco, de 0,6 - 0,7 suelo con humedad intermedia y menores de 0,6 suelo húmedo.</p>
+                    <p class="about_paragraph">Este índice se normaliza generalmente en un rango de 0 a 1 o 0 a 100. Su interpretacion es oposta a la del TCI, con valores bajos que indican estrés hídrico y valores altos que indican buenas condiciones de humedad del suelo y vegetación.</p>
                             </div>
                         </section>
                 </article>
@@ -412,28 +427,46 @@
                 <article class="desp_padding">
                     <div class="desp_answer">
                         
-                        <h3 class="desp_title">Visible and Shortwave Drought Index (VSDI)
+                        <h3 class="desp_title">Vegetation Health Index (VHI)
                             <span class="desp_arrow">
                                 <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
                             </span>
                         </h3>
                         <section class="desp_show">
                             <div class="container_text--desp">
-                                <p class="about_paragraph">El <strong>Visible and Shortwave Drought Index (VSDI)</strong> <sup><a href="#ref" class="ref_text">6</a></sup> se basa en la diferencia entre las bandas sensibles a la humedad (SWIR y RED) y la banda de referencia de humedad (BLUE) y se usa para monitorear la sequía en diferentes tipos de cobertura de suelo agrícola, especialmente durante la temporada de crecimiento de las plantas. Su ecuación es:</p>
+                                <p class="about_paragraph">El <strong>Vegetation Health Index (VHI)</strong> es un índice que se utiliza para monitorear la salud y las condiciones generales de la vegetación, proporcionando una evaluación global de la aridez y las condiciones hídricas. Su ecuación es:</p>
 
-                    <p>
-                        <math display="block" class="formulas">
-                          <mi>VSDI</mi>
-                          <mo>=</mo>
-                          <mi>1</mi>
-                          <mo>&#x2212;</mo>
-                          <mi>[(SWIR</mi>
-                          <mo>&#x2212;</mo>
-                          <mi>BLUE)+(RED</mi>
-                          <mo>&#x2212;</mo>
-                          <mi>BLUE)]</mi>
-                        </math>
-                      </p>
+                                <p>
+                                    <math display="block" class="formulas">
+                                       <mi>VHI</mi>
+                                       <mo>=</mo>
+                                       <mfrac>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>t</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                          <mrow>
+                                             <mi>NDVI</mi>
+                                             <mo>-</mo>
+                                             <mi>NDVI</mi>
+                                             <msub>
+                                                <mo>(</mo>
+                                                <mi>min</mi>
+                                                <mo>)</mo>
+                                             </msub>
+                                          </mrow>
+                                       </mfrac>
+                                    </math>
+                                 </p>
+
+                    <p class="about_paragraph">La interpretación y rango de valores de este índice son los mismos que los del SVI.</p>
+
                             </div>
                         </section>
                 </article>
