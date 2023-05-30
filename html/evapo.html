@@ -152,10 +152,89 @@
 
     <main>
 
-        <div class="container about">
-            <h1>En proceso...</h1>
-            <img src="../images/proceso.webp" alt="">
-        </div>
+        <section class="about">
+            <h2 class="title">Evapotraspiración</h2>
+            <div class="container_text about">
+                <p class="about_paragraph">La evapotranspiración (ET) representa la pérdida de agua desde la superficie de la Tierra hacia la atmósfera por el proceso combinado de evaporación y transpiración. Es una variable fundamental del sistema climático (Sobrino et al., 2021) <sup><a href="#ref" class="ref_text"> 1</a></sup> y su estimación permite monitorear las interacciones entre biosfera, atmósfera e hidrosfera (Priestley y Taylor, 1972; Olioso et al., 1999; Rubert et al., 2016) <sup><a href="#ref" class="ref_text"> 2, 3, 4 </a></sup>. Al ser un componente esencial de los ciclos del agua, su estudio permite una mejor gestión de los cultivos, optimizando recursos y costes y aumentando la productividad, a través de la evaluación del uso del agua de riego (Sobrino et al., 2005)<sup><a href="#ref" class="ref_text"> 5</a></sup>.</p>
+                <h2 class="subtitle about">S-SEBI Model</h2>
+                <p class="highlight-box">Los modelos de evapotranspiración basados en datos de teledetección son una herramienta esencial para proporcionar estimaciones de ET, espacialmente sobre áreas agrícolas. En este proyecto, se ha utilizado el Simplified Surface Energy Balance Index (S-SEBI) para calcular la ET sobre la Comunidad Valenciana. Como datos de entrada se utilizaron los productos ERA5 (resolución espacial de 9 km) y las imágenes VIIRS (resolución espacial de 1 km).</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        
+                        <h3 class="desp_title">Más información sobre el método S-SEBI
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                                <p class="about_paragraph">El S-SEBI es un algoritmo simple de RS para estimar el balance de energía superficial desarrollado por Roerink et al. (2000)<sup><a href="#ref" class="ref_text"> 6</a></sup>, que requiere datos mínimos de entrada. El flujo de calor latente instantáneo LE (W/m<sup>2</sup>) se estima como: </p>
+
+                                <p><math display="block" class="formulas">
+                                    <mi>LE</mi>
+                                    <mo>=</mo>
+                                    <mi>Λ(Rn</mi>
+                                    <mo>&#x2212;</mo>
+                                    <mi>G)</mi>
+                                  </math>
+                                </p>
+
+                                <p class="about_paragraph">donde Λ es la fracción evaporativa instantánea (adicional), Rn es el flujo de radiación neto instantáneo (W/m<sup>2</sup>) y G es el flujo de calor instantáneo del suelo (W/m<sup>2</sup>).</p>
+                                <p class="about_paragraph">El modelo se basa en la estimación de la fracción evaporativa del triángulo LST-Albedo después de la identificación de los píxeles controlados por radiación y evaporación, de acuerdo con la ecuación N:</p>
+
+                                <p>
+                                    <math display="block" class="formulas">
+                                      <mi>&#x039B;</mi>
+                                      <mo>=</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <msub>
+                                            <mi>T</mi>
+                                            <mi>H</mi>
+                                          </msub>
+                                          <mo>&#x2212;</mo>
+                                          <msub>
+                                            <mi>T</mi>
+                                            <mi>S</mi>
+                                          </msub>
+                                        </mrow>
+                                        <mrow>
+                                          <msub>
+                                            <mi>T</mi>
+                                            <mi>H</mi>
+                                          </msub>
+                                          <mo>&#x2212;</mo>
+                                          <msub>
+                                            <mi>T</mi>
+                                            <mi>LE</mi>
+                                          </msub>
+                                        </mrow>
+                                      </mfrac>
+                                    </math>
+                                </p>
+
+                                <p class="about_paragraph">donde T<sub>S</sub> es la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> son las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir del diagrama de dispersión (en figura) entre temperatura superficial y albedo (Gómez et al., 2005)<sup><a href="#ref" class="ref_text"> 7</a></sup>.</p>
+
+                                <div class="container about">
+                                    <img src="../images/evapo/diagrama_disp_T_albedo.png" alt="">
+                                </div>
+                                
+                                    <!-- aqui tengo que poner una clase para los subtitulos de las figuras -->
+                                <p class="about_paragraph">Temperatura superficial versus albedo superficial. La línea H en rojo es el flujo de calor sensible, la línea LE en verde es el flujo de calor latente, T<sub>S</sub> es la temperatura superficial (eje y) y α es el albedo (eje x). El diagrama de dispersión calcula la fracción de evaporación para cada punto de temperatura superficial T<sub>P</sub>.</p>
+                                
+
+
+                            </div>
+                        </section>
+                </article>
+    
+            </section>
+        </section>
 
         <section class="about">
             <div class="container_text about">
@@ -266,6 +345,7 @@
 
     <script src="../js/app.js"></script>
     <script src="../js/chart.js"></script>
+    <script src="../js/desplegable_info.js"></script>
 
 </body>
 </html>
