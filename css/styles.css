@@ -9,6 +9,11 @@ body {
     background-color: #F2F2F0;
 }
 
+::selection {
+    background-color: #E48716; /* Cambia el color de fondo de la selección */
+    color: #ffffff; /* Cambia el color del texto seleccionado */
+  }
+
 .container{
     width: 90%;
     max-width: 1200px;
@@ -373,6 +378,20 @@ body {
     padding-top: 15px;
 }
 
+.about_paragraph--link{
+    text-decoration: none;
+    color: #E48716;
+    font-weight: 600;
+    /* font-size: 1.1em; */
+}
+
+.about_paragraph--link:hover{
+    text-decoration: underline;
+    color: #E48716;
+    /* font-weight: 500; */
+    /* font-size: 1.1em; */
+}
+
 .container_text{
     width: 80%;
     /* max-width: 1200px; */
@@ -489,6 +508,11 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 50px;
+}
+
+.bold{
+    font-weight: 600;
+    color: #001A49;
 }
 
 /* FOOTER */
