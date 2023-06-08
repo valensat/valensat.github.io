@@ -152,11 +152,17 @@
 
     <main>
         <section class="about">
-            <h2 class="title">LAND COVER</h2>
+            <h1 class="title">LAND COVER</h1>
             <div class="container_text about">
-                <p class="about_paragraph">Con el fin de obtener un mapa de clasificación de toda la comunidad se han realizado clasificaciones supervisadas con diferentes productos de satélite. El proceso se ha realizado tanto con imágenes de Landsat 5-9, para un análisis temporal, como con Sentinel 2, para un análisis a mejor resolución espacial.</p>
-                <h2 class="subtitle about">Clasificacion Landsat 1984-2022</h2>
-                <p class="highlight-box">En este apartado se puede visualizar la cobertura del suelo producida con imágenes Landsat 5 para el año 1984 y Landsat 9 para el año 2022. Para obtener la clasificación solo se tomaron en consideración las imágenes del periodo estival (principios de junio - finales de septiembre).</p>
+                <p class="about_paragraph">El Land Cover es una herramienta fundamental para diversos campos, como la planificación urbana, la gestión ambiental, la evaluación de recursos naturales y la monitorización del cambio climático. Proporciona información detallada sobre la distribución espacial de los diferentes tipos de cobertura terrestre, permitiendo comprender y analizar los procesos e interacciones que ocurren en el entorno. Además, el seguimiento periódico del Land Cover a lo largo del tiempo permite identificar cambios y tendencias, facilitando la toma de decisiones informadas en la gestión del territorio y la conservación de los ecosistemas.</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container_text about">
+                <h2 class="subtitle about">Evolución de la cobertura terrestre entre 1984 y 2022</h2>
+                <p class="about_paragraph">A continuación, puedes explorar la clasificación supervisada de la cobertura del suelo utilizando imágenes Landsat 5 para el año 1984 y Landsat 9 para el año 2022, donde solo se tomaron en consideración las imágenes del periodo estival, abarcando desde principios de junio hasta finales de septiembre.</p>
+                <p class="highlight-box">Esta herramienta te permite observar los cambios que han ocurrido en la comunidad a lo largo del tiempo, especialmente en relación con la urbanización y el desarrollo urbano. Al comparar las clasificaciones de diferentes años, podrás identificar y analizar los cambios en la distribución de la cobertura del suelo, incluyendo la expansión de áreas urbanas, la deforestación, la agricultura intensiva y otros procesos de transformación del paisaje. Esta información es invaluable para comprender el impacto de la urbanización en el entorno natural y para tomar decisiones informadas en la planificación y gestión del territorio.</p>
             </div>
         </section>
 
@@ -168,37 +174,56 @@
 
         <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/landcoverlandsat" target="_blank" class="footer_map--link">aquí</a>.</p>
 
-        <section class="container">
-            <div class="table_title">
-                <h2 class="subtitle">Tabla de clasificación - Landsat</h2>
-            </div>
+        <section class="about">
+            <section class="desp_container">
+                <article class="desp_padding">
+                    <div class="desp_answer">
+                        <h3 class="desp_title">Más información sobre el método empleado
+                            <span class="desp_arrow">
+                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                            </span>
+                        </h3>
+                        <section class="desp_show">
+                            <div class="container_text--desp">
+                                <p class="about_paragraph">El métodos utilizado para realizar estas mapas de clasificación es el Clasificador Random Forest (Phan et al., 2020; Teluguntla et al., 2018; Kelley et al., 2018; Maxwell et al., 2019; Millard & Richardson, 2015; Li et al., 2016)<sup><a href="#ref" class="ref_text">1, 2 ...</a></sup>, que mediante árboles de decisión categoriza los inputs de entrada. Se han seleccionado más de 1000 puntos por toda la comunidad, introduciendo la clase a la que pertenecen (agua, urbano, suelo desnudo, vegetación y vegetación seca), y se han establecido 150 árboles decicionales.</p>
+                            </div>
+                        </section>
+                </article>
+            </section>
+        </section>
+
+
+        <section class="about">
+            <div class="container_text">
+                <p class="about_paragraph">Echa un vistazo a esta tabla que muestra los cambios en la cobertura del suelo entre 1984 y 2022 en términos de área y porcentaje para diferentes clases de cobertura, como agua, áreas urbanas, vegetación, vegetación seca y suelo desnudo. Puedes notar que ha habido algunos cambios interesantes en estos años. </p>
+            </div>           
             <table class="table">
                 <tr class="table_header">
-                  <th class="table_header--title">Clase</th>
-                  <th class="table_header--title">Área 1984</th>
-                  <th class="table_header--title">Porcentaje 1984</th>
-                  <th class="table_header--title">Área 2022</th>
-                  <th class="table_header--title">Porcentaje 2022</th>
-                  <th class="table_header--title">Diferencia</th>
-                  <th class="table_header--title">Diferencia %</th>
+                <th class="table_header--title">Clase</th>
+                <th class="table_header--title">Área 1984</th>
+                <th class="table_header--title">Porcentaje 1984</th>
+                <th class="table_header--title">Área 2022</th>
+                <th class="table_header--title">Porcentaje 2022</th>
+                <th class="table_header--title">Diferencia</th>
+                <th class="table_header--title">Diferencia %</th>
                 </tr>
                 <tr>
-                  <td>Agua</td>
-                  <td>93.57 km<sup>2</sup></td>
-                  <td>0.40 %</td>
-                  <td>108.93 km<sup>2</sup></td>
-                  <td>0.47 % </td>
-                  <td class="green-cell">+15.36 km<sup>2</sup></td>
-                  <td class="green-cell">+0.07 % </td>
+                <td>Agua</td>
+                <td>93.57 km<sup>2</sup></td>
+                <td>0.40 %</td>
+                <td>108.93 km<sup>2</sup></td>
+                <td>0.47 % </td>
+                <td class="green-cell">+15.36 km<sup>2</sup></td>
+                <td class="green-cell">+0.07 % </td>
                 </tr>
                 <tr>
-                  <td>Urbano</td>
-                  <td>481.96 km<sup>2</sup></td>
-                  <td>2.07 %</td>
-                  <td>714.39 km<sup>2</sup></td>
-                  <td>3.07 %</td>
-                  <td class="green-cell">+232.43 km<sup>2</sup></td>
-                  <td class="green-cell">+1.00 % </td>
+                <td>Urbano</td>
+                <td>481.96 km<sup>2</sup></td>
+                <td>2.07 %</td>
+                <td>714.39 km<sup>2</sup></td>
+                <td>3.07 %</td>
+                <td class="green-cell">+232.43 km<sup>2</sup></td>
+                <td class="green-cell">+1.00 % </td>
                 </tr>
                 <tr>
                     <td>Vegetación</td>
@@ -210,52 +235,32 @@
                     <td class="green-cell">+14.06 % </td>
                 </tr>
                 <tr>
-                  <td>Vegetación seca</td>
-                  <td>11645.85 km<sup>2</sup></td>
-                  <td>50.08 %</td>
-                  <td>8219.68 km<sup>2</sup></td>
-                  <td>35.34 %</td>
-                  <td class="red-cell">-3426.17 km<sup>2</sup></td>
-                  <td class="red-cell">-14.74 % </td>
+                <td>Vegetación seca</td>
+                <td>11645.85 km<sup>2</sup></td>
+                <td>50.08 %</td>
+                <td>8219.68 km<sup>2</sup></td>
+                <td>35.34 %</td>
+                <td class="red-cell">-3426.17 km<sup>2</sup></td>
+                <td class="red-cell">-14.74 % </td>
                 </tr>
                 <tr>
-                  <td>Suelo desnudo</td>
-                  <td>154.78 km<sup>2</sup></td>
-                  <td>0.67 %</td>
-                  <td>63.09 km<sup>2</sup></td>
-                  <td>0.27 %</td>
-                  <td class="red-cell">-91.69 km<sup>2</sup></td>
-                  <td class="red-cell">-0.40 % </td>
+                <td>Suelo desnudo</td>
+                <td>154.78 km<sup>2</sup></td>
+                <td>0.67 %</td>
+                <td>63.09 km<sup>2</sup></td>
+                <td>0.27 %</td>
+                <td class="red-cell">-91.69 km<sup>2</sup></td>
+                <td class="red-cell">-0.40 % </td>
                 </tr>
-              </table>              
+            </table>
         </section>
 
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre el método empleado
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El métodos utilizado para realizar estas mapas de clasificación es el Clasificador Random Forest (Phan et al., 2020; Teluguntla et al., 2018; Kelley et al., 2018; Maxwell et al., 2019; Millard & Richardson, 2015; Li et al., 2016)<sup><a href="#ref" class="ref_text">1, 2 ...</a></sup>, que mediante árboles de decisión categoriza los inputs de entrada. Se han seleccionado más de 1000 puntos por toda la comunidad, introduciendo la clase a la que pertenecen (agua, urbano, suelo desnudo, vegetación y vegetación seca), y se han establecido 150 árboles decicionales.
-                                </p>
-
-                            </div>
-                        </section>
-                </article>
-    
-            </section>
-        </section>
+        
 
         <section class="about">
             <div class="container_text about">
-                <h2 class="subtitle about">Clasificacion Sentinel 2022</h2>
-                <p class="highlight-box">En este apartado se puede visualizar la cobertura del suelo producida con imágenes Sentinel 2 para el año 2022. Para obtener la clasificación solo se tomaron en consideración las imágenes del periodo estival (principios de junio - finales de septiembre).</p>
+                <h2 class="subtitle about">Cobertura de suelo actual</h2>
+                <p class="highlight-box">Descubre la clasificación actualizada de la comarca de Valencia para el año 2022 utilizando imágenes de Sentinel-2, donde solo se tomaron en consideración las imágenes del periodo estival, abarcando desde principios de junio hasta finales de septiembre.</p>
             </div>
         </section>
 
