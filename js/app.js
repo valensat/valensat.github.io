@@ -2,6 +2,7 @@
     const listElements = document.querySelectorAll('.menu__item--show');
     const list = document.querySelector('.menu__links');
     const menu = document.querySelector('.menu__hamburguer');
+    const navClose = document.querySelector('.nav_close');
 
     const addClick = ()=>{
         listElements.forEach(element =>{
@@ -42,12 +43,18 @@
     }
 
     menu.addEventListener('click', ()=> list.classList.toggle('menu__links--show'));
+
+    navClose.addEventListener('click', () => {
+        list.classList.remove('menu__links--show--index');
+    });
 })();
 
 (function(){
     const listElements = document.querySelectorAll('.menu__item--show--index');
     const list = document.querySelector('.menu__links--index');
     const menu = document.querySelector('.menu__hamburguer');
+    const navClose = document.querySelector('.nav_close');
+
 
     const addClick = ()=>{
         listElements.forEach(element =>{
@@ -88,6 +95,10 @@
     }
 
     menu.addEventListener('click', ()=> list.classList.toggle('menu__links--show--index'));
+
+    navClose.addEventListener('click', () => {
+        list.classList.remove('menu__links--show--index');
+    });
 })();
 
 (function(){

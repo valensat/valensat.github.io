@@ -111,9 +111,6 @@ body {
     width: 30px;
 }
 
-.nav_close{
-    display: var(--show, none);
-}
 
 /* Header container */
 
@@ -232,6 +229,14 @@ body {
 .menu__img--index{
     display: block;
     width: 36px;
+}
+
+.nav_close{
+    display: var(--show, none);
+    margin-left: auto;
+    margin-right: auto;
+    width: 35px;
+    padding-bottom: 50px;
 }
 
 
@@ -1442,10 +1447,13 @@ tr td:first-child{
 
 /* ############################################# MÓVILES ############################################# */
 @media (max-width:450px){
+    
     .menu__hamburguer{
         display: flex;
         gap: 10px;
     }
+
+    /* Menú desplegable PRODUCTOS */
 
     .menu__item{
         --clip:0;
@@ -1526,29 +1534,27 @@ tr td:first-child{
         width: 7vw;
     }
 
-    .menu__item--index{
-        --clip:0;
-    }
+    /* Menú desplegable ÍNDICE */
 
     .menu__links--index{
         position: fixed;
-        max-width: 400px;
         width: 100%;
-        /* top: 70px; */
         right: 0;
         bottom: 0;
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(59, 55, 45, 0.9);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
         padding: 0;
         transform: translateX(100%);
+        gap: 10px;
     }
 
     .menu__links--show--index{
         transform: unset;
         width: 100%;
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(59, 55, 45, 0.9);
+        --show: block;
     }
 
     .menu__item--index{
