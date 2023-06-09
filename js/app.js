@@ -45,7 +45,7 @@
     menu.addEventListener('click', ()=> list.classList.toggle('menu__links--show'));
 
     navClose.addEventListener('click', () => {
-        list.classList.remove('menu__links--show--index');
+        list.classList.remove('menu__links--show');
     });
 })();
 

@@ -1310,7 +1310,7 @@ tr td:first-child{
 
     .menu__links{
         position: fixed;
-        max-width: 400px;
+        /* max-width: 400px; */
         width: 100%;
         /* top: 70px; */
         right: 0;
@@ -1453,33 +1453,37 @@ tr td:first-child{
         gap: 10px;
     }
 
-    /* Menú desplegable PRODUCTOS */
-
-    .menu__item{
-        --clip:0;
+    .title_hamburguer{
+        font-size: 14px;
+        font-weight: 300;
     }
+
+    .menu__img{
+        width: 7vw;
+    }
+
+    /* Menú desplegable PRODUCTOS */
 
     .menu__links{
         position: fixed;
-        max-width: 400px;
         width: 100%;
-        /* top: 70px; */
         right: 0;
         bottom: 0;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 1);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
         padding: 0;
         transform: translateX(100%);
+        gap: 10px;
+        z-index: 1;
     }
 
     .menu__links--show{
         transform: unset;
         width: 100%;
-        /* background-color: rgba(93, 112, 138, 1); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0.95);
+        --show: block;
     }
 
     .menu__item{
@@ -1489,8 +1493,7 @@ tr td:first-child{
 
     .menu__item--active{
         --transform: rotate(0);
-        /* --background: rgba(93, 112, 138, 0.4); */
-        --background: rgba(59, 55, 45, 1);
+        --background: rgba(93, 112, 138, 1);
 
     }
 
@@ -1499,8 +1502,7 @@ tr td:first-child{
         padding-left: 30px;
         height: auto;
         width: 100%;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0);
     }
 
     .menu__arrow{
@@ -1515,24 +1517,17 @@ tr td:first-child{
         transform: translateY(0);
         height: 0;
         transition: height 0.5s;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0);
     }
 
     .menu__link--inside{
         width: 90%;
         margin-left: auto;
         border-left: 1px solid #F2F2F0;
+        background-color: rgba(93, 112, 138, 0);
     }
 
-    .title_hamburguer{
-        font-size: 14px;
-        font-weight: 300;
-    }
 
-    .menu__img{
-        width: 7vw;
-    }
 
     /* Menú desplegable ÍNDICE */
 
@@ -1586,6 +1581,7 @@ tr td:first-child{
         transform: translateY(0);
         height: 0;
         transition: height 0.5s;
+        background-color: rgba(59, 55, 45, 0);
     }
 
     .menu__link--inside--index{
