@@ -1310,8 +1310,7 @@ tr td:first-child{
 
     .menu__links{
         position: fixed;
-        /* max-width: 400px; */
-        width: 100%;
+        width: 400px;
         /* top: 70px; */
         right: 0;
         bottom: 0;
@@ -1385,8 +1384,7 @@ tr td:first-child{
 
     .menu__links--index{
         position: fixed;
-        max-width: 400px;
-        width: 100%;
+        width: 400px;
         /* top: 70px; */
         right: 0;
         bottom: 0;
