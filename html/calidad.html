@@ -242,7 +242,26 @@
                                 <h3 class="subsubtitle"> <br> Normalized Difference Turbidity Index (NDTI)
                                 </h3>
 
-                                <p class="about_paragraph">El índice de turbidez de diferencia de normalización (NDTI), que se estima utilizando los valores de reflectancia espectral de los píxeles de agua, se utiliza para estimar la turbidez en los cuerpos de agua. Utiliza el fenómeno de que la reflectancia electromagnética es mayor en el espectro verde que en el espectro rojo para el agua clara.</p>
+                                <p class="about_paragraph">El índice de turbidez de diferencia de normalización (NDTI), que se estima utilizando los valores de reflectancia espectral de los píxeles de agua, se utiliza para estimar la turbidez en los cuerpos de agua. Utiliza el fenómeno de que la reflectancia electromagnética es mayor en el espectro verde que en el espectro rojo para el agua clara. Por lo tanto, con el aumento de la turbidez también aumenta la reflectancia del espectro rojo. Su ecuación es:</p>
+
+                                <p>
+                                    <math display="block" class="formulas">
+                                        <mi>NDVI</mi>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                        <mrow>
+                                            <mi>RED</mi>
+                                            <mo>&#x2212;</mo>
+                                            <mi>GREEN</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>RED</mi>
+                                            <mo>+</mo>
+                                            <mi>GREEN</mi>
+                                        </mrow>
+                                        </mfrac>
+                                    </math>
+                                </p>
 
                             
                                 <h3 class="subsubtitle"> <br> Total Suspended Solids (TSS)
