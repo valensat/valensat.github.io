@@ -1293,7 +1293,7 @@ tr td:first-child{
 
 
 
-/* MOVILES */
+/* PÓRTATILES */
 @media (max-width:1500px){
     .menu__hamburguer{
         display: flex;
@@ -1437,3 +1437,211 @@ tr td:first-child{
     }
 }
 
+
+
+
+/* ############################################# MÓVILES ############################################# */
+@media (max-width:450px){
+    .menu__hamburguer{
+        display: flex;
+        gap: 10px;
+    }
+
+    .menu__item{
+        --clip:0;
+    }
+
+    .menu__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        /* top: 70px; */
+        right: 0;
+        bottom: 0;
+        /* background-color: rgba(93, 112, 138, 0.4); */
+        background-color: rgba(59, 55, 45, 1);
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        padding: 0;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 100%;
+        /* background-color: rgba(93, 112, 138, 1); */
+        background-color: rgba(59, 55, 45, 1);
+    }
+
+    .menu__item{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .menu__item--active{
+        --transform: rotate(0);
+        /* --background: rgba(93, 112, 138, 0.4); */
+        --background: rgba(59, 55, 45, 1);
+
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+        width: 100%;
+        /* background-color: rgba(93, 112, 138, 0.4); */
+        background-color: rgba(59, 55, 45, 1);
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height 0.5s;
+        /* background-color: rgba(93, 112, 138, 0.4); */
+        background-color: rgba(59, 55, 45, 1);
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #F2F2F0;
+    }
+
+    .title_hamburguer{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .menu__img{
+        width: 7vw;
+    }
+
+    .menu__item--index{
+        --clip:0;
+    }
+
+    .menu__links--index{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        /* top: 70px; */
+        right: 0;
+        bottom: 0;
+        background-color: rgba(59, 55, 45, 1);
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        padding: 0;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show--index{
+        transform: unset;
+        width: 100%;
+        background-color: rgba(59, 55, 45, 1);
+    }
+
+    .menu__item--index{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .menu__item--active--index{
+        --transform: rotate(0);
+        --background: rgba(59, 55, 45, 1);
+    }
+
+    .menu__link--index{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+        width: 100%;
+    }
+
+    .menu__arrow--index{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting--index{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height 0.5s;
+    }
+
+    .menu__link--inside--index{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #F2F2F0;
+    }
+
+    .testimony_container{
+        /* display: grid;
+        padding: 40px 0;
+        grid-template-columns: 50px 1fr 50px;
+        gap: 1em;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        min-height: 500px; */
+        display: none;
+    }
+
+    .footer, .nav--footer, .footer_container, .menu_footer, .footer_container--bottom, .footer_container--bottom2{
+        display: none;
+    }
+
+    /* HEADER */
+    .header{
+        height: 60vh;
+        min-height: 100px;
+    }
+
+    .nav_logo{
+        margin-top: 20px;
+    }
+
+    .nav_logo_img1{
+        width: 25vw;
+    }
+
+    .nav_logo_img2{
+        width: 15vw;
+    }
+
+    .container_nav{
+        width: 95%;
+        height: 10vh;
+    }
+
+    .idiomas{
+        margin-right: 25px;
+        gap: 0.7em;
+    }
+
+    .idiomas_item{
+        font-size: 12px;
+    }
+
+    .header_title{
+        font-size: 3em;
+    }
+
+    .header_paragraph{
+        font-size: 12px;
+    }
+}
