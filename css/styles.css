@@ -1642,6 +1642,10 @@ tr td:first-child{
     }
 
     .header_paragraph{
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .container_text{
+        width: 90%;
     }
 }
