@@ -1605,7 +1605,7 @@ tr td:first-child{
         display: none;
     }
 
-    /* HEADER */
+    /* HEADER ÍNDICE*/
     .header{
         height: 60vh;
         min-height: 100px;
@@ -1644,6 +1644,29 @@ tr td:first-child{
     .header_paragraph{
         font-size: 14px;
     }
+
+    /* HEADER PRODUCTS*/
+    .nav_logo_img_product1{
+        width: 25vw;
+    }
+
+    .nav_logo_img_product2{
+        width: 15vw;
+    }
+
+    .container_nav_product{
+        width: 95%;
+    }
+
+    .header_title_product{
+        font-size: 1em;
+        padding: 4px 0 0;
+    }
+
+    .header_paragraph{
+        font-size: 14px;
+    }
+
 
     .container_text{
         width: 90%;
