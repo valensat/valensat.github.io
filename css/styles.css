@@ -1438,6 +1438,13 @@ tr td:first-child{
         margin-left: auto;
         border-left: 1px solid #F2F2F0;
     }
+
+
+
+    .desp_answer{
+        max-width: 80vw;
+    }
+
 }
 
 
@@ -1588,23 +1595,6 @@ tr td:first-child{
         border-left: 1px solid #F2F2F0;
     }
 
-    .testimony_container{
-        /* display: grid;
-        padding: 40px 0;
-        grid-template-columns: 50px 1fr 50px;
-        gap: 1em;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        min-height: 500px; */
-        display: none;
-    }
-
-    .footer, .nav--footer, .footer_container, .menu_footer, .footer_container--bottom, .footer_container--bottom2{
-        display: none;
-    }
-
     /* HEADER ÍNDICE*/
     .header{
         height: 60vh;
@@ -1668,7 +1658,92 @@ tr td:first-child{
     }
 
 
+    /* TEXTO */
     .container_text{
         width: 90%;
+    }
+
+    .title{
+        /* font-size: 2.5em; */
+        padding-top: 40px;
+        padding-bottom: 15;
+        font-size: xx-large;
+    }
+    
+    .about_paragraph{
+        padding-top: 5px;
+        font-size: 15px;
+    }
+
+    .container_text{
+        padding-bottom: 40px;
+    }
+
+    .subtitle{
+        font-size: 1.5em;
+        padding-top: 40px;
+        padding-bottom: 15;
+    }
+
+    .highlight-box{
+        padding-top: 5px;
+        font-size: 15px;
+    }
+
+    .footer_map{
+        padding-bottom: 40px;
+        font-size: 15px;
+    }
+
+    .subtitle_ref{
+        padding-top: 40px;
+    }
+
+    .about_paragraph--ref{
+        font-size: 0.90rem;
+    }
+
+    .formulas{
+        font-size: 14px;
+    }
+
+    .image_fig{
+        padding: 15px 0px 0px;
+        height: 15vh;
+    }
+
+    .back-to-top {
+        font-size: 14px;
+        width: 50px;
+      }
+
+
+
+
+    /* COSAS QUE ARREGLAR */
+
+    .testimony_container{
+        /* display: grid;
+        padding: 40px 0;
+        grid-template-columns: 50px 1fr 50px;
+        gap: 1em;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        min-height: 500px; */
+        display: none;
+    }
+
+    .footer, .nav--footer, .footer_container, .menu_footer, .footer_container--bottom, .footer_container--bottom2{
+        display: none;
+    }
+
+    .table{
+        display: none;
+    }
+
+    .image_heladas{
+        height: 30vh;
     }
 }
