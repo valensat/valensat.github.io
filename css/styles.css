@@ -1308,26 +1308,27 @@ tr td:first-child{
         --clip:0;
     }
 
+    /* Menú desplegable PRODUCTOS */
     .menu__links{
         position: fixed;
-        width: 400px;
-        /* top: 70px; */
+        max-width: 400px;
         right: 0;
         bottom: 0;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 1);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
         padding: 0;
+        gap: 20px;
         transform: translateX(100%);
+        z-index: 1;
     }
 
     .menu__links--show{
         transform: unset;
         width: 100%;
-        /* background-color: rgba(93, 112, 138, 1); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0.95);
+        --show: block;
     }
 
     .menu__item{
@@ -1337,8 +1338,7 @@ tr td:first-child{
 
     .menu__item--active{
         --transform: rotate(0);
-        /* --background: rgba(93, 112, 138, 0.4); */
-        --background: rgba(59, 55, 45, 1);
+        --background: rgba(93, 112, 138, 1);
 
     }
 
@@ -1347,8 +1347,7 @@ tr td:first-child{
         padding-left: 30px;
         height: auto;
         width: 100%;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0);
     }
 
     .menu__arrow{
@@ -1363,8 +1362,7 @@ tr td:first-child{
         transform: translateY(0);
         height: 0;
         transition: height 0.5s;
-        /* background-color: rgba(93, 112, 138, 0.4); */
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(93, 112, 138, 0);
     }
 
     .menu__link--inside{
@@ -1378,28 +1376,33 @@ tr td:first-child{
         font-weight: 300;
     }
 
+
+    /* Menú desplegable ÍNDICE */
     .menu__item--index{
         --clip:0;
     }
 
     .menu__links--index{
         position: fixed;
-        width: 400px;
+        max-width: 400px;
         /* top: 70px; */
         right: 0;
         bottom: 0;
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(59, 55, 45, 0.9);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
         padding: 0;
         transform: translateX(100%);
+        gap: 20px;
+        z-index: 1;
     }
 
     .menu__links--show--index{
         transform: unset;
         width: 100%;
-        background-color: rgba(59, 55, 45, 1);
+        background-color: rgba(59, 55, 45, 0.9);
+        --show: block;
     }
 
     .menu__item--index{
@@ -1431,6 +1434,7 @@ tr td:first-child{
         transform: translateY(0);
         height: 0;
         transition: height 0.5s;
+        background-color: rgba(59, 55, 45, 0);
     }
 
     .menu__link--inside--index{
@@ -1471,7 +1475,7 @@ tr td:first-child{
 
     .menu__links{
         position: fixed;
-        width: 100%;
+        max-width: 100%;
         right: 0;
         bottom: 0;
         background-color: rgba(93, 112, 138, 1);
@@ -1535,10 +1539,9 @@ tr td:first-child{
 
 
     /* Menú desplegable ÍNDICE */
-
     .menu__links--index{
         position: fixed;
-        width: 100%;
+        max-width: 100%;
         right: 0;
         bottom: 0;
         background-color: rgba(59, 55, 45, 0.9);
@@ -1548,6 +1551,7 @@ tr td:first-child{
         padding: 0;
         transform: translateX(100%);
         gap: 10px;
+        z-index: 1;
     }
 
     .menu__links--show--index{
