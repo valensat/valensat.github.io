@@ -29,6 +29,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -156,10 +158,27 @@
         
 
         <section class="about">
-            <h2 class="title">INCENDIOS EN LA COMUNIDAD</h2>
+            <h1 class="title">INCENDIOS EN LA COMUNIDAD</h1>
             <div class="container_text about">
                 <p class="about_paragraph">A lo largo de la historia, la Comunidad Valenciana ha experimentado varios incendios forestales notables que han dejado una huella significativa en su entorno natural. En 1994, se contabilizaron hasta cuatro incendios con más de 18.000 hectáreas calcinadas, convirtiéndose en el peor año en términos de número y tamaño de incendios forestales en la región. Otros incendios destacados incluyen el de Andilla en junio de 2012, que quemó 9.451 hectáreas, y el de Llutxent en agosto de 2018, afectando a varios municipios y quemando alrededor de 3.270 hectáreas, lo que obligó a la evacuación de más de 2.600 personas.</p>
                 <p class="about_paragraph">Estos incidentes ilustran la importancia de estudiar los incendios a nivel de comunidad autónoma en la Comunidad Valenciana. El análisis de estos eventos permite identificar factores de riesgo, comprender las consecuencias ambientales y socioeconómicas, y desarrollar estrategias de prevención y respuesta más efectivas. Además, estos estudios contribuyen al conocimiento científico aplicado y respaldan la toma de decisiones informadas en la gestión del territorio, la planificación urbana, la protección ambiental y la adaptación al cambio climático. A través de la investigación y el análisis continuo, podemos trabajar hacia la protección de nuestros recursos naturales, garantizando la seguridad y el bienestar de las comunidades valencianas en relación a los incendios forestales.</p>
+            </div>
+        </section>
+
+        <!-- <section class="banner">
+            <div class="graph_donut">
+                <canvas id="incendiosCV" class="graph_donut--inside"></canvas>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="graph_bar">
+                <canvas id="incendiosCV_years" class="graph_bar--inside"></canvas>
+            </div>
+        </section> -->
+
+        <section class="about">
+            <div class="container_text about">
                 <h2 class="subtitle about">Visualizador de áreas quemadas en la Comunidad Valenciana</h2>
                 <p class="highlight-box">Nuestra aplicación te muestra las áreas quemadas en la Comunidad Valenciana, permitiéndote seleccionar el intervalo de fechas de tu interés. Utilizamos imágenes satelitales del sensor MODIS con una resolución de 500 m (producto Burned Area Monthly Global 500m), que abarcan desde el año 2000 hasta la actualidad. Además, te brinda información detallada de su extensión, por provincia y en toda la comunidad. Con esta herramienta, podrás estar al tanto de los impactos de los incendios y contribuir a la protección de nuestro entorno natural.</p>
             </div>
@@ -367,7 +386,7 @@
 
     <script src="../js/app.js"></script>
     <script src="../js/desplegable_info.js"></script>
-    <script src="../js/chart.js"></script>
+    <script src="../js/banners.js"></script>
     
 </body>
 </html>
