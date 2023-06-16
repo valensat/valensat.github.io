@@ -1099,6 +1099,21 @@ tr td:first-child{
   box-sizing: border-box;
 }
 
+.container_text_banner-fires{
+    height: 1000px;
+}
+
+.text_fires {
+    display: block;
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    color: #001a49c2;
+  }
+
 
 /* Imagenes */
 
