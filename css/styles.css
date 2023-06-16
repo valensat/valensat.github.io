@@ -800,30 +800,6 @@ ul{
 }
 
 
-/* BANNERS */
-.banner{
-    height: 450px;
-}
-
-.graph_donut{
-    height: 100%;
-}
-
-.graph_donut--inside{
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.graph_bar{
-    height: 100%;
-}
-
-.graph_bar--inside{
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
 /* PRODUCT WINDOWS */
@@ -1070,6 +1046,60 @@ tr td:first-child{
 }
 
 
+
+
+
+/* BANNERS */
+.container_banner--inc{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left_col, .right_col{
+    flex: 0 0 50%;
+}
+
+.banner_inc{
+    /* height: 450px; */
+    /* display: flex; */
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+.graph_donut{
+    height: 100%;
+}
+
+.graph_donut--inside{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph_bar{
+    height: 100%;
+}
+
+.graph_bar--inside{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph_donut,
+.graph_bar,
+.banner_incendios {
+  width: calc(50% - 10px);
+}
+
+.graph_donut,
+.graph_bar {
+  background-color: lightgray;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
 /* Imagenes */
 
 .img_graph{
@@ -1105,6 +1135,11 @@ tr td:first-child{
 
 .image_table{
     height: 20vh;
+}
+
+.imgbanner_CV{
+    /* height: 1200px; */
+    max-width: 100%;
 }
 
 

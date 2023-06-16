@@ -7,7 +7,7 @@
       labels: ['Castellón', 'Valencia', 'Alicante'],
       datasets: [{
         // label: 'Incendios',
-        data: [637.25, 1170.75, 259.75],
+        data: [563.50, 986.25, 221.75],
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
@@ -69,22 +69,26 @@
 
 (function(){
   const ctx = document.getElementById('incendiosCV_years');
+  const backgroundColors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'];
+  const labels = ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'];
+  const legendLabels = ['Castellón', 'Valencia', 'Alicante'];
+
 
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: labels,
       datasets: [{
-        // label: 'Incendios',
-        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80.50, 27.00, 877.25, 9.50, 6.00, 33.75, 88.75, 105.00, 45.50, 14.25, 39.00, 7.50, 461.25, 0],
+        data: [0, 50.75, 44.75, 35.00, 57.75, 36.50, 30.25, 122.25, 0, 23.50, 63.25, 16.75, 670.75, 6.50, 3.50, 24.50, 64.75, 70.00, 35.75, 12.25, 11.25, 4.50, 349.75, 37.25],
         backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ],
-        hoverOffset: 25,
-        hoverBorderColor: '#272525',
-      }]
+          '#F2F2F0','rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 99, 132)','#F2F2F0','rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 205, 86)','rgb(255, 205, 86)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 205, 86)','rgb(54, 162, 235)','rgb(255, 99, 132)','rgb(255, 99, 132)','rgb(255, 99, 132)'],
+          borderColor: '#ffffff',
+          borderWidth: 2,
+          hoverBorderColor: '#272525',
+          borderRadius: 4,
+          barPercentage: 1.1
+      }],
+      
     },
     options: {
       plugins: {
@@ -96,7 +100,28 @@
           }
         },
         legend: {
-          display: false
+          title: {
+            display: true,
+            text: 'Provincia con más áreas quemadas',
+            font: {
+              size: 13
+            }
+          },
+          display: true,
+          labels: {
+            generateLabels: function() {
+              const newLabels = [];
+              backgroundColors.forEach((color, index) => {
+                newLabels.push({
+                  text: legendLabels[index],
+                  fillStyle: color,
+                  strokeStyle: '#ffffff',
+                  lineWidth: 2
+                });
+              });
+              return newLabels;
+            }
+          }
         },
         tooltip: {
           callbacks: {
