@@ -1159,6 +1159,9 @@ tr td:first-child{
     padding-bottom: 10px;
 }
 
+.banner_quem--img_legend{
+    width: 12vw;
+}
 
 
 /* Imagenes */
