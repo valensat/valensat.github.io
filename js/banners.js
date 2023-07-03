@@ -94,7 +94,7 @@
       plugins: {
         title:{
           display: true,
-          text: 'km² quemados cada año en la comunidad',
+          text: 'km² quemados por año',
           font: {
             size: 18
           }

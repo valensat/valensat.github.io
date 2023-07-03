@@ -1051,9 +1051,12 @@ tr td:first-child{
 
 /* BANNERS */
 
+/* evolucion incendios */
 .container_banner--inc{
+    background-color: rgba(250, 171, 1, 0.1);
     display: flex;
     flex-wrap: wrap;
+    padding: 40px 0;
 }
 
 .left_col, .right_col{
@@ -1061,18 +1064,26 @@ tr td:first-child{
 }
 
 .banner_inc{
-    /* height: 450px; */
-    /* display: flex; */
+    display: flex;
     width: 100%;
-    /* justify-content: space-between; */
+    height: 50%;
+    justify-content: center;
+}
+
+.banner_inc2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .graph_donut{
     height: 100%;
+    width: 70%;
 }
 
 .graph_donut--inside{
     height: 100%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1083,23 +1094,27 @@ tr td:first-child{
 
 .graph_bar--inside{
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 }
 
-.graph_donut,
-.graph_bar,
-.banner_incendios {
-  width: calc(50% - 10px);
+.banner_inc--legend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.imgbanner_CV{
+    width: 70%;
 }
 
 .graph_donut,
 .graph_bar {
-  background-color: lightgray;
   padding: 10px;
   box-sizing: border-box;
 }
 
+/* areas quemadas */
 .banner_quem{
     width: 100%;
     padding: 0 50px 20px;
