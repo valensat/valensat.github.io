@@ -1056,7 +1056,7 @@ tr td:first-child{
     background-color: rgba(250, 171, 1, 0.1);
     display: flex;
     flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .left_col, .right_col{
@@ -1104,14 +1104,24 @@ tr td:first-child{
     align-items: center;
   }
 
+  .right_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 .imgbanner_CV{
-    width: 70%;
+    width: 65%;
 }
 
 .graph_donut,
 .graph_bar {
   padding: 10px;
   box-sizing: border-box;
+}
+.graph_bar{
+    padding-left: 30px;
 }
 
 /* areas quemadas */
