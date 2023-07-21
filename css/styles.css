@@ -1231,6 +1231,10 @@ tr td:first-child{
     max-width: 100%;
 }
 
+.image_gif_inc{
+    height: 40vh;
+}
+
 
 
 
