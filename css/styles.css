@@ -398,6 +398,19 @@ body {
     padding-bottom: 50px;
 }
 
+.container_text_gif{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px; /* This adds some space between the image and the text */
+}
+
+.text_container {
+    padding-top: 5px;
+    font-size: 15px;
+}
+
 .red_text{
     color: #ED413E !important;
 }
@@ -1235,7 +1248,9 @@ tr td:first-child{
     height: 40vh;
 }
 
-
+.image_container {
+    border: 2px solid black; /* This adds a border around the image */
+}
 
 
 
