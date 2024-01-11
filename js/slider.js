@@ -45,3 +45,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const translateValue = -currentIndex * 100 + '%';
+        sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    setInterval(nextSlide, 15000); // Cambiar de diapositiva cada 10 segundos
+    });
