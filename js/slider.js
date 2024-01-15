@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Clear the automatic slide interval and reset it
     function resetAutoSlide() {
         clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextSlide, 30000); // Change slide every 5 seconds
+        autoSlideInterval = setInterval(nextSlide, 15000); // Change slide every 5 seconds
     }
 
     // Initialize the slider interval
