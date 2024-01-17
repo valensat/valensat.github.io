@@ -211,22 +211,21 @@ document.addEventListener('DOMContentLoaded', function() {
     var body = document.body;
   
     footerTrigger.addEventListener('click', function() {
-      // Use setTimeout to allow for display:block to apply so that the transition can happen
       modalOverlay.style.display = 'block';
+      infoPopup.style.display = 'block';
       setTimeout(function() {
         modalOverlay.classList.add('visible');
         infoPopup.classList.add('visible');
-      }, 10); // Timeout duration can be very short, just to allow a repaint
+      }, 10);
       body.classList.add('no-scroll');
     });
   
     function closePopupAndOverlay() {
       infoPopup.classList.remove('visible');
       modalOverlay.classList.remove('visible');
-      // Use a transition end event listener to set display:none after the transition
       modalOverlay.addEventListener('transitionend', function() {
         modalOverlay.style.display = 'none';
-      }, { once: true }); // The {once: true} option auto-removes the event listener after it fires
+      }, { once: true });
       body.classList.remove('no-scroll');
     }
   
