@@ -171,4 +171,71 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     });
 })();
-    
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var footerTrigger = document.getElementById('footerTrigger');
+//     var infoPopup = document.getElementById('infoPopup');
+//     var closePopup = document.getElementById('closePopup');
+//     var modalOverlay = document.getElementById('modalOverlay');
+//     var body = document.body;
+  
+//     footerTrigger.addEventListener('click', function() {
+//       infoPopup.classList.add('visible');
+//       modalOverlay.classList.add('visible');
+//       body.classList.add('no-scroll');
+//     });
+  
+//     function closePopupAndOverlay() {
+//       infoPopup.classList.remove('visible');
+//       modalOverlay.classList.remove('visible');
+//       body.classList.remove('no-scroll');
+//     }
+  
+//     closePopup.addEventListener('click', closePopupAndOverlay);
+//     modalOverlay.addEventListener('click', closePopupAndOverlay);
+  
+//     document.addEventListener('keydown', function(event) {
+//       if (event.key === 'Escape') {
+//         closePopupAndOverlay();
+//       }
+//     });
+//   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var footerTrigger = document.getElementById('footerTrigger');
+    var infoPopup = document.getElementById('infoPopup');
+    var closePopup = document.getElementById('closePopup');
+    var modalOverlay = document.getElementById('modalOverlay');
+    var body = document.body;
+  
+    footerTrigger.addEventListener('click', function() {
+      // Use setTimeout to allow for display:block to apply so that the transition can happen
+      modalOverlay.style.display = 'block';
+      setTimeout(function() {
+        modalOverlay.classList.add('visible');
+        infoPopup.classList.add('visible');
+      }, 10); // Timeout duration can be very short, just to allow a repaint
+      body.classList.add('no-scroll');
+    });
+  
+    function closePopupAndOverlay() {
+      infoPopup.classList.remove('visible');
+      modalOverlay.classList.remove('visible');
+      // Use a transition end event listener to set display:none after the transition
+      modalOverlay.addEventListener('transitionend', function() {
+        modalOverlay.style.display = 'none';
+      }, { once: true }); // The {once: true} option auto-removes the event listener after it fires
+      body.classList.remove('no-scroll');
+    }
+  
+    closePopup.addEventListener('click', closePopupAndOverlay);
+    modalOverlay.addEventListener('click', closePopupAndOverlay);
+  
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closePopupAndOverlay();
+      }
+    });
+});

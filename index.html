@@ -183,7 +183,7 @@
                   <p class="slide_prod_text">El monitoreo de la cobertura y uso del suelo es una tarea crítica para la comprensión y el manejo de los recursos naturales y el medio ambiente. Permite identificar las áreas que están siendo deforestadas o urbanizadas, y por esto más vulnerables a los eventos climáticos extremos. Además, permite identificar las áreas naturales más importantes y las áreas degradadas, al fin de establecer estrategias de conservación adecuadas y planificar acciones de restauración, garantizando un uso sostenible de los recursos.</p>
                 </div>
               </div>
-              <div class="slide_banner_products" style="background-image: url('./images/slider/clim.gif')">
+              <div class="slide_banner_products" style="background-image: url('./images/slider/clima2.PNG')">
                 <div class="slide-content_banner_products">
                   <div class="slide-text_banner_products">SERVICIOS CLIMÁTICOS</div>
                   <p class="slide_prod_text"> El monitoreo constante de los parámetros climáticos permite estudiar los eventos extremos, las tendencias a largo plazo y los cambios en los patrones. Además, permite identificar las áreas más vulnerables y planificar medidas de mitigación y adaptación adecuadas, en ámbito de salud humana, gestión de los recursos naturales y económico.</p>
@@ -194,7 +194,6 @@
               <img src="./images/arrow_right.svg" alt="Next" class="arrow_inside_banner_products">
             </button>
         </div>
-
 
         <section class="valensat-products">
             <h1 class="products_section-title">PRODUCTOS</h1>
@@ -304,8 +303,6 @@
             </div>
         </section>
 
-
-
         <section class="tiemporeal_container" style="background-image: url('./images/images_products/real_chuttersnap-eXtKryPRVC8-unsplash.jpg')">
             <div class="tiemporeal_inside">
                     <p class="tiemporeal_title">Datos en tiempo real y tiempo casi-real</p>
@@ -315,22 +312,27 @@
             </div>
         </section>
 
-        <section class="about">
-            <h2 class="subtitle">Prueba nuestro visualizador de Sentinel-2</h2>
-            <div class="container_text about">
-                <p class="about_paragraph">¡Con nuestro visualizador Sentinel-2 podrás observar como se ve la Comunidad Velenciana desde satélite, con una resolución de 10 metros! Pero eso no es todo. Gracias a la combinación de diferentes bandas de satélite, podemos revelar información que escapa a nuestra visión directa. Esta técnica nos permite resaltar características y patrones que serían imperceptibles para nuestros ojos. Por ejemplo, podemos detectar cambios en la vegetación, identificar diferentes tipos de suelos o incluso monitorear la calidad del agua. La combinación de bandas nos brinda una visión más completa y detallada de la región, ayudándonos a comprender mejor el entorno y tomar decisiones informadas en materia de gestión ambiental y territorial.</p>
-                <p class="highlight-box">Nuestra aplicación te brinda la capacidad de explorar diversas combinaciones de bandas de Sentinel-2. En la parte superior izquierda, podrás ver una imagen en color natural que muestra la escena tal como la percibiríamos con nuestros propios ojos. En la parte superior derecha, te presentamos una imagen en falso color que utiliza bandas infrarrojas para resaltar la salud de la vegetación. En la parte inferior izquierda, hemos creado una imagen en falso color que enfatiza la presencia del agua, generando un contraste impactante con la tierra circundante. Por último, en la parte inferior derecha, te mostramos una imagen en falso color que resalta la vegetación presente en la escena.
-                </p>
+        <section class="home_app">
+            <h2 class="home_app_title">Prueba nuestro visualizador de Sentinel-2</h2>
+            <section class="container_home_app">
+                <div class="container_home_app_map">
+                    <iframe src="https://valensatproject.users.earthengine.app/view/visualizadorsentinel" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                </div>
+            </section>
+            <h3 class="home_app_footer" id="footerTrigger">Pincha aquí para obtener más información sobre la app.</h3>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="home_app_ventana_info" id="infoPopup">
+                <img src="./images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
+                <div class="about">
+                    <div class="home_app_ventana_info--container">
+                        <h2 class="home_app_ventana_info--title">Visualizador de Sentinel-2</h2>
+                        <p class="home_app_ventana_info--text">¡Con nuestro visualizador Sentinel-2 podrás observar como se ve la Comunidad Velenciana desde satélite, con una resolución de 10 metros! Pero eso no es todo. Gracias a la combinación de diferentes bandas de satélite, podemos revelar información que escapa a nuestra visión directa. Esta técnica nos permite resaltar características y patrones que serían imperceptibles para nuestros ojos. Por ejemplo, podemos detectar cambios en la vegetación, identificar diferentes tipos de suelos o incluso monitorear la calidad del agua. La combinación de bandas nos brinda una visión más completa y detallada de la región, ayudándonos a comprender mejor el entorno y tomar decisiones informadas en materia de gestión ambiental y territorial.</p>
+                        <p class="home_app_ventana_info--highlight">Nuestra aplicación te brinda la capacidad de explorar diversas combinaciones de bandas de Sentinel-2. En la parte superior izquierda, podrás ver una imagen en color natural que muestra la escena tal como la percibiríamos con nuestros propios ojos. En la parte superior derecha, te presentamos una imagen en falso color que utiliza bandas infrarrojas para resaltar la salud de la vegetación. En la parte inferior izquierda, hemos creado una imagen en falso color que enfatiza la presencia del agua, generando un contraste impactante con la tierra circundante. Por último, en la parte inferior derecha, te mostramos una imagen en falso color que resalta la vegetación presente en la escena.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="container_appmap_home">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/visualizadorsentinel" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </section>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/visualizadorsentinel" target="_blank" class="footer_map--link">aquí</a>.</p>
 
     </main>
 
