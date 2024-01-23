@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>App | Áreas quemadas y severidad | VALENSAT</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <section class="app_page">
+        <div class="app_page_title">
+            <p class="app_page_title--title">
+                Mapas de severidad generados con el método de la USGS
+            </p>
+        </div>
+
+        <div class="app_page_map">
+            <div class="container_home_app_map">
+                <iframe src="https://valensatproject.users.earthengine.app/view/appfiresusgs" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        <div class="app_page_footer">
+            <h3 class="app_page_footer--footer" id="footerTrigger">Pincha aquí para obtener más información sobre la app.</h3>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="home_app_ventana_info" id="infoPopup">
+                <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
+                <div class="about">
+                    <div class="home_app_ventana_info--container">
+                        <h2 class="home_app_ventana_info--title--app_page">Método desarrollado por USGS</h2>
+                        <p class="home_app_ventana_info--text">Nuestra aplicación te permite estimar el área quemada y la severidad de incendios ocurridos desde 2017 hasta la actualidad, utilizando el método oficial del Servicio Geológico de los Estados Unidos (USGS) y el índice Normalized Burn Ratio (NBR) <sup><a href="#ref" class="ref_text">2</a></sup>. La estimación es a 20 m de resolución, a partir de imágenes Sentinel-2 (producto Sentinel-2 MSI: MultiSpectral Instrument, Level-1C), que han sido previamente corregidas atmosféricamente y con nubes enmascaradas.</p>
+                        <p class="home_app_ventana_info--highlight">Puedes probar poniendo las fechas del 04/08/2018 (imágenes antes del incendio) y del 24/08/2018 (imágenes después del incendio), y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018. Otro ejemplo más actual es el incendio cerca de Montanejos (Castellón), que se puede visualizar entre las fechas 04/03/2023 y 25/03/2023.</p>
+                        <p class="home_app_ventana_info--text">El NBR es un índice es diseñado para resaltar áreas quemadas en grandes zonas de incendio y tiene fórmula similar al NDVI. Considera longitudes de onda de infrarrojo cercano (NIR) e infrarrojo de onda corta (SWIR), regiones del espectro menos sensibles a los efectos atmosféricos y que pueden cuantificar con precisión la vegetación afectada por el incendio <sup><a href="#ref" class="ref_text">3, 4</a></sup>.</p>
+                        <p>
+                            <math display="block" class="formulas">
+                                <mrow>
+                                    <mi>NBR</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                    <mrow>
+                                        <mi>NIR</mi>
+                                        <mo>&#x2212;</mo>
+                                        <mi>SWIR</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>NIR</mi>
+                                        <mo>+</mo>
+                                        <mi>SWIR</mi>
+                                    </mrow>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El NBR se calcula para las imágenes antes del incendio y para las imágenes posteriores al incendio, seleccionando un intervalo de tiempo de una semana antes y una semana después del incendio para asegurarse de tener imágenes. En caso de que hubiera más imágenes disponibles, se hace un mosaico entre ellas. Calculando la resta entre estos dos NBR (preNBR - postNBR) se obtiene el differenced Normalized Burn Ratio (dNBR), que se utiliza para la evaluación de la gravedad de las quemaduras.</p>
+                        <p>
+                            <math display="block" class="formulas">
+                                <mi>dNBR</mi>
+                                <mo>=</mo>
+                                <msub>
+                                    <mi>NBR</mi>
+                                    <mi>pre</mi>
+                                </msub>
+                                <mo>&#x2212;</mo>
+                                <msub>
+                                    <mi>NBR</mi>
+                                    <mi>post</mi>
+                                </msub>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El dNBR ha sido clasificado según los rangos de severidad de las quemaduras propuestos por el USGS. Valores más altos de dNBR indican un daño más severo, mientras valores negativos muestran una mayor productividad de la vegetación (regeneración). Las áreas no quemadas normalmente se atribuyen a valores cercanos a cero.</p>
+                        <div class="div_table">
+                            <p class="title_table">Clases de gravedad de quemaduras y umbrales propuestos por USGS. </p>
+                            <img src="../../images/Incendios/burn_sev_lev.png" alt="" class="image_table">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger');
+        var infoPopup = document.getElementById('infoPopup');
+        var closePopup = document.getElementById('closePopup');
+        var modalOverlay = document.getElementById('modalOverlay');
+        var body = document.body;
+    
+        footerTrigger.addEventListener('click', function() {
+        modalOverlay.style.display = 'block';
+        infoPopup.style.display = 'block';
+        setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+        }, 10);
+        body.classList.add('no-scroll');
+        });
+    
+        function closePopupAndOverlay() {
+        infoPopup.classList.remove('visible');
+        modalOverlay.classList.remove('visible');
+        modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+        }, { once: true });
+        body.classList.remove('no-scroll');
+        }
+    
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+    
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopupAndOverlay();
+        }
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

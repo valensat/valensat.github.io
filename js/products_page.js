@@ -25,3 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show 'ciencia' section by default on page load
     showSection('ciencia_product_page');
 });
+
+
+var sectionHeight = document.getElementById('ciencia_product_page').offsetHeight;
+var totalHeight = sectionHeight + 375;
+
+document.querySelector('.all_sections-container_product_page').style.minHeight = totalHeight + 'px';
+
+var sections = document.querySelectorAll('.content-section_product_page');
+for (var i = 0; i < sections.length; i++) {
+    sections[i].style.height = totalHeight + 'px';
+}
