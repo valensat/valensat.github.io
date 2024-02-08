@@ -148,170 +148,85 @@
     </header>
 
     <main>
-
-        
-
-        <section class="about">
-            <h1 class="title">INCENDIOS EN LA COMUNIDAD</h1>
-            <div class="container_text about">
-                <p class="about_paragraph">A lo largo de la historia, la Comunidad Valenciana ha experimentado varios incendios forestales notables que han dejado una huella significativa en su entorno natural. En 1994, se contabilizaron hasta cuatro incendios con más de 18.000 hectáreas calcinadas, convirtiéndose en el peor año en términos de número y tamaño de incendios forestales en la región. Otros incendios destacados incluyen el de Andilla en junio de 2012, que quemó 9.451 hectáreas, y el de Llutxent en agosto de 2018, afectando a varios municipios y quemando alrededor de 3.270 hectáreas, lo que obligó a la evacuación de más de 2.600 personas.</p>
-                <p class="about_paragraph">Estos incidentes ilustran la importancia de estudiar los incendios a nivel de comunidad autónoma en la Comunidad Valenciana. El análisis de estos eventos permite identificar factores de riesgo, comprender las consecuencias ambientales y socioeconómicas, y desarrollar estrategias de prevención y respuesta más efectivas. Además, estos estudios contribuyen al conocimiento científico aplicado y respaldan la toma de decisiones informadas en la gestión del territorio, la planificación urbana, la protección ambiental y la adaptación al cambio climático. A través de la investigación y el análisis continuo, podemos trabajar hacia la protección de nuestros recursos naturales, garantizando la seguridad y el bienestar de las comunidades valencianas en relación a los incendios forestales.</p>
+        <h2 class="title_product_page">Incendios en la comunidad</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-            <div class="container_banner--inc">
-                <div class="left_col">
-                    <section class="banner_inc">
-                        <div class="graph_donut">
-                            <canvas id="incendiosCV" class="graph_donut--inside"></canvas>
+
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">A lo largo de la historia, la Comunidad Valenciana ha experimentado varios incendios forestales notables que han dejado una huella significativa en su entorno natural. En 1994, se contabilizaron hasta cuatro incendios con más de 18.000 hectáreas calcinadas, convirtiéndose en el peor año en términos de número y tamaño de incendios forestales en la región. Otros incendios destacados incluyen el de Andilla en junio de 2012, que quemó 9.451 hectáreas, y el de Llutxent en agosto de 2018, afectando a varios municipios y quemando alrededor de 3.270 hectáreas, lo que obligó a la evacuación de más de 2.600 personas.</p>
+                        <p class="about_paragraph">Estos incidentes ilustran la importancia de estudiar los incendios a nivel de comunidad autónoma en la Comunidad Valenciana. El análisis de estos eventos permite identificar factores de riesgo, comprender las consecuencias ambientales y socioeconómicas, y desarrollar estrategias de prevención y respuesta más efectivas. Además, estos estudios contribuyen al conocimiento científico aplicado y respaldan la toma de decisiones informadas en la gestión del territorio, la planificación urbana, la protección ambiental y la adaptación al cambio climático. A través de la investigación y el análisis continuo, podemos trabajar hacia la protección de nuestros recursos naturales, garantizando la seguridad y el bienestar de las comunidades valencianas en relación a los incendios forestales.</p>
+                        <div class="container_banner--inc">
+                            <div class="left_col">
+                                <section class="banner_inc">
+                                    <div class="graph_donut">
+                                        <canvas id="incendiosCV" class="graph_donut--inside"></canvas>
+                                    </div>
+                                    <div class="banner_inc--legend">
+                                        <p class="banner_quem--title_legend">Extensión total quemada</p>
+                                        <p class="banner_quem--title_legend">(2000-2023)</p>
+                                        <p class="banner_quem--text_legend">1771.50 km²</p>
+                                    </div>
+                                </section>
+                                
+                                <section class="banner_inc">
+                                    <div class="graph_bar">
+                                        <canvas id="incendiosCV_years" class="graph_bar--inside"></canvas>
+                                    </div>
+                                </section>
+                            </div>
+                
+                            <div class="right_col">
+                                <section class="banner_inc2">
+                                        <img src="../images/banners/incendiosCV_leyenda.png" alt="" class="imgbanner_CV">
+                                </section>
+                            </div>
                         </div>
-                        <div class="banner_inc--legend">
-                            <p class="banner_quem--title_legend">Extensión total quemada</p>
-                            <p class="banner_quem--title_legend">(2000-2023)</p>
-                            <p class="banner_quem--text_legend">1771.50 km²</p>
-                        </div>
-                    </section>
+                        <p class="ref_banner">Datos proporcionados por el producto MCD64A1 de MODIS. Actualizado el 1 de julio de 2023.</p>
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. MODIS Burned Area Product User’s Guide<a href="https://lpdaac.usgs.gov/documents/875/MCD64_User_Guide_V6.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. MODIS Active Fire Product User's Guide<a href="https://www.earthdata.nasa.gov/s3fs-public/2022-02/MODIS_C6_Fire_User_Guide_B.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Freeborn, P. H., Wooster, M. J., Roy, D. P., & Cochrane, M. A. (2014). Quantification of MODIS fire radiative power (FRP) measurement uncertainty for use in satellite based active fire characterization and biomass burning estimation. Geophysical Research Letters, 41(6), 1988-1994.<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013GL059086" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. Peterson, D., & Wang, J. (2013). A sub-pixel-based calculation of fire radiative power from MODIS observations: 2. Sensitivity analysis and potential fire weather application. Remote Sensing of Environment, 129, 231-249.<a href="https://www.sciencedirect.com/science/article/pii/S0034425712004087" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. MODFIRE/VNPFIRE Data Product Description - NASA<a href="https://feer.gsfc.nasa.gov/data/frp/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    </div>
                     
-                    <section class="banner_inc">
-                        <div class="graph_bar">
-                            <canvas id="incendiosCV_years" class="graph_bar--inside"></canvas>
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">En VALENSAT, ofrecemos soluciones interactivas diseñadas para ------------.</p>
+                        <p class="about_paragraph">Explore la funcionalidad de nuestros productos y obtenga valiosa información sobre --------, respaldando así una comprensión más profunda de estos eventos.</p>
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                        <div class="botones_productos_product_page">
+                            <a href="./apps/inc_comunidad.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/inc.jpg')">
+                                <div class="button-content">Visualizador de áreas quemadas en la Comunidad Valenciana</div>
+                            </a>
+                            <a href="./apps/inc_comunidad_modisdaily.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/inc_modis.jpg')">
+                                <div class="button-content">Producto diario de MODIS</div>
+                            </a>                        
                         </div>
-                    </section>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Incendio Bejis - Agosto 2022</h1>
+                        <div class="image_container">
+                            <img src="../images/Incendios/Bejis_gif.gif" alt="" class="image_gif_inc">
+                        </div>     
+                        <p class="about_paragraph">Los incendios forestales, como el de Bejis, tienen un impacto significativo en el medio ambiente. La deforestación causada por estos incendios contribuye al cambio climático y a la pérdida de biodiversidad. Además, los incendios forestales liberan grandes cantidades de dióxido de carbono y otros gases de efecto invernadero, lo que agrava aún más el problema del calentamiento global.</p>
+                        <p class="about_paragraph">En particular, el incendio que ocurrió en Bejis en 2022 tuvo un importante impacto ambiental, con alrededor de 4.000 hectáreas calcinadas y un perímetro de 50 kilómetros. El gif al lado representa el área del incendio antes y después de que occurrió (13 de agosto y 18 de agosto). Para su creación se utilizaron las bandas 12, 8A y 4 de imágenes Sentinel 2.</p>
+                    </div>
                 </div>
-    
-                <div class="right_col">
-                    <section class="banner_inc2">
-                            <img src="../images/banners/incendiosCV_leyenda.png" alt="" class="imgbanner_CV">
-                    </section>
-                </div>
-            </div>
-            <p class="ref_banner">Datos proporcionados por el producto MCD64A1 de MODIS. Actualizado el 1 de julio de 2023.</p>
-        </section>
 
-        
-        <section class="about">
-            <h2 class="subtitle">Incendio Bejis - Agosto 2022</h2>
-            <div class="container_text_gif about">
-                <div class="image_container">
-                    <img src="../images/Incendios/Bejis_gif.gif" alt="" class="image_gif_inc">
-                </div>
-                <div class="text_container">       
-                    <p class="about_paragraph">Los incendios forestales, como el de Bejis, tienen un impacto significativo en el medio ambiente. La deforestación causada por estos incendios contribuye al cambio climático y a la pérdida de biodiversidad. Además, los incendios forestales liberan grandes cantidades de dióxido de carbono y otros gases de efecto invernadero, lo que agrava aún más el problema del calentamiento global.</p>
-                    <p class="about_paragraph">En particular, el incendio que ocurrió en Bejis en 2022 tuvo un importante impacto ambiental, con alrededor de 4.000 hectáreas calcinadas y un perímetro de 50 kilómetros. El gif al lado representa el área del incendio antes y después de que occurrió (13 de agosto y 18 de agosto). Para su creación se utilizaron las bandas 12, 8A y 4 de imágenes Sentinel 2.</p>
-                </div>  
-            </div>
-        </section>
-        
-
-        
-        
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">Visualizador de áreas quemadas en la Comunidad Valenciana</h2>
-                <p class="highlight-box">Nuestra aplicación te muestra las áreas quemadas en la Comunidad Valenciana, permitiéndote seleccionar el intervalo de fechas de tu interés. Utilizamos imágenes satelitales del sensor MODIS con una resolución de 500 m (producto Burned Area Monthly Global 500m), que abarcan desde el año 2000 hasta la actualidad. Además, te brinda información detallada de su extensión, por provincia y en toda la comunidad. Con esta herramienta, podrás estar al tanto de los impactos de los incendios y contribuir a la protección de nuestro entorno natural.</p>
-            </div>
-        </section>
-
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/fireareaprovincias" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/fireareaprovincias" target="_blank" class="footer_map--link">aquí</a>.</p>
-
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre el producto MCD64A1 v006
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El producto MCD64A1 v006 de MODIS proporciona información sobre áreas quemadas a nivel global. Se genera mensualmente utilizando imágenes MODIS de Terra y Aqua y tiene una resolución de 500 metros. Para generarlo se utilizan imágenes de reflectancia de superficie MODIS de 500 m combinadas con observaciones de fuego activo MODIS de 1 km. El algoritmo empleado utiliza un índice de vegetación sensible al fuego (VI) para crear umbrales dinámicos que se aplican a los datos compuestos <sup><a href="#ref" class="ref_text"> 1</a></sup>. Cada pixel contiene además información sobre las fechas de quema, la incertidumbre de las fechas de quema y la información de calidad del producto.</p>
-                                <p class="about_paragraph">Para saber más sobre este producto, pincha <a href="https://lpdaac.usgs.gov/products/mcd64a1v006/" target="_blank" class="footer_map--link">aquí</a></sup>.</p>
-                            </div>
-                        </section>
-                </article>
-            </section>
-        </section>
-
-
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">MODIS daily fire product</h2>
-                <p class="highlight-box">La siguiente aplicación permite calcular el área quemada a través del uso del producto MODIS “Aqua Thermal Anomalies & Fire Daily Global 1km” en toda la Comunidad Valenciana. Para utilizarla, basta seleccionar el intervalo de tiempo que se desea analizar, poniendo las fechas de inicio y fin, y pulsar el botón "ejecutar". La aplicación proporcionará un mapa del área quemada y imprimirá la cantidad de hectáreas quemadas por provincia y en toda la Comunidad. El maximum fire-radiative-power (MW) detectado se representa con una escala de colores, que va del negro al rojo. El producto esta actualizado a la semana pasada.</p>
-            </div>
-        </section>
-
         
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/activefires " name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
 
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/activefires" target="_blank" class="footer_map--link">aquí</a>.</p>
-
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre el producto MYD14A1 v061
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El conjunto de datos MYD14A1 V6.1 proporciona compuestos de máscara de fuego diarios a una resolución de 1 km derivados de las radiaciones MODIS de 4 y 11 micrómetros. La estrategia de detección de incendios se basa en la detección absoluta de un incendio (cuando la intensidad del fuego es suficiente para detectarlo) y en la detección relativa a su fondo (para tener en cuenta la variabilidad de la temperatura de la superficie y la reflexión de la luz solar). Esta información se utiliza para monitorear la distribución espacial y temporal de los incendios en diferentes ecosistemas, detectar cambios en la distribución de incendios e identificar nuevas fronteras de incendios, incendios forestales y cambios en la frecuencia de los incendios o su fuerza relativa. </p>
-                                <p class="about_paragraph">El producto MYD14A1 v061 es un producto diario que proporciona información sobre las áreas de incendio detectadas por el satélite MODIS. Este producto es un compuesto de máscaras de fuego diarios a una resolución de 1 km, derivados de las radiaciones de 4 y 11 micrómetros<sup><a href="#ref" class="ref_text"> 2</a></sup>. La estrategia de detección de incendios se basa en la detección absoluta de un incendio (cuando la intensidad del fuego es suficiente para detectarlo) y en la detección relativa a su fondo (para tener en cuenta la variabilidad de la temperatura de la superficie y la reflexión de la luz solar). Esta información se utiliza para monitorear la distribución espacial y temporal de los incendios en diferentes ecosistemas, detectar cambios en la distribución de incendios e identificar nuevas fronteras de incendios, incendios forestales y cambios en la frecuencia de los incendios o su fuerza relativa.</p>
-                                <p class="about_paragraph">Este producto está relacionado con otros productos MODIS, como el producto Land Surface Temperature/Emissivity Daily (MYD11A1) Version 6.1, que proporciona información sobre la temperatura de la superficie terrestre y la emisividad, y el producto BRDF and Albedo Products, que proporciona información sobre la reflectancia bidireccional de la superficie terrestre y el albedo.</p>
-                                <p class="about_paragraph">Para saber más sobre este producto, pincha <a href="https://lpdaac.usgs.gov/products/myd14a1v061/" target="_blank" class="footer_map--link">aquí</a></sup>.</p>
-                            </div>
-                        </section>
-                </article>
-            </section>
-        </section>
-
-
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre el Maximum Fire Radiative Power
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El Maximum Fire Radiative Power (FRP) representa la máxima potencia radiativa de un incendio, es decir, la máxima cantidad de calor emitida en un segundo, medida en MW (megavatios). Este parámetro se utiliza para monitorear los incendios y su actividad, y se calcula utilizando la radiación térmica detectada por el satélite MODIS, que luego se convierte en potencia radiativa utilizando un algoritmo especialmente diseñado. La potencia radiativa detectada por MODIS es la suma de la potencia emitida por las llamas y la potencia emitida por la superficie del suelo calentada por el incendio<sup><a href="#ref" class="ref_text"> 3</a></sup>.</p>
-                                <p class="about_paragraph">Los mapas de FRP también se utilizan para evaluar la eficacia de los programas de prevención de incendios y monitorear la respuesta de los ecosistemas a los incendios. Además, el FRP se puede utilizar para estimar la biomasa quemada y las emisiones de gases de efecto invernadero y de CO2 producidas por los incendios, lo que proporciona información importante para la evaluación del cambio climático y del impacto en la calidad del aire <sup><a href="#ref" class="ref_text"> 4</a></sup>.</p>
-                                <p class="about_paragraph">Existen diferentes técnicas para calcular el FRP, pero todas se basan en la medida de la radiación térmica detectada por el satélite MODIS. Una de las técnicas más utilizadas se basa en el método de la ventana dividida, que utiliza la radiación térmica detectada en dos ventanas espectrales diferentes para estimar la temperatura de la superficie del suelo y la de las llamas. Otra técnica utilizada para calcular el FRP se basa en el método del píxel activo, que implica la identificación de un píxel activo dentro del incendio y la estimación de su potencia radiativa. Esta técnica es particularmente útil para incendios de pequeña extensión o para incendios que se desarrollan en entornos con una radiación térmica de fondo elevada. En general, la elección de la técnica de cálculo depende de las características del incendio y de las condiciones ambientales en las que se desarrolla. Por ejemplo, el método de la ventana dividida es más adecuado para incendios de gran tamaño, mientras que el método del píxel activo es más adecuado para incendios pequeños <sup><a href="#ref" class="ref_text"> 5</a></sup>.</p>
-                            </div>
-                        </section>
-                </article>
-            </section>
-        </section>
-
-
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. MODIS Burned Area Product User’s Guide<a href="https://lpdaac.usgs.gov/documents/875/MCD64_User_Guide_V6.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2. MODIS Active Fire Product User's Guide<a href="https://www.earthdata.nasa.gov/s3fs-public/2022-02/MODIS_C6_Fire_User_Guide_B.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. Freeborn, P. H., Wooster, M. J., Roy, D. P., & Cochrane, M. A. (2014). Quantification of MODIS fire radiative power (FRP) measurement uncertainty for use in satellite based active fire characterization and biomass burning estimation. Geophysical Research Letters, 41(6), 1988-1994.<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013GL059086" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">4. Peterson, D., & Wang, J. (2013). A sub-pixel-based calculation of fire radiative power from MODIS observations: 2. Sensitivity analysis and potential fire weather application. Remote Sensing of Environment, 129, 231-249.<a href="https://www.sciencedirect.com/science/article/pii/S0034425712004087" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">5. MODFIRE/VNPFIRE Data Product Description - NASA<a href="https://feer.gsfc.nasa.gov/data/frp/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            </div>
-        </section>
-
+        <script src="../js/products_page.js"></script>
 
     </main>
 

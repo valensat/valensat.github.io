@@ -145,53 +145,60 @@
         </nav>
     </header>
 
-    <main>       
-        <section class="about">
-            <h1 class="title">EVOLUCIÓN URBANA</h1>
-            <div class="container_text about">
-                <p class="about_paragraph">Estudiar las series temporales de ciertas playas o líneas de costa puede resultar una tarea complicada 
-                    usando datos satelitales debido a la baja resolución espacial comentada anteriormente. Por suerte, el Instituto Cartográfico Valenciano (ICV) 
-                    contiene en su base de datos ortofotografías del Plan Nacional de Ortofotografía Aérea (PNOA), de la serie A, B y C de vuelos americanos que fotografiaron 
-                    la Comunitat Valenciana en la década de los 40, 50 y 60 y de vuelos menores.
-                    Estas ortofotografías tienen también la ventaja de ocupar un amplio abanico temporal, lo que nos permite evaluar mejor el cambio producido. 
-                    Pero, por otro lado, también estas imágenes tienen sus limitaciones. En primer lugar, no tenemos bandas espectrales, y eso prácticamente imposibilita realizar 
-                    un LandCover (al menos a gran escala) o hacer una segmentación óptima. En segundo lugar, podemos tener problemas a la hora de medir, 
-                    ya que estas ortofotografías deben estar ortoreferenciadas y ortorectificadas.
-                    </p>
+    <main>
+        <h2 class="title_product_page">Evolución Urbana</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-            <img src="../images/banners/evolurbana_banner.png" alt="" class="image_all">
-            <p class="ref_banner">Ortofoto 1956 y 2022 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
 
-        </section>
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">Estudiar las series temporales de ciertas playas o líneas de costa puede resultar una tarea complicada usando datos satelitales debido a la baja resolución espacial comentada anteriormente. Por suerte, el Instituto Cartográfico Valenciano (ICV) contiene en su base de datos ortofotografías del Plan Nacional de Ortofotografía Aérea (PNOA), de la serie A, B y C de vuelos americanos que fotografiaron la Comunitat Valenciana en la década de los 40, 50 y 60 y de vuelos menores.
+                        Estas ortofotografías tienen también la ventaja de ocupar un amplio abanico temporal, lo que nos permite evaluar mejor el cambio producido. 
+                        Pero, por otro lado, también estas imágenes tienen sus limitaciones. En primer lugar, no tenemos bandas espectrales, y eso prácticamente imposibilita realizar 
+                        un LandCover (al menos a gran escala) o hacer una segmentación óptima. En segundo lugar, podemos tener problemas a la hora de medir, ya que estas ortofotografías deben estar ortoreferenciadas y ortorectificadas.</p>
 
-        <section class="about">
-            <h2 class="subtitle">Evolución urbana desde satélite</h2>
-            <div class="container_text about">
-                <p class="about_paragraph">Las imágenes de satélite, pese a no tener tanta resolución espacial, sí tienen una resolución espectral y temporal mucho mayor, y esto también tiene ventajas. Por ello, hemos creado una aplicación en Google Earth Engine con la intención de mostrar imágenes (en este caso de Landsat por tener datos desde 1984) y observar la evolución de la urbanización a una escala perceptible por los satélites. Un claro ejemplo que se observa muy bien es la expansión de los puertos de los grandes núcleos urbanos de la Comunitat Valenciana, con las consecuencias tanto económicas, sociales y políticas que conlleva. También el crecimiento de las grandes urbes en las últimas décadas es apreciable (nuevas urbanizaciones, carreteras, etc).</p>
-                <p class="highlight-box">Esta aplicación utiliza imágenes Landsat para mostrar de manera animada la evolución urbana a lo largo del tiempo, aprovechando la amplia disponibilidad de imágenes de varios años. De esta forma, a la derecha del mapa puedes dibujar tu zona interés, introducir el rango de años para la serie temporal y un rango de fechas para realizar un promedio de las imágenes. Ten en cuenta que cuanto más amplio sea el rango de años y fechas, más puede tardar en cargarse el GIF.</p>
-            </div>
-        </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/timelapsepv" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                        <img src="../images/banners/evolurbana_banner.png" alt="" class="image_all">
+                        <p class="ref_banner">Ortofoto 1956 y 2022 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                        
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    </div>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">En VALENSAT, ofrecemos soluciones interactivas diseñadas para ---------.</p>
+                        <p class="about_paragraph">Explore la funcionalidad de nuestros productos y obtenga valiosa información sobre la magnitud y severidad de --------------, respaldando así una comprensión más profunda de estos eventos.</p>
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                        <div class="botones_productos_product_page">
+                            <a href="./apps/timelapse.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/evolurbana.gif')">
+                                <div class="button-content">Animación Time-Lapse con Landsat</div>
+                            </a>                        
+                        </div>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Contenido descargable</h1>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/timelapsepv" target="_blank" class="footer_map--link">aquí</a>.</p>
         
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            </div>
-        </section>
 
+        <script src="../js/products_page.js"></script>
 
     </main>
+
+
         
     <img src="../images/arrow_up.svg" alt="Volver arriba" class="back-to-top">
 

@@ -146,103 +146,121 @@
     </header>
 
     <main>
-
-        <section class="about">
-            <h2 class="title">EVAPOTRANSPIRACIÓN</h2>
-            <div class="container_text about">
-                <p class="about_paragraph">La evapotranspiración (ET) representa la pérdida de agua desde la superficie de la Tierra hacia la atmósfera por el proceso combinado de evaporación y transpiración. Es una variable fundamental del sistema climático <sup><a href="#ref" class="ref_text"> 1</a></sup> y su estimación permite monitorear las interacciones entre biosfera, atmósfera e hidrosfera<sup><a href="#ref" class="ref_text"> 2, 3, 4 </a></sup>. Al ser un componente esencial de los ciclos del agua, su estudio permite una mejor gestión de los cultivos, optimizando recursos y costes y aumentando la productividad, a través de la evaluación del uso del agua de riego<sup><a href="#ref" class="ref_text"> 5</a></sup>.</p>
-                <h2 class="subtitle about">S-SEBI Model</h2>
-                <p class="highlight-box">Los modelos de evapotranspiración basados en datos de teledetección son una herramienta esencial para proporcionar estimaciones de ET, espacialmente sobre áreas agrícolas. En este proyecto, se ha utilizado el Simplified Surface Energy Balance Index (S-SEBI) para calcular la ET sobre la Comunidad Valenciana. Como datos de entrada se utilizaron los productos ERA5 (resolución espacial de 9 km) y las imágenes VIIRS (resolución espacial de 1 km).</p>
+        <h2 class="title_product_page">Evapotranspiración</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-        </section>
 
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre el modelo S-SEBI
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El S-SEBI es un algoritmo simple de RS para estimar el balance de energía superficial desarrollado por Roerink et al. (2000)<sup><a href="#ref" class="ref_text"> 6</a></sup>, que requiere datos mínimos de entrada. El flujo de calor latente instantáneo LE (W/m<sup>2</sup>) se estima como: </p>
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">La evapotranspiración (ET) representa la pérdida de agua desde la superficie de la Tierra hacia la atmósfera por el proceso combinado de evaporación y transpiración. Es una variable fundamental del sistema climático <sup><a href="#ref" class="ref_text"> 1</a></sup> y su estimación permite monitorear las interacciones entre biosfera, atmósfera e hidrosfera<sup><a href="#ref" class="ref_text"> 2, 3, 4 </a></sup>. Al ser un componente esencial de los ciclos del agua, su estudio permite una mejor gestión de los cultivos, optimizando recursos y costes y aumentando la productividad, a través de la evaluación del uso del agua de riego<sup><a href="#ref" class="ref_text"> 5</a></sup>.</p>
+                        <h2 class="subtitle">S-SEBI Model</h2>
+                        <p class="highlight-box">Los modelos de evapotranspiración basados en datos de teledetección son una herramienta esencial para proporcionar estimaciones de ET, espacialmente sobre áreas agrícolas. En este proyecto, se ha utilizado el Simplified Surface Energy Balance Index (S-SEBI) para calcular la ET sobre la Comunidad Valenciana. Como datos de entrada se utilizaron los productos ERA5 (resolución espacial de 9 km) y las imágenes VIIRS (resolución espacial de 1 km).</p>
+                        <br><br>
+                        <section class="about">
+                            <section class="desp_container">
+                                <article class="desp_padding">
+                                    <div class="desp_answer">
+                                        
+                                        <h3 class="desp_title">Más información sobre el modelo S-SEBI
+                                            <span class="desp_arrow">
+                                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
+                                            </span>
+                                        </h3>
+                                        <section class="desp_show">
+                                            <div class="container_text--desp">
+                                                <p class="about_paragraph">El S-SEBI es un algoritmo simple de RS para estimar el balance de energía superficial desarrollado por Roerink et al. (2000)<sup><a href="#ref" class="ref_text"> 6</a></sup>, que requiere datos mínimos de entrada. El flujo de calor latente instantáneo LE (W/m<sup>2</sup>) se estima como: </p>
 
-                                <p><math display="block" class="formulas">
-                                    <mi>LE</mi>
-                                    <mo>=</mo>
-                                    <mi>Λ(Rn</mi>
-                                    <mo>&#x2212;</mo>
-                                    <mi>G)</mi>
-                                  </math>
-                                </p>
+                                                <p><math display="block" class="formulas">
+                                                    <mi>LE</mi>
+                                                    <mo>=</mo>
+                                                    <mi>Λ(Rn</mi>
+                                                    <mo>&#x2212;</mo>
+                                                    <mi>G)</mi>
+                                                </math>
+                                                </p>
 
-                                <p class="about_paragraph">donde Λ es la fracción evaporativa instantánea (adicional), Rn es el flujo de radiación neto instantáneo (W/m<sup>2</sup>) y G es el flujo de calor instantáneo del suelo (W/m<sup>2</sup>).</p>
-                                <p class="about_paragraph">El modelo se basa en la estimación de la fracción evaporativa del triángulo LST-Albedo después de la identificación de los píxeles controlados por radiación y evaporación, de acuerdo con la ecuación N:</p>
+                                                <p class="about_paragraph">donde Λ es la fracción evaporativa instantánea (adicional), Rn es el flujo de radiación neto instantáneo (W/m<sup>2</sup>) y G es el flujo de calor instantáneo del suelo (W/m<sup>2</sup>).</p>
+                                                <p class="about_paragraph">El modelo se basa en la estimación de la fracción evaporativa del triángulo LST-Albedo después de la identificación de los píxeles controlados por radiación y evaporación, de acuerdo con la ecuación N:</p>
 
-                                <p>
-                                    <math display="block" class="formulas">
-                                      <mi>&#x039B;</mi>
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <msub>
-                                            <mi>T</mi>
-                                            <mi>H</mi>
-                                          </msub>
-                                          <mo>&#x2212;</mo>
-                                          <msub>
-                                            <mi>T</mi>
-                                            <mi>S</mi>
-                                          </msub>
-                                        </mrow>
-                                        <mrow>
-                                          <msub>
-                                            <mi>T</mi>
-                                            <mi>H</mi>
-                                          </msub>
-                                          <mo>&#x2212;</mo>
-                                          <msub>
-                                            <mi>T</mi>
-                                            <mi>LE</mi>
-                                          </msub>
-                                        </mrow>
-                                      </mfrac>
-                                    </math>
-                                </p>
+                                                <p>
+                                                    <math display="block" class="formulas">
+                                                    <mi>&#x039B;</mi>
+                                                    <mo>=</mo>
+                                                    <mfrac>
+                                                        <mrow>
+                                                        <msub>
+                                                            <mi>T</mi>
+                                                            <mi>H</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo>
+                                                        <msub>
+                                                            <mi>T</mi>
+                                                            <mi>S</mi>
+                                                        </msub>
+                                                        </mrow>
+                                                        <mrow>
+                                                        <msub>
+                                                            <mi>T</mi>
+                                                            <mi>H</mi>
+                                                        </msub>
+                                                        <mo>&#x2212;</mo>
+                                                        <msub>
+                                                            <mi>T</mi>
+                                                            <mi>LE</mi>
+                                                        </msub>
+                                                        </mrow>
+                                                    </mfrac>
+                                                    </math>
+                                                </p>
 
-                                <p class="about_paragraph">donde T<sub>S</sub> es la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> son las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir del diagrama de dispersión (en figura) entre temperatura superficial y albedo (Gómez et al., 2005)<sup><a href="#ref" class="ref_text"> 7</a></sup>.</p>
+                                                <p class="about_paragraph">donde T<sub>S</sub> es la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> son las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir del diagrama de dispersión (en figura) entre temperatura superficial y albedo (Gómez et al., 2005)<sup><a href="#ref" class="ref_text"> 7</a></sup>.</p>
 
-                                <div class="div_table">
-                                    <img src="../images/evapo/diagrama_disp_T_albedo.png" alt="" class="image_fig">
-                                </div>
-                                
-                                <p class="title_img">Temperatura superficial versus albedo superficial. La línea H en rojo es el flujo de calor sensible, la línea LE en verde es el flujo de calor latente, T<sub>S</sub> es la temperatura superficial (eje y) y α es el albedo (eje x). El diagrama de dispersión calcula la fracción de evaporación para cada punto de temperatura superficial T<sub>P</sub>.</p>
-                                
+                                                <div class="div_table">
+                                                    <img src="../images/evapo/diagrama_disp_T_albedo.png" alt="" class="image_fig">
+                                                </div>
+                                                
+                                                <p class="title_img">Temperatura superficial versus albedo superficial. La línea H en rojo es el flujo de calor sensible, la línea LE en verde es el flujo de calor latente, T<sub>S</sub> es la temperatura superficial (eje y) y α es el albedo (eje x). El diagrama de dispersión calcula la fracción de evaporación para cada punto de temperatura superficial T<sub>P</sub>.</p>
+                                                
 
 
-                            </div>
+                                            </div>
+                                        </section>
+                                </article>
+                    
+                            </section>
                         </section>
-                </article>
-    
-            </section>
-        </section>
 
-        <section class="about">
-            <div class="container_text about">
-            <h3 class="subtitle_ref" id="ref">Referencias</h3>
-            <p class="about_paragraph--ref">1. Sobrino, J. A., Da Rocha, N. S., Skokovic, D., Käfer, P. S., López-Urrea, R., Jiménez-Muñoz, J. C., & Rolim, S. B. A. (2021). Evapotranspiration Estimation with the S-SEBI Method from Landsat 8 Data against Lysimeter Measurements at the Barrax Site, Spain. Remote Sensing, 13(18), 3686.<a href="https://doi.org/10.3390/rs13183686" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">2. Priestley, C. H. B., & Taylor, R. J. K. (1972). On the Assessment of Surface Heat Flux and Evaporation Using Large-Scale Parameters. Monthly Weather Review, 100(2), 81-92.<a href="https://doi.org/10.1175/1520-0493(1972)100" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">3. Olioso, A., Chauki, H., Courault, D., & Wigneron, J. (1999). Estimation of Evapotranspiration and Photosynthesis by Assimilation of Remote Sensing Data into SVAT Models. Remote Sensing of Environment, 68(3), 341-356.<a href="https://doi.org/10.1016/s0034-4257(98)00121-7" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">4. Rubert, G. C., Roberti, D. R., Pereira, L. S., De Quadros, F. L. F., De Campos Velho, H. F., & Moraes, O. L. L. (2018). Evapotranspiration of the Brazilian Pampa Biome: Seasonality and Influential Factors. DOAJ (DOAJ: Directory of Open Access Journals).<a href="https://doi.org/10.3390/w10121864 " target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">5. Sobrino, J. A., Gomez, M. C., Jiménez-Muñoz, J. C., Olioso, A., & Chehbouni, G. (2005). A simple algorithm to estimate evapotranspiration from DAIS data: Application to the DAISEX campaigns. Journal of Hydrology, 315(1-4), 117-125.<a href="https://doi.org/10.1016/j.jhydrol.2005.03.027 " target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">6. Roerink, G., Su, Z., & Menenti, M. (2000). S-SEBI: A simple remote sensing algorithm to estimate the surface energy balance. Physics and chemistry of the earth, 25(2), 147-157.<a href="https://doi.org/10.1016/s1464-1909(99)00128-8" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            <p class="about_paragraph--ref">7. Gómez, M. E. P., Olioso, A., Sobrino, J. A., & Jacob, F. (2005). Retrieval of evapotranspiration over the Alpilles/ReSeDA experimental site using airborne POLDER sensor and a thermal camera. Remote Sensing of Environment, 96(3-4), 399-408.<a href="https://doi.org/10.1016/j.rse.2005.03.006" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. Sobrino, J. A., Da Rocha, N. S., Skokovic, D., Käfer, P. S., López-Urrea, R., Jiménez-Muñoz, J. C., & Rolim, S. B. A. (2021). Evapotranspiration Estimation with the S-SEBI Method from Landsat 8 Data against Lysimeter Measurements at the Barrax Site, Spain. Remote Sensing, 13(18), 3686.<a href="https://doi.org/10.3390/rs13183686" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Priestley, C. H. B., & Taylor, R. J. K. (1972). On the Assessment of Surface Heat Flux and Evaporation Using Large-Scale Parameters. Monthly Weather Review, 100(2), 81-92.<a href="https://doi.org/10.1175/1520-0493(1972)100" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Olioso, A., Chauki, H., Courault, D., & Wigneron, J. (1999). Estimation of Evapotranspiration and Photosynthesis by Assimilation of Remote Sensing Data into SVAT Models. Remote Sensing of Environment, 68(3), 341-356.<a href="https://doi.org/10.1016/s0034-4257(98)00121-7" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. Rubert, G. C., Roberti, D. R., Pereira, L. S., De Quadros, F. L. F., De Campos Velho, H. F., & Moraes, O. L. L. (2018). Evapotranspiration of the Brazilian Pampa Biome: Seasonality and Influential Factors. DOAJ (DOAJ: Directory of Open Access Journals).<a href="https://doi.org/10.3390/w10121864 " target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. Sobrino, J. A., Gomez, M. C., Jiménez-Muñoz, J. C., Olioso, A., & Chehbouni, G. (2005). A simple algorithm to estimate evapotranspiration from DAIS data: Application to the DAISEX campaigns. Journal of Hydrology, 315(1-4), 117-125.<a href="https://doi.org/10.1016/j.jhydrol.2005.03.027 " target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">6. Roerink, G., Su, Z., & Menenti, M. (2000). S-SEBI: A simple remote sensing algorithm to estimate the surface energy balance. Physics and chemistry of the earth, 25(2), 147-157.<a href="https://doi.org/10.1016/s1464-1909(99)00128-8" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">7. Gómez, M. E. P., Olioso, A., Sobrino, J. A., & Jacob, F. (2005). Retrieval of evapotranspiration over the Alpilles/ReSeDA experimental site using airborne POLDER sensor and a thermal camera. Remote Sensing of Environment, 96(3-4), 399-408.<a href="https://doi.org/10.1016/j.rse.2005.03.006" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    </div>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Contenido descargable</h1>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+        
 
+        <script src="../js/products_page.js"></script>
 
     </main>
     

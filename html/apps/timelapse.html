@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/styles.css">
 
-    <title>App | Áreas quemadas y severidad | VALENSAT</title>
+    <title>App | Evolución urbana | VALENSAT</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
@@ -35,13 +35,13 @@
     <section class="app_page">
         <div class="app_page_title">
             <p class="app_page_title--title">
-                Mapas de severidad generados con el método de la UCG
+                Crea una animación Time-Lapse con Landsat
             </p>
         </div>
 
         <div class="app_page_map">
             <div class="container_home_app_map">
-                <iframe src="https://valensatproject.users.earthengine.app/view/firesrafanew" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                <iframe src="https://valensatproject.users.earthengine.app/view/timelapsepv" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
 
@@ -52,10 +52,9 @@
                 <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
                 <div class="about">
                     <div class="home_app_ventana_info--container">
-                        <h2 class="home_app_ventana_info--title--app_page">Método desarrollado por UCG</h2>
-                        <p class="home_app_ventana_info--text">La siguiente aplicación utiliza la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup> para calcular el área quemada y la severidad del incendio. Para ello, se emplean imágenes Sentinel-2 (producto Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A) con una resolución de 20 m, que han sido previamente corregidas atmosféricamente y con nubes enmascaradas.</p>
-                        <p class="home_app_ventana_info--highlight">Puedes probar poniendo las fechas del 04/08/2018 (imágenes antes del incendio) y del 24/08/2018 (imágenes después del incendio), y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018. Otro ejemplo más actual es el incendio cerca de Montanejos (Castellón), que se puede visualizar entre las fechas 04/03/2023 y 25/03/2023.</p>
-                        <p class="home_app_ventana_info--text">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
+                        <h2 class="home_app_ventana_info--title--app_page">Animación Time-Lapse con Landsat</h2>
+                        <p class="about_paragraph">Las imágenes de satélite, pese a no tener tanta resolución espacial, sí tienen una resolución espectral y temporal mucho mayor, y esto también tiene ventajas. Por ello, hemos creado una aplicación en Google Earth Engine con la intención de mostrar imágenes (en este caso de Landsat por tener datos desde 1984) y observar la evolución de la urbanización a una escala perceptible por los satélites. Un claro ejemplo que se observa muy bien es la expansión de los puertos de los grandes núcleos urbanos de la Comunitat Valenciana, con las consecuencias tanto económicas, sociales y políticas que conlleva. También el crecimiento de las grandes urbes en las últimas décadas es apreciable (nuevas urbanizaciones, carreteras, etc).</p>
+                        <p class="highlight-box">Esta aplicación utiliza imágenes Landsat para mostrar de manera animada la evolución urbana a lo largo del tiempo, aprovechando la amplia disponibilidad de imágenes de varios años. De esta forma, a la derecha del mapa puedes dibujar tu zona interés, introducir el rango de años para la serie temporal y un rango de fechas para realizar un promedio de las imágenes. Ten en cuenta que cuanto más amplio sea el rango de años y fechas, más puede tardar en cargarse el GIF.</p>
                     </div>
                 </div>
             </div>

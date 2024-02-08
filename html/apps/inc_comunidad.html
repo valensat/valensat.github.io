@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/styles.css">
 
-    <title>App | Áreas quemadas y severidad | VALENSAT</title>
+    <title>App | Incendios en la Comunidad Valenciana | VALENSAT</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
@@ -35,13 +35,13 @@
     <section class="app_page">
         <div class="app_page_title">
             <p class="app_page_title--title">
-                Mapas de severidad generados con el método de la UCG
+                Prueba nuestro visualizador de áreas quemadas en la Comunidad Valenciana
             </p>
         </div>
 
         <div class="app_page_map">
             <div class="container_home_app_map">
-                <iframe src="https://valensatproject.users.earthengine.app/view/firesrafanew" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                <iframe src="https://valensatproject.users.earthengine.app/view/fireareaprovincias" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
 
@@ -52,10 +52,10 @@
                 <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
                 <div class="about">
                     <div class="home_app_ventana_info--container">
-                        <h2 class="home_app_ventana_info--title--app_page">Método desarrollado por UCG</h2>
-                        <p class="home_app_ventana_info--text">La siguiente aplicación utiliza la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup> para calcular el área quemada y la severidad del incendio. Para ello, se emplean imágenes Sentinel-2 (producto Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A) con una resolución de 20 m, que han sido previamente corregidas atmosféricamente y con nubes enmascaradas.</p>
-                        <p class="home_app_ventana_info--highlight">Puedes probar poniendo las fechas del 04/08/2018 (imágenes antes del incendio) y del 24/08/2018 (imágenes después del incendio), y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018. Otro ejemplo más actual es el incendio cerca de Montanejos (Castellón), que se puede visualizar entre las fechas 04/03/2023 y 25/03/2023.</p>
-                        <p class="home_app_ventana_info--text">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
+                        <p class="highlight-box">Nuestra aplicación te muestra las áreas quemadas en la Comunidad Valenciana, permitiéndote seleccionar el intervalo de fechas de tu interés. Utilizamos imágenes satelitales del sensor MODIS con una resolución de 500 m (producto Burned Area Monthly Global 500m), que abarcan desde el año 2000 hasta la actualidad. Además, te brinda información detallada de su extensión, por provincia y en toda la comunidad. Con esta herramienta, podrás estar al tanto de los impactos de los incendios y contribuir a la protección de nuestro entorno natural.</p>
+                        <h2 class="home_app_ventana_info--title--app_page">Producto MCD64A1 v006</h2>
+                        <p class="about_paragraph">El producto MCD64A1 v006 de MODIS proporciona información sobre áreas quemadas a nivel global. Se genera mensualmente utilizando imágenes MODIS de Terra y Aqua y tiene una resolución de 500 metros. Para generarlo se utilizan imágenes de reflectancia de superficie MODIS de 500 m combinadas con observaciones de fuego activo MODIS de 1 km. El algoritmo empleado utiliza un índice de vegetación sensible al fuego (VI) para crear umbrales dinámicos que se aplican a los datos compuestos <sup><a href="#ref" class="ref_text"> 1</a></sup>. Cada pixel contiene además información sobre las fechas de quema, la incertidumbre de las fechas de quema y la información de calidad del producto.</p>
+                        <p class="about_paragraph">Para saber más sobre este producto, pincha <a href="https://lpdaac.usgs.gov/products/mcd64a1v006/" target="_blank" class="footer_map--link">aquí</a></sup>.</p>
                     </div>
                 </div>
             </div>
