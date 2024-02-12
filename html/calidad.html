@@ -146,142 +146,48 @@
     </header>
 
     <main>
-        <section class="about">
-            <h2 class="title">LAGOS Y EMBALSES</h2>
-            <div class="container_text about">
-                <p class="about_paragraph">El agua es un recurso fundamental y en muchos lugares empieza a escasear. Por otra parte, el sector agrícola contribuye significativamente a la contaminación del agua, especialmente a través de la liberación de nitratos provenientes de fertilizantes y plaguicidas. Este exceso de nutrientes en el agua puede generar problemas como la proliferación de algas y la presencia de cianobacterias tóxicas, lo que se conoce como eutrofización <sup><a href="#ref" class="ref_text">1</a></sup>.</p>
-                <p class="about_paragraph">En el año 2000 se estableció la Directiva Marco del Agua (WFD en sus siglas en inglés), que tiene como objetivo clasificar y evaluar el estado ecológico de las aguas continentales y costeras. Esta directiva establece una escala de clasificación que va desde "muy malo" hasta "muy bueno" y se basa en indicadores medioambientales específicos.</p>
-                <p class="about_paragraph">Aquí es donde la teledetección desempeña un papel fundamental. Obtener estos indicadores de forma "in situ" resulta costoso tanto en términos de tiempo como económicamente. Sin embargo, mediante el procesamiento de imágenes de satélite, podemos estimar estos indicadores de manera más eficiente, sobre todo en grandes cuerpos de agua como la Albufera, y con una frecuencia temporal adecuada. De esta manera, la teledetección nos brinda una herramienta valiosa para monitorear y gestionar la calidad del agua de forma más eficaz y sostenible.</p>
+        <h2 class="title_product_page">Lagos y embalses</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-            <img src="../images/banners/agua_banner.jpg" alt="" class="image_all">
-            <p class="ref_banner">Foto de <a href="https://unsplash.com/@jacerv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="ref_banner--link" target="_blank">Jaser Cervantes</a> en <a href="https://unsplash.com/es/fotos/ngMxifEBXYY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="ref_banner--link" target="_blank">Unsplash</a></p>
-        </section>
 
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">Índices destacados</h2>
-                <p class="about_paragraph">En nuestra aplicación, te ofrecemos una manera sencilla y accesible de estimar la calidad del agua. Para ello, utilizamos tres indicadores clave: el NDCI, que nos brinda información sobre la clorofila, y el TSS y la transparencia, que nos ayudan a evaluar la turbidez del agua. Utilizamos imágenes de Sentinel-2, aprovechando su alta resolución, lo cual resulta especialmente beneficioso al estudiar lagos y embalses de menor tamaño.</p>
-                <p class="highlight-box">Simplemente selecciona la zona de interés y el rango de fechas deseadas. Al ejecutar la aplicación, se mostrará una miniatura animada en la parte izquierda con las imágenes correspondientes al periodo seleccionado, y una gráfica que representa la evolución del promedio de la zona a lo largo del tiempo. Ten en cuenta que cuanto más amplio sea el rango de fechas, más puede tardar en cargarse el GIF.</p>
-            </div>
-        </section>
-        
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/calidad-agua" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/calidad-agua" target="_blank" class="footer_map--link">aquí</a>.</p>
-
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        
-                        <h3 class="desp_title">Más información sobre los índices
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">
-                                    Antes de hablar de qué índices nos sirven para estudiar, la bibliografía nos dice que existe una bipartición en la clasificación de tipos de aguas: las aguas tipo 1 y tipo 2 (Mishra & Mishra, 2012).
-                                </p>
-                                <p class="about_paragraph">
-                                <strong>Aguas tipo 1:</strong> Son aquellas aguas en las que el fitoplancton (que convierte CO2 y H2O en O2) es el responsable de la producción primaria.
-                                </p>
-                                <p class="about_paragraph">
-                                <strong>Aguas tipo 2:</strong> Corresponden a las aguas turbias, donde no solo el fitoplancton es un factor fundamental. Aquí, constituyentes como materia totalmente suspendida (TSM), materia orgánica disuelta (CDOM), o la transparencia (SD) son igual de importantes y sus efectos no pueden ser negligibles.
-                                </p>
-                                <p class="about_paragraph">
-                                    En la Comunitat Valenciana (CV) tenemos diversos embalses, ríos y zonas de costa que podemos clasificar en estos dos tipos de agua. En el caso particular de la Albufera, 
-                                    que ha sido extensamente estudiada y existe un gran número de referencias sobre ella, sabemos que se trata de un agua tipo 2. Esto implica que para estimar de forma adecuada 
-                                    la calidad del agua debemos incorporar diferentes indicadores que tengan en cuenta todos los factores que afecten en mayor medida en la Albufera, y 
-                                    no solo aquellos que se relacionen con la biomasa del fitoplancton. 
-                                </p>
-                                <h3 class="subsubtitle"> <br> Normalized Difference Chlorophyll Index (NDCI)
-                                </h3>
-                                <p class="about_paragraph">
-                                    La clorofila a (chl-a) es el principal pigmento del fitoplancton, por lo que es un gran indicador para determinar la claridad del agua. 
-                                    Su reflectividad en el espectro es el siguiente: 
-                                </p>
-                                <div class="div_table">
-                                    <img src="../images/agua/clorofila_espectrum.png" alt="Curvas espectrales de absorción de la clorofila-a y la clorofila-b" class="image_table_calidad">
-                                    <p class="title_img">Curvas espectrales de absorción de la clorofila-a y la clorofila-b</p>
-                                </div>
-                                
-                                <p class="about_paragraph">
-                                    Al ver este espectro, Mishra y Mishra (2012)<sup><a href="#ref" class="ref_text">2</a></sup> propusieron un índice que relacionara dos bandas que permitiera
-                                    detectar uno de los picos de absorción. Así, al igual que el NDVI o el NDWI, aparece el Normalized Difference Clorophyll Index o NDCI, un indicador normalizado con rango de -1 a 1. En el caso de estudiar el índice en <strong>Sentinel-2</strong>, elegimos las bandas 4 y 5 (en λ = 665nm y λ =705nm respectivamente) para estudiar la diferencia del segundo pico.
-                                <p><math display="block" class="formulas">
-                                    <mrow>
-                                      <mi>NDCR</mi>  
-                                      <mo>=</mo>
-                                      <mfrac>
-                                        <mrow>
-                                          <mi>B5</mi>
-                                          <mo>-</mo>
-                                          <mi>B4</mi>
-                                        </mrow>
-                                        <mrow>
-                                          <mi>B5</mi>
-                                          <mo>+</mo>
-                                          <mi>B4</mi>
-                                        </mrow>
-                                      </mfrac>
-                                    </mrow>
-                                  </math></p>
-                                
-                                <h3 class="subsubtitle"> <br> Normalized Difference Turbidity Index (NDTI)
-                                </h3>
-
-                                <p class="about_paragraph">El índice de turbidez de diferencia de normalización (NDTI), que se estima utilizando los valores de reflectancia espectral de los píxeles de agua, se utiliza para estimar la turbidez en los cuerpos de agua. Utiliza el fenómeno de que la reflectancia electromagnética es mayor en el espectro verde que en el espectro rojo para el agua clara. Por lo tanto, con el aumento de la turbidez también aumenta la reflectancia del espectro rojo. Su ecuación es:</p>
-
-                                <p>
-                                    <math display="block" class="formulas">
-                                        <mi>NDVI</mi>
-                                        <mo>=</mo>
-                                        <mfrac>
-                                        <mrow>
-                                            <mi>RED</mi>
-                                            <mo>&#x2212;</mo>
-                                            <mi>GREEN</mi>
-                                        </mrow>
-                                        <mrow>
-                                            <mi>RED</mi>
-                                            <mo>+</mo>
-                                            <mi>GREEN</mi>
-                                        </mrow>
-                                        </mfrac>
-                                    </math>
-                                </p>
-
-                            
-                                <h3 class="subsubtitle"> <br> Total Suspended Solids (TSS)
-                                </h3>
-                                <p class="about_paragraph">La reflectividad del agua aumenta proporcionalmente con el aumento de la concentración de cualquier tipo de sólidos y partículas en la parte del espectro comprendida entre 400 y 1000 nm. Dependiendo del tamaño y las propiedades de la partícula, tendremos una respuesta espectral distinta. Por ejemplo, si las partículas son inorgánicas y de origen arcilloso, a más concentración de partículas más reflectividad habrá en la zona del rojo.</p>
-                                <p class="about_paragraph">Por esto, el TSS es un parámetro util a estimar la calidad del agua, como el agua de mar o aguas residuales después de tratamientos de depuracion. Doña et al. (2015) <sup><a href="#ref" class="ref_text">1</a></sup> lograron obtener una buena relación entre las particulas y la banda TM4 de Landsat para obtener el indicador de TSS, que se utilizó para calcular el índice en la aplicación.</p>
-                                <p class="about_paragraph">La siguiente tabla muestra los resultados de los algoritmos presentados por Doña en comparación con otros.</p>
-
-                                <div class="div_table">
-                                    <img src="../images/agua/Algoritmo_Doña.png" alt="" class="image_fig">
-                                </div>
-                             
-                            </div>
-                        </section>
-                </article>
-            </section>
-        </section>
-
-        <section class="about">
-                <div class="container_text about">
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">El agua es un recurso fundamental y en muchos lugares empieza a escasear. Por otra parte, el sector agrícola contribuye significativamente a la contaminación del agua, especialmente a través de la liberación de nitratos provenientes de fertilizantes y plaguicidas. Este exceso de nutrientes en el agua puede generar problemas como la proliferación de algas y la presencia de cianobacterias tóxicas, lo que se conoce como eutrofización <sup><a href="#ref" class="ref_text">1</a></sup>.</p>
+                        <p class="about_paragraph">En el año 2000 se estableció la Directiva Marco del Agua (WFD en sus siglas en inglés), que tiene como objetivo clasificar y evaluar el estado ecológico de las aguas continentales y costeras. Esta directiva establece una escala de clasificación que va desde "muy malo" hasta "muy bueno" y se basa en indicadores medioambientales específicos.</p>
+                        <p class="about_paragraph">Aquí es donde la teledetección desempeña un papel fundamental. Obtener estos indicadores de forma "in situ" resulta costoso tanto en términos de tiempo como económicamente. Sin embargo, mediante el procesamiento de imágenes de satélite, podemos estimar estos indicadores de manera más eficiente, sobre todo en grandes cuerpos de agua como la Albufera, y con una frecuencia temporal adecuada. De esta manera, la teledetección nos brinda una herramienta valiosa para monitorear y gestionar la calidad del agua de forma más eficaz y sostenible.</p>
+                        <img src="../images/banners/agua_banner.jpg" alt="" class="image_all">
+                        <p class="ref_banner">Foto de <a href="https://unsplash.com/@jacerv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="ref_banner--link" target="_blank">Jaser Cervantes</a> en <a href="https://unsplash.com/es/fotos/ngMxifEBXYY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="ref_banner--link" target="_blank">Unsplash</a></p>
                         <h3 class="subtitle_ref" id="ref">Referencias</h3>
                         <p class="about_paragraph--ref">1. Doña, C., Miralles, V. C., Sánchez, J., Ferril, A., & Camacho, A. (2011). Herramienta para el estudio del estado de eutrofización de masas de agua continentales. Revista de teledetección: Revista de la Asociación Española de Teledetección, 36, 40-50. <a href="http://www.aet.org.es/revistas/revista36/Numero36_04.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                         <p class="about_paragraph--ref">2. Mishra, S., & Mishra, D. (2012). Normalized difference chlorophyll index: A novel model for remote estimation of chlorophyll-a concentration in turbid productive waters. Remote Sensing of Environment, 117, 394-406. <a href="https://doi.org/10.1016/j.rse.2011.10.016" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        
                     </div>
-        </section>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                        <div class="botones_productos_product_page">
+                            <a href="./apps/calidad_agua.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/calidad_agua.gif')">
+                                <div class="button-content">Análisis de la calidad del agua</div>
+                            </a>                        
+                        </div>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h2>Contenido descargable</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+        <script src="../js/products_page.js"></script>
 
     </main>
 

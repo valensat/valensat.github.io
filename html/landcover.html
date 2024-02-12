@@ -146,215 +146,139 @@
     </header>
 
     <main>
-        <section class="about">
-            <h1 class="title">LAND COVER</h1>
-            <div class="container_text about">
-                <p class="about_paragraph">El Land Cover es una herramienta fundamental para diversos campos, como la planificación urbana, la gestión ambiental, la evaluación de recursos naturales y la monitorización del cambio climático. Proporciona información detallada sobre la distribución espacial de los diferentes tipos de cobertura terrestre, permitiendo comprender y analizar los procesos e interacciones que ocurren en el entorno. Además, el seguimiento periódico del Land Cover a lo largo del tiempo permite identificar cambios y tendencias, facilitando la toma de decisiones informadas en la gestión del territorio y la conservación de los ecosistemas.</p>
+        <h2 class="title_product_page">Land Cover</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-        </section>
 
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">Evolución de la cobertura terrestre entre 1984 y 2022</h2>
-                <p class="about_paragraph">A continuación, puedes explorar la clasificación supervisada de la cobertura del suelo utilizando imágenes Landsat 5 para el año 1984 y Landsat 9 para el año 2022, donde solo se tomaron en consideración las imágenes del periodo estival, abarcando desde principios de junio hasta finales de septiembre.</p>
-                <p class="highlight-box">Esta herramienta te permite observar los cambios que han ocurrido en la comunidad a lo largo del tiempo, especialmente en relación con la urbanización y el desarrollo urbano. Al comparar las clasificaciones de diferentes años, podrás identificar y analizar los cambios en la distribución de la cobertura del suelo, incluyendo la expansión de áreas urbanas, la deforestación, la agricultura intensiva y otros procesos de transformación del paisaje. Esta información es invaluable para comprender el impacto de la urbanización en el entorno natural y para tomar decisiones informadas en la planificación y gestión del territorio.</p>
-            </div>
-        </section>
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">El Land Cover es una herramienta fundamental para diversos campos, como la planificación urbana, la gestión ambiental, la evaluación de recursos naturales y la monitorización del cambio climático. Proporciona información detallada sobre la distribución espacial de los diferentes tipos de cobertura terrestre, permitiendo comprender y analizar los procesos e interacciones que ocurren en el entorno. Además, el seguimiento periódico del Land Cover a lo largo del tiempo permite identificar cambios y tendencias, facilitando la toma de decisiones informadas en la gestión del territorio y la conservación de los ecosistemas.</p>
+                        <p class="about_paragraph">Echa un vistazo a esta tabla que muestra los cambios en la cobertura del suelo entre 1984 y 2022 en términos de área y porcentaje para diferentes clases de cobertura, como agua, áreas urbanas, vegetación, vegetación seca y suelo desnudo. Puedes notar que ha habido algunos cambios interesantes en estos años. </p>
+                        <table class="table">
+                            <tr class="table_header">
+                                <th>Clase</th>
+                                <th>Agua <br>(lagos y embalses)</th>
+                                <th>Suelo urbano <br>(ciudades y zonas industriales)</th>
+                                <th>Rural <br>(vegetación seca y verde)</th>
+                                <th>Otro <br>(playas, minas y lechos de ríos)</th>
+                            </tr>
+                        
+                            <tr>
+                                <td><strong>1984</strong></td>
+                                <td>93.57 km<sup>2</sup></td>
+                                <td>481.96 km<sup>2</sup></td>
+                                <td>22525.07 km<sup>2</sup></td>
+                                <td>154.78 km<sup>2</sup></td>
+                            </tr>
+            
+                            <tr>
+                                <td><strong>1985</strong></td>
+                                <td>87.82 km<sup>2</sup> (<span style="color: red;">&#9660 6.14%</span>)*</td>
+                                <td>484.24 km<sup>2</sup> (<span style="color: green;">&#9650 0.47%</span>)*</td>
+                                <td>22536.77 km<sup>2</sup> (<span style="color:green;">&#9650 0.05%</span>)*</td>
+                                <td>146.59 km<sup>2</sup> (<span style="color: red;">&#9660 5.29%</span>)*</td>
+                              </tr>
+            
+                              <tr>
+                                <td><strong>1990</strong></td>
+                                <td>116.61 km<sup>2</sup> (<span style="color: green;">&#9650 24.62%</span>)*</td>
+                                <td>702.85 km<sup>2</sup> (<span style="color: green;">&#9650 45.83%</span>)*</td>
+                                <td>22297.79 km<sup>2</sup> (<span style="color: red;">&#9660 1.00%</span>)*</td>
+                                <td>138.36 km<sup>2</sup> (<span style="color: red;">&#9660 10.60%</span>)*</td>
+                              </tr>
+            
+                              <tr>
+                                <td><strong>1995</strong></td>
+                                <td>82.13 km<sup>2</sup> (<span style="color: red;">&#9660 12.23%</span>)*</td>
+                                <td>759.72 km<sup>2</sup> (<span style="color: green;">&#9650 57.92%</span>)*</td>
+                                <td>22241.11 km<sup>2</sup> (<span style="color: red;">&#9660 1.26%</span>)*</td>
+                                <td>171.92 km<sup>2</sup> (<span style="color: green;">&#9650 11.07%</span>)*</td>
+                              </tr>
+            
+                              <tr>
+                                <td><strong>2000</strong></td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2005</strong></td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2010</strong></td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2015</strong></td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2020</strong></td>
+                                <td> 116.70 km<sup>2</sup> (<span style="color: green;">&#9650 24.71%</span>)*</td>
+                                <td> 908.57 km<sup>2</sup> (<span style="color: green;">&#9650 98.11%</span>)*</td>
+                                <td> 22199.87 km<sup>2</sup> (<span style="color: red;">&#9660 1.44%</span>)*</td>
+                                <td> 30.70 km<sup>2</sup> (<span style="color: red;">&#9660 80.16%</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2022</strong></td>
+                                <td>108.65 km<sup>2</sup> (<span style="color: green;">&#9650 16.23%</span>)*</td>
+                                <td>972.40 km<sup>2</sup> (<span style="color: green;">&#9650 101.18%</span>)*</td>
+                                <td>22108.91 km<sup>2</sup> (<span style="color: red;">&#9660 1.82%</span>)*</td>
+                                <td>65.90 km<sup>2</sup> (<span style="color: red;">&#9660 57.42%</span>)*</td>
+                              </tr>
+                              <tr>
+                                <td><strong>2023</strong></td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
+                                <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
+                              </tr>
+                        </table>
+                        <div class="container_text">
+                            <p class="ref_banner">*Porcentajes referidos al total de la clase en 1984</p>
+                        </div>
+                        
 
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/landcoverlandsat " name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. Teluguntla, P., Thenkabail, P. S., Oliphant, A., Xiong, J., Gumma, M. K., Congalton, R. G., Yadav, K., & Huete, A. (2018). A 30-m landsat-derived cropland extent product of Australia and China using random forest machine learning algorithm on Google Earth Engine cloud computing platform. ISPRS Journal of Photogrammetry and Remote Sensing, 144, 325-340.<a href="https://doi.org/10.1016/j.isprsjprs.2018.07.017" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Phan, T. N., Kuch, V., & Lehnert, L. W. (2020). Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition. Remote Sensing, 12(15), 2411.<a href="https://doi.org/10.3390/rs12152411" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Maxwell, A. E., Strager, M. P., Warner, T. A., Ramezan, C. A., Morgan, A. N., & Pauley, C. E. (2019). Large-Area, High Spatial Resolution Land Cover Mapping Using Random Forests, GEOBIA, and NAIP Orthophotography: Findings and Recommendations. Remote Sensing, 11(12), 1409.<a href="https://doi.org/10.3390/rs11121409" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    </div>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Contenido descargable</h1>
+                    </div>
+                </div>
+
             </div>
         </div>
+        
 
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/landcoverlandsat" target="_blank" class="footer_map--link">aquí</a>.</p>
+        <script src="../js/products_page.js"></script>
 
-        <section class="about">
-            <section class="desp_container">
-                <article class="desp_padding">
-                    <div class="desp_answer">
-                        <h3 class="desp_title">Más información sobre el método empleado
-                            <span class="desp_arrow">
-                                <img src="../images/arrow_desp.svg" alt="arrow" class="desp_img">
-                            </span>
-                        </h3>
-                        <section class="desp_show">
-                            <div class="container_text--desp">
-                                <p class="about_paragraph">El métodos utilizado para realizar estas mapas de clasificación es el Clasificador Random Forest <sup><a href="#ref" class="ref_text">1, 2</a></sup>, que mediante árboles de decisión categoriza los inputs de entrada. Se han seleccionado más de 1000 puntos por toda la comunidad, introduciendo la clase a la que pertenecen (agua, urbano, suelo desnudo, vegetación y vegetación seca), y se han establecido 150 árboles decicionales <sup><a href="#ref" class="ref_text">3</a></sup>.</p>
-                            </div>
-                        </section>
-                </article>
-            </section>
-        </section>
-
-
-        <section class="about">
-            <div class="container_text">
-                <p class="about_paragraph">Echa un vistazo a esta tabla que muestra los cambios en la cobertura del suelo entre 1984 y 2022 en términos de área y porcentaje para diferentes clases de cobertura, como agua, áreas urbanas, vegetación, vegetación seca y suelo desnudo. Puedes notar que ha habido algunos cambios interesantes en estos años. </p>
-            </div>
-            
-            <table class="table">
-                <tr class="table_header">
-                    <th>Clase</th>
-                    <th>Agua <br>(lagos y embalses)</th>
-                    <th>Suelo urbano <br>(ciudades y zonas industriales)</th>
-                    <th>Rural <br>(vegetación seca y verde)</th>
-                    <th>Otro <br>(playas, minas y lechos de ríos)</th>
-                </tr>
-            
-                <tr>
-                    <td><strong>1984</strong></td>
-                    <td>93.57 km<sup>2</sup></td>
-                    <td>481.96 km<sup>2</sup></td>
-                    <td>22525.07 km<sup>2</sup></td>
-                    <td>154.78 km<sup>2</sup></td>
-                </tr>
-
-                <tr>
-                    <td><strong>1985</strong></td>
-                    <td>87.82 km<sup>2</sup> (<span style="color: red;">&#9660 6.14%</span>)*</td>
-                    <td>484.24 km<sup>2</sup> (<span style="color: green;">&#9650 0.47%</span>)*</td>
-                    <td>22536.77 km<sup>2</sup> (<span style="color:green;">&#9650 0.05%</span>)*</td>
-                    <td>146.59 km<sup>2</sup> (<span style="color: red;">&#9660 5.29%</span>)*</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>1990</strong></td>
-                    <td>116.61 km<sup>2</sup> (<span style="color: green;">&#9650 24.62%</span>)*</td>
-                    <td>702.85 km<sup>2</sup> (<span style="color: green;">&#9650 45.83%</span>)*</td>
-                    <td>22297.79 km<sup>2</sup> (<span style="color: red;">&#9660 1.00%</span>)*</td>
-                    <td>138.36 km<sup>2</sup> (<span style="color: red;">&#9660 10.60%</span>)*</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>1995</strong></td>
-                    <td>82.13 km<sup>2</sup> (<span style="color: red;">&#9660 12.23%</span>)*</td>
-                    <td>759.72 km<sup>2</sup> (<span style="color: green;">&#9650 57.92%</span>)*</td>
-                    <td>22241.11 km<sup>2</sup> (<span style="color: red;">&#9660 1.26%</span>)*</td>
-                    <td>171.92 km<sup>2</sup> (<span style="color: green;">&#9650 11.07%</span>)*</td>
-                  </tr>
-
-                  <tr>
-                    <td><strong>2000</strong></td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2005</strong></td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2010</strong></td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2015</strong></td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2020</strong></td>
-                    <td> 116.70 km<sup>2</sup> (<span style="color: green;">&#9650 24.71%</span>)*</td>
-                    <td> 908.57 km<sup>2</sup> (<span style="color: green;">&#9650 98.11%</span>)*</td>
-                    <td> 22199.87 km<sup>2</sup> (<span style="color: red;">&#9660 1.44%</span>)*</td>
-                    <td> 30.70 km<sup>2</sup> (<span style="color: red;">&#9660 80.16%</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2022</strong></td>
-                    <td>108.65 km<sup>2</sup> (<span style="color: green;">&#9650 16.23%</span>)*</td>
-                    <td>972.40 km<sup>2</sup> (<span style="color: green;">&#9650 101.18%</span>)*</td>
-                    <td>22108.91 km<sup>2</sup> (<span style="color: red;">&#9660 1.82%</span>)*</td>
-                    <td>65.90 km<sup>2</sup> (<span style="color: red;">&#9660 57.42%</span>)*</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2023</strong></td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660  %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: green;">&#9650 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9660 %</span>)*</td>
-                    <td> km<sup>2</sup> (<span style="color: red;">&#9650 %</span>)*</td>
-                  </tr>
-            </table>
-            <div class="container_text">
-                <p class="ref_banner">*Porcentajes referidos al total de la clase en 1984</p>
-            </div>
-            
-        </section>
-
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">Evolución de las áreas urbanas entre 1984 y 2022</h2>
-                <p class="about_paragraph">Utilizando las clasificaciones obtenidas a partir de las imágenes de Landsat, hemos identificado las áreas urbanas y nos permite observar los cambios que han ocurrido en el entorno urbano entre 1984 y 2022. En el visualizador que se encuentra a continuación, podrás ver las zonas urbanas que no existían en 1984 y aquellas que han experimentado transformaciones, convirtiéndose ahora en áreas con vegetación o suelo desnudo.</p>
-            </div>
-        </section>
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/evolucionurbana" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/evolucionurbana" target="_blank" class="footer_map--link">aquí</a>.</p>
-
-
-        <section class="about">
-            <div class="container_text">
-                <p class="about_paragraph">Esta tabla muestra los valores en km cuadrados y en porcentaje de las modificaciones de la cobertura urbana respecto a la superficie total de la Comunidad Valenciana, por los años 1984-2022.</p>
-            </div>           
-            <table class="table">
-                <tr class="table_header">
-                <th class="table_header--title">Clase</th>
-                <th class="table_header--title">Aumento</th>
-                <th class="table_header--title">Disminución</th>
-                </tr>
-                <tr>
-                <td><b>Km<sup>2</sup></b></td>
-                <td>+ 522.09</td>
-                <td>- 289.65</td>
-                </tr>
-                <tr>
-                <td><b>%</b></td>
-                <td>+ 2.24</td>
-                <td>- 1.24</td>
-                </tr>
-            </table>
-        </section>
-
-        <section class="about">
-            <div class="container_text about">
-                <h2 class="subtitle about">Cobertura de suelo actual</h2>
-                <p class="highlight-box">Descubre la clasificación actualizada de la comarca de Valencia para el año 2022 utilizando imágenes de Sentinel-2, donde solo se tomaron en consideración las imágenes del periodo estival, abarcando desde principios de junio hasta finales de septiembre.</p>
-            </div>
-        </section>
-
-
-        <div class="container_appmap">
-            <div class="mapa_container_marco">
-                <iframe src="https://valensatproject.users.earthengine.app/view/clasificacionvalencia" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
-            </div>
-        </div>
-
-        <p class="footer_map">Para visualizarlo en pantalla completa, pincha <a href="https://valensatproject.users.earthengine.app/view/clasificacionvalencia" target="_blank" class="footer_map--link">aquí</a>.</p>
-
-
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. Teluguntla, P., Thenkabail, P. S., Oliphant, A., Xiong, J., Gumma, M. K., Congalton, R. G., Yadav, K., & Huete, A. (2018). A 30-m landsat-derived cropland extent product of Australia and China using random forest machine learning algorithm on Google Earth Engine cloud computing platform. ISPRS Journal of Photogrammetry and Remote Sensing, 144, 325-340.<a href="https://doi.org/10.1016/j.isprsjprs.2018.07.017" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2. Phan, T. N., Kuch, V., & Lehnert, L. W. (2020). Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition. Remote Sensing, 12(15), 2411.<a href="https://doi.org/10.3390/rs12152411" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. Maxwell, A. E., Strager, M. P., Warner, T. A., Ramezan, C. A., Morgan, A. N., & Pauley, C. E. (2019). Large-Area, High Spatial Resolution Land Cover Mapping Using Random Forests, GEOBIA, and NAIP Orthophotography: Findings and Recommendations. Remote Sensing, 11(12), 1409.<a href="https://doi.org/10.3390/rs11121409" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-            </div>
-        </section>
     </main>
 
     <img src="../images/arrow_up.svg" alt="Volver arriba" class="back-to-top">

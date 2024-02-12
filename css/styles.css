@@ -836,6 +836,13 @@ body {
     padding-bottom: 5px;
 }
 
+.home_app_ventana_info--subtitle--app_page{
+    color: var(--color-title);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 15px 0 0;
+}
+
 /* ABOUT */
 /* versión enero 2024 */
 .slider-container_banner_info {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>App | Sequías | VALENSAT</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <section class="app_page">
+        <div class="app_page_title">
+            <p class="app_page_title--title">
+                Estudia la sequía con índices de vegetación
+            </p>
+        </div>
+
+        <div class="app_page_map">
+            <div class="container_home_app_map">
+                <iframe src="https://valensatproject.users.earthengine.app/view/sequa" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        <div class="app_page_footer">
+            <h3 class="app_page_footer--footer" id="footerTrigger">Pincha aquí para obtener más información sobre la app.</h3>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="home_app_ventana_info" id="infoPopup">
+                <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
+                <div class="about">
+                    <div class="home_app_ventana_info--container">
+                        <p class="highlight-box">A través de la siguiente aplicación es posible calcular el Standardized Precipitation Index (SPI), el Standardized Precipitation Evapotranspiration Index (SPEI), el Vegetation Condition Index (VCI), el Temperature Condition Index (TCI), el Soil Vegetation Index (SVI) y el Vegetation Health Index (VHI), seleccionando las fechas de referencia y la zona de interés.</p>
+                        <h2 class="home_app_ventana_info--title--app_page">¿Cómo se calculan y qué representan estos índices?</h2>
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Standardized Precipitation Index (SPI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Standardized Precipitation Index (SPI)</strong> es un índice de aridez basado en la precipitación. Mide la anomalía de la precipitación en relación con una distribución de referencia, calculando la desviación estándar de las precipitaciones en un período de tiempo determinado. Se utiliza sobretodo para evaluar las condiciones de sequía o exceso de precipitación. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                               <mi>SPI</mi>
+                               <mo>=</mo>
+                               <mfrac>
+                                  <mrow>
+                                     <mi>P</mi>
+                                     <mo>-</mo>
+                                     <mi>P</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                                  <mrow>
+                                     <mi>σ</mi>
+                                  </mrow>
+                               </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">Los valores del SPI oscilan entre -3 y +3, donde los valores más altos indican condiciones de exceso de precipitación o mayor humedad. Un SPI cerca de 0 indica condiciones climáticas cercanas a la media histórica de precipitación, mientras valores negativos indican condiciones de sequía. Cuanto más negativo sea el valor, más severa será la sequía.</p>
+                        
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Standardized Precipitation Evapotranspiration Index (SPEI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Standardized Precipitation Evapotranspiration Index (SPEI)</strong> es un índice de aridez que tiene en cuenta tanto la precipitación como la evapotranspiración. Al igual que el SPI, el SPEI mide las anomalías en relación con una distribución de referencia, pero también considera las necesidades de agua de las plantas, a través de la evapotranspiración. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                               <mi>SPEI</mi>
+                               <mo>=</mo>
+                               <mfrac>
+                                  <mrow>
+                                     <mi>P</mi>
+                                     <mo>-</mo>
+                                     <mi>P</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                     <mo>-</mo>
+                                     <mi>E</mi>
+                                     <mo>-</mo>
+                                     <mi>E</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                                  <mrow>
+                                     <mi>σ</mi>
+                                  </mrow>
+                               </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El SPEI tiene un comportamiento muy similar al SPI. Sus valores varían entre -3 y +3, con valores negativos que indican condiciones secas y valores positivos que indican una mayor presencia de agua.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Vegetation Condition Index (VCI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Vegetation Condition Index (VCI)</strong> se basa en la diferencia entre el índice de vegetación observado (por ejemplo, NDVI o EVI) y la media histórica, normalizando el resultado dentro de un rango predefinido. El VCI se utiliza con frecuencia para monitorear el estrés de las plantas y la disponibilidad de agua en el suelo. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                               <mi>VCI</mi>
+                               <mo>=</mo>
+                               <mfrac>
+                                  <mrow>
+                                     <mi>NDVI</mi>
+                                     <mo>-</mo>
+                                     <mi>NDVI</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                                  <mrow>
+                                     <mi>NDVI</mi>
+                                     <mo>-</mo>
+                                     <mi>NDVI</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>min</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                               </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El VCI se normaliza generalmente en un rango de 0 a 100, con valores bajos que indican estrés hídrico y valores altos que indican una condición saludable de la vegetación o en general buenas condiciones de humedad en el suelo.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Temperature Condition Index (TCI)</h2>
+                        <p class="home_app_ventana_info--text">Temperature Condition Index (TCI)</strong> es un índice que mide las condiciones térmicas. Puede basarse en la temperatura media, máxima o mínima, y evalúa las anomalías en relación con la media histórica. Se puede utilizar para monitorear los efectos de las temperaturas extremas o el estrés térmico en los cultivos. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                               <mi>TCI</mi>
+                               <mo>=</mo>
+                               <mfrac>
+                                  <mrow>
+                                     <mi>T</mi>
+                                     <mo>-</mo>
+                                     <mi>T</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                                  <mrow>
+                                     <mi>T</mi>
+                                     <mo>-</mo>
+                                     <mi>T</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>min</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                               </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El TCI no tiene valores límites específicos, ya que depende de la referencia y de el cálculo utilizado. Generalmente, valores altos indican condiciones de calor extremo o estrés térmico para las plantas, mientras que valores bajos indican condiciones de temperatura moderada y favorables para el crecimiento de las plantas.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Soil Vegetation Index (SVI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Soil Vegetation Index (SVI)</strong>es un índice que proporciona información sobre la salud y las condiciones de la vegetación, en relación con la disponibilidad de agua en el suelo. Se calcula utilizando índices de vegetación y datos de humedad del suelo, según la siguiente ecuación:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                               <mi>SVI</mi>
+                               <mo>=</mo>
+                               <mfrac>
+                                  <mrow>
+                                     <mi>NDVI</mi>
+                                     <mo>-</mo>
+                                     <mi>NDVI</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>t</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                                  <mrow>
+                                     <mi>NDVI</mi>
+                                     <mo>-</mo>
+                                     <mi>NDVI</mi>
+                                     <msub>
+                                        <mo>(</mo>
+                                        <mi>min</mi>
+                                        <mo>)</mo>
+                                     </msub>
+                                  </mrow>
+                               </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">Este índice se normaliza generalmente en un rango de 0 a 1 o de 0 a 100. Su interpretación es opuesta a la del TCI, con valores bajos que indican estrés hídrico y valores altos que indican buenas condiciones de humedad del suelo y vegetación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger');
+        var infoPopup = document.getElementById('infoPopup');
+        var closePopup = document.getElementById('closePopup');
+        var modalOverlay = document.getElementById('modalOverlay');
+        var body = document.body;
+    
+        footerTrigger.addEventListener('click', function() {
+        modalOverlay.style.display = 'block';
+        infoPopup.style.display = 'block';
+        setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+        }, 10);
+        body.classList.add('no-scroll');
+        });
+    
+        function closePopupAndOverlay() {
+        infoPopup.classList.remove('visible');
+        modalOverlay.classList.remove('visible');
+        modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+        }, { once: true });
+        body.classList.remove('no-scroll');
+        }
+    
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+    
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopupAndOverlay();
+        }
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

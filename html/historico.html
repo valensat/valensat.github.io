@@ -146,22 +146,42 @@
     </header>
 
     <main>
-
-        <div class="container about">
-            <h1>En proceso...</h1>
-            <img src="../images/proceso.webp" alt="">
-        </div>
-
-
-        <section class="about">
-            <div class="container_text about">
-                <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+        <h2 class="title_product_page">Datos climatológicos</h2>
+        <div class="main-container_product_page">
+            <div class="sidebar_product_page">
+                <ul class="menu_product_page">
+                <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
+                <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
+                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                </ul>
             </div>
-        </section>
+
+            <div class="all_sections-container_product_page">
+                <div class="section-container_product_page">
+                    <div id="ciencia_product_page" class="content-section_product_page">
+                        
+
+                        <h3 class="subtitle_ref" id="ref">Referencias</h3>
+                        <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                    </div>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                    </div>
+                    
+                    <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Contenido descargable</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+        <script src="../js/products_page.js"></script>
 
     </main>
     

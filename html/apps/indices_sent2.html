@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>App | Índices de vegetación | VALENSAT</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <section class="app_page">
+        <div class="app_page_title">
+            <p class="app_page_title--title">
+                Visualiza los índices de vegetación más utilizados
+            </p>
+        </div>
+
+        <div class="app_page_map">
+            <div class="container_home_app_map">
+                <iframe src="https://valensatproject.users.earthengine.app/view/sequa" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        <div class="app_page_footer">
+            <h3 class="app_page_footer--footer" id="footerTrigger">Pincha aquí para obtener más información sobre la app.</h3>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="home_app_ventana_info" id="infoPopup">
+                <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
+                <div class="about">
+                    <div class="home_app_ventana_info--container">
+                        <h2 class="home_app_ventana_info--title--app_page">Visualizador de índices de vegetación con imágenes de Sentinel-2</h2>
+                        <p class="highlight-box">A través de nuestra aplicación, podrás acceder a varios índices de vegetación para la monitorización y gestión de la vegetación y los recursos naturales. Con solo seleccionar las fechas de interés y la zona que deseas analizar, podrás calcular el Normalized Difference Vegetation Index (NDVI), Enhanced Vegetation Index (EVI), Soil Adjusted Vegetation Index (SAVI), Normalized Difference Water Index (NDWI) y Normalized Multiband Drought Index (NMDI). Pero eso no es todo, nuestra herramienta también genera una clasificación basada en el índice seleccionado, proporcionando aún más información valiosa para tu análisis. ¡Explora y descubre las diversas posibilidades que ofrece nuestro visualizador de índices de vegetación!</p>
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Normalized Difference Vegetation Index (NDVI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Normalized Difference Vegetation Index (NDVI)</strong> <sup><a href="#ref" class="ref_text">1</a></sup>  es un índice usado para medir la diferencia normalizada entre las reflectancias del rojo y del infrarrojo cercano, proporcionando una medida sobre la cantidad, calidad y desarrollo de la cobertura vegetal. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                                <mi>NDVI</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>&#x2212;</mo>
+                                    <mi>RED</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>NIR</mi>
+                                    <mo>+</mo>
+                                    <mi>RED</mi>
+                                </mrow>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">Los valores del NDVI varían de -1 a +1, donde los valores más altos indican una mayor densidad y salud de la vegetación. Un NDVI de 0 indica una superficie sin vegetación, mientras que los valores negativos indican la presencia de agua o nieve. El NDVI se utiliza ampliamente en estudios de cambio climático, monitoreo de la vegetación y evaluación de la producción agrícola.</p>
+                        <p class="home_app_ventana_info--text"> En cualquier caso, la clasificación así creada es sólo orientativa, para poder clasificar la cobertura del suelo con exactitud, consulte la sección <a href="../landcover.html" target="_blank" class="about_paragraph--link">Land Cover</a>. Por ejemplo, en aguas muy eutróficas, como las de la Albufera, la clasificación realizada con el NDVI podría indicarlas como suelo.</p>
+                        
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Soil Adjusted Vegetation Index (SAVI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Soil Adjusted Vegetation Index (SAVI)</strong> <sup><a href="#ref" class="ref_text">2</a></sup> se introdujo para mitigar el impacto del brillo del suelo. Su creador, Huete, añadió un factor de ajuste del suelo 'L' a la ecuación del NDVI para corregir los efectos de ruido del suelo (color, humedad, variabilidad del suelo entre regiones, etc.), que suelen afectar a los resultados. Este índice está más adaptado a estudios de análisis de vegetación en etapas de crecimiento inicial o vegetación dispersa. En general, el SAVI puede ser una buena alternativa en cualquier suelo donde exista una baja densidad vegetal y la exposición de la superficie del suelo sea relevante. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                              <mi>SAVI</mi>
+                              <mo>=</mo>
+                              <mfrac>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>RED</mi>
+                                </mrow>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>+</mo>
+                                  <mi>RED</mi>
+                                  <mo>+</mo>
+                                  <mi>L</mi>
+                                </mrow>
+                              </mfrac>
+                              <mo>×</mo>
+                              <mrow>
+                                <mi>(1</mi>
+                                <mo>+</mo>
+                                <mi>L)</mi>
+                              </mrow>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El SAVI varía entre -1 y +1, dependiendo de la densidad de vegetación verde de la zona en cuestión. En las zonas con mucha vegetación verde, se usa L = 0 y, en este caso, SAVI es igual que el NDVI. Por el contrario, se usa L = 1 para las zonas de vegetación verde baja. Lo habitual es L = 0,5 para ajustarse a la mayoría de suelos.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Enhanced Vegetación Index (EVI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Enhanced Vegetación Index (EVI)</strong> es una alternativa más sólida a los índices tradicionales, por ser más robusto frente a la aportación del suelo y de las influencias atmosféricas. Liu y Huete <sup><a href="#ref" class="ref_text">3</a></sup> introdujeron este índice para ajustar los resultados del NDVI a los ruidos atmosféricos y del suelo, especialmente en las zonas de vegetación densa, así como para mitigar la saturación en la mayoría de los casos. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                              <mi>EVI</mi>
+                              <mo>=</mo>
+                                <mrow>
+                                  <mi>G</mi>
+                                  <mo>×</mo>
+                                  <mfrac>
+                                    <mrow>
+                                      <mi>NIR</mi>
+                                      <mo>&#x2212;</mo>
+                                      <mi>RED</mi>
+                                    </mrow>
+                                    <mrow>
+                                      <mi>NIR</mi>
+                                      <mo>+</mo>
+                                      <mrow>
+                                        <mi>C1</mi>
+                                        <mo>×</mo>
+                                        <mi>RED</mi>
+                                      </mrow>
+                                      <mo>&#x2212;</mo>
+                                      <mrow>
+                                        <mi>C2</mi>
+                                        <mo>×</mo>
+                                        <mi>BLUE</mi>
+                                      </mrow>
+                                      <mo>+</mo>
+                                      <mrow>
+                                        <mi>L</mi>
+                                      </mrow>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El rango de valores del EVI es de -1 a +1, y para la vegetación sana varía entre 0,2 y 0,8. Los coeficientes 'C1' y 'C2' sirven para corregir la dispersión de los aerosoles presentes en la atmósfera y 'L' para ajustar el fondo del suelo y del dosel de la vegetación.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Normalized Difference Water Index (NDWI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Normalized Difference Water Index (NDWI)</strong> <sup><a href="#ref" class="ref_text">4</a></sup> se elaboró inicialmente para delinear masas de agua al aire libre y evaluar su turbidez, mitigando la reflectancia del suelo y la vegetación terrestre. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                              <mi>NDWI</mi>
+                              <mo>=</mo>
+                              <mfrac>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>SWIR1</mi>
+                                </mrow>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>+</mo>
+                                  <mi>SWIR1</mi>
+                                </mrow>
+                              </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">El NDWI mide el cambio en el contenido de agua de las hojas, por eso se utiliza para monitorear sequías, registrar reducciones de rendimiento, aparte de descarga de embalses, descenso de los niveles de agua subterránea, etc. El rango común para la vegetación verde es de -0,1 a 0,4.</p>
+
+                        <h2 class="home_app_ventana_info--subtitle--app_page">Normalized Multiband Drought Index (NMDI)</h2>
+                        <p class="home_app_ventana_info--text">El <strong>Normalized Multiband Drought Index (NMDI)</strong> <sup><a href="#ref" class="ref_text">5</a></sup> monitorea las posibles condiciones de sequía utilizando la diferencia entre dos bandas SWIR como medida de la sensibilidad al agua en la vegetación y el suelo. También se utiliza comúnmente en la detección de incendios forestales. Su ecuación es:</p>
+                        <p>
+                            <math display="block" class="formulas">
+                              <mi>NMDI</mi>
+                              <mo>=</mo>
+                              <mfrac>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>(SWIR1</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>SWIR2)</mi>
+                                </mrow>
+                                <mrow>
+                                  <mi>NIR</mi>
+                                  <mo>&#x2212;</mo>
+                                  <mi>(SWIR1</mi>
+                                  <mo>+</mo>
+                                  <mi>SWIR2)</mi>
+                                </mrow>
+                              </mfrac>
+                            </math>
+                        </p>
+                        <p class="home_app_ventana_info--text">A medida que aumenta la humedad del suelo, los valores del índice disminuyen. Valores de 0,7 - 1 indican suelo seco, de 0,6 - 0,7 suelo con humedad intermedia y menores de 0,6 suelo húmedo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger');
+        var infoPopup = document.getElementById('infoPopup');
+        var closePopup = document.getElementById('closePopup');
+        var modalOverlay = document.getElementById('modalOverlay');
+        var body = document.body;
+    
+        footerTrigger.addEventListener('click', function() {
+        modalOverlay.style.display = 'block';
+        infoPopup.style.display = 'block';
+        setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+        }, 10);
+        body.classList.add('no-scroll');
+        });
+    
+        function closePopupAndOverlay() {
+        infoPopup.classList.remove('visible');
+        modalOverlay.classList.remove('visible');
+        modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+        }, { once: true });
+        body.classList.remove('no-scroll');
+        }
+    
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+    
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopupAndOverlay();
+        }
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>
