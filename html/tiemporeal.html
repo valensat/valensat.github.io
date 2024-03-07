@@ -29,6 +29,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -147,9 +150,282 @@
 
     <main>
         
-        <div class="container about">
-            <h1>En proceso...</h1>
-            <img src="../images/proceso.webp" alt="">
+        <div id="contenedor-principal">
+
+            <div class="seccion columna-3">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/tiempo.svg" alt="">Tiempo AEMET</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <div class="seccion_aemet">
+                    <div class="seccion_aemet--temp">
+                        <select id="seccion_aemet--estaciones" class="seccion_aemet--desplegable">
+                            <option selected disabled> --- Elige estación de AEMET --- </option>
+                            <optgroup label="Alacant/Alicante">
+                                <option value="8025">Alacant/Alicante</option>
+                                <option value="8059C">Alcoi/Alcoy</option>
+                                <option value="8019">Alicante-Elche Aeropuerto</option>
+                                <option value="8036Y">Benidorm</option>
+                                <option value="7247X">el Pinós/Pinoso</option>
+                                <option value="8018X">Elx/Elche</option>
+                                <option value="8050X">Jávea/ Xàbia</option>
+                                <option value="8013X">Novelda</option>
+                                <option value="7244X">Orihuela</option>
+                                <option value="8057C">Pego</option>
+                                <option value="7261X">Rojales</option>
+                                <option value="8008Y">Villena</option>
+                            </optgroup>
+                            <optgroup label="Castelló/Castellón">
+                                <option value="8492X">Atzeneta del Maestrat</option>
+                                <option value="9563X">Castellfort</option>
+                                <option value="8500A">Castelló - Almassora</option>
+                                <option value="8520X">La Pobla de Benifassà-Fredes</option>
+                                <option value="8472A">Montanejos</option>
+                                <option value="9562X">Morella</option>
+                                <option value="8439X">Segorbe</option>
+                                <option value="8503Y">Torreblanca</option>
+                                <option value="8489X">Villafranca del Cid/Vilafranca</option>
+                                </optgroup>
+                            <optgroup label="València/Valencia">
+                                <option value="8381X">Ademuz</option>
+                                <option value="8072Y">Barx</option>
+                                <option value="8270X">Bicorp</option>
+                                <option value="8300X">Carcaixent</option>
+                                <option value="8395X">Chelva</option>
+                                <option value="8005X">Fontanars dels Alforins</option>
+                                <option value="8193E">Jalance</option>
+                                <option value="8409X">Llíria</option>
+                                <option value="8058Y">Miramar</option>
+                                <option value="8283X">Ontinyent</option>
+                                <option value="8325X">Polinyà de Xúquer</option>
+                                <option value="8446Y">Sagunt/Sagunto</option>
+                                <option value="8337X">Turís</option>
+                                <option value="8309X">Utiel</option>
+                                <option value="8416Y" selected="selected">València, Viveros</option>
+                                <option value="8414A">Valencia Aeropuerto</option>
+                                <option value="8293X">Xàtiva</option>
+                                <option value="8203O">Zarra</option>
+                            </optgroup>
+                        </select>
+                        <div class="seccion_aemet--registro_aemet">
+                            <h3 id="seccion_aemet--tit" class="seccion_aemet--registro_aemet_text_tit"></h3>
+                            <div class="seccion_aemet--registro_aemet--infoest">
+                                <p id="seccion_aemet--idema" class="seccion_aemet--registro_aemet_text--infoest"></p>
+                                <p id="seccion_aemet--ubi" class="seccion_aemet--registro_aemet_text--infoest"></p>
+                                <p id="seccion_aemet--lat" class="seccion_aemet--registro_aemet_text--infoest"></p>
+                                <p id="seccion_aemet--lon" class="seccion_aemet--registro_aemet_text--infoest"></p>
+                                <p id="seccion_aemet--alt" class="seccion_aemet--registro_aemet_text--infoest"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seccion_aemet--temp2">
+                        <div class="seccion_aemet--temp2_valores">
+                            <div class="seccion_aemet--temp2_valores--tm aemet_box">
+                                <div class="seccion_aemet--temp2_valores--text">
+                                    <p>T. MEDIA</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--tm_val">
+                                    <p id="seccion_aemet--temperatura" class="seccion_aemet--temp2_valores--tm_text"></p>
+                                </div>
+                            </div>
+                            <div class="seccion_aemet--temp2_valores--tmaxmin aemet_box">
+                                <div class="seccion_aemet--temp2_valores--tmaxmin_text">
+                                    <p class="seccion_aemet--temp2_valores--tmaxmin_min">MIN</p>
+                                    <p class="seccion_aemet--temp2_valores--tmaxmin_max">MAX</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--tmaxmin_val">
+                                    <p id="seccion_aemet--temperatura_min" class="seccion_aemet--registro_aemet_text"></p>
+                                    <p id="seccion_aemet--temperatura_max" class="seccion_aemet--registro_aemet_text"></p>
+                                </div>
+                            </div>
+                            <div class="seccion_aemet--temp2_valores--precip aemet_box">
+                                <div class="seccion_aemet--temp2_valores--text">
+                                    <p>PRECIPITACIÓN</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--precip_val">
+                                    <p id="seccion_aemet--precip" class="seccion_aemet--registro_aemet_text_precip"></p>
+                                    <img src="../images/info_icons/precip.svg" alt="" class="seccion_aemet--icon_inside">
+                                </div>
+                            </div>
+                            <div class="seccion_aemet--temp2_valores--hr aemet_box">
+                                <div class="seccion_aemet--temp2_valores--text">
+                                    <p>HUMEDAD RELATIVA</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--hr_val">
+                                    <p id="seccion_aemet--hr" class="seccion_aemet--registro_aemet_text_hr"></p>
+                                    <img src="../images/info_icons/hr.svg" alt="" class="seccion_aemet--icon_inside">
+                                </div>
+                            </div>
+                            <div class="seccion_aemet--temp2_valores--tr aemet_box">
+                                <div class="seccion_aemet--temp2_valores--text">
+                                    <p>T. DE ROCÍO</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--tr_val">
+                                    <p id="seccion_aemet--tr" class="seccion_aemet--registro_aemet_text_tr"></p>
+                                    <img src="../images/info_icons/tr.svg" alt="" class="seccion_aemet--icon_inside">
+                                </div>
+                            </div>
+                            <div class="seccion_aemet--temp2_valores--vv aemet_box">
+                                <div class="seccion_aemet--temp2_valores--text">
+                                    <p>VIENTO</p>
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--vv_val">
+                                    <p id="seccion_aemet--vv" class="seccion_aemet--registro_aemet_text_vv"></p>
+                                    <img src="../images/info_icons/viento.svg" alt="" class="seccion_aemet--icon_inside_wind">
+                                </div>
+                                <div class="seccion_aemet--temp2_valores--dv_val">
+                                    <img src="../images/info_icons/brujula.svg" alt="" class="seccion_aemet--icon_inside_brujula">
+                                    <p id="seccion_aemet--dv" class="seccion_aemet--registro_aemet_text_dv"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seccion_aemet--graf">
+                        <div class="seccion_aemet--api_graph">
+                            <canvas id="seccion_aemet--api_graph" style="height: 300px;" width="600px"></canvas>
+                        </div>
+                        <!-- <p class="footer_ref">Información obtenida de la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p> -->
+                    </div>
+                </div>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/prediccion.svg" alt="">Predicción AEMET</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <p>Contenido de la sección 1.</p>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-1">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/tiempo.svg" alt="">Tiempo AVAMET</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <div class="seccion_AVAMET">
+                    <iframe src="../data/AVAMET/widget_avamet.html" frameborder="0" scrolling="no" class="iframe_estaciones"></iframe>
+                </div>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="seccion columna-1 fila-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/conta.svg" alt="">Contaminación</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <div class="app_page_map_tiemporreal">
+                    <div class="container_home_app_map_tiemporreal">
+                        <iframe src="https://valensatproject.users.earthengine.app/view/pruebaconta" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp_tiemporreal"></iframe>
+                    </div>
+                </div>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-1 fila-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/incendios.svg" alt="">Incendios último mes</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <p>Contenido de la sección 1.</p>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-1 fila-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Temperatura de suelo (LST)</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <p>Contenido de la sección 1.</p>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="seccion columna-1">
+                <h2>Título de la Sección 4</h2>
+                <p>Contenido de la sección 4.</p>
+            </div>
+            <div class="seccion columna-2">
+                <h2>Título de la Sección 5</h2>
+                <p>Contenido de la sección 5.</p>
+            </div>
+            <div class="seccion columna-3">
+                <h2>Título de la Sección 6</h2>
+                <p>Contenido de la sección 6.</p>
+            </div>
+            <div class="seccion columna-1">
+                <h2>Título de la Sección 7</h2>
+                <p>Contenido de la sección 7.</p>
+            </div>
+            <div class="seccion columna-1">
+                <h2>Título de la Sección 8</h2>
+                <p>Contenido de la sección 8.</p>
+            </div>
+            <div class="seccion columna-1">
+                <h2>Título de la Sección 9</h2>
+                <p>Contenido de la sección 9.</p>
+            </div>
+            <div class="seccion columna-2">
+                <h2>Título de la Sección 10</h2>
+                <p>Contenido de la sección 10.</p>
+            </div>
+            <div class="seccion columna-1">
+                <h2>Título de la Sección 11</h2>
+                <p>Contenido de la sección 11.</p>
+            </div>
+            <div class="seccion columna-1 fila-2">
+                <h2>Título de la Sección 12</h2>
+                <p>Contenido de la sección 12.</p>
+            </div>
+            <div class="seccion columna-2 fila-2">
+                <h2>Título de la Sección 13</h2>
+                <p>Contenido de la sección 13.</p>
+            </div>
         </div>
 
     </main>
@@ -255,5 +531,7 @@
 
     <script src="../js/app.js"></script>
     <script src="../js/slider.js"></script>
+    <script src="../js/tiemporeal.js"></script>
+
 </body>
 </html>

@@ -1257,6 +1257,325 @@ body {
 
 
 
+/* ####################################### */
+/* ############# TIEMPO REAL ############# */
+/* ####################################### */
+
+/* styles.css */
+#contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.seccion {
+    margin: 10px;
+    /* padding: 20px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; 
+    background-color: #fff;
+    height: 400px;
+    border-color: #B9848C;
+}
+
+.columna-1 {
+    width: 31%;
+}
+
+.columna-2 {
+    width: 64.7%;
+}
+
+.columna-3 {
+    width: 100%;
+}
+
+.fila-2 {
+    height: 800px;
+}
+
+.title_seccion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #B9848C;
+    height: 7vh;
+}
+
+.seccion_icon{
+    width: 45px;
+    aspect-ratio: 1/1;
+    background-color: #F2F2F0;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.title_seccion--title{
+    font-weight: 600;
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+    color: #272525;
+}
+
+.info_icon{
+    width: 37px;
+    aspect-ratio: 1/1;
+}
+
+.info_icon:hover{
+    cursor: pointer;
+}
+
+.icono-info {
+    cursor: pointer;
+    margin-left: auto;
+    display: inline-block;
+}
+
+.popup-oculto {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.contenido-popup {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animacionPopup;
+    animation-duration: 0.5s;
+}
+
+@keyframes animacionPopup {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* AEMET */
+
+.seccion_aemet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
+    height: calc(100% - 7vh);
+}
+
+.seccion_aemet--temp{
+    /* width: max-content; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 350px;
+}
+
+.seccion_aemet--temp2{
+    /* width: calc(50% - 600px); */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.seccion_aemet--graf{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+.seccion_aemet--desplegable{
+    text-align: center;
+    border-radius: 10px;
+    border-color: #B9848C;
+    background-color: #F2F2F0;
+    padding: 5px;
+}
+
+.seccion_aemet--desplegable:hover{
+    cursor: pointer;
+}
+
+.seccion_aemet--registro_aemet{
+    padding: 10px 10px 0;
+}
+
+.seccion_aemet--registro_aemet_text{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.seccion_aemet--temp2_valores{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 330px;
+    gap: 10px;
+    align-items: center;
+}
+
+.aemet_box{
+    border: 1px solid #B9848C;
+    padding: 5px;
+    text-align: center;
+    width: 160px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.seccion_aemet--temp2_valores--tm_text{
+    font-size: 1.7em;
+    color: #272525;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin, .seccion_aemet--temp2_valores--hr, .seccion_aemet--temp2_valores--precip, .seccion_aemet--temp2_valores--tr, .seccion_aemet--temp2_valores--tm{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.seccion_aemet--temp2_valores--vv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin_text, .seccion_aemet--temp2_valores--text{
+    font-size: 0.9em;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin_text,
+.seccion_aemet--temp2_valores--tmaxmin_val{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin_min,
+.seccion_aemet--temp2_valores--tmaxmin_max {
+    width: 50%;
+    text-align: center;
+    color: #272525;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin_min{
+    color: #2F70AF;
+}
+
+.seccion_aemet--temp2_valores--tmaxmin_max{
+    color: #ED413E;
+}
+
+.seccion_aemet--icon_inside{
+    width: 15%;
+    aspect-ratio: 1/1;
+}
+
+.seccion_aemet--icon_inside_wind{
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+.seccion_aemet--icon_inside_brujula{
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+.seccion_aemet--temp2_valores--hr_val, .seccion_aemet--temp2_valores--precip_val, .seccion_aemet--temp2_valores--tr_val, .seccion_aemet--temp2_valores--vv_val{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.seccion_aemet--registro_aemet_text_hr, .seccion_aemet--registro_aemet_text_precip, .seccion_aemet--registro_aemet_text_tr, .seccion_aemet--registro_aemet_text_vv{
+    font-size: 1.1em;
+    color: #272525;
+}
+
+.seccion_aemet--temp2_valores--dv_val{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.seccion_aemet--registro_aemet_text_dv{
+    font-size: 1.1em;
+    color: #272525;
+}
+
+.seccion_aemet--registro_aemet_text_tit{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.seccion_aemet--registro_aemet--infoest{
+    padding: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* AVAMET */
+
+.seccion_AVAMET{
+    /* width: 100%; */
+    height: calc(100% - 7vh);
+}
+
+
+
+/* APPS */
+
+.app_page_map_tiemporreal{
+    height: calc(100% - 7vh);
+}
+
+.container_home_app_map_tiemporreal{
+    width: 100%;
+    height: 100%;
+}
+
+.mapapp_tiemporreal{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
 /* About */
 
@@ -2240,23 +2559,31 @@ tr td:first-child{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0;
+    padding: 10px;
+    background-color: #fff;
+    min-height: 600px;
 }
 
 .avamet_widget_container{
-    width: 40%;
+    width: 90%;
     height: max-content;
     min-height: 300px;
     border: 0;
 }
 
 .iframe_estaciones{
-    width: 100%;
-    height: 600px;
+    width: 99%;
+    /* height: 600px; */
+    height: 99%;
 }
 
 .desplegable_height{
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    border-color: #B9848C;
+    background-color: #F2F2F0;
 }
 
 .center{
