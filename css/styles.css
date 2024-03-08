@@ -1544,6 +1544,57 @@ body {
     gap: 0.5em;
 }
 
+
+/* PREDICCION AEMET */
+
+.seccion_aemet--prediccion{
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.seccion_aemet--desplegable_municipio{
+    text-align: center;
+    border-radius: 10px;
+    border-color: #B9848C;
+    background-color: #F2F2F0;
+    padding: 5px;
+    width: max-content;
+}
+
+.iconos_prediccion{
+    /* width: 50px; */
+}
+
+
+
+.tablaPrediccion_aemet--header{
+    width: 300px;
+    padding: 10px;
+    color: #272525;
+}
+
+.tablaPrediccion_aemet--fila1{
+    background-color: #95B6E9;
+}
+
+.tablaPrediccion_aemet--fila1, .tablaPrediccion_aemet--fila2, .tablaPrediccion_aemet--fila3, .tablaPrediccion_aemet--fila4{
+    text-align: center;
+    padding: 10px 5px 5px;
+}
+
+.tablaPrediccion_aemet--fila3{
+    color: #2F70AF;
+}
+
+.tablaPrediccion_aemet--fila4{
+    color: #ED413E;
+}
+
+
 /* AVAMET */
 
 .seccion_AVAMET{
@@ -2203,7 +2254,9 @@ ul{
     text-align: center;
 }
 
-th{
+/* OPCIONES TABLA ANTIGUO */
+
+/* th{
     padding: 8px;
     border-top: 2px solid #001A49;
     border-bottom: 2px solid #001A49;
@@ -2223,7 +2276,7 @@ tr:hover td{
 
 tr td:first-child{
     text-align: left;
-}
+} */
 
 
 .title_table{
