@@ -155,7 +155,7 @@
             <div class="seccion columna-3">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/tiempo.svg" alt="">Tiempo AEMET</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--tiempo_aemet')">
                 </div>
                 <div class="seccion_aemet">
                     <div class="seccion_aemet--temp">
@@ -230,8 +230,8 @@
                             </div>
                             <div class="seccion_aemet--temp2_valores--tmaxmin aemet_box">
                                 <div class="seccion_aemet--temp2_valores--tmaxmin_text">
-                                    <p class="seccion_aemet--temp2_valores--tmaxmin_min">MIN</p>
-                                    <p class="seccion_aemet--temp2_valores--tmaxmin_max">MAX</p>
+                                    <p class="seccion_aemet--temp2_valores--tmaxmin_min">T. MIN</p>
+                                    <p class="seccion_aemet--temp2_valores--tmaxmin_max">T. MAX</p>
                                 </div>
                                 <div class="seccion_aemet--temp2_valores--tmaxmin_val">
                                     <p id="seccion_aemet--temperatura_min" class="seccion_aemet--registro_aemet_text"></p>
@@ -249,7 +249,7 @@
                             </div>
                             <div class="seccion_aemet--temp2_valores--hr aemet_box">
                                 <div class="seccion_aemet--temp2_valores--text">
-                                    <p>HUMEDAD RELATIVA</p>
+                                    <p>HUMEDAD</p>
                                 </div>
                                 <div class="seccion_aemet--temp2_valores--hr_val">
                                     <p id="seccion_aemet--hr" class="seccion_aemet--registro_aemet_text_hr"></p>
@@ -284,15 +284,25 @@
                         <div class="seccion_aemet--api_graph">
                             <canvas id="seccion_aemet--api_graph" style="height: 300px;" width="600px"></canvas>
                         </div>
-                        <!-- <p class="footer_ref">Información obtenida de la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p> -->
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--tiempo_aemet" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Tiempo AEMET</h3>
+                            <p class="contenido-popup--inside_text">Se presentan los datos observados en el último registro de la estación de AEMET seleccionada, en relación con las siguientes variables meteorológicas:</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura:</span> Temperatura del aire, en grados Celsius, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura mínima y máxima:</span> Temperatura mínima y máxima, en grados Celsius, en la última hora.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Precipitación:</span> Precipitación acumulada en la última hora, en mm (l/m²).</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Humedad:</span> Humedad relativa del aire, expresada en porcentaje, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura del punto de rocío:</span> Temperatura del punto de rocío, en grados Celsius, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Velocidad del viento:</span> Velocidad media del viento en los 10 minutos anteriores a la hora indicada, en km/h. Se considera que el viento está en calma cuando  la velocidad media, en diez minutos, es inferior a 1,8 km/h.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Dirección del viento:</span> Dirección media de donde viene el viento, en los diez minutos anteriores a la hora indicada, en relación a los 8 rumbos principales.</p>
+                            <p class="contenido-popup--inside_text">Además, se grafican los datos horarios de <span class="contenido-popup--inside_text_span">Temperatura media</span> en las últimas 24 horas, de la estación seleccionada.</p>
+                        </div>
+                        <p class="footer_ref">Información proporcionada por la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--tiempo_aemet')">
                     </div>
                 </div>
             </div>
@@ -300,7 +310,7 @@
             <div class="seccion columna-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/prediccion.svg" alt="">Predicción AEMET</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--prediccion_aemet')">
                 </div>
                 <div class="seccion_aemet--prediccion">
                     <select id="seccion_aemet--estaciones_municipio" class="seccion_aemet--desplegable_municipio">
@@ -869,11 +879,19 @@
                     
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--prediccion_aemet" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Predicción AEMET</h3>
+                            <p class="contenido-popup--inside_text">Predicciones en municipios de España. Se generan de forma automática mediante el tratamiento estadístico de los resultados de modelos numéricos de predicción.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Estado del cielo:</span> estado de la atmósfera en función de la nubosidad y precipitación, representado por pictogramas (ver pictogramas en tabla "Estado del cielo").</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura mínima y máxima:</span> Temperatura mínima y máxima, en grados Celsius.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Probabilidad de precipitación:</span> probabilidad, expresada en porcentaje, de que se produzca cualquier cantidad de precipitación en el período considerado.</p>
+                            <p class="contenido-popup--inside_text">Tabla estado del cielo:</p>
+                            <img src="../images/aemet_pred/estadocielo.PNG" alt="Pictogramas estado del cielo" title="Pictogramas estado del cielo" class="popup--prediccion_aemet_img">
+                        </div>
+                        <p class="footer_ref">Información proporcionada por la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--prediccion_aemet')">
                     </div>
                 </div>
             </div>
@@ -881,17 +899,28 @@
             <div class="seccion columna-1">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/tiempo.svg" alt="">Tiempo AVAMET</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--prediccion_avamet')">
                 </div>
                 <div class="seccion_AVAMET">
                     <iframe src="../data/AVAMET/widget_avamet.html" frameborder="0" scrolling="no" class="iframe_estaciones"></iframe>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--prediccion_avamet" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Tiempo AVAMET</h3>
+                            <p class="contenido-popup--inside_text">Se presentan los datos observados en el último registro de la estación de AEMET seleccionada, en relación con las siguientes variables meteorológicas:</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura:</span> Temperatura del aire, en grados Celsius, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Temperatura mínima y máxima:</span> Temperatura mínima y máxima, en grados Celsius, en el intervalo de medida.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Humedad:</span> Humedad relativa del aire.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Velocidad del viento:</span> Velocidad media del viento, en km/h, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Dirección del viento:</span> Dirección media de donde viene el viento, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Presión:</span> Presión atmosférica, en hPa, a la hora indicada.</p>
+                            <p class="contenido-popup--inside_text"><span class="contenido-popup--inside_text_span">Precipitación:</span> Precipitación acumulada en el intervalo de medida, en mm (l/m²).</p>
+                            <p class="contenido-popup--inside_text">Se puede obtener información más detallada al hacer click en el nombre de la estación.</p>
+                        </div>
+                        <p class="footer_ref">Información proporcionada por la Associació Valenciana de Meteorologia Josep Peinado, ©<a href="https://www.avamet.org/" target="_blank" class="enlace_ref">AVAMET</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--prediccion_avamet')">
                     </div>
                 </div>
             </div>
@@ -950,47 +979,6 @@
                 </div>
             </div>
 
-
-            <div class="seccion columna-1">
-                <h2>Título de la Sección 4</h2>
-                <p>Contenido de la sección 4.</p>
-            </div>
-            <div class="seccion columna-2">
-                <h2>Título de la Sección 5</h2>
-                <p>Contenido de la sección 5.</p>
-            </div>
-            <div class="seccion columna-3">
-                <h2>Título de la Sección 6</h2>
-                <p>Contenido de la sección 6.</p>
-            </div>
-            <div class="seccion columna-1">
-                <h2>Título de la Sección 7</h2>
-                <p>Contenido de la sección 7.</p>
-            </div>
-            <div class="seccion columna-1">
-                <h2>Título de la Sección 8</h2>
-                <p>Contenido de la sección 8.</p>
-            </div>
-            <div class="seccion columna-1">
-                <h2>Título de la Sección 9</h2>
-                <p>Contenido de la sección 9.</p>
-            </div>
-            <div class="seccion columna-2">
-                <h2>Título de la Sección 10</h2>
-                <p>Contenido de la sección 10.</p>
-            </div>
-            <div class="seccion columna-1">
-                <h2>Título de la Sección 11</h2>
-                <p>Contenido de la sección 11.</p>
-            </div>
-            <div class="seccion columna-1 fila-2">
-                <h2>Título de la Sección 12</h2>
-                <p>Contenido de la sección 12.</p>
-            </div>
-            <div class="seccion columna-2 fila-2">
-                <h2>Título de la Sección 13</h2>
-                <p>Contenido de la sección 13.</p>
-            </div>
         </div>
 
     </main>

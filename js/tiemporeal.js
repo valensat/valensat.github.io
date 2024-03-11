@@ -1,10 +1,10 @@
-function mostrarPopup() {
-    document.getElementById("popup").style.display = "block";
+function mostrarPopup(id) {
+    document.getElementById(id).style.display = "block";
     // document.body.style.overflow = "hidden"; // Bloquea el scroll del fondo
 }
 
-function cerrarPopup() {
-    document.getElementById("popup").style.display = "none";
+function cerrarPopup(id) {
+    document.getElementById(id).style.display = "none";
     document.body.style.overflow = "auto"; // Permite el scroll del fondo
 }
 
@@ -450,9 +450,20 @@ function mostrarPrediccion(urlDatos) {
                 let dia = data[0].prediccion.dia[i];
                 const fecha = new Date(dia.fecha);
                 const fechaFormateada = fecha.toLocaleDateString('es-ES', {weekday: 'short', day: 'numeric'});
+
+                // Busca el primer valor de estadoCielo que no sea undefined
+                let estadoCieloValor;
+                for (let j = 0; j < 6; j++) { // Iteramos hasta el índice 5 (estadoCielo[5])
+                    if (dia.estadoCielo[j] && dia.estadoCielo[j].value.trim().length > 0) {
+                        estadoCieloValor = dia.estadoCielo[j].value;
+                        break; // Salimos del bucle una vez que encontramos un valor válido
+                    }
+                }
+                console.log(estadoCieloValor)
+
                 datosTranspuestos.push({
                     fecha: fechaFormateada,
-                    estadoCielo: dia.estadoCielo[0].value,
+                    estadoCielo: estadoCieloValor,
                     probPrecipitacion: dia.probPrecipitacion[0].value + '%',
                     tempMin: dia.temperatura.minima + '°C',
                     tempMax: dia.temperatura.maxima + '°C'
@@ -548,6 +559,7 @@ function mostrarPrediccion(urlDatos) {
                 let celdaTitulo = document.createElement('td');
                 celdaTitulo.colSpan = 0; // Ajusta el colSpan según sea necesario
                 celdaTitulo.textContent = tit[j];
+                celdaTitulo.classList.add('tablaPrediccion_aemet--celdatit');
                 fila.appendChild(celdaTitulo);
                 for (let i = 0; i < datosTranspuestos.length; i++) {
                     let celda = document.createElement('td');
