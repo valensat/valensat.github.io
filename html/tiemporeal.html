@@ -927,14 +927,14 @@
 
             
 
-            <div class="seccion columna-1 fila-2">
+            <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/conta.svg" alt="">Contaminación</h2>
                     <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
-                        <iframe src="https://valensatproject.users.earthengine.app/view/pruebaconta" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp_tiemporreal"></iframe>
+                        <iframe src="https://ee-valensatproject.projects.earthengine.app/view/contaminacionnearrealtime" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp_tiemporreal"></iframe>
                     </div>
                 </div>
                 
@@ -947,9 +947,49 @@
                 </div>
             </div>
 
-            <div class="seccion columna-1 fila-2">
+            <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/incendios.svg" alt="">Incendios último mes</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <div class="app_page_map_tiemporreal">
+                    <div class="container_home_app_map_tiemporreal">
+                        <iframe src="https://ee-valensatproject.projects.earthengine.app/view/firesnearrealtime" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp_tiemporreal"></iframe>
+                    </div>
+                </div>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-1-5 fila-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Temperatura de suelo (LST)</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                </div>
+                <div class="app_page_map_tiemporreal">
+                    <div class="container_home_app_map_tiemporreal">
+                        <iframe src="https://valensatproject.users.earthengine.app/view/lstnearrealtime" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp_tiemporreal"></iframe>
+                    </div>
+                </div>
+                
+                <div id="popup" class="popup-oculto">
+                    <div class="contenido-popup">
+                        <h3>Información sobre la sección</h3>
+                        <p>Este es el contenido del pop-up que explica la sección.</p>
+                        <button onclick="cerrarPopup()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion columna-1-5 fila-2">
+                <div class="title_seccion">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Isla de Calor</h2>
                     <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
                 </div>
                 <p>Contenido de la sección 1.</p>
@@ -963,9 +1003,9 @@
                 </div>
             </div>
 
-            <div class="seccion columna-1 fila-2">
+            <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
-                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Temperatura de suelo (LST)</h2>
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Calidad de agua de la albufera</h2>
                     <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
                 </div>
                 <p>Contenido de la sección 1.</p>

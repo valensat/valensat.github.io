@@ -1296,6 +1296,10 @@ body {
     width: 100%;
 }
 
+.columna-1-5 {
+    width: 48%;
+}
+
 .fila-2 {
     height: 800px;
 }
