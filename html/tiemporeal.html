@@ -930,7 +930,7 @@
             <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/conta.svg" alt="">Contaminación</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--contam')">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
@@ -938,11 +938,18 @@
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--contam" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Calidad del aire</h3>
+                            <p class="contenido-popup--inside_text">Este visor muestra una evaluación de la calidad del aire en la Comunidad Valenciana utilizando imágenes del satélite Sentinel-5, específicamente el producto 'Sentinel-5P NRTI NO2: Near Real-Time Nitrogen Dioxide', el cual ofrece imágenes de alta resolución casi en tiempo real de las concentraciones de NO<sub>2</sub>.</p>
+                            <p class="contenido-popup--inside_text">El <span class="contenido-popup--inside_text_span">dióxido de nitrógeno</span> (NO<sub>2</sub>) es esencial como precursor del ozono generado por actividades humanas y juega un papel clave en la formación de varios compuestos transportados por el aire, como ácido nítrico, partículas finas, nitrato de peroxiacetilo, nitrosaminas e hidrocarburos aromáticos nitropolicíclicos. El instrumento TROPOMI a bordo del Sentinel-5 Precursor detecta productos de columnas de NO<sub>2</sub> en la troposfera y estratosfera, diferenciando entre contribuciones estratosféricas y troposféricas mediante el cálculo de factores de masa de aire para una conversión precisa.</p>
+                            <p class="contenido-popup--inside_text">En base a los niveles de NO<sub>2</sub>, se ha categorizado la calidad del aire en distintas clasificaciones, siguiendo la tabla que se detalla a continuación:</p>
+                            <img src="../images/data/tablas/calidad_aire_tabla.PNG" alt="Calidad del aire" class="contenido-popup--inside_table">
+                            <p class="contenido-popup--inside_text">Para obtener información más detallada sobre el producto, se puede consultar la página web de <a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-5p-tropomi" target="_blank" class="enlace_popup">Sentinel</a>.</p>
+                        </div>
+                        <p class="footer_ref">Información y datos proporcionados por <a href="https://www.copernicus.eu/es" target="_blank" class="enlace_ref">Copernicus</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--contam')">
                     </div>
                 </div>
             </div>
@@ -950,7 +957,7 @@
             <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/incendios.svg" alt="">Incendios último mes</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--inc')">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
@@ -958,19 +965,22 @@
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--inc" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <h3 class="contenido-popup--inside_tit">Incendios último mes</h3>
+                        <p class="contenido-popup--inside_text">Este visor presenta los incendios que han ocurrido en el último mes en la Comunidad Valenciana. Para este propósito, se han utilizado imágenes de MODIS, específicamente el producto 'MOD14A1.061: Terra Thermal Anomalies & Fire Daily Global 1km', que ofrece máscaras diarias de incendios con una resolución de 1 km, derivadas de las radiancias MODIS de 4 y 11 micrómetros.</p>
+                        <p class="contenido-popup--inside_text">La estrategia de detección de incendios se basa en la identificación absoluta de un incendio (cuando la intensidad del fuego es lo suficientemente alta para ser detectada) y en la detección relativa en comparación con su entorno (para considerar la variabilidad de la temperatura de la superficie y la reflexión de la luz solar). Este producto diferencia entre áreas en fuego, áreas sin fuego y áreas no observadas. Esta información se emplea para vigilar la distribución espacial y temporal de los incendios en diferentes ecosistemas, detectar cambios en su distribución e identificar nuevos focos de fuego, incendios forestales y variaciones en la frecuencia o intensidad relativa de los incendios.</p>
+                        <p class="contenido-popup--inside_text">Para obtener información más detallada sobre el producto, se puede consultar la página web de <a href="https://lpdaac.usgs.gov/products/mod14a1v061/" target="_blank" class="enlace_popup">MODIS</a>.</p>
+                        <p class="footer_ref">Información y datos proporcionados por <a href="https://www.earthdata.nasa.gov/" target="_blank" class="enlace_ref">NASA EARTHDATA</a> y <a href="https://www.usgs.gov/" target="_blank" class="enlace_ref">USGS</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--inc')">
                     </div>
                 </div>
             </div>
 
             <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
-                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Temperatura de suelo (LST)</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Temperatura de superficie (LST)</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--lst')">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
@@ -978,11 +988,13 @@
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--lst" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <h3 class="contenido-popup--inside_tit">Temperatura de superficie</h3>
+                        <p class="contenido-popup--inside_text">Este visor presenta la temperatura media de la superficie durante la última semana disponible en la Comunidad Valenciana. Para lograrlo, se han empleado imágenes de MODIS, específicamente el producto 'MOD11A1.061 Terra Land Surface Temperature and Emissivity Daily Global 1km', que ofrece valores diarios de temperatura de la superficie terrestre (LST) y emisividad en una cuadrícula de 1200 x 1200 kilómetros.</p>
+                        <p class="contenido-popup--inside_text">Para obtener información más detallada sobre el producto, se puede consultar la página web de <a href="https://lpdaac.usgs.gov/products/mod11a1v061/" target="_blank" class="enlace_popup">MODIS</a>.</p>
+                        <p class="footer_ref">Información y datos proporcionados por <a href="https://www.earthdata.nasa.gov/" target="_blank" class="enlace_ref">NASA EARTHDATA</a> y <a href="https://www.usgs.gov/" target="_blank" class="enlace_ref">USGS</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--lst')">
                     </div>
                 </div>
             </div>
@@ -990,7 +1002,7 @@
             <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
                     <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Isla de Calor en Valencia, Castellón y Alicante</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--suhi')">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
@@ -998,19 +1010,28 @@
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--suhi" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Isla de Calor</h3>
+                            <p class="contenido-popup--inside_text">La <span class="contenido-popup--inside_text_span">Isla de Calor Urbana</span> es un fenómeno común en áreas urbanas, donde la temperatura es significativamente más alta que en áreas circundantes debido a la concentración de actividades humanas y la presencia de materiales de construcción que absorben y retienen el calor. Este efecto se intensifica durante la noche debido a la liberación retardada de calor almacenado en estructuras y pavimentos urbanos.</p>
+                            <p class="contenido-popup--inside_text">Desde el espacio, la Isla de Calor Urbana Superficial (SUHI, por sus siglas en inglés) se puede detectar mediante la observación de la temperatura de la superficie terrestre con satélites.</p>
+                            <p class="contenido-popup--inside_text">Para lograrlo, se han empleado imágenes de MODIS, específicamente el producto 'MOD11A1.061 Terra Land Surface Temperature and Emissivity Daily Global 1km', que ofrece valores diarios de temperatura de la superficie terrestre (LST) y emisividad en una cuadrícula de 1200 x 1200 kilómetros.</p>
+                            <p class="contenido-popup--inside_text">Para evaluar la intensidad del SUHI, se calcula el índice térmico <span class="contenido-popup--inside_text_span">UHIER</span>, que utiliza datos satelitales para estimar la diferencia de temperatura entre áreas urbanas y rurales. Este índice proporciona una medida cuantitativa de la magnitud del efecto de la Isla de Calor Urbana. Los valores del índice se clasifican en función de su magnitud, lo que permite una evaluación más precisa de la intensidad del fenómeno.</p>
+                            <img src="../images/data/ecuaciones/uhier_ec.PNG" alt="Ecuación UHIER" class="contenido-popup--inside_ecuation">
+                            <img src="../images/data/tablas/suhi_tabla.PNG" alt="Intensidad SUHI" class="contenido-popup--inside_table">
+                            <p class="contenido-popup--inside_text">Para obtener información más detallada sobre el producto, se puede consultar la página web de <a href="https://lpdaac.usgs.gov/products/mod11a1v061/" target="_blank" class="enlace_popup">MODIS</a>.</p>
+                        </div>
+                        <p class="footer_ref">Información y datos proporcionados por <a href="https://www.earthdata.nasa.gov/" target="_blank" class="enlace_ref">NASA EARTHDATA</a> y <a href="https://www.usgs.gov/" target="_blank" class="enlace_ref">USGS</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--suhi')">
                     </div>
                 </div>
             </div>
 
             <div class="seccion columna-1-5 fila-2">
                 <div class="title_seccion">
-                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Calidad de agua de la albufera</h2>
-                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup()">
+                    <h2 class="title_seccion--title"><img class="seccion_icon" src="../images/info_icons/temp.svg" alt="">Calidad del agua en la Albufera</h2>
+                    <img src="../images/info_seccion.svg" alt="" class="info_icon" onclick="mostrarPopup('popup--albuf')">
                 </div>
                 <div class="app_page_map_tiemporreal">
                     <div class="container_home_app_map_tiemporreal">
@@ -1018,11 +1039,19 @@
                     </div>
                 </div>
                 
-                <div id="popup" class="popup-oculto">
+                <div id="popup--albuf" class="popup-oculto">
                     <div class="contenido-popup">
-                        <h3>Información sobre la sección</h3>
-                        <p>Este es el contenido del pop-up que explica la sección.</p>
-                        <button onclick="cerrarPopup()">Cerrar</button>
+                        <div class="contenido-popup--inside">
+                            <h3 class="contenido-popup--inside_tit">Calidad del agua</h3>
+                            <p class="contenido-popup--inside_text">Este visualizador muestra la cantidad de Clorofila-a en último mes en la Albufera de Valencia. Para eso se han utilizado imágenes de Sentinel-2, en concreto el producto 'Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C'.</p>
+                            <p class="contenido-popup--inside_text">La <span class="contenido-popup--inside_text_span">Clorofila-a</span> es un pigmento fotosintético presente en las plantas acuáticas, como las algas y las cianobacterias. Su concentración en el agua es un indicador clave de la salud y la calidad del ecosistema acuático. Un aumento en los niveles de Clorofila-a puede ser indicativo de la eutrofización, un proceso en el que los cuerpos de agua se enriquecen con nutrientes, como nitrógeno y fósforo, promoviendo un crecimiento excesivo de algas. Este crecimiento descontrolado puede conducir a la proliferación de algas nocivas, que pueden producir toxinas perjudiciales para la vida acuática y la salud humana. Por lo tanto, monitorear los niveles de Clorofila-a es crucial para evaluar y gestionar la calidad del agua.</p>
+                            <p class="contenido-popup--inside_text">El <span class="contenido-popup--inside_text_span">Índice de Concentración Normalizada de Diferencia de Color (NDCI)</span> se utiliza para estimar la concentración de Clorofila-a en el agua mediante imágenes satelitales. El NDCI se calcula a partir de las diferencias en la reflectancia del agua en diferentes longitudes de onda, lo que permite detectar cambios en la composición del agua, incluida la presencia de Clorofila-a. Una mayor concentración de Clorofila-a generalmente se asocia con valores más altos de NDCI. Esta relación se utiliza para clasificar los valores de NDCI y evaluar la cantidad de Clorofila-a en el agua de la Albufera de Valencia.</p>
+                            <img src="../images/data/ecuaciones/ndci_ec.PNG" alt="Ecuación NDCI" class="contenido-popup--inside_ecuation">
+                            <img src="../images/data/tablas/ndci_tabla.PNG" alt="Chl-a" class="contenido-popup--inside_table">
+                            <p class="contenido-popup--inside_text">Para obtener información más detallada sobre el producto, se puede consultar la página web de <a href="https://sentinel.esa.int/web/sentinel/user-guides/sentinel-2-msi/processing-levels/level-1" target="_blank" class="enlace_popup">Sentinel</a>.</p>
+                        </div>
+                        <p class="footer_ref">Información y datos proporcionados por <a href="https://www.copernicus.eu/es" target="_blank" class="enlace_ref">Copernicus</a></p>
+                        <img src="../images/info_icons/close.svg" alt="" class="close_icon" onclick="cerrarPopup('popup--albuf')">
                     </div>
                 </div>
             </div>

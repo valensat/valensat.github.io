@@ -1420,6 +1420,35 @@ body {
     margin-right: auto;
 }
 
+.enlace_popup{
+    text-decoration: none;
+    color: #E48716;
+    font-weight: 600;
+}
+
+.enlace_popup:hover{
+    text-decoration: underline;
+    color: #B9848C;
+}
+
+.contenido-popup--inside_table{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 37%;
+    padding: 10px 0;
+}
+
+.contenido-popup--inside_ecuation{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 10px 0;
+}
+
 
 /* AEMET */
 
