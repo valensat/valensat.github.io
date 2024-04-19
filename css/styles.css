@@ -665,9 +665,9 @@ body {
 }
 
 .all_sections-container_product_page {
-    padding-top: 13vh;
+    /* padding-top: 13vh; */
     /* position: relative; */
-    /* min-height: 140vh; */
+    /* min-height: 240vh; */
 }
   
 .content-section_product_page {
@@ -688,7 +688,7 @@ body {
     direction: rtl;
     scrollbar-width: thin;
     scrollbar-color: #272525 #F2F2F0;
-    /* min-height: 140vh; */
+    /* min-height: max-content; */
 }
 
 .content-section_product_page * {
@@ -842,6 +842,17 @@ body {
     font-weight: 600;
     padding: 15px 0 0;
 }
+
+.imagen_ciencia_product_page--container{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen_ciencia_product_page{
+    height: 100%;
+}
+
 
 /* ABOUT */
 /* versión enero 2024 */
@@ -2181,7 +2192,7 @@ ul{
 .subtitle_ref{
     color: var(--color-title);
     font-size: 1.5rem;
-    padding-top: 50px;
+    padding-top: 15px;
     font-weight: 400;
 }
 

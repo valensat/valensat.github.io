@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedSection.style.opacity = '1';
             selectedSection.style.visibility = 'visible';
             document.querySelector('.menu-item_product_page[onclick="showSection(\'' + sectionId + '\')"]').classList.add('active');
+            
         }, 300); // Should match the duration of the CSS transition
     };
   
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 var sectionHeight = document.getElementById('ciencia_product_page').offsetHeight;
-var totalHeight = sectionHeight + 375;
+var totalHeight = sectionHeight * 2.5;
 
 document.querySelector('.all_sections-container_product_page').style.minHeight = totalHeight + 'px';
 
