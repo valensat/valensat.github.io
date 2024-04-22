@@ -845,13 +845,19 @@ body {
     padding: 10px 0;
 }
 
-.home_app_ventana_info--ec, .home_app_ventana_info--img{
+.home_app_ventana_info--ec{
     width: 40%;
     padding: 10px 0 5px;
 }
 
 .home_app_ventana_info--tabla{
     width: 37%;
+    padding: 10px 0 5px;
+}
+
+.home_app_ventana_info--img{
+    width: 30%;
+    padding: 10px 0 5px;
 }
 
 .ref_sup{
