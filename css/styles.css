@@ -35,6 +35,8 @@ body {
 .header_home{
     width: 100%;
     height: 13vh;
+    min-height: 130px;
+    max-height: 140px;
     /* min-height: 190px; */
     /* max-height: 150px; */
     position: relative;
@@ -670,7 +672,7 @@ body {
     visibility: hidden;
     position: absolute;
     /* top: 0; */
-    top: calc(13vh + 100px);
+    top: calc(130px + 100px);
     left: 0;
     right: 0;
     bottom: 0;
