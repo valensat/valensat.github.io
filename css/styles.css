@@ -1754,6 +1754,184 @@ body {
 }
 
 
+/* ########## SLIDER EVOLUCIÓN URBANA ########## */
+.slider-container_evurb--valencia {
+    position: relative;
+    width: 98%;
+    overflow: hidden;
+    height: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 8px 5px #242529;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 1%;
+}
+
+
+.slider-wrapper_evurb--valencia {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide_evurb--valencia {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.slide_evurb--valencia {
+    /* min-width: 100%; */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #244072;
+    border-radius: 0%;
+}
+
+.slide_evurb--valencia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 5%; */
+    background-color: rgba(39, 37, 37, 0.7);
+    z-index: 1;
+}
+
+
+.slide-content_evurb--valencia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f2f2f0;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.slide_prod_text{
+    line-height: 1.7;
+    text-align: justify;
+    color: #F2F2F0;
+    font-size: 1.2rem;
+}
+
+.slide-text_evurb--valencia {
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.arrow_evurb--valencia {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    user-select: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.arrow_inside_evurb--valencia{
+    width: 35px;
+}
+
+.arrow-left_evurb--valencia {
+    left: 2.5%;
+}
+
+.arrow-right_evurb--valencia {
+    right: 2.5%;
+}
+
+.slide-content_evurb--images{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide-content_evurb--img{
+    width: 45%;
+    object-fit: cover;
+    box-shadow: 0px 0px 0px 2px #272525;
+}
+
+.slide-content_evurb--year1{
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    font-size: 2em;
+    color: #F2F2F0;
+    font-weight: 600;
+    box-shadow: 0px 0px 4px 1px #001A49;
+    background-color: #24417275;
+    padding: 5px 5px 2px;
+}
+
+.slide-content_evurb--year2{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    font-size: 2em;
+    color: #F2F2F0;
+    font-weight: 600;
+    box-shadow: 0px 0px 4px 1px #001A49;
+    background-color: #24417275;
+    padding: 5px 5px 2px;
+}
+
+.content_3img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+    gap: 2em;
+}
+
+.content_3img--inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0 20px;
+}
+
+.content_3img--img{
+    box-shadow: 0px 0px 20px 3px #001A49;
+    width: 400px;
+}
+
+.content_3img--text{
+    color: #001A49;
+    font-size: 1.7em;
+    font-weight: 600;
+}
 
 
 

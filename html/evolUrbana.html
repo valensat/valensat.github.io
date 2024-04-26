@@ -152,7 +152,7 @@
                 <ul class="menu_product_page">
                 <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
                 <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
-                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                <!-- <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li> -->
                 <li class="menu-item_product_page" onclick="showSection('referencias_product_page')">Referencias</li>
                 </ul>
             </div>
@@ -160,45 +160,210 @@
             <div class="all_sections-container_product_page">
                 <div class="section-container_product_page">
                     <div id="ciencia_product_page" class="content-section_product_page">
-                        <p class="about_paragraph">Analizar cómo han cambiado las playas y las costas a lo largo del tiempo puede ser difícil con fotos de satélite, ya que a veces no son lo suficientemente detalladas. Afortunadamente, contamos con una colección de fotografías aéreas históricas del Instituto Cartográfico Valenciano que nos muestra cómo era la Comunidad Valenciana desde los años 40 hasta los 60. Estas imágenes son como una máquina del tiempo que nos ayudan a entender los cambios en nuestras playas y costas. Aunque tienen sus desafíos, como que no muestran todos los colores necesarios para ciertos análisis o que deben ser ajustadas para medir correctamente, son una herramienta valiosa para proteger y gestionar nuestras preciosas costas.</p>
+                        <p class="about_paragraph">El estudio de la evolución urbana a lo largo de los años es fundamental para comprender el desarrollo y la transformación de las ciudades. Observar cómo han evolucionado los patrones de asentamiento, la distribución de la población, la infraestructura y el uso del suelo nos proporciona información invaluable sobre los procesos sociales, económicos y ambientales que han dado forma a nuestras comunidades. Esta comprensión histórica no solo nos ayuda a contextualizar el presente, sino que también nos permite proyectar y planificar el futuro de manera más efectiva. Además, analizar la evolución urbana nos permite identificar tendencias, desafíos y oportunidades, lo que es esencial para promover un desarrollo urbano sostenible y equitativo. Al aprender de las experiencias pasadas, podemos tomar decisiones informadas que mejoren la calidad de vida de los habitantes urbanos y promuevan la resiliencia frente a los desafíos emergentes, como el cambio climático y la urbanización rápida. Por lo tanto, estudiar la evolución urbana es un paso crucial hacia la creación de ciudades más inclusivas, eficientes y sostenibles para las generaciones presentes y futuras.</p>
+                        <p class="about_paragraph">El análisis detallado de la evolución urbana a lo largo del tiempo presenta desafíos únicos cuando se utiliza la teledetección desde el espacio. Aunque los satélites proporcionan una perspectiva amplia y consistente, la falta de alta resolución espacial en muchos de ellos dificulta el estudio de la evolución urbana con un nivel de detalle adecuado. Además, encontrar un catálogo extenso de productos que abarque varias décadas también puede ser un desafío. Sin embargo, una solución viable es recurrir a ortofotos, que ofrecen una visión más detallada y de alta resolución a lo largo del tiempo. Estas imágenes, disponibles desde hace muchos años, permiten un análisis exhaustivo de la evolución urbana en áreas específicas. En la Comunidad Valenciana, contamos con el apoyo del Instituto Cartográfico Valenciano<sup class="ref_sup">1</sup>, que ofrece una amplia gama de productos cartográficos con una gran resolución espacial, de incluso hasta 25 cm. Su extenso catálogo y su visor fácil de usar facilitan el acceso y la visualización de datos históricos, lo que nos permite examinar con detalle la evolución urbana y planificar el desarrollo futuro de manera más efectiva.</p>
+                        <p class="about_paragraph">La Comunidad Valenciana ha experimentado una notable evolución urbana a lo largo de su historia. Desde sus raíces como asentamientos romanos y árabes hasta su desarrollo como una región próspera y turística en la actualidad, la evolución urbana de esta comunidad refleja una combinación única de influencias culturales, económicas y geográficas. La expansión urbana, la industrialización y el crecimiento demográfico han dejado una huella significativa en el paisaje urbano, con ciudades modernas que coexisten con antiguos centros históricos y áreas rurales.</p>
 
-                        <p class="about_paragraph">Al integrar este contexto histórico con la información recabada sobre los barrios de Valencia que han experimentado una significativa urbanización, podemos apreciar cómo el desarrollo urbano y la transformación de espacios como Benimaclet, El Grao, la Ciudad de las Artes y las Ciencias junto a la Avenida de Francia, El Cabanyal, y Ruzafa han redefinido la relación entre la ciudad y sus costas. Por ejemplo, la expansión de la zona portuaria ha reconfigurado completamente el acceso y la interfaz de Valencia con el mar, especialmente en barrios como El Cabanyal y Natzaret, este último habiendo perdido contacto directo con la playa debido a dicha expansión.</p>
+                        <div class="slider-container_evurb--valencia">
+                            <button class="arrow_evurb--valencia arrow-left_evurb--valencia" onclick="prevSlide()">
+                              <img src="../images/arrow_left.svg" alt="Previous" class="arrow_inside_evurb--valencia">
+                            </button>
+                            <div class="slider-wrapper_evurb--valencia">
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/benimaclet_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/benimaclet_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Benimaclet, Valencia</div>
+                                            <p class="slide_prod_text">El barrio de Benimaclet en Valencia está experimentando transformaciones significativas en su planeamiento urbano. Recientemente, se han propuesto nuevos planes que incluyen la creación de un amplio parque verde y la construcción de 1.345 viviendas, de las cuales un 30% serán de protección pública. Este nuevo proyecto busca expandir las zonas verdes del barrio en más de 20,000 m² y reorientar los edificios para mejorar la conexión del barrio con la huerta, respetando los caminos tradicionales como el Camí de Farinós<sup class="ref_sup">2</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/elsensal_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/elsensal_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">El Sensal, Castellón</div>
+                                            <p class="slide_prod_text">El barrio Sensal en Castellón ha experimentado diversas transformaciones y desarrollos significativos que reflejan su evolución y crecimiento en la ciudad. Recientemente, se anunció una importante inversión para la construcción de 120 nuevas viviendas de protección oficial, reflejando el compromiso con la expansión y mejora del barrio<sup class="ref_sup">3</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/laflorida_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/laflorida_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">La Florida, Alicante</div>
+                                            <p class="slide_prod_text">El barrio de La Florida en Alicante ha evolucionado notablemente desde sus orígenes hasta convertirse en una zona residencial importante de la ciudad. Históricamente, el barrio se desarrolló en torno a quintas de recreo utilizadas por la burguesía local durante la época veraniega, lo cual le dio el nombre definitivo de "La Florida". A lo largo del tiempo, este distrito ha pasado por varias transformaciones, incluyendo su urbanización y el desarrollo de infraestructuras como un campo de fútbol y la estación de tranvías, que marcaron el carácter lúdico y práctico del barrio<sup class="ref_sup">4</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/campanar_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/campanar_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Campanar, Valencia</div>
+                                            <p class="slide_prod_text">Campanar, originalmente un área de huertas, experimentó una intensa urbanización en los primeros años del siglo XXI, transformándose en una zona residencial deseada por muchas familias jóvenes. Durante el período del boom inmobiliario, se construyeron viviendas que se promocionaban como de lujo, con modernas instalaciones como piscinas y zonas recreativas<sup class="ref_sup">5</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/paulledo_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/paulledo_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Pau Lledó, Castellón</div>
+                                            <p class="slide_prod_text">El barrio de Pau Lledó en Castellón ha experimentado una notable transformación y crecimiento, convirtiéndose en uno de los barrios con mayores ingresos medios anuales por persona en la ciudad. Este desarrollo se refleja no solo en la riqueza de sus residentes sino también en la proliferación de nuevas construcciones y proyectos inmobiliarios. La zona ha atraído una serie de nuevas promociones, enfocadas principalmente en viviendas unifamiliares, lo que ha contribuido a su expansión y modernización<sup class="ref_sup">6</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/sanblas_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/sanblas_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">San Blas, Alicante</div>
+                                            <p class="slide_prod_text">El barrio de San Blas, tiene una rica historia vinculada con el desarrollo urbano y económico de Alicante. Originariamente, el barrio se desarrolló alrededor de un santuario dedicado a San Blas que existió desde 1697 hasta 1809. La historia moderna de San Blas comenzó con la llegada del ferrocarril en 1858, que conectaba Alicante con Madrid, propiciando un notable crecimiento económico. Durante los años siguientes, el barrio se expandió significativamente con la construcción de viviendas. Este desarrollo inicial sentó las bases para la evolución futura de San Blas como un barrio residencial importante<sup class="ref_sup">7</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/puertval_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/puertval_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Puerto de Valencia</div>
+                                            <p class="slide_prod_text">El Puerto de Valencia, uno de los más importantes en España y el Mediterráneo, ha experimentado una expansión y modernización significativa desde 1956. Esta evolución se ha marcado por grandes inversiones y proyectos de desarrollo para aumentar su capacidad y eficiencia<sup class="ref_sup">8</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/puertcas_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/puertcas_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Puerto de Castellón</div>
+                                            <p class="slide_prod_text">Desde su autorización por la reina Isabel II en el siglo XIX, el puerto ha jugado un papel crucial en la exportación de productos cerámicos y agrícolas, siendo un motor fundamental para el desarrollo económico de la región. A lo largo del tiempo, se han realizado importantes proyectos de expansión, como la modificación del muelle de Levante y su canal de acceso en 1918, y más recientemente, la ampliación por el sur con una nueva dársena y el dique del Este<sup class="ref_sup">9</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide_evurb--valencia">
+                                    <div class="slide-content_evurb--valencia">
+                                        <div class="slide-content_evurb--images">
+                                            <p class="slide-content_evurb--year1">1956</p>
+                                            <img src="../images/evolUrbana/puertali_antes.png" alt="" class="slide-content_evurb--img">
+                                            <img src="../images/evolUrbana/puertali_despues.png" alt="" class="slide-content_evurb--img">
+                                            <p class="slide-content_evurb--year2">2023</p>
+                                        </div>
+                                        <div class="slide-content_evurb--text_container">
+                                            <div class="slide-text_evurb--valencia slide_prod_title">Puerto de Alicante</div>
+                                            <p class="slide_prod_text">El Puerto de Alicante ha mostrado un notable desarrollo desde 1956, fortaleciendo su infraestructura y servicios para mejorar la productividad y la conectividad logística<sup class="ref_sup">10</sup>.</p>
+                                            <p class="ref_banner">Ortofoto 1956 y 2023 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="arrow_evurb--valencia arrow-right_evurb--valencia" onclick="nextSlide()">
+                              <img src="../images/arrow_right.svg" alt="Next" class="arrow_inside_evurb--valencia">
+                            </button>
+                        </div>
 
-                        <p class="about_paragraph">La metamorfosis urbana no solo ha cambiado la fisonomía de estos barrios, sino que también ha tenido un impacto en el uso y percepción de las costas y playas cercanas. La construcción de la Ciudad de las Artes y las Ciencias, por ejemplo, transformó un área que antes era parte del lecho del río Turia en un icono arquitectónico y cultural, afectando indirectamente la dinámica y el paisaje costero cercano. La renovación de barrios como Ruzafa y la creciente popularidad de áreas como la Avenida de Francia y Benimaclet reflejan un cambio en el estilo de vida y en las prioridades urbanas, lo cual, a su vez, influye en cómo los residentes y visitantes interactúan con las costas y el mar.</p>
+                        <p class="about_paragraph">Aunque la teledetección puede no ofrecer siempre la misma resolución espacial que las ortofotos, hay satélites que disponen de una amplia gama de productos a lo largo de décadas. Un ejemplo notable es el programa Landsat, que ha proporcionado datos continuos desde la década de 1970. De esta forma, al observar superficies extensas con la resolución de Landsat (30 m), como áreas urbanas o regiones naturales, podemos realizar análisis temporales que revelan tendencias a lo largo del tiempo.</p>
 
-                        <p class="about_paragraph">Además, el contraste entre las fotografías aéreas históricas y el estado actual de estos barrios y sus costas subraya la importancia de una planificación y gestión cuidadosas para equilibrar el desarrollo urbano con la conservación de los recursos naturales y la identidad cultural de Valencia. Este entendimiento profundo de los cambios a lo largo del tiempo es esencial para proteger y gestionar nuestras preciosas costas de manera sostenible, asegurando que sigan siendo disfrutadas por generaciones futuras.</p>
-
-                        <br>
-
-
-
-                        <img src="../images/banners/evolurbana_banner.png" alt="" class="image_all">
-                        <p class="ref_banner">Ortofoto 1956 y 2022 CC BY 4.0 &copy; <a href="http://www.icv.gva.es" target="_blank" class="ref_banner--link">Institut Cartogràfic Valencià</a></p>
-                        
+                        <div class="content_3img">
+                            <div class="content_3img--inside">
+                                <img src="../images/evolUrbana/puerto_val.gif" alt="" class="content_3img--img">
+                                <p class="content_3img--text">Puerto de Valencia</p>
+                            </div>
+                            <div class="content_3img--inside">
+                                <img src="../images/evolUrbana/puerto_cas.gif" alt="" class="content_3img--img">
+                                <p class="content_3img--text">Puerto de Castellón</p>
+                            </div>
+                            <div class="content_3img--inside">
+                                <img src="../images/evolUrbana/puerto_ali.gif" alt="" class="content_3img--img">
+                                <p class="content_3img--text">Puerto de Alicante</p>
+                            </div>
+                        </div>
                         
                     </div>
                     
                     <div id="productos_product_page" class="content-section_product_page">
-                        <p class="about_paragraph">En VALENSAT, ofrecemos soluciones interactivas diseñadas para ---------.</p>
-                        <p class="about_paragraph">Explore la funcionalidad de nuestros productos y obtenga valiosa información sobre la magnitud y severidad de --------------, respaldando así una comprensión más profunda de estos eventos.</p>
+                        <p class="about_paragraph">En nuestra plataforma, no solo te ofrecemos información sobre la evolución urbana en la Comunidad Valenciana, sino que también te proporcionamos herramientas interactivas para que puedas explorar y visualizar estos cambios de manera dinámica y personalizada.</p>
+                        <p class="about_paragraph">¿Alguna vez has querido ver cómo ha cambiado tu ciudad a lo largo de los años? ¡Con nuestra aplicación de generación de GIFs de evolución urbana, puedes hacerlo! Simplemente selecciona la zona que te interesa y el rango de meses desde 1984 hasta el presente, y nuestra aplicación creará un GIF que muestra la evolución de esa área a lo largo del tiempo, utilizando imágenes Landsat. Desde la expansión urbana hasta el desarrollo de infraestructuras, podrás observar los cambios de manera clara y visual. Además, si encuentras un GIF que te gusta, ¡puedes descargarlo y compartirlo con quien quieras!</p>
+                        <p class="about_paragraph">¿Quieres profundizar aún más en la evolución urbana de la Comunidad Valenciana? ¡Te llevamos directamente al visor del Instituto Cartográfico Valenciano! Este visor te permite comparar ortofotos de diferentes años y ver cómo han cambiado las ciudades y paisajes a lo largo del tiempo. Con una amplia selección de imágenes disponibles, podrás explorar la evolución urbana con detalle y precisión. ¡Sumérgete en la historia de tu ciudad y descubre cómo ha evolucionado a lo largo de los años!</p>
                         <h1 class="productos_title_section">Productos interactivos disponibles</h1>
                         <div class="botones_productos_product_page">
                             <a href="./apps/timelapse.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/evolurbana.gif')">
                                 <div class="button-content">Animación Time-Lapse con Landsat</div>
                             </a>                        
+                            <a href="https://visor.gva.es/visor/index.html?idioma=es&TipVisor=comparador&extension=364776.166774971,4180058.493669871,1066926.8010032796,4547321.373139449" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/icv.png')">
+                                <div class="button-content">Comparador del Instituto Cartográfico Valenciano</div>
+                            </a>                        
                         </div>
                     </div>
                     
-                    <div id="descargable_product_page" class="content-section_product_page">
+                    <!-- <div id="descargable_product_page" class="content-section_product_page">
                         <h1 class="productos_title_section">Contenido descargable</h1>
-                    </div>
+                    </div> -->
 
                     <div id="referencias_product_page" class="content-section_product_page">
                         <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                        <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">1. Institut Cartogràfic Valencià - ICV - Generalitat Valenciana.<a href="https://icv.gva.es/va/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Blesa, T. L. (2024, February 6). Así es el nuevo PAI de Benimaclet: un gran parque verde de 30.000 m2 y 1.345 viviendas. València Extra.<a href="https://www.valenciaextra.com/es/valencia/nuevo-proyecto-pai-benimaclet-2024_528758_102.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Aznar, F. (2024, February 22). Mazón anuncia 120 nuevas viviendas de protección oficial en el barrio Sensal de Castelló. El Periódico Mediterráneo.<a href="https://www.elperiodicomediterraneo.com/castello/2024/02/22/mazon-viviendas-pisos-proteccion-oficial-sensal-castellon-98513474.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. LimiñAna, P. R. (2023, November 26). ¿Por qué el barrio de La Florida está en las nubes? Alicanteplaza.<a href="https://alicanteplaza.es/por-que-el-barrio-de-la-florida-esta-en-las-nubes" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. Vivo, A. R. (2024, February 23). Así es 'Nou Campanar', el barrio donde se ha producido el incendio y que se construyó en los años del. LaSexta.<a href="https://www.lasexta.com/programas/al-rojo-vivo/asi-nou-campanar-barrio-donde-producido-incendio-que-construyo-anos-boom-inmobiliario-valencia_2024022365d87ce8344c980001b88f35.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">6. Tezanos, A. (2023, December 9). El mapa de la riqueza de Castelló: la renta de la ciudad barrio por barrio. El Periódico Mediterráneo.<a href="https://www.elperiodicomediterraneo.com/castello/2023/12/09/mapa-riqueza-castello-renta-ciudad-95559410.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">7. Reinosa, A. (2022, February 3). De “Tato” a “San Blas”, el origen de un histórico barrio de la ciudad de Alicante. El Español.<a href="https://www.elespanol.com/alicante/alicante-ciudad/20220203/tato-san-blas-origen-historico-barrio-alicante/647185707_0.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">8. Magariño, J. F. (2021, December 30). El puerto de Valencia lanza su plan de 1.100 millones de inversión hasta 2025. Cinco Días.<a href="https://cincodias.elpais.com/cincodias/2021/12/30/companias/1640863233_117501.html" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">9. Pardo, R. (2019, April 17). PortCastelló recorre sus 150 años de historia a través de los planos de su construcción. Economia3.<a href="https://economia3.com/2019/04/17/192235-portcastello-recorre-sus-150-anos-de-historia-a-traves-de-los-planos-de-su-construccion/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">10. Autoridad Portuaria de Alicante. Home - Puerto de Alicante. Puerto De Alicante.<a href="https://www.puertoalicante.com/en/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">11. Producto 'USGS Landsat 5 Level 2, Collection 2, Tier 1'<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T1_L2" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">12. Producto 'USGS Landsat 7 Level 2, Collection 2, Tier 1'<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1_L2" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">13. Producto 'USGS Landsat 8 Level 2, Collection 2, Tier 1'<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">14. Producto 'USGS Landsat 9 Level 2, Collection 2, Tier 1'<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                     </div>
                 </div>
 

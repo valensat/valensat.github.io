@@ -27,9 +27,31 @@ document.addEventListener('DOMContentLoaded', function() {
     showSection('ciencia_product_page');
 });
 
+// Cambiar altura de la página en funcion de esta
+
+// Crear un objeto que actúe como un diccionario
+var pageConfig = {
+    'suhi': 2.5,
+    'evolUrbana': 2.2,
+    // Agrega aquí más páginas y sus valores de multiplicación
+};
+
+// Obtener el nombre de la página actual
+var currentUrl = window.location.href;
+var pageName = currentUrl.split('/').pop().split('.')[0];
+console.log(currentUrl);
+console.log(pageName);
 
 var sectionHeight = document.getElementById('ciencia_product_page').offsetHeight;
-var totalHeight = sectionHeight * 2.5;
+
+// Calcular totalHeight basado en la configuración de la página actual
+var totalHeight = sectionHeight * (pageConfig[pageName] || 2.5); // Valor predeterminado de 2.5 si no se encuentra en el diccionario
+console.log(totalHeight);
+
+// // Asegúrate de que totalHeight tenga un valor predeterminado si la página no está en el diccionario
+// if (totalHeight === NaN) {
+//     totalHeight = sectionHeight * 2.5; // Valor predeterminado
+// }
 
 document.querySelector('.all_sections-container_product_page').style.minHeight = totalHeight + 'px';
 
