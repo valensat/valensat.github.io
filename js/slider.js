@@ -74,6 +74,61 @@
 })();
 // ###################################################################################### //
 
+// ################################## SLIDER ABOUT ################################## //
+(function(){
+    document.addEventListener('DOMContentLoaded', function () {
+        const sliderWrapper = document.querySelector('.slider-wrapper_banner_info');
+        const slides = document.querySelectorAll('.slide_banner_info');
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+            // Only increment if not on the last slide
+            currentIndex++;
+            } else {
+            // If on the last slide, wrap to the first slide
+            currentIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+            // Only decrement if not on the first slide
+            currentIndex--;
+            } else {
+            // If on the first slide, wrap to the last slide
+            currentIndex = slides.length - 1;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateValue = -currentIndex * 100 + '%';
+            sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
+            resetAutoSlide(); // Reset the automatic slide interval
+        }
+
+        // Clear the automatic slide interval and reset it
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 15000); // Change slide every 5 seconds
+        }
+
+        // Initialize the slider interval
+        resetAutoSlide();
+
+        // Update arrow button event listeners
+        document.querySelector('.arrow-left_banner_info').addEventListener('click', prevSlide);
+        document.querySelector('.arrow-right_banner_info').addEventListener('click', nextSlide);
+
+        // Initialize arrows display
+        updateSlider();
+        });
+})();
+// ###################################################################################### //
+
 // ################################ BOTÓN VOLVER ARRIBA ################################# //
 (function(){
     var backToTop = document.querySelector(".back-to-top");
