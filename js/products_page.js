@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 var pageConfig = {
     'suhi': 2.5,
     'evolUrbana': 2.2,
+    'contaminacion': 2.4,
+    'salud': 1
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 

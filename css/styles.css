@@ -722,6 +722,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
@@ -1755,8 +1759,16 @@ body {
     height: 100%;
 }
 
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
-/* ########## SLIDER EVOLUCIÓN URBANA ########## */
+
+/* ####################################### */
+/* ########## EVOLUCIÓN URBANA ########### */
+/* ####################################### */
+
+/* SLIDER */
 .slider-container_evurb--valencia {
     position: relative;
     width: 98%;
@@ -1934,6 +1946,69 @@ body {
     font-size: 1.7em;
     font-weight: 600;
 }
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
+
+
+/* ####################################### */
+/* ########### CONTAMINACIÓN ############# */
+/* ####################################### */
+
+.img_contaminacion--container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+
+.graph_contaminacion--container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
