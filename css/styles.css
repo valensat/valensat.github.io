@@ -716,6 +716,7 @@ body {
     font-weight: 600;
     text-decoration: underline;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .botones_productos_product_page{
@@ -2826,21 +2827,10 @@ tr td:first-child{
 /* areas quemadas */
 .banner_quem{
     width: 100%;
-    padding: 0 50px 20px;
+    padding: 65px 0 50px;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(250, 171, 1, 0.1);
-    margin-top: 20px;
 }
-
-.banner_quem--title {
-    line-height: 3;
-    font-weight: 700;
-    text-align: center;
-    color: #4C3957;
-    font-size: 1.7rem;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
-  }
 
   .banner_quem--group{
     display: flex;

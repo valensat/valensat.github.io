@@ -34,7 +34,8 @@ var pageConfig = {
     'suhi': 2.5,
     'evolUrbana': 2.2,
     'contaminacion': 2.4,
-    'salud': 1
+    'salud': 1,
+    'areaQuemada': 1.22,
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 

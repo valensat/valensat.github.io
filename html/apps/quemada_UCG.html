@@ -53,9 +53,30 @@
                 <div class="about">
                     <div class="home_app_ventana_info--container">
                         <h2 class="home_app_ventana_info--title--app_page">Método desarrollado por UCG</h2>
-                        <p class="home_app_ventana_info--text">La siguiente aplicación utiliza la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup> para calcular el área quemada y la severidad del incendio. Para ello, se emplean imágenes Sentinel-2 (producto Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A) con una resolución de 20 m, que han sido previamente corregidas atmosféricamente y con nubes enmascaradas.</p>
+                        <p class="home_app_ventana_info--text">La siguiente aplicación utiliza la metodología desarrollada y validada por la Unidad de Cambio Global (UCG) para calcular el área quemada y la severidad del incendio<sup class="ref_sup">7</sup>. Para ello, se emplean imágenes Sentinel-2 (producto Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A) con una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'.</p>
                         <p class="home_app_ventana_info--highlight">Puedes probar poniendo las fechas del 04/08/2018 (imágenes antes del incendio) y del 24/08/2018 (imágenes después del incendio), y seleccionar la zona cerca de Luchente (Valencia), para visualizar el incendio que occurrió en el 2018. Otro ejemplo más actual es el incendio cerca de Montanejos (Castellón), que se puede visualizar entre las fechas 04/03/2023 y 25/03/2023.</p>
-                        <p class="home_app_ventana_info--text">El cálculo del área quemada y la severidad del incendio se realiza a través de la metodología desarrollada y validada por la Unidad de Cambio Global <sup><a href="#ref" class="ref_text">5</a></sup>. Se utilizan imágenes Sentinel 2 (Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A), a una resolución de 20 m, corregidas atmosféricamente usando la banda SLC del producto, eliminando todos los píxeles que no son 'Dark Area Pixels', 'Vegetation', 'Bare Soils' o 'Water'. Como en el caso anterior, en el caso de imágenes múltiples, se produce un mosaico. Además, las imágenes son reproyectadas en el sistema de coordenadas EPSG:32630.</p>
+                        <p class="home_app_ventana_info--text">Para calcular el área total quemada se aplicó el índice NBR2<sup class="ref_sup">8</sup> a las imágenes antes y después del incendio. De aquí se obtuvo entonces el dNBR2, restando el NBR2 antes del incendio y el después. Se consideró área quemada el área con valores de NBR2 superiores a 0.10, de acuerdo a:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/nbr2.PNG" alt="" class="home_app_ventana_info--ec">
+                            <img src="../../images/data/ecuaciones/dbnr2.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">Una vez identificada el área de interés, se realizó una clasificación de la vegetación en base al índice Normalized Difference Vegetation Index (NDVI) (Ec. 13). De hecho, el NDVI se utiliza para cuantificar el verdor de la vegetación y es útil para comprender la densidad de la vegetación y evaluar los cambios en la salud de las plantas.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/nbr2.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">En particular, se utilizaron específicos rangos de valores para definir la vegetación como de baja densidad, densidad intermedia y completamente densa, como se muestra en la tabla. Además, se han mascarado todos los píxeles con valores NDVI inferiores a 0, para eliminar zonas de agua, que pueden producir ruido en el producto final.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/tablas/" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">En áreas de baja densidad de vegetación se aplicó el índice Burned Area Index for Sentinel-2 (BAIS2), un nuevo índice desarrollado<sup class="ref_sup">9</sup>. En cambio, donde había vegetación mixta, que tiene una densidad intermedia, se aplicó el NBR. En las áreas que tenían una alta densidad de vegetación, se aplicó el índice NBR3<sup class="ref_sup">8</sup>. La elección de los índices se hizo en base a cuál tenía mayor índice de separabilidad para una determinada densidad de vegetación<sup class="ref_sup">7</sup>.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/bais2.PNG" alt="" class="home_app_ventana_info--ec">
+                            <img src="../../images/data/ecuaciones/nbr3.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">De esta forma, para cada índice se establece unos límites que definen el nivel de severidad del incendio, como se muestra en la tabla. También se muestran los valores de los umbrales según el criterio USGS, que no utiliza distinciones de densidad de vegetación.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/tablas/" alt="" class="home_app_ventana_info--ec">
+                        </div>
                     </div>
                 </div>
             </div>
