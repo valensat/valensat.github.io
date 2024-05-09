@@ -861,6 +861,10 @@ body {
     width: 37%;
     padding: 10px 0 5px;
 }
+.home_app_ventana_info--tablalarga{
+    width: 50%;
+    padding: 10px 0 5px;
+}
 
 .home_app_ventana_info--img{
     width: 30%;
@@ -1982,6 +1986,48 @@ body {
 /* ####################################### */
 /* ####################################### */
 
+/* ####################################### */
+/* ########### ÁREAS QUEMADAS ############ */
+/* ####################################### */
+
+.img--gif_incendio{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px 3px #001A49;
+    /* width: 400px; */
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
+
+/* ####################################### */
+/* ###### INCENDIOS EN LA COMUNIDAD ###### */
+/* ####################################### */
+
+.img_evolincendios--container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+.img_evolincendios--leyenda{
+    width: 7%;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
 
 
@@ -2759,20 +2805,12 @@ tr td:first-child{
     padding: 20px 0;
 }
 
-.left_col, .right_col{
-    flex: 0 0 50%;
-}
+
 
 .banner_inc{
     display: flex;
     width: 100%;
     height: 50%;
-    justify-content: center;
-}
-
-.banner_inc2{
-    display: flex;
-    width: 100%;
     justify-content: center;
 }
 
@@ -2802,18 +2840,9 @@ tr td:first-child{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .right_col{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-.imgbanner_CV{
-    width: 65%;
 }
+
+
 
 .graph_donut,
 .graph_bar {

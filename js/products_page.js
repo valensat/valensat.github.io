@@ -35,7 +35,8 @@ var pageConfig = {
     'evolUrbana': 2.2,
     'contaminacion': 2.4,
     'salud': 1,
-    'areaQuemada': 1.22,
+    'areaQuemada': 1.6,
+    'evolIncendios': 1.5,
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 
