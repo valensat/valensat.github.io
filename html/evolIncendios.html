@@ -154,7 +154,7 @@
                 <ul class="menu_product_page">
                 <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
                 <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
-                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                <!-- <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li> -->
                 <li class="menu-item_product_page" onclick="showSection('referencias_product_page')">Referencias</li>
                 </ul>
             </div>
@@ -172,51 +172,50 @@
                         <p class="about_paragraph">La década de 2010 a 2020 también fue significativa en cuanto a incendios forestales, con más de 90,000 hectáreas quemadas en la Comunidad Valenciana. El año 2012 fue especialmente crítico, con cerca de 60,000 hectáreas devastadas. Este año resalta por dos grandes incendios: uno en Cortes del Pallás que consumió 28,643 hectáreas y otro en Andilla con 19,940 hectáreas afectadas.</p>
                         <p class="about_paragraph">Los incendios en la Comunidad Valenciana a menudo se deben a factores humanos, como la negligencia o acciones intencionadas, pero los rayos durante las tormentas eléctricas también han sido una causa significativa, especialmente en 2022, cuando representaron casi el 83% de la superficie quemada por esta causa en la última década. Estos eventos subrayan la vulnerabilidad de la región a los incendios forestales, exacerbada por el cambio climático y la actividad humana, resaltando la necesidad de políticas efectivas de prevención y gestión de incendios para proteger el valioso patrimonio natural y las comunidades de la Comunidad Valenciana.</p>
                         
-                        <!-- <div class="container_banner--inc">
-                            <div class="left_col">
-                                <section class="banner_inc">
-                                    <div class="graph_donut">
-                                        <canvas id="incendiosCV" class="graph_donut--inside"></canvas>
-                                    </div>
-                                    <div class="banner_inc--legend">
-                                        <p class="banner_quem--title_legend">Extensión total quemada</p>
-                                        <p class="banner_quem--title_legend">(2000-2023)</p>
-                                        <p class="banner_quem--text_legend">1771.50 km²</p>
-                                    </div>
-                                </section>
-                                
-                                <section class="banner_inc">
-                                    <div class="graph_bar">
-                                        <canvas id="incendiosCV_years" class="graph_bar--inside"></canvas>
-                                    </div>
-                                </section>
+                        <div class="container_banner--inc">
+                            <div class="container_banner--inc_left">
+                                <div class="graph_donut">
+                                    <canvas id="incendiosCV" class="graph_donut--inside"></canvas>
+                                </div>
+                                <div class="banner_inc--legend">
+                                    <p class="banner_quem--title_legend">Extensión total quemada</p>
+                                    <p class="banner_quem--title_legend">(2000-2023)</p>
+                                    <p class="banner_quem--text_legend">2394.25 km²</p>
+                                </div>
+                            </div>
+
+                            <div class="container_banner--inc_right">
+                                <div class="graph_bar">
+                                    <canvas id="incendiosCV_years" class="graph_bar--inside"></canvas>
+                                </div>
                             </div>
                         </div>
-                        <p class="ref_banner">Incendios ocurridos en la Comunidad Valenciana entre el 2000 y el 2023. Datos proporcionados por el producto MCD64A1 de MODIS.</p> -->
+                        <p class="ref_banner">Incendios ocurridos en la Comunidad Valenciana entre el 2000 y el 2023. Datos proporcionados por el producto MCD64A1 de MODIS.</p>
                         
                     </div>
                     
                     <div id="productos_product_page" class="content-section_product_page">
-                        <p class="about_paragraph">En VALENSAT, ofrecemos soluciones interactivas diseñadas para ------------.</p>
-                        <p class="about_paragraph">Explore la funcionalidad de nuestros productos y obtenga valiosa información sobre --------, respaldando así una comprensión más profunda de estos eventos.</p>
+                        <p class="about_paragraph">Explora nuestra aplicación interactiva que te permite visualizar el área quemada en la Comunidad Valenciana para cada año desde el 2000. Utilizando un producto mensual de MODIS con una resolución de 500 metros<sup class="ref_sup">1</sup>, nuestra herramienta te proporciona una visión detallada de la evolución de los incendios forestales a lo largo de las décadas. Con esta aplicación, puedes identificar las áreas más afectadas y analizar las tendencias anuales de incendios, lo que te ayuda a comprender mejor los patrones de fuego en la región.</p>
+                        <p class="about_paragraph">Además, te ofrecemos otra aplicación que te permite calcular el área quemada en la Comunidad Valenciana usando un producto diario de MODIS con una resolución de 1 kilómetro<sup class="ref_sup">2,3</sup>. Esta herramienta te muestra el área quemada en cada provincia (Castellón, Valencia y Alicante), proporcionando una visión más detallada y específica de los incendios forestales en cada región. Con esta aplicación, puedes realizar un seguimiento diario de los incendios y obtener información precisa sobre la extensión y la distribución de las áreas afectadas en cada provincia, facilitando una gestión más eficaz de los recursos y las estrategias de prevención y recuperación.</p>
                         <h1 class="productos_title_section">Productos interactivos disponibles</h1>
                         <div class="botones_productos_product_page">
                             <a href="./apps/inc_comunidad.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/inc.jpg')">
                                 <div class="button-content">Visualizador de áreas quemadas en la Comunidad Valenciana</div>
                             </a>
                             <a href="./apps/inc_comunidad_modisdaily.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/inc_modis.jpg')">
-                                <div class="button-content">Producto diario de MODIS</div>
+                                <div class="button-content">Producto diario de MODIS de incendios activos</div>
                             </a>                        
                         </div>
                     </div>
                     
                     <div id="referencias_product_page" class="content-section_product_page">
                         <h3 class="subtitle_ref" id="ref">Referencias</h3>
-                        <p class="about_paragraph--ref">1. MODIS Burned Area Product User’s Guide<a href="https://lpdaac.usgs.gov/documents/875/MCD64_User_Guide_V6.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">2. MODIS Active Fire Product User's Guide<a href="https://www.earthdata.nasa.gov/s3fs-public/2022-02/MODIS_C6_Fire_User_Guide_B.pdf" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">3. Freeborn, P. H., Wooster, M. J., Roy, D. P., & Cochrane, M. A. (2014). Quantification of MODIS fire radiative power (FRP) measurement uncertainty for use in satellite based active fire characterization and biomass burning estimation. Geophysical Research Letters, 41(6), 1988-1994.<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013GL059086" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">4. Peterson, D., & Wang, J. (2013). A sub-pixel-based calculation of fire radiative power from MODIS observations: 2. Sensitivity analysis and potential fire weather application. Remote Sensing of Environment, 129, 231-249.<a href="https://www.sciencedirect.com/science/article/pii/S0034425712004087" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                        <p class="about_paragraph--ref">5. MODFIRE/VNPFIRE Data Product Description - NASA<a href="https://feer.gsfc.nasa.gov/data/frp/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">1. Producto 'MCD64A1.061 MODIS Burned Area Monthly Global 500m'. <a href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD64A1#description" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">2. Producto 'MOD14A1.061: Terra Thermal Anomalies & Fire Daily Global 1km'. <a href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD14A1#description" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">3. Producto 'MYD14A1.061: Aqua Thermal Anomalies & Fire Daily Global 1km'. <a href="https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MYD14A1" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">4. Freeborn, P. H., Wooster, M. J., Roy, D. P., & Cochrane, M. A. (2014). Quantification of MODIS fire radiative power (FRP) measurement uncertainty for use in satellite based active fire characterization and biomass burning estimation. Geophysical Research Letters, 41(6), 1988-1994. <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013GL059086" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">5. Peterson, D., & Wang, J. (2013). A sub-pixel-based calculation of fire radiative power from MODIS observations: 2. Sensitivity analysis and potential fire weather application. Remote Sensing of Environment, 129, 231-249. <a href="https://www.sciencedirect.com/science/article/pii/S0034425712004087" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
+                        <p class="about_paragraph--ref">6. MODFIRE/VNPFIRE Data Product Description - NASA. <a href="https://feer.gsfc.nasa.gov/data/frp/" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                     </div>
                 </div>
 

@@ -7,7 +7,7 @@
       labels: ['Castellón', 'Valencia', 'Alicante'],
       datasets: [{
         // label: 'Incendios',
-        data: [563.50, 986.25, 221.75],
+        data: [756.5, 1339.5, 298.25],
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
@@ -49,7 +49,7 @@
               }, 0);
               var percentage = Math.round(value / total * 10000) / 100;
 
-              return label + ': ' + value.toFixed(2) + ' km² (' + percentage.toFixed(2) + '%)';
+              return label + ': ' + value.toFixed(2) + ' km² (' + percentage.toFixed(0) + '%)';
             },
             title: function() {
               return '';
@@ -79,21 +79,21 @@
     data: {
       labels: labels,
       datasets: [{
-        data: [0, 50.75, 44.75, 35.00, 57.75, 36.50, 30.25, 122.25, 0, 23.50, 63.25, 16.75, 670.75, 6.50, 3.50, 24.50, 64.75, 70.00, 35.75, 12.25, 11.25, 4.50, 349.75, 37.25],
-        backgroundColor: [
-          '#F2F2F0','rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 99, 132)','#F2F2F0','rgb(255, 99, 132)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 205, 86)','rgb(255, 205, 86)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(54, 162, 235)','rgb(255, 205, 86)','rgb(54, 162, 235)','rgb(255, 99, 132)','rgb(255, 99, 132)','rgb(255, 99, 132)'],
-          borderColor: '#ffffff',
-          borderWidth: 2,
-          hoverBorderColor: '#272525',
-          borderRadius: 4,
-          barPercentage: 1.1
+        label: 'Áreas quemadas (km²) por año',
+        data: [0, 65.50, 63.00, 46.75, 71.25, 46.25, 34.50, 161.75, 0, 29.00, 81.75, 26.50, 873.75, 9.25, 7.00, 33.75, 81.25, 93.50, 45.00, 12.75, 15.75, 7.25, 462.25, 90.50],
+        backgroundColor: ['#E48716'],
+        borderColor: '#FDD48A',
+        borderWidth: 2,
+        hoverBorderColor: '#272525',
+        borderRadius: 4,
+        barPercentage: 1.1
       }],
       
     },
     options: {
       plugins: {
         title:{
-          display: true,
+          display: false,
           text: 'km² quemados por año',
           font: {
             size: 18
@@ -101,27 +101,26 @@
         },
         legend: {
           title: {
-            display: true,
+            display: false,
             text: 'Provincia con más áreas quemadas',
             font: {
               size: 13
             }
           },
-          display: true,
-          labels: {
-            generateLabels: function() {
-              const newLabels = [];
-              backgroundColors.forEach((color, index) => {
-                newLabels.push({
-                  text: legendLabels[index],
-                  fillStyle: color,
-                  strokeStyle: '#ffffff',
-                  lineWidth: 2
-                });
-              });
-              return newLabels;
-            }
-          }
+          // labels: {
+          //   generateLabels: function() {
+          //     const newLabels = [];
+          //     backgroundColors.forEach((color, index) => {
+          //       newLabels.push({
+          //         text: legendLabels[index],
+          //         fillStyle: color,
+          //         strokeStyle: '#ffffff',
+          //         lineWidth: 2
+          //       });
+          //     });
+          //     return newLabels;
+          //   }
+          // }
         },
         tooltip: {
           callbacks: {
