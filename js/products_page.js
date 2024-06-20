@@ -37,7 +37,9 @@ var pageConfig = {
     'salud': 1,
     'areaQuemada': 1.6,
     'evolIncendios': 1.9,
-    'riesgo': 1
+    'riesgo': 1,
+    'evapo': 1.7,
+    'sequias': 1.1
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 

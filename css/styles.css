@@ -2029,7 +2029,31 @@ body {
 /* ####################################### */
 /* ####################################### */
 
+/* ####################################### */
+/* ########## EVAPOTRANSPIRACIÓN ######### */
+/* ####################################### */
 
+.img_evapo--container{
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 5px;
+}
+
+.img_evapo_leyenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
 
 
