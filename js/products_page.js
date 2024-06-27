@@ -39,7 +39,8 @@ var pageConfig = {
     'evolIncendios': 1.9,
     'riesgo': 1,
     'evapo': 1.7,
-    'sequias': 1.1
+    'sequias': 2.4,
+    'heladas': 1
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 
