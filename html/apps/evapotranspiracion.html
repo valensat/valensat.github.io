@@ -54,22 +54,40 @@
                     <div class="home_app_ventana_info--container">
                         <h2 class="home_app_ventana_info--title--app_page">Evapotranspiración</h2>
                         <p class="home_app_ventana_info--text">Esta aplicación utiliza la metodología desarrollada y validada por Jerzy Piotr Kabala para calcular mapas de evapotranspiración (ET) a 30 metros de resolución espacial. La imagen final resultante corresponde a la fecha más cercana con imágenes Landsat del día seleccionado. Por este motivo, puede ser que la imagen no complete la zona seleccionada, ya que al corresponder a una única imagen, puede verse cortada por la presencia de nubes o por el propio paso de Landsat en esa zona.</p>
-                        <p class="home_app_ventana_info--text">Se ha aplicado el algoritmo S-SEBI a imágenes Landsat-8 (nivel 2A) y ERA5 para calcular la ET diaria, donde las nubes han sido enmascaradas en todas las imágenes. Los productos utilizados de Landsat-8 y ERA5 han sido: 'USGS Landsat 8 Level 2, Collection 2, Tier 1<sup class="ref_sup">8</sup>', 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">9</sup>' y 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">10</sup>'.</p>
+                        <p class="home_app_ventana_info--text">Se ha aplicado el algoritmo S-SEBI a imágenes Landsat-8 (nivel 2A) y ERA5 para calcular la ET diaria, donde las nubes han sido enmascaradas en todas las imágenes. Los productos utilizados de Landsat-8 y ERA5 han sido: 'USGS Landsat 8 Level 2, Collection 2, Tier 1<sup class="ref_sup">10</sup>', 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">11</sup>' y 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">12</sup>'.</p>
                         <p class="home_app_ventana_info--text">Cabe destacar que es preferible seleccionar zonas sin mucha pendiente para obtener datos más precisos.</p>
                         <h2 class="home_app_ventana_info--subtitle--app_page">Simplified Surface Energy Balance Index (S-SEBI)</h2>
-                        <p class="home_app_ventana_info--text">El S-SEBI es un algoritmo que permite estimar el balance de energía superficial que requiere de unos datos mínimos de entrada<sup class="ref_sup">6</sup>. El flujo de calor latente instantáneo o LE (W m<sup>-2</sup>) se estima como:</p>
+                        <p class="home_app_ventana_info--text">El S-SEBI es un algoritmo que permite estimar el balance de energía superficial y que requiere de unos datos mínimos de entrada<sup class="ref_sup">6</sup>. Estos datos son el Índice de Vegetación de Diferencia Normalizada (NDVI), el albedo (α), la temperatura de superficie terrestre (T<sub>S</sub>) y la emisividad de la superficie terrestre (ε). Las fórmulas para calcular estos datos de entrada se muestran en la siguiente tabla:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/tablas/ssebi_tabla.PNG" alt="" class="home_app_ventana_info--tablalarga2">
+                        </div>
+                        <p class="home_app_ventana_info--text">Por otro lado, cuando se consideran condiciones instantáneas, la ecuación del balance de energía superficial (Surface Energy Balance, SEB) es de la forma:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/ssebi0_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">R<sub>n</sub>, H y G corresponden a la radiación neta de la superficie, el flujo de calor sensible y el flujo de calor del suelo, respectivamente. Todos se expresan en unidades de energía (W m<sup>-2</sup>), y LET es el flujo de calor latente que, a su vez, se estima como:</p>
                         <div class="home_app_ventana_info--img_container">
                             <img src="../../images/data/ecuaciones/ssebi1_ec.PNG" alt="" class="home_app_ventana_info--ec">
                         </div>
-                        <p class="home_app_ventana_info--text">donde Λ es la fracción evaporativa instantánea (adicional), R<sub>n</sub> es el flujo de radiación neto instantáneo (W m<sup>-2</sup>) y G es el flujo de calor instantáneo del suelo (W m<sup>-2</sup>).</p>
-                        <p class="home_app_ventana_info--text">La fracción evaporativa o Λ se obtiene de acuerdo a la ecuación:</p>
+                        <p class="home_app_ventana_info--text">donde Λ es la fracción evaporativa instantánea. El modelo se basa en la estimación de la fracción evaporativa del triángulo LST-Albedo después de la identificación de los píxeles controlados por radiación y evaporación, de acuerdo con la ecuación:</p>
                         <div class="home_app_ventana_info--img_container">
                             <img src="../../images/data/ecuaciones/ssebi2_ec.PNG" alt="" class="home_app_ventana_info--ec">
                         </div>
-                        <p class="home_app_ventana_info--text">donde T<sub>S</sub> es la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> son las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir de un diagrama de dispersión (como se muestra debajo) entre la temperatura superficial y el albedo<sup class="ref_sup">7</sup>. La temperatura de la superficie terrestre se ha obtenido del producto de Landsat y el albedo a partir de los productos de ERA5.</p>
+                        <p class="home_app_ventana_info--text">siendo T<sub>S</sub> la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir de un diagrama de dispersión (como se muestra debajo) entre la temperatura superficial y el albedo<sup class="ref_sup">7</sup>.</p>
                         <div class="home_app_ventana_info--img_container">
                             <img src="../../images/data/graficos/ssebi_graf.png" alt="" class="home_app_ventana_info--tabla">
                         </div>
+                        <p class="home_app_ventana_info--text">La línea H en rojo es el flujo de calor sensible, la línea LE en verde es el flujo de calor latente, T<sub>S</sub> es la temperatura superficial (eje y) y α es el albedo (eje x). El diagrama de dispersión calcula la fracción de evaporación para cada punto de temperatura superficial.</p>
+                        <p class="home_app_ventana_info--text">Una vez que se obtiene Λ, falta saber R<sub>n</sub>, que puede obtenerse según:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/ssebi3_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">Donde R<sub>Sn</sub> y R<sub>Ln</sub> son la radiación solar de onda corta y de onda larga, respectivamente, ambas medidas en W m<sup>-2</sup>. Estos valores se pueden derivar a partir de la emisividad de la superficie terrestre (ε), pero en este caso han sido obtenidos a través de ERA5.</p>
+                        <p class="home_app_ventana_info--text">La ET diaria se define como la integración temporal de los valores instantáneos de ET durante un día y se puede obtener utilizando el C<sub>di</sub>, que consiste en la relación entre el flujo de radiación neta diaria (R<sub>nd</sub>) y el flujo de radiación neta instantánea (R<sub>ni</sub>), respectivamente, obtenidos también de los productos de ERA5. Con todo esto, se puede obtener la ET diaria como<sup class="ref_sup">9</sup>:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/ssebi4_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
+                        <p class="home_app_ventana_info--text">donde λ es el calor latente de vaporización (2.45 MJ/kg). En este cálculo, el flujo de calor del suelo (G) se considera igual a cero y no se incluye en la ecuación, asumiendo que gran parte de la energía que entra y alcanza el suelo durante el día regresa a la atmósfera por la noche a través de la radiación terrestre de onda larga. La fracción evaporativa λ se considera constante durante el día.</p>
                     </div>
                 </div>
             </div>
