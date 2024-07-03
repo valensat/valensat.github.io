@@ -52,24 +52,17 @@
                 <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
                 <div class="about">
                     <div class="home_app_ventana_info--container">
-                        <h2 class="home_app_ventana_info--title--app_page">Evapotranspiración</h2>
-                        <p class="home_app_ventana_info--text">Esta aplicación utiliza la metodología desarrollada y validada por Jerzy Piotr Kabala para calcular mapas de evapotranspiración (ET) a 30 metros de resolución espacial. La imagen final resultante corresponde a la fecha más cercana con imágenes Landsat del día seleccionado. Por este motivo, puede ser que la imagen no complete la zona seleccionada, ya que al corresponder a una única imagen, puede verse cortada por la presencia de nubes o por el propio paso de Landsat en esa zona.</p>
-                        <p class="home_app_ventana_info--text">Se ha aplicado el algoritmo S-SEBI a imágenes Landsat-8 (nivel 2A) y ERA5 para calcular la ET diaria, donde las nubes han sido enmascaradas en todas las imágenes. Los productos utilizados de Landsat-8 y ERA5 han sido: 'USGS Landsat 8 Level 2, Collection 2, Tier 1<sup class="ref_sup">8</sup>', 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">9</sup>' y 'ERA5-Land Hourly - ECMWF Climate Reanalysis<sup class="ref_sup">10</sup>'.</p>
-                        <p class="home_app_ventana_info--text">Cabe destacar que es preferible seleccionar zonas sin mucha pendiente para obtener datos más precisos.</p>
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Simplified Surface Energy Balance Index (S-SEBI)</h2>
-                        <p class="home_app_ventana_info--text">El S-SEBI es un algoritmo que permite estimar el balance de energía superficial que requiere de unos datos mínimos de entrada<sup class="ref_sup">6</sup>. El flujo de calor latente instantáneo o LE (W m<sup>-2</sup>) se estima como:</p>
+                        <h2 class="home_app_ventana_info--title--app_page">Nivel de daño</h2>
+                        <p class="home_app_ventana_info--text">Esta aplicación permite calcular el nivel de daño de la zona seleccionada de la Comunidad Valenciana. Los niveles de daño se establecen según los límites de la agencia de seguros 'Agroseguro<sup class="ref_sup">1</sup>'. Para obtener esta información, se utilizaron imágenes MODIS (productos 'MOD09GA.061 Terra Surface Reflectance Daily Global 1km and 500m<sup class="ref_sup">2</sup>' y 'MYD09GA.061 Aqua Surface Reflectance Daily Global 1km and 500m<sup class="ref_sup">3</sup>') corregidas atmosféricamente. Para realizar el cálculo, se debe seleccionar una parcela, indicando el tipo de seguro elegido (Estrato 1, 2, 3 o 4) y un rango de fechas.</p>
+                        <p class="home_app_ventana_info--text">Las imágenes MODIS se corrigen atmosféricamente utilizando la banda de calidad ‘state_1km’, para eliminar los píxeles con presencia de nubes, sombras, cirros, aerosoles, nieve y agua. Posteriormente, se calcula el NDVI y se selecciona el valor máximo por cada pixel para el período de tiempo considerado. Este valor corresponde al Índice de Vegetación Actual (NDVI-A).</p>
                         <div class="home_app_ventana_info--img_container">
-                            <img src="../../images/data/ecuaciones/ssebi1_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                            <img src="../../images/data/ecuaciones/ndvi.PNG" alt="" class="home_app_ventana_info--ec">
                         </div>
-                        <p class="home_app_ventana_info--text">donde Λ es la fracción evaporativa instantánea (adicional), R<sub>n</sub> es el flujo de radiación neto instantáneo (W m<sup>-2</sup>) y G es el flujo de calor instantáneo del suelo (W m<sup>-2</sup>).</p>
-                        <p class="home_app_ventana_info--text">La fracción evaporativa o Λ se obtiene de acuerdo a la ecuación:</p>
+                        <p class="home_app_ventana_info--text">Luego, se realiza el mismo calculo para cada año, de 2003 a 2021, para el mismo intervalo de fechas. De esta forma, se obtiene el Índice de Vegetación Medio (NDVI-M), calculado como una media de los valores máximos de NDVI obtenidos a partir de todos los datos de la serie temporal histórica. Se calcula así el valor de cada estrato, utilizando la media y la desviación estándar del NDVI-M, siguiendo las indicaciones de Agroseguro. Tanto el NDVI-M como la desviación estándar se multiplicaron por el factor 0,99 a efectos del cálculo del Índice de Vegetación Garantizado (NDVI-G). En la siguiente tabla se muestran los cuatro estratos de garantía considerados.</p>
                         <div class="home_app_ventana_info--img_container">
-                            <img src="../../images/data/ecuaciones/ssebi2_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                            <img src="../../images/data/tablas/agro.PNG" alt="" class="home_app_ventana_info--tablalarga">
                         </div>
-                        <p class="home_app_ventana_info--text">donde T<sub>S</sub> es la temperatura de la superficie terrestre y T<sub>H</sub> y T<sub>LE</sub> son las temperaturas correspondientes a condiciones secas y húmedas para un valor de albedo dado, que se puede estimar a partir de un diagrama de dispersión (como se muestra debajo) entre la temperatura superficial y el albedo<sup class="ref_sup">7</sup>. La temperatura de la superficie terrestre se ha obtenido del producto de Landsat y el albedo a partir de los productos de ERA5.</p>
-                        <div class="home_app_ventana_info--img_container">
-                            <img src="../../images/data/graficos/ssebi_graf.png" alt="" class="home_app_ventana_info--tabla">
-                        </div>
+                        <p class="home_app_ventana_info--text">Finalmente se calculó el nivel de daño, es decir, el NDVI-G, para cada estrato, restando el valor de NDVI-A al NDVI-M. Cuando el NDVI-A es inferior al NDVI-M para una decena y una zona determinada, se declara que existe “Daño”.</p>
                     </div>
                 </div>
             </div>

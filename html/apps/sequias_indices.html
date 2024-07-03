@@ -53,162 +53,27 @@
                 <div class="about">
                   <div class="home_app_ventana_info--container">
                      <h2 class="home_app_ventana_info--title--app_page">Índices aplicados a sequías</h2>
-                        <p class="highlight-box">A través de la siguiente aplicación es posible calcular calcular una serie de índices comúnmente utilizados para estimar el grado de sequía. A través de la siguiente aplicación es posible calcular el Standardized Precipitation Index (SPI), el Standardized Precipitation Evapotranspiration Index (SPEI), el Vegetation Condition Index (VCI), el Temperature Condition Index (TCI), el Soil Vegetation Index (SVI) y el Vegetation Health Index (VHI), seleccionando las fechas de referencia y la zona de interés.</p>
-                        <h2 class="home_app_ventana_info--title--app_page">¿Cómo se calculan y qué representan estos índices?</h2>
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Standardized Precipitation Index (SPI)</h2>
-                        <p class="home_app_ventana_info--text">El <strong>Standardized Precipitation Index (SPI)</strong> es un índice de aridez basado en la precipitación. Mide la anomalía de la precipitación en relación con una distribución de referencia, calculando la desviación estándar de las precipitaciones en un período de tiempo determinado. Se utiliza sobretodo para evaluar las condiciones de sequía o exceso de precipitación. Su ecuación es:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                               <mi>SPI</mi>
-                               <mo>=</mo>
-                               <mfrac>
-                                  <mrow>
-                                     <mi>P</mi>
-                                     <mo>-</mo>
-                                     <mi>P</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                                  <mrow>
-                                     <mi>σ</mi>
-                                  </mrow>
-                               </mfrac>
-                            </math>
-                        </p>
-                        <p class="home_app_ventana_info--text">Los valores del SPI oscilan entre -3 y +3, donde los valores más altos indican condiciones de exceso de precipitación o mayor humedad. Un SPI cerca de 0 indica condiciones climáticas cercanas a la media histórica de precipitación, mientras valores negativos indican condiciones de sequía. Cuanto más negativo sea el valor, más severa será la sequía.</p>
-                        
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Standardized Precipitation Evapotranspiration Index (SPEI)</h2>
-                        <p class="home_app_ventana_info--text">El <strong>Standardized Precipitation Evapotranspiration Index (SPEI)</strong> es un índice de aridez que tiene en cuenta tanto la precipitación como la evapotranspiración. Al igual que el SPI, el SPEI mide las anomalías en relación con una distribución de referencia, pero también considera las necesidades de agua de las plantas, a través de la evapotranspiración. Su ecuación es:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                               <mi>SPEI</mi>
-                               <mo>=</mo>
-                               <mfrac>
-                                  <mrow>
-                                     <mi>P</mi>
-                                     <mo>-</mo>
-                                     <mi>P</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                     <mo>-</mo>
-                                     <mi>E</mi>
-                                     <mo>-</mo>
-                                     <mi>E</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                                  <mrow>
-                                     <mi>σ</mi>
-                                  </mrow>
-                               </mfrac>
-                            </math>
-                        </p>
-                        <p class="home_app_ventana_info--text">El SPEI tiene un comportamiento muy similar al SPI. Sus valores varían entre -3 y +3, con valores negativos que indican condiciones secas y valores positivos que indican una mayor presencia de agua.</p>
-
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Vegetation Condition Index (VCI)</h2>
-                        <p class="home_app_ventana_info--text">El <strong>Vegetation Condition Index (VCI)</strong> se basa en la diferencia entre el índice de vegetación observado (por ejemplo, NDVI o EVI) y la media histórica, normalizando el resultado dentro de un rango predefinido. El VCI se utiliza con frecuencia para monitorear el estrés de las plantas y la disponibilidad de agua en el suelo. Su ecuación es:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                               <mi>VCI</mi>
-                               <mo>=</mo>
-                               <mfrac>
-                                  <mrow>
-                                     <mi>NDVI</mi>
-                                     <mo>-</mo>
-                                     <mi>NDVI</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                                  <mrow>
-                                     <mi>NDVI</mi>
-                                     <mo>-</mo>
-                                     <mi>NDVI</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>min</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                               </mfrac>
-                            </math>
-                        </p>
-                        <p class="home_app_ventana_info--text">El VCI se normaliza generalmente en un rango de 0 a 100, con valores bajos que indican estrés hídrico y valores altos que indican una condición saludable de la vegetación o en general buenas condiciones de humedad en el suelo.</p>
-
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Temperature Condition Index (TCI)</h2>
-                        <p class="home_app_ventana_info--text">Temperature Condition Index (TCI)</strong> es un índice que mide las condiciones térmicas. Puede basarse en la temperatura media, máxima o mínima, y evalúa las anomalías en relación con la media histórica. Se puede utilizar para monitorear los efectos de las temperaturas extremas o el estrés térmico en los cultivos. Su ecuación es:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                               <mi>TCI</mi>
-                               <mo>=</mo>
-                               <mfrac>
-                                  <mrow>
-                                     <mi>T</mi>
-                                     <mo>-</mo>
-                                     <mi>T</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                                  <mrow>
-                                     <mi>T</mi>
-                                     <mo>-</mo>
-                                     <mi>T</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>min</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                               </mfrac>
-                            </math>
-                        </p>
-                        <p class="home_app_ventana_info--text">El TCI no tiene valores límites específicos, ya que depende de la referencia y de el cálculo utilizado. Generalmente, valores altos indican condiciones de calor extremo o estrés térmico para las plantas, mientras que valores bajos indican condiciones de temperatura moderada y favorables para el crecimiento de las plantas.</p>
-
-                        <h2 class="home_app_ventana_info--subtitle--app_page">Soil Vegetation Index (SVI)</h2>
-                        <p class="home_app_ventana_info--text">El <strong>Soil Vegetation Index (SVI)</strong>es un índice que proporciona información sobre la salud y las condiciones de la vegetación, en relación con la disponibilidad de agua en el suelo. Se calcula utilizando índices de vegetación y datos de humedad del suelo, según la siguiente ecuación:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                               <mi>SVI</mi>
-                               <mo>=</mo>
-                               <mfrac>
-                                  <mrow>
-                                     <mi>NDVI</mi>
-                                     <mo>-</mo>
-                                     <mi>NDVI</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>t</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                                  <mrow>
-                                     <mi>NDVI</mi>
-                                     <mo>-</mo>
-                                     <mi>NDVI</mi>
-                                     <msub>
-                                        <mo>(</mo>
-                                        <mi>min</mi>
-                                        <mo>)</mo>
-                                     </msub>
-                                  </mrow>
-                               </mfrac>
-                            </math>
-                        </p>
-                        <p class="home_app_ventana_info--text">Este índice se normaliza generalmente en un rango de 0 a 1 o de 0 a 100. Su interpretación es opuesta a la del TCI, con valores bajos que indican estrés hídrico y valores altos que indican buenas condiciones de humedad del suelo y vegetación.</p>
+                     <p class="home_app_ventana_info--text">A través de la siguiente aplicación es posible calcular calcular una serie de índices comúnmente utilizados para estimar el grado de sequía. Estos índices son: Vegetation Condition Index (VCI), Thermal Condition Index (TCI) y Vegetation Health Index (VHI).</p>
+                     <p class="home_app_ventana_info--text">Para ello, se han utilizado los productos 'MOD09GA.061 Terra Surface Reflectance Daily Global 1km and 500m<sup class="ref_sup">2</sup>' y 'MOD11A1.061 Terra Land Surface Temperature and Emissivity Daily Global 1km<sup class="ref_sup">4</sup>' de MODIS.</p>
+                     <h2 class="home_app_ventana_info--subtitle--app_page">Vegetation Condition Index (VCI)</h2>
+                     <p class="home_app_ventana_info--text">El Índice de Condición de la Vegetación (VCI) compara el NDVI actual con el rango de valores observados en el mismo período en años anteriores<sup class="ref_sup">5</sup>. Se expresa en porcentajes, variando de 0%, para condiciones extremadamente desfavorables, a 100%, para condiciones óptimas. El VCI permite detectar la sequía y medir su inicio, intensidad, duración e impacto en la vegetación. Su ecuación es la siguiente:</p>
+                     <div class="home_app_ventana_info--img_container">
+                        <img src="../../images/data/ecuaciones/vci_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                     </div>
+                     <p class="home_app_ventana_info--text">donde NDVI<sub>MAX</sub> y NDVI<sub>MIN</sub> son los valores medios máximos y mínimos del NDVI obtenidos para cada período de cada año en la serie temporal de 2003 a 2023, y NDVI es el valor medio del NDVI obtenido para cada imagen MODIS en el intervalo de fechas seleccionado.</p>
+                     <h2 class="home_app_ventana_info--subtitle--app_page">Thermal Condition Index (TCI)</h2>
+                     <p class="home_app_ventana_info--text">El TCI se utiliza para determinar el estrés en la vegetación causado por las temperaturas y el exceso de humedad. Este índice estima las condiciones en función de las temperaturas máximas y mínimas, ajustándose para reflejar las diferentes respuestas de la vegetación a la temperatura. Varía de 0, indicando condiciones extremadamente desfavorables, a 100, indicando condiciones óptimas. El TCI se basa en la observación de la temperatura de la superficie terrestre (LST) mediante teledetección en el infrarrojo térmico (TIR)<sup class="ref_sup">6</sup> y se calcula como:</p>
+                     <div class="home_app_ventana_info--img_container">
+                        <img src="../../images/data/ecuaciones/tci_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                     </div>
+                     <p class="home_app_ventana_info--text">LST<sub>MAX</sub> y LST<sub>MIN</sub> son las temperaturas de superficie terrestre máxima y mínima, calculadas a partir de los datos del satélite de los últimos 20 años, desde 2003 hasta 2023. Se obtienen tomando los valores máximos y mínimos de cada temporada de cada año y haciendo una media de ellos. Por otro lado, LST es el valor medio de la temperatura de superficie terrestre obtenido en el intervalo de fechas seleccionado.</p>
+                     <h2 class="home_app_ventana_info--subtitle--app_page">Vegetation Health Index (VHI)</h2>
+                     <p class="home_app_ventana_info--text">El índice de salud de la vegetación (VHI) es uno de los índices más populares para el monitoreo de sequías mediante teledetección<sup class="ref_sup">7</sup>. Este índice se compone de dos elementos clave, el índice de condición de la vegetación (VCI) y el índice de condición térmica (TCI). El VHI se fundamenta en dos principios: un NDVI bajo y una alta LST sugieren una mala salud de la vegetación, y que las demás contribuciones ambientales son despreciables.</p>
+                     <p class="home_app_ventana_info--text">Al integrar el VCI y el TCI, el VHI refleja de manera indirecta una combinación del contenido de clorofila y humedad en la salud de la vegetación, así como los cambios en las condiciones térmicas en la superficie. De este modo, se consideran las condiciones biofísicas y climáticas locales, lo que permite un monitoreo preciso de la sequía en las plantas en diversas regiones agrometeorológicas y se estima a partir de la siguiente ecuación:</p>
+                     <div class="home_app_ventana_info--img_container">
+                        <img src="../../images/data/ecuaciones/vhi_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                     </div>
+                     <p class="home_app_ventana_info--text">donde 'a' determina las contribuciones del VCI y el TCI al VHI, que varían dependiendo del entorno del área de estudio. En este caso, asumimos contribuciones iguales de la demanda de agua y la temperatura durante el crecimiento de las plantas, por lo que asignamos al coeficiente 'a' un valor de 0.5. El VHI varía de 0 a 100, caracterizando cambios en las condiciones de la vegetación desde extremadamente pobres (0) hasta excelentes (100).</p>
                     </div>
                 </div>
             </div>

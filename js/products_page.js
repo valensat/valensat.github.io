@@ -40,7 +40,8 @@ var pageConfig = {
     'riesgo': 1,
     'evapo': 1.7,
     'sequias': 2.4,
-    'heladas': 1
+    'heladas': 1,
+    'indices': 1.8
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 

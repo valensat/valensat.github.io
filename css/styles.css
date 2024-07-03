@@ -1957,6 +1957,36 @@ body {
     font-weight: 600;
 }
 
+.content_6img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.content_6img--inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0 20px;
+}
+
+.content_6img--img{
+    box-shadow: 0px 0px 20px 3px #001A49;
+    width: 190px;
+    height: 60vh;
+}
+
+.content_6img--text{
+    color: #001A49;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
 /* ####################################### */
 /* ####################################### */
 /* ####################################### */
@@ -2083,6 +2113,18 @@ body {
 /* ####################################### */
 
 
+/* ####################################### */
+/* ############### SEQUÍAS ############### */
+/* ####################################### */
+
+.img_sequias--ind{
+    padding: 40px 0;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
+
 
 
 
@@ -2143,6 +2185,13 @@ body {
     display: block;
     line-height: 1.7;
     padding-top: 15px;
+}
+
+.about_paragraph--list{
+    display: block;
+    line-height: 1.7;
+    padding-top: 15px;
+    padding-left: 20px;
 }
 
 .about_paragraph--link{
