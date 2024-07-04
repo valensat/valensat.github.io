@@ -558,6 +558,11 @@ body {
     padding-top: 15px;
 }
 
+.home_app_ventana_info--textlist{
+    line-height: 1.7;
+    padding-top: 15px;
+}
+
 .home_app_ventana_info--highlight {
     display: block;
     line-height: 1.7;
