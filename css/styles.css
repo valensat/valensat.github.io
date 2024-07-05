@@ -2131,7 +2131,28 @@ body {
 /* ####################################### */
 
 
+/* ####################################### */
+/* ########## CALIDAD DEL AGUA ########### */
+/* ####################################### */
 
+.img_calidad--container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+}
+
+.img_calidad--container_inside{
+    width: 40%;
+    box-shadow: 0px 0px 20px 3px #001A49;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
 
 
