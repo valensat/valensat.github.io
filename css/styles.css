@@ -2964,6 +2964,70 @@ tr td:first-child{
 }
 
 
+/* land cover */
+.container_banner--lc{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 10px 0;
+    /* flex-direction: column; */
+}
+
+
+.container_banner--lc_left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph_donut_lc{
+    height: 70%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph_donut_lc--inside{
+    height: 70%;
+    width: 70%;
+}
+
+.container_banner--lc_right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph_bar_lc{
+    height: 100%;
+    width: 100%;
+}
+
+.graph_bar_lc--inside{
+    height: 100%;
+    width: 100%;
+}
+
+.banner_lc--legend{
+    margin-right: auto;
+    margin-left: auto;
+    height: 50%;
+    width: max-content;
+    position: relative;
+    top: calc(0px - 5vh)
+}
+
 
 /* .graph_donut,
 .graph_bar {

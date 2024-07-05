@@ -41,7 +41,8 @@ var pageConfig = {
     'evapo': 1.7,
     'sequias': 2.4,
     'heladas': 1,
-    'indices': 1.8
+    'indices': 1.8,
+    'landcover': 2.2
     // Agrega aquí más páginas y sus valores de multiplicación
 };
 

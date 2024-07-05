@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>App | Land Cover | VALENSAT</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <section class="app_page">
+        <div class="app_page_title">
+            <p class="app_page_title--title">
+                Split-panel del Land Cover entre 1984 y 2022
+            </p>
+        </div>
+
+        <div class="app_page_map">
+            <div class="container_home_app_map">
+                <iframe src="https://valensatproject.users.earthengine.app/view/splitpanellandsat" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+            </div>
+        </div>
+
+        <div class="app_page_footer">
+            <h3 class="app_page_footer--footer" id="footerTrigger">Pincha aquí para obtener más información sobre la app.</h3>
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="home_app_ventana_info" id="infoPopup">
+                <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
+                <div class="about">
+                    <div class="home_app_ventana_info--container">
+                        <h2 class="home_app_ventana_info--title--app_page">Land Cover</h2>
+                        <p class="home_app_ventana_info--text">Esta aplicación muestra una pantalla dividida que permite comparar visualmente el cambio del uso del suelo en la Comunidad Valenciana entre el año 2022 (izquierda) y los otros años disponibles (derecha).</p>
+                        <p class="home_app_ventana_info--text">Con el fin de monitorear el cambio del uso del suelo en la Comunidad Valenciana durante los últimos 40 años, se han realizado clasificaciones utilizando imágenes de Landsat 5, 8 y 9, que tienen una resolución espacial de 30 metros. Las imágenes de Landsat 7 fueron descartadas debido a problemas de corrección de ruido. Para reducir la probabilidad de encontrar píxeles nublados en las imágenes y mitigar el impacto de las variaciones estacionales pronunciadas, solo se analizaron las imágenes de verano, adquiridas del 1 de junio al 30 de septiembre. Se utilizaron imágenes de Landsat 5 para los años 1984, 1985, 1990, 1995, 2000, 2005 y 2010, mientras que se usaron imágenes de Landsat 8 para los años 2015 y 2020, y de Landsat 9 para 2022.</p>
+                        <p class="home_app_ventana_info--text">Los productos utilizados fueron 'USGS Landsat 5 Level 2, Collection 2, Tier 1<sup class="ref_sup">1</sup>', 'USGS Landsat 7 Level 2, Collection 2, Tier 1<sup class="ref_sup">2</sup>', 'USGS Landsat 8 Level 2, Collection 2, Tier 1<sup class="ref_sup">3</sup>' y 'USGS Landsat 9 Level 2, Collection 2, Tier 1<sup class="ref_sup">4</sup>', que ofrecen valores de reflectividad cada 16 días con una resolución espacial de 30 m.</p>
+                        <p class="home_app_ventana_info--text">Para la clasificación, se utilizó el algoritmo de clasificación supervisada Random Forest, con 150 árboles de decisión y un conjunto de datos de entrada superior a 1000 puntos por año. Se evaluó la capacidad del satélite para distinguir entre diferentes tipos de coberturas del suelo y se eligieron cinco clases: agua, urbano, vegetación verde, vegetación seca y otros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger');
+        var infoPopup = document.getElementById('infoPopup');
+        var closePopup = document.getElementById('closePopup');
+        var modalOverlay = document.getElementById('modalOverlay');
+        var body = document.body;
+    
+        footerTrigger.addEventListener('click', function() {
+        modalOverlay.style.display = 'block';
+        infoPopup.style.display = 'block';
+        setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+        }, 10);
+        body.classList.add('no-scroll');
+        });
+    
+        function closePopupAndOverlay() {
+        infoPopup.classList.remove('visible');
+        modalOverlay.classList.remove('visible');
+        modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+        }, { once: true });
+        body.classList.remove('no-scroll');
+        }
+    
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+    
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopupAndOverlay();
+        }
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

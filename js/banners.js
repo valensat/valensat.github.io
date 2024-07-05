@@ -149,3 +149,77 @@
     }
   });
 })();
+
+
+
+
+
+// LAND COVER
+// (function(){
+//   const ctx = document.getElementById('lcCV');
+
+//   new Chart(ctx, {
+//     type: 'doughnut',
+//     data: {
+//       labels: ['Castellónbjds', 'Valencia', 'Alicante'],
+//       datasets: [{
+//         // label: 'Incendios',
+//         data: [756.5, 1339.5, 298.25],
+//         backgroundColor: [
+//           'rgb(255, 99, 132)',
+//           'rgb(54, 162, 235)',
+//           'rgb(255, 205, 86)'
+//         ],
+//         hoverOffset: 25,
+//         hoverBorderColor: '#272525',
+//       }]
+//     },
+//     options: {
+//       layout: {
+//         padding: {
+//           right: 6
+//         }
+//       },
+//       plugins: {
+//         title:{
+//           display: false,
+//           text: 'km² quemados por provincia',
+//           font: {
+//             size: 18
+//           }
+//         },
+//         legend: {
+//           position: 'left',
+//           labels: {
+//             font: {
+//               size: 16
+//             }
+//           }
+//         },
+//         tooltip: {
+//           callbacks: {
+//             label: function(context) {
+//               var label = context.label || '';
+//               var value = context.dataset.data[context.dataIndex] || 0;
+//               var total = context.dataset.data.reduce(function(acc, cur) {
+//                 return acc + cur;
+//               }, 0);
+//               var percentage = Math.round(value / total * 10000) / 100;
+
+//               return label + ': ' + value.toFixed(2) + ' km² (' + percentage.toFixed(0) + '%)';
+//             },
+//             title: function() {
+//               return '';
+//             }
+//           },
+//           backgroundColor: 'rgba(36, 64, 114, 0.9)',
+//           bodyFont: {
+//             size: 13
+//           },
+//           padding: 8,
+//           boxPadding: 4
+//         }
+//       }
+//     }
+//   });
+// })();
