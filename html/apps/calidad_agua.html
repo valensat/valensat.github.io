@@ -54,65 +54,30 @@
                     <div class="home_app_ventana_info--container">
                         <h2 class="home_app_ventana_info--title--app_page">Calidad del agua</h2>
                         <p class="home_app_ventana_info--text">En nuestra aplicación, te ofrecemos una manera sencilla y accesible de estimar la calidad del agua. Para ello, utilizamos tres indicadores clave: el NDCI, que nos brinda información sobre la clorofila, y el TSS y la transparencia, que nos ayudan a evaluar la turbidez del agua. Utilizamos imágenes de Sentinel-2, aprovechando su alta resolución, lo cual resulta especialmente beneficioso al estudiar lagos y embalses de menor tamaño. Para ello se utilizó el producto de Sentinel-2: 'Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A<sup class="ref_sup">1</sup>' y se han enmascarado las nubes.</p>
-                        <p class="home_app_ventana_info--text">Antes de hablar de qué índices nos sirven para estudiar, la bibliografía nos dice que existe una bipartición en la clasificación de tipos de aguas: las aguas tipo 1 y tipo 2sup class="ref_sup">2</sup>.</p>
+                        <p class="home_app_ventana_info--text">Antes de hablar de qué índices nos sirven para estudiar, la bibliografía nos dice que existe una bipartición en la clasificación de tipos de aguas: las aguas tipo 1 y tipo 2<sup class="ref_sup">2</sup>.</p>
                         <p class="home_app_ventana_info--text"><strong>Aguas tipo 1:</strong> Son aquellas aguas en las que el fitoplancton (que convierte CO2 y H2O en O2) es el responsable de la producción primaria.</p>
                         <p class="home_app_ventana_info--text"><strong>Aguas tipo 2:</strong> Corresponden a las aguas turbias, donde no solo el fitoplancton es un factor fundamental. Aquí, constituyentes como materia totalmente suspendida (TSM), materia orgánica disuelta (CDOM), o la transparencia (SD) son igual de importantes y sus efectos no pueden ser negligibles.</p>
                         <p class="home_app_ventana_info--text">En la Comunidad Valenciana tenemos diversos embalses, ríos y zonas de costa que podemos clasificar en estos dos tipos de agua. En el caso particular de la Albufera, que ha sido extensamente estudiada y existe un gran número de referencias sobre ella, sabemos que se trata de un agua tipo 2. Esto implica que para estimar de forma adecuada la calidad del agua debemos incorporar diferentes indicadores que tengan en cuenta todos los factores que afecten en mayor medida en la Albufera, y no solo aquellos que se relacionen con la biomasa del fitoplancton.</p>
                         <h2 class="home_app_ventana_info--subtitle--app_page">Normalized Difference Chlorophyll Index (NDCI)</h2>
                         <p class="home_app_ventana_info--text">La clorofila a (chl-a) es el principal pigmento del fitoplancton, por lo que es un gran indicador para determinar la claridad del agua. Su reflectividad en el espectro es el siguiente:</p>
-                        <div class="div_table">
-                            <img src="../../images/agua/clorofila_espectrum.png" alt="Curvas espectrales de absorción de la clorofila-a y la clorofila-b" class="image_table_calidad">
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/graficos/cloro_graf.png" alt="" class="home_app_ventana_info--tabla">
                             <p class="title_img">Curvas espectrales de absorción de la clorofila-a y la clorofila-b</p>
                         </div>
                         <p class="home_app_ventana_info--text">Al ver este espectro, se propuso un índice que relacionara dos bandas que permitiera detectar uno de los picos de absorción. Así, al igual que el NDVI o el NDWI, aparece el Normalized Difference Clorophyll Index o NDCI, un indicador normalizado con rango de -1 a 1. En el caso de estudiar el índice en Sentinel-2, elegimos las bandas 4 y 5 (en λ = 665nm y λ =705nm respectivamente) para estudiar la diferencia del segundo pico.</p>
-                        <p>
-                            <math display="block" class="formulas">
-                                <mrow>
-                                    <mi>NDCR</mi>  
-                                    <mo>=</mo>
-                                    <mfrac>
-                                        <mrow>
-                                        <mi>B5</mi>
-                                        <mo>-</mo>
-                                        <mi>B4</mi>
-                                        </mrow>
-                                        <mrow>
-                                        <mi>B5</mi>
-                                        <mo>+</mo>
-                                        <mi>B4</mi>
-                                        </mrow>
-                                    </mfrac>
-                                </mrow>
-                          </math>
-                        </p>
-                        
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/ndci_ec.PNG" alt="" class="home_app_ventana_info--tabla">
+                        </div>
                         <h2 class="home_app_ventana_info--subtitle--app_page">Normalized Difference Turbidity Index (NDTI)</h2>
                         <p class="home_app_ventana_info--text">El índice de turbidez de diferencia de normalización (NDTI), que se estima utilizando los valores de reflectancia espectral de los píxeles de agua, se utiliza para estimar la turbidez en los cuerpos de agua. Utiliza el fenómeno de que la reflectancia electromagnética es mayor en el espectro verde que en el espectro rojo para el agua clara. Por lo tanto, con el aumento de la turbidez también aumenta la reflectancia del espectro rojo. Su ecuación es:</p>
-                        <p>
-                            <math display="block" class="formulas">
-                                <mi>NDVI</mi>
-                                <mo>=</mo>
-                                <mfrac>
-                                    <mrow>
-                                        <mi>RED</mi>
-                                        <mo>&#x2212;</mo>
-                                        <mi>GREEN</mi>
-                                    </mrow>
-                                    <mrow>
-                                        <mi>RED</mi>
-                                        <mo>+</mo>
-                                        <mi>GREEN</mi>
-                                    </mrow>
-                                </mfrac>
-                            </math>
-                        </p>
-
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/ndti_ec.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
                         <h2 class="home_app_ventana_info--subtitle--app_page">Total Suspended Solids (TSS)</h2>
                         <p class="home_app_ventana_info--text">La reflectividad del agua aumenta proporcionalmente con el aumento de la concentración de cualquier tipo de sólidos y partículas en la parte del espectro comprendida entre 400 y 1000 nm. Dependiendo del tamaño y las propiedades de la partícula, tendremos una respuesta espectral distinta. Por ejemplo, si las partículas son inorgánicas y de origen arcilloso, a más concentración de partículas más reflectividad habrá en la zona del rojo.</p>
-                        <p class="home_app_ventana_info--text">Por esto, el TSS es un parámetro util a estimar la calidad del agua, como el agua de mar o aguas residuales después de tratamientos de depuracion. Doña et al. (2015) <sup><a href="#ref" class="ref_text">1</a></sup> lograron obtener una buena relación entre las particulas y la banda TM4 de Landsat para obtener el indicador de TSS, que se utilizó para calcular el índice en la aplicación.</p>
-                        <p class="home_app_ventana_info--text">La siguiente tabla muestra los resultados de los algoritmos presentados por Doña en comparación con otros.</p>
-                        <div class="div_table">
-                            <img src="../../images/agua/Algoritmo_Doña.png" alt="" class="image_fig">
+                        <p class="home_app_ventana_info--text">Por esto, el TSS es un parámetro util a estimar la calidad del agua, como el agua de mar o aguas residuales después de tratamientos de depuracion. Se puede calcular como<sup class="ref_sup">3</sup>:</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/tss_ec.PNG" alt="" class="home_app_ventana_info--tablalarga">
                         </div>
                     </div>
                 </div>
