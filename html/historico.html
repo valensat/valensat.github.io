@@ -29,6 +29,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -152,28 +155,54 @@
                 <ul class="menu_product_page">
                 <li class="menu-item_product_page" onclick="showSection('ciencia_product_page')">Ciencia</li>
                 <li class="menu-item_product_page" onclick="showSection('productos_product_page')">Productos Interactivos</li>
-                <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li>
+                <!-- <li class="menu-item_product_page" onclick="showSection('descargable_product_page')">Contenido Descargable</li> -->
+                <li class="menu-item_product_page" onclick="showSection('referencias_product_page')">Referencias</li>
                 </ul>
             </div>
 
             <div class="all_sections-container_product_page">
                 <div class="section-container_product_page">
                     <div id="ciencia_product_page" class="content-section_product_page">
-                        
+                        <p class="about_paragraph">Los datos climatológicos son registros de las condiciones atmosféricas en un lugar y tiempo específicos, incluyendo variables como temperatura, precipitación, humedad, viento y presión atmosférica. Estos datos son esenciales para comprender el clima de una región, prever eventos meteorológicos, y estudiar cambios y patrones climáticos a lo largo del tiempo. La recopilación y el análisis de datos climatológicos son fundamentales para la agricultura, la planificación urbana, la gestión de recursos hídricos, y la mitigación de desastres naturales.</p>
+                        <div class="img_clima--container">
+                            <img src="../images/images_products/inside/temp_color.gif" alt="" class="img_clima--container_img">
+                        </div>
+                        <p class="ref_banner">Temperatura media en Valencia entre 1973 y 2022. Información obtenida de la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p>
+                        <p class="about_paragraph">La Comunidad Valenciana se caracteriza por un clima mediterráneo, con veranos cálidos y secos, e inviernos suaves y relativamente húmedos. Las temperaturas medias anuales varían desde los 15°C en las zonas interiores hasta los 18°C en las áreas costeras. Las precipitaciones son irregulares y, a menudo, se concentran en episodios torrenciales durante el otoño, lo que puede causar inundaciones. Las sequías son frecuentes en esta región, especialmente durante los meses de verano, lo que tiene un impacto significativo en la agricultura y el suministro de agua.</p>
+                        <p class="about_paragraph">La Agencia Estatal de Meteorología (AEMET)<sup class="ref_sup">1</sup> es el organismo encargado de la observación, estudio y predicción del clima en España. AEMET proporciona servicios meteorológicos y climatológicos esenciales para la seguridad y bienestar de la sociedad. Sus funciones incluyen la emisión de previsiones meteorológicas, alertas de fenómenos adversos, y el monitoreo continuo del clima. Además, AEMET colabora en proyectos de investigación climática y proporciona datos históricos y actuales que son vitales para la planificación y la toma de decisiones en diversos sectores, desde la agricultura hasta la aviación.</p>
+                        <div class="img_clima2--container">
+                            <canvas id="clim_ombro_medio"></canvas>
+                        </div>
+                        <p class="ref_banner">Diagrama ombrotérmico en Valencia. Valores medios de temperatura y precipitación entre 1973 y 2022. Información obtenida de la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a></p>
+                        <p class="about_paragraph">La Asociación Valenciana de Meteorología (AVAMET)<sup class="ref_sup">2</sup> es una entidad que reúne a aficionados y profesionales interesados en la meteorología en la Comunidad Valenciana. AVAMET proporciona una red de estaciones meteorológicas que ofrecen datos detallados y en tiempo real sobre las condiciones climáticas locales. Estos datos son accesibles a través de su plataforma online, lo que permite a los usuarios consultar información sobre temperatura, humedad, precipitación, y otros parámetros. Además de la recopilación y difusión de datos meteorológicos, AVAMET organiza actividades educativas y de divulgación para fomentar el conocimiento y la pasión por la meteorología entre la población.</p>
 
+                    </div>
+                    
+                    <div id="productos_product_page" class="content-section_product_page">
+                        <p class="about_paragraph">En el apartado <a href="../html/tiemporeal.html" target="_blank" class="about_paragraph--link">TIEMPO REAL</a> de nuestra página web, ofrecemos una funcionalidad avanzada que utiliza una API de AEMET para proporcionar datos climatológicos precisos de la estación seleccionada. Esto incluye información detallada sobre las condiciones actuales y la predicción del tiempo para la próxima semana. Además, contamos con otra API de AVAMET que muestra valores climatológicos de la estación seleccionada, permitiendo a los usuarios acceder a un registro completo de datos meteorológicos.</p>
+                        <p class="about_paragraph">También hemos desarrollado una aplicación que muestra un mapa interactivo de las estaciones de AVAMET y AEMET en la Comunidad Valenciana. Al seleccionar una de estas estaciones en el mapa, los usuarios son dirigidos directamente a la página específica de la estación, donde pueden consultar todos sus datos y características en detalle. Esto facilita el acceso a información precisa y localizada sobre las condiciones meteorológicas.</p>
+                        <p class="about_paragraph">Si desean obtener más información sobre datos climatológicos o conocer más sobre cómo se recogen estos datos, les recomendamos visitar las páginas web de AEMET y AVAMET, donde encontrarán recursos adicionales y explicaciones detalladas sobre la recopilación y el análisis de datos meteorológicos.</p>
+                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
+                        <div class="botones_productos_product_page">
+                            <a href="../html/tiemporeal.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/tiemporeal.PNG')">
+                                <div class="button-content">Visita nuestro apartado de TIEMPO REAL</div>
+                            </a>
+                            <a href="./apps/estaciones.html" target="_blank" class="btn" style="background-image: url('../../images/images_products/apps/estaciones.PNG')">
+                                <div class="button-content">Mapa de estaciones de AEMET y AVAMET</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- <div id="descargable_product_page" class="content-section_product_page">
+                        <h1 class="productos_title_section">Contenido descargable</h1>
+                    </div> -->
+
+                    <div id="referencias_product_page" class="content-section_product_page">
                         <h3 class="subtitle_ref" id="ref">Referencias</h3>
                         <p class="about_paragraph--ref">1. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                         <p class="about_paragraph--ref">2.  <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                         <p class="about_paragraph--ref">3. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
                         <p class="about_paragraph--ref">4. <a href="" target="_blank" class="footer_map--link"><img src="../images/link.svg" alt="link" class="link_ref" title="Abrir referencia"></a></p>
-                    </div>
-                    
-                    <div id="productos_product_page" class="content-section_product_page">
-                        <h1 class="productos_title_section">Productos interactivos disponibles</h1>
-                    </div>
-                    
-                    <div id="descargable_product_page" class="content-section_product_page">
-                        <h1 class="productos_title_section">Contenido descargable</h1>
                     </div>
                 </div>
 
@@ -287,5 +316,6 @@
     <script src="../js/slider.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/chart.js"></script>
+    <script src="../js/datos_clim.js"></script>
 </body>
 </html>

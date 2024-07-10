@@ -44,6 +44,7 @@ var pageConfig = {
     'indices': 1.8,
     'landcover': 2.2,
     'costa': 1,
+    'historico': 1.7,
     'calidad': 1.7
     // Agrega aquí más páginas y sus valores de multiplicación
 };

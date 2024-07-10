@@ -39,13 +39,13 @@
     }).addTo(map);
 
     var estIcon = L.icon({
-        iconUrl: '../images/radio.svg',  
+        iconUrl: '../../images/radio.svg',  
         iconSize:     [25, 25], // size of the icon
         popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
     });
 
     var estIcon2 = L.icon({
-        iconUrl: '../images/radio2.svg',  
+        iconUrl: '../../images/radio2.svg',  
         iconSize:     [25, 25], // size of the icon
         popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
     });

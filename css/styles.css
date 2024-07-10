@@ -828,6 +828,34 @@ body {
     cursor: pointer;
 }
 
+.app_page_title_est{
+    height: 7%;
+    background-color: rgba(242, 242, 240, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app_page_footer_est{
+    height: 7%;
+    background-color: rgba(242, 242, 240, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app_page_footer--footer_est{
+    color: #2c303f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: rgba(242, 242, 240, 1);
+    /* cursor: pointer; */
+}
+
 .app_page_footer--footer:hover{
     color: #E48716;
     text-decoration: underline;
@@ -2155,7 +2183,38 @@ body {
 /* ####################################### */
 
 
+/* ####################################### */
+/* ######## DATOS CLIMATOLOGICOS ######### */
+/* ####################################### */
 
+.img_clima--container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+}
+
+.img_clima--container_img{
+    width: 60%;
+    /* box-shadow: 0px 0px 20px 3px #001A49; */
+}
+
+.img_clima2--container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+}
+
+/* ####################################### */
+/* ####################################### */
+/* ####################################### */
 
 
 
@@ -3304,7 +3363,7 @@ tr td:first-child{
 .mapa_estaciones{
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0.8em;
+    /* border-radius: 0.8em; */
 }
 
 #mapid {
@@ -3313,8 +3372,8 @@ tr td:first-child{
   }
 
 #map {
-    height: 800px;
-    width: 600px;
+    height: 100%;
+    width: 100%;
     }
 
 .url_popup_map{

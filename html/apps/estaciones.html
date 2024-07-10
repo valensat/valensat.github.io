@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <title>App | Datos Climatológicos | VALENSAT</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+</head>
+<body>
+
+    <section class="app_page">
+        <div class="app_page_title_est">
+            <p class="app_page_title--title">
+                Estaciones de AEMET y AVAMET en la Comunidad Valenciana
+            </p>
+        </div>
+
+        <div class="app_page_map">
+            <div class="container_home_app_map">
+                <div id="map" class="mapa_estaciones"></div>
+            </div>
+            <div id="map-legend">
+                <ul class="leyenda_mapa">
+                    <li class="leyenda_mapa--item"><img src="../images/radio.svg" alt=""><span class="leyenda_mapa--items">Estaciones de <span class="leyenda_mapa--items_item_1">AVAMET</span></span></li>
+                    <li class="leyenda_mapa--item"><img src="../images/radio2.svg" alt=""><span class="leyenda_mapa--items">Estaciones de <span class="leyenda_mapa--items_item_2">AEMET</span></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="app_page_footer_est">
+            <h3 class="app_page_footer--footer_est">Información obtenida de la Agencia Estatal de Meteorología, ©<a href="https://www.aemet.es/es/portada" target="_blank" class="enlace_ref">AEMET</a> y de la Associació Valenciana de Meteorologia Josep Peinado, ©<a href="https://www.avamet.org/" target="_blank" class="enlace_ref">AVAMET</a></h3>
+        </div>
+    </section>
+
+    <script src="../../js/mapa_estaciones.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger');
+        var infoPopup = document.getElementById('infoPopup');
+        var closePopup = document.getElementById('closePopup');
+        var modalOverlay = document.getElementById('modalOverlay');
+        var body = document.body;
+    
+        footerTrigger.addEventListener('click', function() {
+        modalOverlay.style.display = 'block';
+        infoPopup.style.display = 'block';
+        setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+        }, 10);
+        body.classList.add('no-scroll');
+        });
+    
+        function closePopupAndOverlay() {
+        infoPopup.classList.remove('visible');
+        modalOverlay.classList.remove('visible');
+        modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+        }, { once: true });
+        body.classList.remove('no-scroll');
+        }
+    
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+    
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopupAndOverlay();
+        }
+        });
+    });
+    </script>
+    
+
+</body>
+</html>

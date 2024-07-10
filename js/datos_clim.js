@@ -1,7 +1,8 @@
 (function(){ 
-    var T_hist = [10.122, 11.182, 13.162, 15.196, 18.642, 22.746, 25.554, 25.85, 22.944, 18.668, 13.892, 11.004];
+    // var T_hist = [10.122, 11.182, 13.162, 15.196, 18.642, 22.746, 25.554, 25.85, 22.944, 18.668, 13.892, 11.004];
+    var T_hist = [10.1, 11.2, 13.2, 15.2, 18.6, 22.7, 25.6, 25.9, 22.9, 18.7, 13.9, 11.0];
     var y_meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-    var prec_hist = [36.1808, 29.7778, 38.0534, 43.4782, 38.3594, 21.8132, 13.4726, 18.344, 52.1952, 61.8364, 51.615, 43.9318];
+    var prec_hist = [36.2, 29.8, 38.1, 43.5, 38.4, 21.8, 13.5, 18.3, 52.2, 61.8, 51.6, 43.9];
 
     const data = {
         labels: y_meses,
@@ -78,7 +79,7 @@
     
     // render init block
     const myChart = new Chart(
-    document.getElementById('clim_medio'),
+    document.getElementById('clim_ombro_medio'),
     config
     );
 })();
