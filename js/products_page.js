@@ -40,7 +40,7 @@ var pageConfig = {
     'riesgo': 1,
     'evapo': 1.7,
     'sequias': 2.5,
-    'heladas': 1,
+    'heladas': 1.7,
     'indices': 1.8,
     'landcover': 2.2,
     'costa': 1,

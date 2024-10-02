@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/styles.css">
 
-    <title>App | Land Cover | VALENSAT</title>
+    <title>App | Heladas | VALENSAT</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicon/apple-icon-60x60.png">
@@ -35,13 +35,13 @@
     <section class="app_page">
         <div class="app_page_title">
             <p class="app_page_title--title">
-                Split-panel del Land Cover entre 1984 y 2022
+                Intensidad de daño por heladas en cítricos entre 2004 y 2023
             </p>
         </div>
 
         <div class="app_page_map">
             <div class="container_home_app_map">
-                <iframe src="https://valensatproject.users.earthengine.app/view/splitpanellandsat" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
+                <iframe src="https://valensatproject.users.earthengine.app/view/intensidaddaoheladas" name="targetframe2" allowTransparency="true" scrolling="no" frameborder="0" class="mapapp"></iframe>
             </div>
         </div>
 
@@ -52,13 +52,18 @@
                 <img src="../../images/close2.svg" class="close-icon" id="closePopup" alt="Cerrar">
                 <div class="about">
                     <div class="home_app_ventana_info--container">
-                        <h2 class="home_app_ventana_info--title--app_page">Land Cover</h2>
-                        <p class="home_app_ventana_info--text">Esta aplicación muestra una pantalla dividida que permite comparar visualmente el cambio del uso del suelo en la Comunidad Valenciana entre el año 2022 (izquierda) y los otros años disponibles (derecha).</p>
-                        <p class="home_app_ventana_info--text">Con el fin de monitorear el cambio del uso del suelo en la Comunidad Valenciana durante los últimos 40 años, se han realizado clasificaciones utilizando imágenes de Landsat 5, 8 y 9, que tienen una resolución espacial de 30 metros. Las imágenes de Landsat 7 fueron descartadas debido a problemas de corrección de ruido. Para reducir la probabilidad de encontrar píxeles nublados en las imágenes y mitigar el impacto de las variaciones estacionales pronunciadas, solo se analizaron las imágenes de verano, adquiridas del 1 de junio al 30 de septiembre. Se utilizaron imágenes de Landsat 5 para los años 1984, 1985, 1990, 1995, 2000, 2005 y 2010, mientras que se usaron imágenes de Landsat 8 para los años 2015 y 2020, y de Landsat 9 para 2022.</p>
-                        <p class="home_app_ventana_info--text">Los productos utilizados fueron 'USGS Landsat 5 Level 2, Collection 2, Tier 1<sup class="ref_sup">1</sup>', 'USGS Landsat 7 Level 2, Collection 2, Tier 1<sup class="ref_sup">2</sup>', 'USGS Landsat 8 Level 2, Collection 2, Tier 1<sup class="ref_sup">3</sup>' y 'USGS Landsat 9 Level 2, Collection 2, Tier 1<sup class="ref_sup">4</sup>', que ofrecen valores de reflectividad cada 16 días con una resolución espacial de 30 m.</p>
-                        <p class="home_app_ventana_info--text">Para la clasificación, se utilizó el algoritmo de clasificación supervisada Random Forest, con 150 árboles de decisión y un conjunto de datos de entrada superior a 1000 puntos por año. Se evaluó la capacidad del satélite para distinguir entre diferentes tipos de coberturas del suelo y se eligieron cinco clases: agua, urbano, vegetación verde, vegetación seca y otros.</p>
-                        <p class="home_app_ventana_info--text">Para más información sobre el desarrollo y los resultados obtenidos, visita nuestro <a href="https://doi.org/10.3390/land13071072" target="_blank" class="about_paragraph--link">artículo</a> publicado<sup class="ref_sup">5</sup>.</p>
-                        
+                        <h2 class="home_app_ventana_info--title--app_page">Intensidad de daño por heladas en cítricos</h2>
+                        <p class="about_paragraph">Nuestra aplicación te muestra la intensidad de daño producido por heladas en la Comunidad Valenciana. Utilizamos imágenes satelitales proporcionadas por Meteosat Segunda Generación (MSG) con una resolución de 3 km (producto 'MLST: LST retrieval from clear-sky infrared observations performed by SEVIRI/MSG<sup class="ref_sup">1</sup>'), que abarcan desde el año 2003 hasta el 2023.</p>
+                        <p class="about_paragraph">El producto MLST de MSG proporciona imágenes de temperatura de superficie terrestre cada 15 minutos. El producto ha sido generado, escogiendo una imagen por hora, y solo en horas nocturnas (00:00-06:00), en el periodo de estudio, y en los meses Enero, Febrero, Marzo, Abril, Noviembre y Diciembre, ya que en el resto de meses y horas no se enucentra presencia de este efecto.</p>
+                        <p class="about_paragraph">Debido a la escasez de metodologías fácilmente aplicables que sean comprensibles para los agricultores y que no requieran una gran cantidad de datos de entrada diversos, hemos desarrollado una nueva metodología simplificada basada en LST medido por satélite para detectar posibles daños por heladas. Para tener en cuenta los diferentes impactos en flores, frutos, troncos y tallos de los cítricos, establecimos tres umbrales críticos de temperatura basados en la literatura existente. Dado que la duración de las heladas también juega un papel crucial para determinar la extensión del daño a una plantación, establecimos cuatro umbrales de duración consecutivos para evaluar el impacto potencial en las plantas. En la tabla de abajo se muestran estos límites.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/tablas/damage_levels.PNG" alt="" class="home_app_ventana_info--tablalarga">
+                        </div>
+                        <p class="about_paragraph">Combinando estos parámetros, se establecieron cuatro niveles de daño: daño leve, daño moderado, daño severo y daño permanente.</p>
+                        <p class="about_paragraph">Por último, para estimar la intensidad resultante, y con fin de representar con mayor precisión la frecuencia e intensidad de las heladas en la Comunidad Valenciana a lo largo del tiempo, a cada nivel de helada se le asignó un valor específico: 1 para daño leve, 2 para daño moderado, 3 para daño intenso y 4 para daño permanente. Este valor se multiplicó por el número de eventos de helada en cada nivel dentro del intervalo de tiempo seleccionado. El nivel de intensidad total se calculó sumando todos los valores para el mismo píxel en los distintos niveles de helada, lo que dio como resultado una medida de intensidad general, siguiendo la siguiente ecuación.</p>
+                        <div class="home_app_ventana_info--img_container">
+                            <img src="../../images/data/ecuaciones/intensidad_heladas.PNG" alt="" class="home_app_ventana_info--ec">
+                        </div>
                     </div>
                 </div>
             </div>
