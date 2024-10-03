@@ -240,3 +240,124 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 })();
 // ###################################################################################### //
+
+// ################################### FOOTER COOKIES ################################### //
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger--cook');
+        var infoPopup = document.getElementById('infoPopup--cook');
+        var closePopup = document.getElementById('closePopup--cook');
+        var modalOverlay = document.getElementById('modalOverlay--cook');
+        var body = document.body;
+      
+        footerTrigger.addEventListener('click', function() {
+          modalOverlay.style.display = 'block';
+          infoPopup.style.display = 'block';
+          setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+          }, 10);
+          body.classList.add('no-scroll');
+        });
+      
+        function closePopupAndOverlay() {
+          infoPopup.classList.remove('visible');
+          modalOverlay.classList.remove('visible');
+          modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+          }, { once: true });
+          body.classList.remove('no-scroll');
+        }
+      
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+      
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closePopupAndOverlay();
+          }
+        });
+    });
+})();
+// ###################################################################################### //
+
+
+// ################################# FOOTER PRIVACIDAD ################################## //
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger--priv');
+        var infoPopup = document.getElementById('infoPopup--priv');
+        var closePopup = document.getElementById('closePopup--priv');
+        var modalOverlay = document.getElementById('modalOverlay--priv');
+        var body = document.body;
+      
+        footerTrigger.addEventListener('click', function() {
+          modalOverlay.style.display = 'block';
+          infoPopup.style.display = 'block';
+          setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+          }, 10);
+          body.classList.add('no-scroll');
+        });
+      
+        function closePopupAndOverlay() {
+          infoPopup.classList.remove('visible');
+          modalOverlay.classList.remove('visible');
+          modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+          }, { once: true });
+          body.classList.remove('no-scroll');
+        }
+      
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+      
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closePopupAndOverlay();
+          }
+        });
+    });
+})();
+// ###################################################################################### //
+
+// ################################### FOOTER LEGAL ##################################### //
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var footerTrigger = document.getElementById('footerTrigger--leg');
+        var infoPopup = document.getElementById('infoPopup--leg');
+        var closePopup = document.getElementById('closePopup--leg');
+        var modalOverlay = document.getElementById('modalOverlay--leg');
+        var body = document.body;
+      
+        footerTrigger.addEventListener('click', function() {
+          modalOverlay.style.display = 'block';
+          infoPopup.style.display = 'block';
+          setTimeout(function() {
+            modalOverlay.classList.add('visible');
+            infoPopup.classList.add('visible');
+          }, 10);
+          body.classList.add('no-scroll');
+        });
+      
+        function closePopupAndOverlay() {
+          infoPopup.classList.remove('visible');
+          modalOverlay.classList.remove('visible');
+          modalOverlay.addEventListener('transitionend', function() {
+            modalOverlay.style.display = 'none';
+          }, { once: true });
+          body.classList.remove('no-scroll');
+        }
+      
+        closePopup.addEventListener('click', closePopupAndOverlay);
+        modalOverlay.addEventListener('click', closePopupAndOverlay);
+      
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closePopupAndOverlay();
+          }
+        });
+    });
+})();
+// ###################################################################################### //
