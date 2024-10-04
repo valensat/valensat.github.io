@@ -2324,6 +2324,18 @@ body {
     text-decoration: underline;
 }
 
+.home_app_ventana_info--text--cook{
+    display: block;
+    line-height: 1.7;
+    padding-top: 15px;
+    font-weight: 300;
+}
+
+.underline{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 .home_app_ventana_info--cook, .home_app_ventana_info--priv, .home_app_ventana_info--leg {
     display: none; 
     position: fixed; 
