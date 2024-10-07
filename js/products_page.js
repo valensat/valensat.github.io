@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Crear un objeto que actúe como un diccionario
 var pageConfig = {
-    'suhi': 2.5,
+    'suhi': 2.4,
     'evolUrbana': 2.2,
     'contaminacion': 2.4,
     'salud': 1,

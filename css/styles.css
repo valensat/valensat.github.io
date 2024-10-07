@@ -916,14 +916,24 @@ body {
 }
 
 .imagen_ciencia_product_page--container{
-    height: 450px;
     display: flex;
     justify-content: center;
 }
 
 .imagen_ciencia_product_page{
-    height: 100%;
+    width: 30%;
 }
+
+.imagen_ciencia_product_page2{
+    width: 35%;
+}
+
+.imagen_ciencia_product_page3{
+    width: 70%;
+}
+
+
+
 
 
 /* ABOUT */
