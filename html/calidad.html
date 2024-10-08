@@ -43,20 +43,17 @@
             <div class="nav_home">
                 <ul class="idiomas_home">
                     <li class="idiomas_home_items">
-                        <a href="#" class="idiomas_home_item">ES</a>
+                        <a href="../index.html" class="idiomas_home_item">ES</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">EN</a>
+                        <a href="./html/en/index.html" class="idiomas_home_item">EN</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">VAL</a>
+                        <a href="./html/val/index.html" class="idiomas_home_item">VAL</a>
                     </li>
                 </ul>
 
-                <ul class="nav_home_bottom">
-                    <!-- <li class="nav_home_bottom_items">
-                        <a href="../html/ciencia.html" class="nav_home_bottom_item">CIENCIA</a>
-                    </li> -->
+                <ul class="nav_home_bottom" id="menu-lista">
                     <li class="nav_home_bottom_items">
                         <a href="#" class="nav_home_bottom_item" id="productosLink">PRODUCTOS</a>
                         <section class="menu_home" id="productosMenu">
@@ -74,7 +71,7 @@
                                             <a href="../html/contaminacion.html" class="menu_home_link menu_home_link_inside">Contaminación</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
+                                            <a href="./html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -88,7 +85,7 @@
                                             <a href="../html/evolIncendios.html" class="menu_home_link menu_home_link_inside">Incendios en la comunidad</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
+                                            <a href="./html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -116,7 +113,7 @@
                                             <a href="../html/landcover.html" class="menu_home_link menu_home_link_inside">Land Cover</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
+                                            <a href="./html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
                                         </li> -->
                                         <li class="menu_home_inside">
                                             <a href="../html/historico.html" class="menu_home_link menu_home_link_inside">Datos climatológicos</a>
@@ -138,12 +135,90 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="nav_home_mobiles">
+                <img src="../images/menu_right.svg" alt="" class="nav_home_bottom_icon--img" id="menu-btn">
+                
+            </div>
             
             <div class="nav_logo">
                 <img src="../images/logo_uv2.PNG" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
     </header>
+
+    <section class="menu_home_mobiles" id="productosMenu_mobiles">
+        <ul class="menu_home_mobiles--panel">
+            <li>
+                <p class="menu_home_mobiles--products--title">PRODUCTOS</p>
+                <ul class="menu_home_mobiles--products">
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Urbano</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/suhi.html" class="menu_home_mobiles--products--a2 ">Isla de calor</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolUrbana.html" class="menu_home_mobiles--products--a2 ">Evolución urbana</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/contaminacion.html" class="menu_home_mobiles--products--a2 ">Contaminación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Incendios</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/areaQuemada.html" class="menu_home_mobiles--products--a2 ">Áreas quemadas y severidad</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolIncendios.html" class="menu_home_mobiles--products--a2 ">Incendios en la comunidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Agricultura</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/evapo.html" class="menu_home_mobiles--products--a2 ">Evapotranspiración</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/sequias.html" class="menu_home_mobiles--products--a2 ">Sequías</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/heladas.html" class="menu_home_mobiles--products--a2 ">Heladas</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/indices.html" class="menu_home_mobiles--products--a2 ">Índices de vegetación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Datos históricos</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/landcover.html" class="menu_home_mobiles--products--a2 ">Land Cover</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/historico.html" class="menu_home_mobiles--products--a2 ">Datos climatológicos</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/calidad.html" class="menu_home_mobiles--products--a2 ">Lagos y embalses</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../html/tiemporeal.html" class="menu_home_mobiles--products--title2">TIEMPO REAL</a>
+            </li>
+            <li class="">
+                <a href="../html/about.html" class="menu_home_mobiles--products--title2">SOBRE NOSOTROS</a>
+            </li>
+            <img src="../images/close.svg" alt="" id="menu-btn-close">
+        </ul>
+    </section>
 
     <main>
         <h2 class="title_product_page">Lagos y embalses</h2>
@@ -170,7 +245,7 @@
                         <p class="about_paragraph">Los satélites equipados con sensores multiespectrales, como Landsat y Sentinel-2, proporcionan imágenes que pueden analizarse para evaluar la turbidez, la clorofila-a y otros indicadores de calidad del agua. Además, mediante algoritmos especializados, es posible extraer información sobre la concentración de nutrientes, la presencia de materia orgánica y otros parámetros relevantes. Los modelos de calidad del agua basados en teledetección combinan datos satelitales con mediciones in situ, lo que mejora la precisión de los análisis y proporciona un monitoreo continuo de la calidad del agua.</p>
                         <div class="img_calidad--container">
                             <img class="img_calidad--container_inside" src="../images/images_products/inside/albufera.PNG" alt="">
-                            <img src="../images/images_products/inside/albufera_leyenda.PNG" alt="">
+                            <img src="../images/images_products/inside/albufera_leyenda.PNG" alt="" class="img_calidad--container_inside--leyenda">
                         </div>
                         <p class="ref_banner">Cantidad de Clorofila-a en la Albufera de Valencia a través del índice NDCI con imágenes de Sentinel-2.</p>
                         <p class="about_paragraph">En la Comunidad Valenciana, la calidad del agua en lagos y embalses es de gran importancia debido a su clima mediterráneo, caracterizado por períodos de sequía y altas temperaturas. Los recursos hídricos son vitales para el abastecimiento de agua potable, el riego agrícola y la industria turística, pilares fundamentales de la economía regional. La calidad del agua en lagos y embalses ofrece beneficios específicos en la Comunidad Valenciana. Garantizar que estos cuerpos de agua tengan buena calidad es esencial para abastecer a las poblaciones con agua potable segura. La región depende en gran medida del riego para su agricultura, y monitorear la calidad del agua asegura que los cultivos reciban agua libre de contaminantes, mejorando así la producción agrícola. Además, los cuerpos de agua de la Comunidad Valenciana son hábitats importantes para numerosas especies, por lo que mantener y mejorar la calidad del agua es crucial para la conservación de la biodiversidad acuática. Por último, lagos y embalses limpios y saludables atraen turistas y proporcionan espacios recreativos para la comunidad, promoviendo el bienestar y la economía local.</p>

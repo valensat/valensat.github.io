@@ -43,20 +43,17 @@
             <div class="nav_home">
                 <ul class="idiomas_home">
                     <li class="idiomas_home_items">
-                        <a href="#" class="idiomas_home_item">ES</a>
+                        <a href="../index.html" class="idiomas_home_item">ES</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">EN</a>
+                        <a href="./html/en/index.html" class="idiomas_home_item">EN</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">VAL</a>
+                        <a href="./html/val/index.html" class="idiomas_home_item">VAL</a>
                     </li>
                 </ul>
 
-                <ul class="nav_home_bottom">
-                    <!-- <li class="nav_home_bottom_items">
-                        <a href="../html/ciencia.html" class="nav_home_bottom_item">CIENCIA</a>
-                    </li> -->
+                <ul class="nav_home_bottom" id="menu-lista">
                     <li class="nav_home_bottom_items">
                         <a href="#" class="nav_home_bottom_item" id="productosLink">PRODUCTOS</a>
                         <section class="menu_home" id="productosMenu">
@@ -74,7 +71,7 @@
                                             <a href="../html/contaminacion.html" class="menu_home_link menu_home_link_inside">Contaminación</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
+                                            <a href="./html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -88,7 +85,7 @@
                                             <a href="../html/evolIncendios.html" class="menu_home_link menu_home_link_inside">Incendios en la comunidad</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
+                                            <a href="./html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -116,7 +113,7 @@
                                             <a href="../html/landcover.html" class="menu_home_link menu_home_link_inside">Land Cover</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
+                                            <a href="./html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
                                         </li> -->
                                         <li class="menu_home_inside">
                                             <a href="../html/historico.html" class="menu_home_link menu_home_link_inside">Datos climatológicos</a>
@@ -138,12 +135,90 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="nav_home_mobiles">
+                <img src="../images/menu_right.svg" alt="" class="nav_home_bottom_icon--img" id="menu-btn">
+                
+            </div>
             
             <div class="nav_logo">
                 <img src="../images/logo_uv2.PNG" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
     </header>
+
+    <section class="menu_home_mobiles" id="productosMenu_mobiles">
+        <ul class="menu_home_mobiles--panel">
+            <li>
+                <p class="menu_home_mobiles--products--title">PRODUCTOS</p>
+                <ul class="menu_home_mobiles--products">
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Urbano</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/suhi.html" class="menu_home_mobiles--products--a2 ">Isla de calor</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolUrbana.html" class="menu_home_mobiles--products--a2 ">Evolución urbana</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/contaminacion.html" class="menu_home_mobiles--products--a2 ">Contaminación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Incendios</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/areaQuemada.html" class="menu_home_mobiles--products--a2 ">Áreas quemadas y severidad</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolIncendios.html" class="menu_home_mobiles--products--a2 ">Incendios en la comunidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Agricultura</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/evapo.html" class="menu_home_mobiles--products--a2 ">Evapotranspiración</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/sequias.html" class="menu_home_mobiles--products--a2 ">Sequías</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/heladas.html" class="menu_home_mobiles--products--a2 ">Heladas</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/indices.html" class="menu_home_mobiles--products--a2 ">Índices de vegetación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Datos históricos</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/landcover.html" class="menu_home_mobiles--products--a2 ">Land Cover</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/historico.html" class="menu_home_mobiles--products--a2 ">Datos climatológicos</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/calidad.html" class="menu_home_mobiles--products--a2 ">Lagos y embalses</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../html/tiemporeal.html" class="menu_home_mobiles--products--title2">TIEMPO REAL</a>
+            </li>
+            <li class="">
+                <a href="../html/about.html" class="menu_home_mobiles--products--title2">SOBRE NOSOTROS</a>
+            </li>
+            <img src="../images/close.svg" alt="" id="menu-btn-close">
+        </ul>
+    </section>
 
     <main>
         <h2 class="title_product_page">Evapotranspiración</h2>

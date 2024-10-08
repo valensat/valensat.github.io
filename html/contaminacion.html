@@ -47,20 +47,17 @@
             <div class="nav_home">
                 <ul class="idiomas_home">
                     <li class="idiomas_home_items">
-                        <a href="#" class="idiomas_home_item">ES</a>
+                        <a href="../index.html" class="idiomas_home_item">ES</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">EN</a>
+                        <a href="./html/en/index.html" class="idiomas_home_item">EN</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">VAL</a>
+                        <a href="./html/val/index.html" class="idiomas_home_item">VAL</a>
                     </li>
                 </ul>
 
-                <ul class="nav_home_bottom">
-                    <!-- <li class="nav_home_bottom_items">
-                        <a href="../html/ciencia.html" class="nav_home_bottom_item">CIENCIA</a>
-                    </li> -->
+                <ul class="nav_home_bottom" id="menu-lista">
                     <li class="nav_home_bottom_items">
                         <a href="#" class="nav_home_bottom_item" id="productosLink">PRODUCTOS</a>
                         <section class="menu_home" id="productosMenu">
@@ -78,7 +75,7 @@
                                             <a href="../html/contaminacion.html" class="menu_home_link menu_home_link_inside">Contaminación</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
+                                            <a href="./html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -92,7 +89,7 @@
                                             <a href="../html/evolIncendios.html" class="menu_home_link menu_home_link_inside">Incendios en la comunidad</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
+                                            <a href="./html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -120,7 +117,7 @@
                                             <a href="../html/landcover.html" class="menu_home_link menu_home_link_inside">Land Cover</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
+                                            <a href="./html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
                                         </li> -->
                                         <li class="menu_home_inside">
                                             <a href="../html/historico.html" class="menu_home_link menu_home_link_inside">Datos climatológicos</a>
@@ -142,12 +139,90 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="nav_home_mobiles">
+                <img src="../images/menu_right.svg" alt="" class="nav_home_bottom_icon--img" id="menu-btn">
+                
+            </div>
             
             <div class="nav_logo">
                 <img src="../images/logo_uv2.PNG" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
     </header>
+
+    <section class="menu_home_mobiles" id="productosMenu_mobiles">
+        <ul class="menu_home_mobiles--panel">
+            <li>
+                <p class="menu_home_mobiles--products--title">PRODUCTOS</p>
+                <ul class="menu_home_mobiles--products">
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Urbano</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/suhi.html" class="menu_home_mobiles--products--a2 ">Isla de calor</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolUrbana.html" class="menu_home_mobiles--products--a2 ">Evolución urbana</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/contaminacion.html" class="menu_home_mobiles--products--a2 ">Contaminación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Incendios</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/areaQuemada.html" class="menu_home_mobiles--products--a2 ">Áreas quemadas y severidad</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolIncendios.html" class="menu_home_mobiles--products--a2 ">Incendios en la comunidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Agricultura</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/evapo.html" class="menu_home_mobiles--products--a2 ">Evapotranspiración</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/sequias.html" class="menu_home_mobiles--products--a2 ">Sequías</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/heladas.html" class="menu_home_mobiles--products--a2 ">Heladas</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/indices.html" class="menu_home_mobiles--products--a2 ">Índices de vegetación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Datos históricos</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/landcover.html" class="menu_home_mobiles--products--a2 ">Land Cover</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/historico.html" class="menu_home_mobiles--products--a2 ">Datos climatológicos</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/calidad.html" class="menu_home_mobiles--products--a2 ">Lagos y embalses</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../html/tiemporeal.html" class="menu_home_mobiles--products--title2">TIEMPO REAL</a>
+            </li>
+            <li class="">
+                <a href="../html/about.html" class="menu_home_mobiles--products--title2">SOBRE NOSOTROS</a>
+            </li>
+            <img src="../images/close.svg" alt="" id="menu-btn-close">
+        </ul>
+    </section>
 
     <main>
         <h2 class="title_product_page">Contaminación</h2>
@@ -168,8 +243,8 @@
                         <p class="about_paragraph">La teledetección satelital ofrece una herramienta poderosa para medir y monitorear la contaminación atmosférica de manera global y a largo plazo. Los satélites equipados con sensores especializados pueden detectar una variedad de contaminantes atmosféricos, como dióxido de carbono (CO<sub>2</sub>), monóxido de carbono (CO), dióxido de nitrógeno (NO<sub>2</sub>), ozono (O<sub>3</sub>) y partículas en suspensión (PM), entre otros. Estos sensores capturan datos sobre la distribución espacial y temporal de los contaminantes, permitiendo la identificación de fuentes de emisión, el seguimiento de patrones de dispersión y la evaluación de la calidad del aire a escala regional y global.</p>
                         <p class="about_paragraph">La Comunidad Valenciana, con su densa población y actividad industrial, enfrenta desafíos significativos en términos de contaminación atmosférica. Las principales fuentes de contaminación incluyen el tráfico vehicular, las industrias, la agricultura y el transporte marítimo. En las áreas urbanas, los altos niveles de tráfico pueden contribuir a la acumulación de contaminantes como el NO<sub>2</sub> y las partículas en suspensión. Además, la región costera está expuesta a la contaminación procedente de los puertos y las actividades marítimas.</p>
                         <div class="img_contaminacion--container">
-                            <img src="../images/images_products/inside/calidad_aire_comunidad.png" alt="">
-                            <img src="../images/images_products/inside/calidad_aire_comunidad_leyenda.png" alt="">
+                            <img src="../images/images_products/inside/calidad_aire_comunidad.png" alt="" class="img_contaminacion--container--img">
+                            <img src="../images/images_products/inside/calidad_aire_comunidad_leyenda.png" alt="" class="img_contaminacion--container--img2">
                         </div>
                         <p class="ref_banner">Calidad del aire en la Comunidad Valenciana en 2023. Datos proporcionados por el producto NRTI-NO2 de Sentinel-5.</p>
                         <p class="about_paragraph">A pesar de estos desafíos, la Comunidad Valenciana también ha implementado medidas para abordar la contaminación atmosférica y mejorar la calidad del aire. Estas incluyen la promoción de la movilidad sostenible, la reducción de emisiones industriales, la gestión adecuada de residuos y la promoción de fuentes de energía limpia. Además, la vigilancia continua de la contaminación atmosférica a través de redes de monitoreo terrestre y la teledetección satelital proporciona información crucial para la toma de decisiones y la implementación de políticas efectivas de gestión ambiental.</p>
@@ -178,7 +253,7 @@
                         <div class="graph_contaminacion--container">
                             <canvas id="graph_contaminacion"></canvas>
                         </div>
-                        <p class="ref_banner">Datos obtenidos a partir de la RVVCCA.</p>
+                        <p class="ref_banner ref_banner_inc">Datos obtenidos a partir de la RVVCCA.</p>
                     </div>
                     
                     <div id="productos_product_page" class="content-section_product_page">

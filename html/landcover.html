@@ -45,20 +45,17 @@
             <div class="nav_home">
                 <ul class="idiomas_home">
                     <li class="idiomas_home_items">
-                        <a href="#" class="idiomas_home_item">ES</a>
+                        <a href="../index.html" class="idiomas_home_item">ES</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">EN</a>
+                        <a href="./html/en/index.html" class="idiomas_home_item">EN</a>
                     </li>
                     <li class="idiomas_items">
-                        <a href="#" class="idiomas_home_item">VAL</a>
+                        <a href="./html/val/index.html" class="idiomas_home_item">VAL</a>
                     </li>
                 </ul>
 
-                <ul class="nav_home_bottom">
-                    <!-- <li class="nav_home_bottom_items">
-                        <a href="../html/ciencia.html" class="nav_home_bottom_item">CIENCIA</a>
-                    </li> -->
+                <ul class="nav_home_bottom" id="menu-lista">
                     <li class="nav_home_bottom_items">
                         <a href="#" class="nav_home_bottom_item" id="productosLink">PRODUCTOS</a>
                         <section class="menu_home" id="productosMenu">
@@ -76,7 +73,7 @@
                                             <a href="../html/contaminacion.html" class="menu_home_link menu_home_link_inside">Contaminación</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
+                                            <a href="./html/salud.html" class="menu_home_link menu_home_link_inside">Cambio climático y salud</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -90,7 +87,7 @@
                                             <a href="../html/evolIncendios.html" class="menu_home_link menu_home_link_inside">Incendios en la comunidad</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
+                                            <a href="./html/riesgo.html" class="menu_home_link menu_home_link_inside">Mapas de riesgo</a>
                                         </li> -->
                                     </ul>
                                 </li>
@@ -118,7 +115,7 @@
                                             <a href="../html/landcover.html" class="menu_home_link menu_home_link_inside">Land Cover</a>
                                         </li>
                                         <!-- <li class="menu_home_inside">
-                                            <a href="../html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
+                                            <a href="./html/costa.html" class="menu_home_link menu_home_link_inside">Evolución/erosión de costa</a>
                                         </li> -->
                                         <li class="menu_home_inside">
                                             <a href="../html/historico.html" class="menu_home_link menu_home_link_inside">Datos climatológicos</a>
@@ -140,12 +137,90 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="nav_home_mobiles">
+                <img src="../images/menu_right.svg" alt="" class="nav_home_bottom_icon--img" id="menu-btn">
+                
+            </div>
             
             <div class="nav_logo">
                 <img src="../images/logo_uv2.PNG" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
     </header>
+
+    <section class="menu_home_mobiles" id="productosMenu_mobiles">
+        <ul class="menu_home_mobiles--panel">
+            <li>
+                <p class="menu_home_mobiles--products--title">PRODUCTOS</p>
+                <ul class="menu_home_mobiles--products">
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Urbano</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/suhi.html" class="menu_home_mobiles--products--a2 ">Isla de calor</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolUrbana.html" class="menu_home_mobiles--products--a2 ">Evolución urbana</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/contaminacion.html" class="menu_home_mobiles--products--a2 ">Contaminación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Incendios</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/areaQuemada.html" class="menu_home_mobiles--products--a2 ">Áreas quemadas y severidad</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/evolIncendios.html" class="menu_home_mobiles--products--a2 ">Incendios en la comunidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Agricultura</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/evapo.html" class="menu_home_mobiles--products--a2 ">Evapotranspiración</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/sequias.html" class="menu_home_mobiles--products--a2 ">Sequías</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/heladas.html" class="menu_home_mobiles--products--a2 ">Heladas</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/indices.html" class="menu_home_mobiles--products--a2 ">Índices de vegetación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Datos históricos</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="../html/landcover.html" class="menu_home_mobiles--products--a2 ">Land Cover</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/historico.html" class="menu_home_mobiles--products--a2 ">Datos climatológicos</a>
+                            </li>
+                            <li class="">
+                                <a href="../html/calidad.html" class="menu_home_mobiles--products--a2 ">Lagos y embalses</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../html/tiemporeal.html" class="menu_home_mobiles--products--title2">TIEMPO REAL</a>
+            </li>
+            <li class="">
+                <a href="../html/about.html" class="menu_home_mobiles--products--title2">SOBRE NOSOTROS</a>
+            </li>
+            <img src="../images/close.svg" alt="" id="menu-btn-close">
+        </ul>
+    </section>
 
     <main>
         <h2 class="title_product_page">Land Cover</h2>
@@ -165,8 +240,8 @@
                         <p class="about_paragraph">La cobertura del suelo, o Land Cover, se refiere a la descripción física de la superficie terrestre, que abarca desde bosques y cultivos hasta cuerpos de agua y áreas urbanas. Es una representación detallada de cómo se distribuyen diferentes tipos de superficie en una región, proporcionando una visión integral del paisaje. Calcular y monitorear la cobertura del suelo es esencial por múltiples razones. En primer lugar, permite una gestión sostenible de los recursos naturales, facilitando la planificación y el uso adecuado de la tierra. Además, ayuda a detectar y analizar cambios ambientales significativos, como la deforestación, la urbanización y la degradación del suelo, proporcionando datos cruciales para tomar decisiones informadas.</p>
                         <p class="about_paragraph">Otro aspecto importante es la conservación de la biodiversidad. Monitorear la cobertura del suelo ayuda a identificar y proteger hábitats críticos, contribuyendo a la preservación de diversas especies. También es fundamental para la planificación urbana y rural, asistiendo en el desarrollo de infraestructuras de manera organizada y eficiente. Además, proporciona datos esenciales para evaluar el impacto de los cambios climáticos en diferentes tipos de cobertura del suelo, permitiendo adaptar estrategias de mitigación y adaptación.</p>
                         <div class="img_contaminacion--container">
-                            <img src="../images/images_products/inside/lc_comunidad.png" alt="">
-                            <img src="../images/images_products/inside/lc_comunidad_leyenda.PNG" alt="">
+                            <img src="../images/images_products/inside/lc_comunidad.png" alt="" class="img_evolincendios--img">
+                            <img src="../images/images_products/inside/lc_comunidad_leyenda.PNG" alt="" class="img_evolincendios--leyenda2">
                         </div>
                         <p class="ref_banner">Land Cover en la Comunidad Valenciana en 2022. Resultado obtenido con el algoritmo Random Forest utilizando imágenes Landsat.</p>
                         <p class="about_paragraph">La teledetección se ha convertido en una herramienta poderosa para medir la cobertura del suelo a gran escala y con alta precisión. Utiliza datos obtenidos por sensores remotos, como los satélites, que capturan imágenes en diferentes bandas del espectro electromagnético. Las imágenes satelitales de alta resolución, proporcionadas por satélites como Landsat, Sentinel-2 y MODIS, son fundamentales para clasificar y mapear la cobertura del suelo. A través del análisis multiespectral, estas imágenes capturan datos en varias bandas del espectro, lo que permite diferenciar entre distintos tipos de superficie. Los algoritmos de clasificación, tanto supervisada como no supervisada, categorizan la cobertura del suelo en diversas clases, como bosques, áreas urbanas y cuerpos de agua. Además, los índices de vegetación, como el NDVI, son herramientas valiosas para identificar áreas vegetadas y evaluar su salud.</p>
@@ -187,7 +262,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="ref_banner">Land Cover en la Comunidad Valenciana en 2023 (izquierda) y entre el 1985 y el 2020 (derecha). Resultados obtenidos con el algoritmo Random Forest utilizando imágenes Landsat.</p>
+                        <p class="ref_banner ref_banner_inc">Land Cover en la Comunidad Valenciana en 2023 (izquierda) y entre el 1985 y el 2020 (derecha). Resultados obtenidos con el algoritmo Random Forest utilizando imágenes Landsat.</p>
                         <p class="about_paragraph">La conservación de ecosistemas también es una prioridad, ya que la región alberga diversos ecosistemas que necesitan protección y manejo sostenible. Monitorear la cobertura del suelo permite identificar áreas críticas para la conservación. Con el crecimiento urbano continuo, es esencial planificar y gestionar el desarrollo de infraestructuras de manera sostenible, y los mapas de cobertura del suelo facilitan esta planificación urbana efectiva. Para más información sobre el tema, visita nuestro <a href="https://doi.org/10.3390/land13071072" target="_blank" class="about_paragraph--link">artículo</a> publicado<sup class="ref_sup">5</sup>.</p>
                     </div>
                     
