@@ -3824,11 +3824,12 @@ tr td:first-child{
     }
 
     .header_title_home_link{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .header_title_home{
         padding-bottom: 35px;
+        padding-left: 10px;
     }
 
 
@@ -3857,7 +3858,7 @@ tr td:first-child{
         font-size: 11px;
     }
 
-    .home_app_ventana_info--text--cook, .slide_prod_text, .banner_quem--text_legend, .contenido-popup--inside_text, .seccion_aemet--registro_aemet_text--infoest{
+    .home_app_ventana_info--text--cook, .slide_prod_text, .contenido-popup--inside_text, .seccion_aemet--registro_aemet_text--infoest, .banner_quem--text_legend{
         font-size: 10px;
     }
 
@@ -3962,7 +3963,7 @@ tr td:first-child{
     }
 
     .nav_home_bottom_icon--img{
-        width: 25px;
+        width: 130%;
         cursor: pointer;
     }
 
@@ -4081,8 +4082,8 @@ tr td:first-child{
     }
 
     .content-section_product_page {
-        margin-left: 10px;
-        padding-right: 30px;
+        margin-left: 20px;
+        padding-right: 40px;
     }
 
     .footer{
@@ -4155,11 +4156,21 @@ tr td:first-child{
     }
 
     .banner_quem--img_legend{
-        width: 150%;
+        width: 100%;
     }
 
+    .banner_quem--inside{
+       gap: 5px;
+       /* flex-direction: row; */
+    }
+
+    .banner_quem--group{
+        gap: 20px;
+        flex-direction: column;
+     }
+
     .img_evolincendios--img{
-        width: 60%;
+        width: 70%;
     }
 
     .img_evolincendios--leyenda{
