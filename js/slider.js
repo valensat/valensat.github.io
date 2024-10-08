@@ -361,3 +361,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })();
 // ###################################################################################### //
+
+
+// ################################### MENU MOVIL ##################################### //
+(function(){
+  document.addEventListener('DOMContentLoaded', function() {
+      var productosLink_mobiles = document.getElementById('menu-btn');
+      var productosMenu_mobiles = document.getElementById('productosMenu_mobiles');
+      var productosLink_mobiles_close = document.getElementById('menu-btn-close');
+
+      productosLink_mobiles.addEventListener('click', function() {
+          productosMenu_mobiles.classList.toggle('active_mobiles');
+          document.body.style.overflow = 'hidden';
+      });
+
+      productosLink_mobiles_close.addEventListener('click', function() {
+        productosMenu_mobiles.classList.remove('active_mobiles');
+        document.body.style.overflow = '';
+      });
+
+      // Cierra el menú cuando haces clic fuera de él
+      document.addEventListener('click', function(event) {
+          if (!productosMenu_mobiles.contains(event.target) && !productosLink_mobiles.contains(event.target)) {
+              productosMenu_mobiles.classList.remove('active_mobiles');
+              document.body.style.overflow = '';
+          }
+      });
+  });
+})();
+
+// ###################################################################################### //

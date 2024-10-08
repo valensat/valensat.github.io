@@ -57,10 +57,7 @@
                     </li>
                 </ul>
 
-                <ul class="nav_home_bottom">
-                    <!-- <li class="nav_home_bottom_items">
-                        <a href="./html/ciencia.html" class="nav_home_bottom_item">CIENCIA</a>
-                    </li> -->
+                <ul class="nav_home_bottom" id="menu-lista">
                     <li class="nav_home_bottom_items">
                         <a href="#" class="nav_home_bottom_item" id="productosLink">PRODUCTOS</a>
                         <section class="menu_home" id="productosMenu">
@@ -142,12 +139,90 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="nav_home_mobiles">
+                <img src="./images/menu_right.svg" alt="" class="nav_home_bottom_icon--img" id="menu-btn">
+                
+            </div>
             
             <div class="nav_logo">
                 <img src="./images/logo_uv2.PNG" alt="logo_UV" class="nav_logo_img_product2">
             </div>
         </nav>
     </header>
+
+    <section class="menu_home_mobiles" id="productosMenu_mobiles">
+        <ul class="menu_home_mobiles--panel">
+            <li>
+                <p class="menu_home_mobiles--products--title">PRODUCTOS</p>
+                <ul class="menu_home_mobiles--products">
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Urbano</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="./html/suhi.html" class="menu_home_mobiles--products--a2 ">Isla de calor</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/evolUrbana.html" class="menu_home_mobiles--products--a2 ">Evolución urbana</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/contaminacion.html" class="menu_home_mobiles--products--a2 ">Contaminación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Incendios</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="./html/areaQuemada.html" class="menu_home_mobiles--products--a2 ">Áreas quemadas y severidad</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/evolIncendios.html" class="menu_home_mobiles--products--a2 ">Incendios en la comunidad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Agricultura</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="./html/evapo.html" class="menu_home_mobiles--products--a2 ">Evapotranspiración</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/sequias.html" class="menu_home_mobiles--products--a2 ">Sequías</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/heladas.html" class="menu_home_mobiles--products--a2 ">Heladas</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/indices.html" class="menu_home_mobiles--products--a2 ">Índices de vegetación</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_home_mobiles--products--li">
+                        <a href="#" class="menu_home_mobiles--products--a1">Datos históricos</a>
+                        <ul class="menu_home_mobiles--products--ul">
+                            <li class="">
+                                <a href="./html/landcover.html" class="menu_home_mobiles--products--a2 ">Land Cover</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/historico.html" class="menu_home_mobiles--products--a2 ">Datos climatológicos</a>
+                            </li>
+                            <li class="">
+                                <a href="./html/calidad.html" class="menu_home_mobiles--products--a2 ">Lagos y embalses</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="./html/tiemporeal.html" class="menu_home_mobiles--products--title2">TIEMPO REAL</a>
+            </li>
+            <li class="">
+                <a href="./html/about.html" class="menu_home_mobiles--products--title2">SOBRE NOSOTROS</a>
+            </li>
+            <img src="./images/close.svg" alt="" id="menu-btn-close">
+        </ul>
+    </section>
 
     <main>
 
@@ -206,19 +281,19 @@
                     <button onclick="location.href='./html/suhi.html'" class="button_products" style="background-image: url('./images/images_products/yaron-cohen-IRkS_rOXJxw-unsplash.jpg')">
                         <div class="button_content">
                             <img src="./images/icons_products/isla.svg" alt="Isla de Calor" class="icon_product">
-                            <span>Isla de Calor</span>
+                            <span class="button_content--text">Isla de Calor</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/evolUrbana.html'" class="button_products" style="background-image: url('./images/images_products/evol_nicolas-j-leclercq-WJg2bynUWOk-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/urbano.svg" alt="Evolución Urbana" class="icon_product">
-                          <span>Evolución urbana</span>
+                          <span class="button_content--text">Evolución urbana</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/contaminacion.html'" class="button_products" style="background-image: url('./images/images_products/cont_maxim-tolchinskiy-W3y2crFkVIs-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/contaminacion.svg" alt="Contaminación" class="icon_product">
-                          <span>Contaminación</span>
+                          <span class="button_content--text">Contaminación</span>
                         </div>
                     </button>
                     <!-- <button onclick="location.href='./html/salud.html'" class="button_products" style="background-image: url('./images/images_products/salud_ryoji-iwata-n31JPLu8_Pw-unsplash.jpg')">
@@ -233,13 +308,13 @@
                     <button onclick="location.href='./html/areaQuemada.html'" class="button_products" style="background-image: url('./images/images_products/quem_gorrin-bel-Ok5zvsEyQ1I-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/quem.svg" alt="Áreas Quemadas y Severidad" class="icon_product">
-                          <span>Áreas Quemadas y Severidad</span>
+                          <span class="button_content--text">Áreas Quemadas y Severidad</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/evolIncendios.html'" class="button_products" style="background-image: url('./images/images_products/inc_matt-palmer-kbTp7dBzHyY-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/inc.svg" alt="Evolución Incendios" class="icon_product">
-                          <span>Incendios en la comunidad</span>
+                          <span class="button_content--text">Incendios en la comunidad</span>
                         </div>
                     </button>
                     <!-- <button onclick="location.href='./html/riesgo.html'" class="button_products" style="background-image: url('./images/images_products/riesgo_brian-wangenheim-VRuyoZFXISo-unsplash.jpg')">
@@ -254,25 +329,25 @@
                     <button onclick="location.href='./html/evapo.html'" class="button_products" style="background-image: url('./images/images_products/evapo_erik-peterson-d5W3bOlbNfc-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/evap.svg" alt="Evapotranspiración" class="icon_product">
-                          <span>Evapotranspiración</span>
+                          <span class="button_content--text">Evapotranspiración</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/sequias.html'" class="button_products" style="background-image: url('./images/images_products/sequia_renzo-d-souza-VkxwV7t_dLI-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/sequia.svg" alt="Secquías" class="icon_product">
-                          <span>Sequías</span>
+                          <span class="button_content--text">Sequías</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/heladas.html'" class="button_products" style="background-image: url('./images/images_products/heladas_olga-deeva-_ZXkGJXICVw-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/helada.svg" alt="Heladas" class="icon_product">
-                          <span>Heladas</span>
+                          <span class="button_content--text">Heladas</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/indices.html'" class="button_products" style="background-image: url('./images/images_products/veg_juan-encalada-4xud_CA6K-s-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/veg.svg" alt="Índices de Vegetación" class="icon_product">
-                          <span>Índices de Vegetación</span>
+                          <span class="button_content--text">Índices de Vegetación</span>
                         </div>
                     </button>
                 </div>
@@ -281,7 +356,7 @@
                     <button onclick="location.href='./html/landcover.html'" class="button_products" style="background-image: url('./images/images_products/lc_markus-spiske-pZX9QPxeIQc-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/lc.svg" alt="Land Cover" class="icon_product">
-                          <span>Land Cover</span>
+                          <span class="button_content--text">Land Cover</span>
                         </div>
                     </button>
                     <!-- <button onclick="location.href='./html/costa.html'" class="button_products" style="background-image: url('./images/images_products/costa_kiril-dobrev-v63UL8s28Ew-unsplash.jpg')">
@@ -293,13 +368,13 @@
                     <button onclick="location.href='./html/historico.html'" class="button_products" style="background-image: url('./images/images_products/clima_wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/clima.svg" alt="Costa" class="icon_product">
-                          <span>Datos climatológicos</span>
+                          <span class="button_content--text">Datos climatológicos</span>
                         </div>
                     </button>
                     <button onclick="location.href='./html/calidad.html'" class="button_products" style="background-image: url('./images/images_products/lagos_daniel-jacob-S84pCIjiEC4-unsplash.jpg')">
                         <div class="button_content">
                           <img src="./images/icons_products/lagos.svg" alt="Costa" class="icon_product">
-                          <span>Lagos y embalses</span>
+                          <span class="button_content--text">Lagos y embalses</span>
                         </div>
                     </button>
                 </div>
