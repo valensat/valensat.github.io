@@ -3936,7 +3936,8 @@ tr td:first-child{
     }
 
     .container_nav_product{
-        width: 100%;
+        position: absolute;
+        left: 5%;
     }
 
     .nav_home{
@@ -3944,7 +3945,8 @@ tr td:first-child{
     }
 
     .nav_home_mobiles{
-        padding-left: 205px;
+        position: absolute;
+        right: 5%;
     }
 
     .nav_home_bottom_icon--img{
@@ -3953,21 +3955,17 @@ tr td:first-child{
     }
 
     .menu_home_mobiles {
-        /* display: none; */
         max-height: 0;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        /* background-color: #000000; */
-        /* background-color: rgba(39, 37, 37, 0.99); */
         background-color: rgba(242, 242, 240, 0.95);
         transition: opacity 0.3s, transform 0.3s;
         opacity: 0;
         min-height: 100%;
         padding-bottom: 30px;
         padding-top: 30px;
-        /* color: #244072; */
     }
 
     .menu_home_mobiles.active_mobiles{
