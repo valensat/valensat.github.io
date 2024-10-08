@@ -3799,7 +3799,7 @@ tr td:first-child{
 
 
 
-.nav_home_bottom_icon--img, .nav_home_mobiles, .menu_home_mobiles{
+.nav_home_bottom_icon--img, .nav_home_mobiles, .menu_home_mobiles, .about_paragraph--mobile, .about_paragraph--mobile_title, .about_paragraph--mobile_text{
     display: none;
 }
 
@@ -4282,7 +4282,34 @@ tr td:first-child{
         width: 95%;
     }
 
+    .about_paragraph--mobile, .about_paragraph--mobile_title, .about_paragraph--mobile_text{
+        display: block;
+    }
 
+    .about_paragraph--mobile_title{
+        padding-top: 50px;
+        text-align: center;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        color: #ED413E;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .about_paragraph--mobile_text{
+        line-height: 1.3;
+        font-size: 13px;
+        border-radius: 3%;
+        background-color: #ED413E70;
+        padding: 20px;
+        font-weight: 600;
+        box-shadow: 0px 0px 15px 3px #001A49;
+        color: #272525;
+    }
+
+    .espacio_mobile{
+        padding-top: 30px;
+    }
 
     /***********************************/
     /***********************************/
