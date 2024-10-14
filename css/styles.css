@@ -3642,171 +3642,28 @@ tr td:first-child{
 
 
 
-/* PÓRTATILES */
-@media (max-width:1500px){
-    .menu__hamburguer{
-        display: flex;
-    }
-
-    .menu__item{
-        --clip:0;
-    }
-
-    /* Menú desplegable PRODUCTOS */
-    .menu__links{
-        position: fixed;
-        max-width: 400px;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(93, 112, 138, 1);
-        overflow-y: auto;
-        display: grid;
-        grid-auto-rows: max-content;
-        padding: 0;
-        gap: 20px;
-        transform: translateX(100%);
-        z-index: 1;
-    }
-
-    .menu__links--show{
-        transform: unset;
-        width: 100%;
-        background-color: rgba(93, 112, 138, 0.95);
-        --show: block;
-    }
-
-    .menu__item{
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .menu__item--active{
-        --transform: rotate(0);
-        --background: rgba(93, 112, 138, 1);
-
-    }
-
-    .menu__link{
-        padding: 25px 0;
-        padding-left: 30px;
-        height: auto;
-        width: 100%;
-        background-color: rgba(93, 112, 138, 0);
-    }
-
-    .menu__arrow{
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .menu__nesting{
-        display: grid;
-        position: unset;
-        width: 100%;
-        transform: translateY(0);
-        height: 0;
-        transition: height 0.5s;
-        background-color: rgba(93, 112, 138, 0);
-    }
-
-    .menu__link--inside{
-        width: 90%;
-        margin-left: auto;
-        border-left: 1px solid #F2F2F0;
-    }
-
-    .title_hamburguer{
-        font-size: 1.5em;
-        font-weight: 300;
-    }
-
-
-    /* Menú desplegable ÍNDICE */
-    .menu__item--index{
-        --clip:0;
-    }
-
-    .menu__links--index{
-        position: fixed;
-        max-width: 400px;
-        /* top: 70px; */
-        right: 0;
-        bottom: 0;
-        background-color: rgba(59, 55, 45, 0.9);
-        overflow-y: auto;
-        display: grid;
-        grid-auto-rows: max-content;
-        padding: 0;
-        transform: translateX(100%);
-        gap: 20px;
-        z-index: 1;
-    }
-
-    .menu__links--show--index{
-        transform: unset;
-        width: 100%;
-        background-color: rgba(59, 55, 45, 0.9);
-        --show: block;
-    }
-
-    .menu__item--index{
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .menu__item--active--index{
-        --transform: rotate(0);
-        --background: rgba(59, 55, 45, 1);
-    }
-
-    .menu__link--index{
-        padding: 25px 0;
-        padding-left: 30px;
-        height: auto;
-        width: 100%;
-    }
-
-    .menu__arrow--index{
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .menu__nesting--index{
-        display: grid;
-        position: unset;
-        width: 100%;
-        transform: translateY(0);
-        height: 0;
-        transition: height 0.5s;
-        background-color: rgba(59, 55, 45, 0);
-    }
-
-    .menu__link--inside--index{
-        width: 90%;
-        margin-left: auto;
-        border-left: 1px solid #F2F2F0;
-    }
-
-
-
-    .desp_answer{
-        max-width: 80vw;
-    }
-
-}
-
-
-
 
 
 .nav_home_bottom_icon--img, .nav_home_mobiles, .menu_home_mobiles, .about_paragraph--mobile, .about_paragraph--mobile_title, .about_paragraph--mobile_text{
     display: none;
 }
 
+@media (max-width:1280px){
+    .menu_footer{
+        display: none;
+    }
+}
+
+@media (max-width:1600px){
+    .menu_home {
+        min-height: 26vh;
+    }
+}
+
 
 
 /* ############################################# MÓVILES ############################################# */
-@media (max-width:450px){
+@media (max-width:1024px){
 
     /* cosas que no se van a ver */
     .nav_logo_img_product1, .nav_logo_img_product2, .home_app, .nav_home_bottom_items, .nav_logo, .graph_contaminacion--container, .container_banner--inc, .ref_banner_inc, .container_banner--lc, .img_clima2--container, .seccion_aemet--api_graph, .no_mobile{
