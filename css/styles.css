@@ -3652,6 +3652,10 @@ tr td:first-child{
     .menu_footer{
         display: none;
     }
+
+    .nav_logo_img_product1, .nav_logo_img_product2{
+        display: none;
+    }
 }
 
 @media (max-width:1600px){
